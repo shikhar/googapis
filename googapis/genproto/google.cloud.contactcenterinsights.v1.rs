@@ -100,7 +100,7 @@ pub mod conversation {
             #[prost(message, repeated, tag = "3")]
             pub words: ::prost::alloc::vec::Vec<transcript_segment::WordInfo>,
             /// The language code of this segment as a
-            /// [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag.
+            /// \[BCP-47\](<https://www.rfc-editor.org/rfc/bcp/bcp47.txt>) language tag.
             /// Example: "en-US".
             #[prost(string, tag = "4")]
             pub language_code: ::prost::alloc::string::String,
@@ -306,7 +306,7 @@ pub struct IssueAssignment {
     #[prost(string, tag = "1")]
     pub issue: ::prost::alloc::string::String,
     /// Score indicating the likelihood of the issue assignment.
-    /// currently bounded on [0,1].
+    /// currently bounded on \[0,1\].
     #[prost(double, tag = "2")]
     pub score: f64,
     /// Immutable. Display name of the assigned issue. This field is set at time of analyis
@@ -1210,7 +1210,7 @@ pub struct CreateConversationRequest {
     /// server-generated ID will be used.
     ///
     /// This value should be 4-32 characters and must match the regular
-    /// expression /^[a-z0-9-]{4,32}$/. Valid characters are /[a-z][0-9]-/
+    /// expression /^\[a-z0-9-\]{4,32}$/. Valid characters are /\[a-z][0-9\]-/
     #[prost(string, tag = "3")]
     pub conversation_id: ::prost::alloc::string::String,
 }
@@ -1675,7 +1675,7 @@ pub mod contact_center_insights_client {
     impl<T> ContactCenterInsightsClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

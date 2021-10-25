@@ -83,7 +83,7 @@ pub struct CatalogItem {
     #[prost(message, optional, tag = "5")]
     pub item_attributes: ::core::option::Option<FeatureMap>,
     /// Optional. Language of the title/description/item_attributes. Use language
-    /// tags defined by BCP 47. https://www.rfc-editor.org/rfc/bcp/bcp47.txt. Our
+    /// tags defined by BCP 47. <https://www.rfc-editor.org/rfc/bcp/bcp47.txt.> Our
     /// supported language codes include 'en', 'es', 'fr', 'de', 'ar', 'fa', 'zh',
     /// 'ja', 'ko', 'sv', 'ro', 'nl'. For other languages, contact
     /// your Google account manager.
@@ -798,7 +798,7 @@ pub mod catalog_service_client {
     impl<T> CatalogServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -1017,7 +1017,7 @@ pub mod prediction_api_key_registry_client {
     impl<T> PredictionApiKeyRegistryClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -1134,7 +1134,7 @@ pub struct PredictRequest {
     ///   Recently viewed.
     ///
     /// The full list of available placements can be seen at
-    /// https://console.cloud.google.com/recommendation/datafeeds/default_catalog/dashboard
+    /// <https://console.cloud.google.com/recommendation/datafeeds/default_catalog/dashboard>
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// Required. Context about the user, what they are looking at and what action
@@ -1200,7 +1200,7 @@ pub struct PredictRequest {
     ///    must start with a letter, and must end with a letter or digit.
     ///  * No more than 64 labels can be associated with a given request.
     ///
-    /// See https://goo.gl/xmQnxf for more information on and examples of labels.
+    /// See <https://goo.gl/xmQnxf> for more information on and examples of labels.
     #[prost(map = "string, string", tag = "9")]
     pub labels:
         ::std::collections::HashMap<::prost::alloc::string::String, ::prost::alloc::string::String>,
@@ -1264,7 +1264,7 @@ pub mod prediction_service_client {
     impl<T> PredictionServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -1487,7 +1487,7 @@ pub mod user_event_service_client {
     impl<T> UserEventServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

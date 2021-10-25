@@ -57,7 +57,7 @@ pub struct ServiceConfig {
     #[prost(message, repeated, tag = "18")]
     pub endpoints: ::prost::alloc::vec::Vec<super::super::Endpoint>,
     /// Defines the monitored resources used by this service. This is required
-    /// by the [Service.monitoring][google.api.Service.monitoring] and [Service.logging][google.api.Service.logging] configurations.
+    /// by the \[Service.monitoring][google.api.Service.monitoring\] and \[Service.logging][google.api.Service.logging\] configurations.
     #[prost(message, repeated, tag = "25")]
     pub monitored_resources: ::prost::alloc::vec::Vec<super::super::MonitoredResourceDescriptor>,
     /// Monitoring configuration.
@@ -303,7 +303,7 @@ pub mod service_usage_client {
     impl<T> ServiceUsageClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

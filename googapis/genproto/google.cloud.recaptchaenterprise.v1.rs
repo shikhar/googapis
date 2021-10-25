@@ -317,7 +317,7 @@ pub struct Key {
     /// Human-readable display name of this key. Modifiable by user.
     #[prost(string, tag = "2")]
     pub display_name: ::prost::alloc::string::String,
-    /// See <a href="https://cloud.google.com/recaptcha-enterprise/docs/labels">
+    /// See <a href="<https://cloud.google.com/recaptcha-enterprise/docs/labels">>
     /// Creating and managing labels</a>.
     #[prost(map = "string, string", tag = "6")]
     pub labels:
@@ -520,7 +520,7 @@ pub mod recaptcha_enterprise_service_client {
     impl<T> RecaptchaEnterpriseServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

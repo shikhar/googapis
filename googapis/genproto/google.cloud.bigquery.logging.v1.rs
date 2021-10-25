@@ -259,7 +259,7 @@ pub struct TableDataListRequest {
     pub max_results: u32,
 }
 /// Describes a BigQuery table.
-/// See the [Table](/bigquery/docs/reference/v2/tables) API resource
+/// See the \[Table\](/bigquery/docs/reference/v2/tables) API resource
 /// for more details on individual fields.
 /// Note: `Table.schema` has been deprecated in favor of `Table.schemaJson`.
 /// `Table.schema` may continue to be present in your logs during this
@@ -320,7 +320,7 @@ pub struct TableViewDefinition {
     pub query: ::prost::alloc::string::String,
 }
 /// BigQuery dataset information.
-/// See the [Dataset](/bigquery/docs/reference/v2/datasets) API resource
+/// See the \[Dataset\](/bigquery/docs/reference/v2/datasets) API resource
 /// for more details on individual fields.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Dataset {
@@ -411,7 +411,7 @@ pub struct Job {
     pub job_statistics: ::core::option::Option<JobStatistics>,
 }
 /// Job configuration information.
-/// See the [Jobs](/bigquery/docs/reference/v2/jobs) API resource
+/// See the \[Jobs\](/bigquery/docs/reference/v2/jobs) API resource
 /// for more details on individual fields.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct JobConfiguration {

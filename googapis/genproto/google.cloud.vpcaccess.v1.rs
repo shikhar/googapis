@@ -34,7 +34,7 @@ pub mod connector {
     pub struct Subnet {
         /// Subnet name (relative, not fully qualified).
         /// E.g. if the full subnet selfLink is
-        /// https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName}
+        /// <https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName}>
         /// the correct input for this field would be {subnetName}
         #[prost(string, tag = "1")]
         pub name: ::prost::alloc::string::String,
@@ -145,7 +145,7 @@ pub mod vpc_access_service_client {
     impl<T> VpcAccessServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

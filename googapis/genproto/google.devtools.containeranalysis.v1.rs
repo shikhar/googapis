@@ -2,7 +2,7 @@
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetVulnerabilityOccurrencesSummaryRequest {
     /// The name of the project to get a vulnerability summary for in the form of
-    /// `projects/[PROJECT_ID]`.
+    /// `projects/\[PROJECT_ID\]`.
     #[prost(string, tag = "1")]
     pub parent: ::prost::alloc::string::String,
     /// The filter expression.
@@ -64,7 +64,7 @@ pub mod container_analysis_client {
     impl<T> ContainerAnalysisClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

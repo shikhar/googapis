@@ -1,7 +1,7 @@
 // NOTE: No sensitive PII logging is allowed. If you are adding a field/enum
 // value that is sensitive PII, add corresponding datapol annotation to
 // it. For more information, see
-// https://g3doc.corp.google.com/storage/speckle/g3doc/purple_team/data_pol_annotations.md?cl=head
+// <https://g3doc.corp.google.com/storage/speckle/g3doc/purple_team/data_pol_annotations.md?cl=head>
 
 /// An entry for an Access Control list.
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -10,7 +10,7 @@ pub struct AclEntry {
     #[prost(string, tag = "1")]
     pub value: ::prost::alloc::string::String,
     /// The time when this access control entry expires in <a
-    /// href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> format, for example
+    /// href="<https://tools.ietf.org/html/rfc3339">RFC> 3339</a> format, for example
     /// <b>2012-11-15T16:19:00.094Z</b>.
     #[prost(message, optional, tag = "2")]
     pub expiration_time: ::core::option::Option<::prost_types::Timestamp>,
@@ -115,7 +115,7 @@ pub struct BackupRun {
     #[prost(enumeration = "SqlBackupRunStatus", tag = "2")]
     pub status: i32,
     /// The time the run was enqueued in UTC timezone in <a
-    /// href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> format, for example
+    /// href="<https://tools.ietf.org/html/rfc3339">RFC> 3339</a> format, for example
     /// <b>2012-11-15T16:19:00.094Z</b>.
     #[prost(message, optional, tag = "3")]
     pub enqueued_time: ::core::option::Option<::prost_types::Timestamp>,
@@ -124,12 +124,12 @@ pub struct BackupRun {
     #[prost(int64, tag = "4")]
     pub id: i64,
     /// The time the backup operation actually started in UTC timezone in <a
-    /// href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> format, for example
+    /// href="<https://tools.ietf.org/html/rfc3339">RFC> 3339</a> format, for example
     /// <b>2012-11-15T16:19:00.094Z</b>.
     #[prost(message, optional, tag = "5")]
     pub start_time: ::core::option::Option<::prost_types::Timestamp>,
     /// The time the backup operation completed in UTC timezone in <a
-    /// href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> format, for example
+    /// href="<https://tools.ietf.org/html/rfc3339">RFC> 3339</a> format, for example
     /// <b>2012-11-15T16:19:00.094Z</b>.
     #[prost(message, optional, tag = "6")]
     pub end_time: ::core::option::Option<::prost_types::Timestamp>,
@@ -145,7 +145,7 @@ pub struct BackupRun {
     #[prost(string, tag = "9")]
     pub description: ::prost::alloc::string::String,
     /// The start time of the backup window during which this the backup was
-    /// attempted in <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a>
+    /// attempted in <a href="<https://tools.ietf.org/html/rfc3339">RFC> 3339</a>
     /// format, for example <b>2012-11-15T16:19:00.094Z</b>.
     #[prost(message, optional, tag = "10")]
     pub window_start_time: ::core::option::Option<::prost_types::Timestamp>,
@@ -350,7 +350,7 @@ pub struct DatabaseInstance {
     /// deprecated. Use the
     /// "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud
     /// Monitoring API instead. Please see <a
-    /// href="https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ">this
+    /// href="<https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ">this>
     /// announcement</a> for details.
     #[deprecated]
     #[prost(message, optional, tag = "10")]
@@ -1031,7 +1031,7 @@ pub struct IpMapping {
     #[prost(string, tag = "2")]
     pub ip_address: ::prost::alloc::string::String,
     /// The due time for this IP to be retired in <a
-    /// href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> format, for example
+    /// href="<https://tools.ietf.org/html/rfc3339">RFC> 3339</a> format, for example
     /// <b>2012-11-15T16:19:00.094Z</b>. This field is only available when
     /// the IP is scheduled to be retired.
     #[prost(message, optional, tag = "3")]
@@ -1242,17 +1242,17 @@ pub struct Operation {
     #[prost(string, tag = "4")]
     pub user: ::prost::alloc::string::String,
     /// The time this operation was enqueued in UTC timezone in <a
-    /// href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> format, for example
+    /// href="<https://tools.ietf.org/html/rfc3339">RFC> 3339</a> format, for example
     /// <b>2012-11-15T16:19:00.094Z</b>.
     #[prost(message, optional, tag = "5")]
     pub insert_time: ::core::option::Option<::prost_types::Timestamp>,
     /// The time this operation actually started in UTC timezone in <a
-    /// href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> format, for example
+    /// href="<https://tools.ietf.org/html/rfc3339">RFC> 3339</a> format, for example
     /// <b>2012-11-15T16:19:00.094Z</b>.
     #[prost(message, optional, tag = "6")]
     pub start_time: ::core::option::Option<::prost_types::Timestamp>,
     /// The time this operation finished in UTC timezone in <a
-    /// href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> format, for example
+    /// href="<https://tools.ietf.org/html/rfc3339">RFC> 3339</a> format, for example
     /// <b>2012-11-15T16:19:00.094Z</b>.
     #[prost(message, optional, tag = "7")]
     pub end_time: ::core::option::Option<::prost_types::Timestamp>,
@@ -1623,7 +1623,7 @@ pub struct SslCert {
     #[prost(string, tag = "3")]
     pub cert: ::prost::alloc::string::String,
     /// The time when the certificate was created in <a
-    /// href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> format, for example
+    /// href="<https://tools.ietf.org/html/rfc3339">RFC> 3339</a> format, for example
     /// <b>2012-11-15T16:19:00.094Z</b>
     #[prost(message, optional, tag = "4")]
     pub create_time: ::core::option::Option<::prost_types::Timestamp>,
@@ -1631,7 +1631,7 @@ pub struct SslCert {
     #[prost(string, tag = "5")]
     pub common_name: ::prost::alloc::string::String,
     /// The time when the certificate expires in <a
-    /// href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> format, for example
+    /// href="<https://tools.ietf.org/html/rfc3339">RFC> 3339</a> format, for example
     /// <b>2012-11-15T16:19:00.094Z</b>.
     #[prost(message, optional, tag = "6")]
     pub expiration_time: ::core::option::Option<::prost_types::Timestamp>,
@@ -1691,7 +1691,7 @@ pub mod sql_instances_reschedule_maintenance_request_body {
         pub reschedule_type: i32,
         /// Optional. Timestamp when the maintenance shall be rescheduled to if
         /// reschedule_type=SPECIFIC_TIME, in <a
-        /// href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> format, for
+        /// href="<https://tools.ietf.org/html/rfc3339">RFC> 3339</a> format, for
         /// example <b>2012-11-15T16:19:00.094Z</b>.
         #[prost(message, optional, tag = "2")]
         pub schedule_time: ::core::option::Option<::prost_types::Timestamp>,
@@ -2498,7 +2498,7 @@ pub mod sql_backup_runs_service_client {
     impl<T> SqlBackupRunsServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -2619,7 +2619,7 @@ pub mod sql_databases_service_client {
     impl<T> SqlDatabasesServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -2776,7 +2776,7 @@ pub mod sql_flags_service_client {
     impl<T> SqlFlagsServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -2844,7 +2844,7 @@ pub mod sql_instances_service_client {
     impl<T> SqlInstancesServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -3346,7 +3346,7 @@ pub mod sql_operations_service_client {
     impl<T> SqlOperationsServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -3432,7 +3432,7 @@ pub mod sql_ssl_certs_service_client {
     impl<T> SqlSslCertsServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -3593,7 +3593,7 @@ pub mod sql_tiers_service_client {
     impl<T> SqlTiersServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -3801,7 +3801,7 @@ pub mod sql_users_service_client {
     impl<T> SqlUsersServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

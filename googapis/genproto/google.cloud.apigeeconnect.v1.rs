@@ -1,4 +1,4 @@
-/// The request for [ListConnections][Management.ListConnections].
+/// The request for \[ListConnections][Management.ListConnections\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListConnectionsRequest {
     /// Required. Parent name of the form:
@@ -19,7 +19,7 @@ pub struct ListConnectionsRequest {
     pub page_token: ::prost::alloc::string::String,
 }
 /// The response for
-/// [ListConnections][Management.ListConnections].
+/// \[ListConnections][Management.ListConnections\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListConnectionsResponse {
     /// A list of clients.
@@ -64,7 +64,7 @@ pub mod connection_service_client {
     impl<T> ConnectionServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -226,7 +226,7 @@ pub struct HttpRequest {
 /// The proto definition of url.
 /// A url represents a URL and the general form represented is:
 ///
-///  `[scheme://][google.cloud.apigeeconnect.v1.Url.host][path]`
+///  `\[scheme://][google.cloud.apigeeconnect.v1.Url.host][path\]`
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Url {
     /// Scheme.
@@ -317,7 +317,7 @@ pub mod tether_client {
     impl<T> TetherClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

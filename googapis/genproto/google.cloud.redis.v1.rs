@@ -8,8 +8,8 @@ pub struct Instance {
     /// Note: Redis instances are managed and addressed at regional level so
     /// location_id here refers to a GCP region; however, users may choose which
     /// specific zone (or collection of zones for cross-zone instances) an instance
-    /// should be provisioned in. Refer to [location_id][google.cloud.redis.v1.Instance.location_id] and
-    /// [alternative_location_id][google.cloud.redis.v1.Instance.alternative_location_id] fields for more details.
+    /// should be provisioned in. Refer to \[location_id][google.cloud.redis.v1.Instance.location_id\] and
+    /// \[alternative_location_id][google.cloud.redis.v1.Instance.alternative_location_id\] fields for more details.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// An arbitrary and optional user-provided name for the instance.
@@ -22,13 +22,13 @@ pub struct Instance {
     /// Optional. The zone where the instance will be provisioned. If not provided,
     /// the service will choose a zone for the instance. For STANDARD_HA tier,
     /// instances will be created across two zones for protection against zonal
-    /// failures. If [alternative_location_id][google.cloud.redis.v1.Instance.alternative_location_id] is also provided, it must be
-    /// different from [location_id][google.cloud.redis.v1.Instance.location_id].
+    /// failures. If \[alternative_location_id][google.cloud.redis.v1.Instance.alternative_location_id\] is also provided, it must be
+    /// different from \[location_id][google.cloud.redis.v1.Instance.location_id\].
     #[prost(string, tag = "4")]
     pub location_id: ::prost::alloc::string::String,
     /// Optional. Only applicable to STANDARD_HA tier which protects the instance
     /// against zonal failures by provisioning it across two zones. If provided, it
-    /// must be a different zone from the one provided in [location_id][google.cloud.redis.v1.Instance.location_id].
+    /// must be a different zone from the one provided in \[location_id][google.cloud.redis.v1.Instance.location_id\].
     #[prost(string, tag = "5")]
     pub alternative_location_id: ::prost::alloc::string::String,
     /// Optional. The version of Redis software.
@@ -54,9 +54,9 @@ pub struct Instance {
     #[prost(int32, tag = "11")]
     pub port: i32,
     /// Output only. The current zone where the Redis endpoint is placed. For Basic
-    /// Tier instances, this will always be the same as the [location_id][google.cloud.redis.v1.Instance.location_id]
+    /// Tier instances, this will always be the same as the \[location_id][google.cloud.redis.v1.Instance.location_id\]
     /// provided by the user at creation time. For Standard Tier instances,
-    /// this can be either [location_id][google.cloud.redis.v1.Instance.location_id] or [alternative_location_id][google.cloud.redis.v1.Instance.alternative_location_id] and can
+    /// this can be either \[location_id][google.cloud.redis.v1.Instance.location_id\] or \[alternative_location_id][google.cloud.redis.v1.Instance.alternative_location_id\] and can
     /// change after a failover event.
     #[prost(string, tag = "12")]
     pub current_location_id: ::prost::alloc::string::String,
@@ -71,7 +71,7 @@ pub struct Instance {
     #[prost(string, tag = "15")]
     pub status_message: ::prost::alloc::string::String,
     /// Optional. Redis configuration parameters, according to
-    /// http://redis.io/topics/config. Currently, the only supported parameters
+    /// <http://redis.io/topics/config.> Currently, the only supported parameters
     /// are:
     ///
     ///  Redis version 3.2 and newer:
@@ -100,7 +100,7 @@ pub struct Instance {
     #[prost(int32, tag = "18")]
     pub memory_size_gb: i32,
     /// Optional. The full name of the Google Compute Engine
-    /// [network](https://cloud.google.com/vpc/docs/vpc) to which the
+    /// \[network\](<https://cloud.google.com/vpc/docs/vpc>) to which the
     /// instance is connected. If left unspecified, the `default` network
     /// will be used.
     #[prost(string, tag = "20")]
@@ -169,7 +169,7 @@ pub mod instance {
         PrivateServiceAccess = 2,
     }
 }
-/// Request for [ListInstances][google.cloud.redis.v1.CloudRedis.ListInstances].
+/// Request for \[ListInstances][google.cloud.redis.v1.CloudRedis.ListInstances\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListInstancesRequest {
     /// Required. The resource name of the instance location using the form:
@@ -182,16 +182,16 @@ pub struct ListInstancesRequest {
     /// If not specified, a default value of 1000 will be used by the service.
     /// Regardless of the page_size value, the response may include a partial list
     /// and a caller should only rely on response's
-    /// [`next_page_token`][google.cloud.redis.v1.ListInstancesResponse.next_page_token]
+    /// \[`next_page_token`][google.cloud.redis.v1.ListInstancesResponse.next_page_token\]
     /// to determine if there are more instances left to be queried.
     #[prost(int32, tag = "2")]
     pub page_size: i32,
     /// The `next_page_token` value returned from a previous
-    /// [ListInstances][google.cloud.redis.v1.CloudRedis.ListInstances] request, if any.
+    /// \[ListInstances][google.cloud.redis.v1.CloudRedis.ListInstances\] request, if any.
     #[prost(string, tag = "3")]
     pub page_token: ::prost::alloc::string::String,
 }
-/// Response for [ListInstances][google.cloud.redis.v1.CloudRedis.ListInstances].
+/// Response for \[ListInstances][google.cloud.redis.v1.CloudRedis.ListInstances\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListInstancesResponse {
     /// A list of Redis instances in the project in the specified location,
@@ -214,7 +214,7 @@ pub struct ListInstancesResponse {
     #[prost(string, repeated, tag = "3")]
     pub unreachable: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
-/// Request for [GetInstance][google.cloud.redis.v1.CloudRedis.GetInstance].
+/// Request for \[GetInstance][google.cloud.redis.v1.CloudRedis.GetInstance\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetInstanceRequest {
     /// Required. Redis instance resource name using the form:
@@ -223,7 +223,7 @@ pub struct GetInstanceRequest {
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
 }
-/// Request for [CreateInstance][google.cloud.redis.v1.CloudRedis.CreateInstance].
+/// Request for \[CreateInstance][google.cloud.redis.v1.CloudRedis.CreateInstance\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateInstanceRequest {
     /// Required. The resource name of the instance location using the form:
@@ -241,16 +241,16 @@ pub struct CreateInstanceRequest {
     /// * Must be unique within the customer project / location
     #[prost(string, tag = "2")]
     pub instance_id: ::prost::alloc::string::String,
-    /// Required. A Redis [Instance] resource
+    /// Required. A Redis \[Instance\] resource
     #[prost(message, optional, tag = "3")]
     pub instance: ::core::option::Option<Instance>,
 }
-/// Request for [UpdateInstance][google.cloud.redis.v1.CloudRedis.UpdateInstance].
+/// Request for \[UpdateInstance][google.cloud.redis.v1.CloudRedis.UpdateInstance\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateInstanceRequest {
     /// Required. Mask of fields to update. At least one path must be supplied in
     /// this field. The elements of the repeated paths field may only include these
-    /// fields from [Instance][google.cloud.redis.v1.Instance]:
+    /// fields from \[Instance][google.cloud.redis.v1.Instance\]:
     ///
     ///  *   `displayName`
     ///  *   `labels`
@@ -263,7 +263,7 @@ pub struct UpdateInstanceRequest {
     #[prost(message, optional, tag = "2")]
     pub instance: ::core::option::Option<Instance>,
 }
-/// Request for [UpgradeInstance][google.cloud.redis.v1.CloudRedis.UpgradeInstance].
+/// Request for \[UpgradeInstance][google.cloud.redis.v1.CloudRedis.UpgradeInstance\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpgradeInstanceRequest {
     /// Required. Redis instance resource name using the form:
@@ -275,7 +275,7 @@ pub struct UpgradeInstanceRequest {
     #[prost(string, tag = "2")]
     pub redis_version: ::prost::alloc::string::String,
 }
-/// Request for [DeleteInstance][google.cloud.redis.v1.CloudRedis.DeleteInstance].
+/// Request for \[DeleteInstance][google.cloud.redis.v1.CloudRedis.DeleteInstance\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DeleteInstanceRequest {
     /// Required. Redis instance resource name using the form:
@@ -308,7 +308,7 @@ pub mod input_config {
         GcsSource(super::GcsSource),
     }
 }
-/// Request for [Import][google.cloud.redis.v1.CloudRedis.ImportInstance].
+/// Request for \[Import][google.cloud.redis.v1.CloudRedis.ImportInstance\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ImportInstanceRequest {
     /// Required. Redis instance resource name using the form:
@@ -345,7 +345,7 @@ pub mod output_config {
         GcsDestination(super::GcsDestination),
     }
 }
-/// Request for [Export][google.cloud.redis.v1.CloudRedis.ExportInstance].
+/// Request for \[Export][google.cloud.redis.v1.CloudRedis.ExportInstance\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ExportInstanceRequest {
     /// Required. Redis instance resource name using the form:
@@ -357,7 +357,7 @@ pub struct ExportInstanceRequest {
     #[prost(message, optional, tag = "3")]
     pub output_config: ::core::option::Option<OutputConfig>,
 }
-/// Request for [Failover][google.cloud.redis.v1.CloudRedis.FailoverInstance].
+/// Request for \[Failover][google.cloud.redis.v1.CloudRedis.FailoverInstance\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct FailoverInstanceRequest {
     /// Required. Redis instance resource name using the form:
@@ -459,7 +459,7 @@ pub mod cloud_redis_client {
     impl<T> CloudRedisClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

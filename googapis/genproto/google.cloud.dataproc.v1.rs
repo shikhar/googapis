@@ -10,7 +10,7 @@ pub struct AutoscalingPolicy {
     #[prost(string, tag = "1")]
     pub id: ::prost::alloc::string::String,
     /// Output only. The "resource name" of the autoscaling policy, as described
-    /// in https://cloud.google.com/apis/design/resource_names.
+    /// in <https://cloud.google.com/apis/design/resource_names.>
     ///
     /// * For `projects.regions.autoscalingPolicies`, the resource name of the
     ///   policy has the following format:
@@ -70,7 +70,7 @@ pub struct BasicYarnAutoscalingConfig {
     /// aggressive scaling). A scale-up factor closer to 0 will result in a smaller
     /// magnitude of scaling up (less aggressive scaling).
     /// See [How autoscaling
-    /// works](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/autoscaling#how_autoscaling_works)
+    /// works](<https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/autoscaling#how_autoscaling_works>)
     /// for more information.
     ///
     /// Bounds: [0.0, 1.0].
@@ -82,7 +82,7 @@ pub struct BasicYarnAutoscalingConfig {
     /// update (more aggressive scaling). A scale-down factor of 0 disables
     /// removing workers, which can be beneficial for autoscaling a single job.
     /// See [How autoscaling
-    /// works](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/autoscaling#how_autoscaling_works)
+    /// works](<https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/autoscaling#how_autoscaling_works>)
     /// for more information.
     ///
     /// Bounds: [0.0, 1.0].
@@ -150,7 +150,7 @@ pub struct InstanceGroupAutoscalingPolicyConfig {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateAutoscalingPolicyRequest {
     /// Required. The "resource name" of the region or location, as described
-    /// in https://cloud.google.com/apis/design/resource_names.
+    /// in <https://cloud.google.com/apis/design/resource_names.>
     ///
     /// * For `projects.regions.autoscalingPolicies.create`, the resource name
     ///   of the region has the following format:
@@ -169,7 +169,7 @@ pub struct CreateAutoscalingPolicyRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAutoscalingPolicyRequest {
     /// Required. The "resource name" of the autoscaling policy, as described
-    /// in https://cloud.google.com/apis/design/resource_names.
+    /// in <https://cloud.google.com/apis/design/resource_names.>
     ///
     /// * For `projects.regions.autoscalingPolicies.get`, the resource name
     ///   of the policy has the following format:
@@ -194,7 +194,7 @@ pub struct UpdateAutoscalingPolicyRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DeleteAutoscalingPolicyRequest {
     /// Required. The "resource name" of the autoscaling policy, as described
-    /// in https://cloud.google.com/apis/design/resource_names.
+    /// in <https://cloud.google.com/apis/design/resource_names.>
     ///
     /// * For `projects.regions.autoscalingPolicies.delete`, the resource name
     ///   of the policy has the following format:
@@ -210,7 +210,7 @@ pub struct DeleteAutoscalingPolicyRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListAutoscalingPoliciesRequest {
     /// Required. The "resource name" of the region or location, as described
-    /// in https://cloud.google.com/apis/design/resource_names.
+    /// in <https://cloud.google.com/apis/design/resource_names.>
     ///
     /// * For `projects.regions.autoscalingPolicies.list`, the resource name
     ///   of the region has the following format:
@@ -254,7 +254,7 @@ pub mod autoscaling_policy_service_client {
     impl<T> AutoscalingPolicyServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -437,10 +437,10 @@ pub struct Cluster {
     pub config: ::core::option::Option<ClusterConfig>,
     /// Optional. The labels to associate with this cluster.
     /// Label **keys** must contain 1 to 63 characters, and must conform to
-    /// [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt).
+    /// [RFC 1035](<https://www.ietf.org/rfc/rfc1035.txt>).
     /// Label **values** may be empty, but, if present, must contain 1 to 63
     /// characters, and must conform to [RFC
-    /// 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be
+    /// 1035](<https://www.ietf.org/rfc/rfc1035.txt>). No more than 32 labels can be
     /// associated with a cluster.
     #[prost(map = "string, string", tag = "8")]
     pub labels:
@@ -473,7 +473,7 @@ pub struct ClusterConfig {
     /// Compute Engine zone where your cluster is deployed, and then create
     /// and manage this project-level, per-location bucket (see
     /// [Dataproc staging
-    /// bucket](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)).
+    /// bucket](<https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket>)).
     /// **This field requires a Cloud Storage bucket name, not a URI to a Cloud
     /// Storage bucket.**
     #[prost(string, tag = "1")]
@@ -517,7 +517,7 @@ pub struct ClusterConfig {
     /// `wget`):
     ///
     ///     ROLE=$(curl -H Metadata-Flavor:Google
-    ///     http://metadata/computeMetadata/v1/instance/attributes/dataproc-role)
+    ///     <http://metadata/computeMetadata/v1/instance/attributes/dataproc-role>)
     ///     if [[ "${ROLE}" == 'Master' ]]; then
     ///       ... master specific actions ...
     ///     else
@@ -594,8 +594,8 @@ pub struct AutoscalingConfig {
     /// Only resource names including projectid and location (region) are valid.
     /// Examples:
     ///
-    /// * `https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]`
-    /// * `projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]`
+    /// * `<https://www.googleapis.com/compute/v1/projects/\[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id\]`>
+    /// * `projects/\[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id\]`
     ///
     /// Note that the policy must be in the same project and Dataproc region.
     #[prost(string, tag = "1")]
@@ -621,8 +621,8 @@ pub struct GceClusterConfig {
     ///
     /// A full URL, partial URI, or short name are valid. Examples:
     ///
-    /// * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]`
-    /// * `projects/[project_id]/zones/[zone]`
+    /// * `<https://www.googleapis.com/compute/v1/projects/\[project_id]/zones/[zone\]`>
+    /// * `projects/\[project_id]/zones/[zone\]`
     /// * `us-central1-f`
     #[prost(string, tag = "1")]
     pub zone_uri: ::prost::alloc::string::String,
@@ -630,13 +630,13 @@ pub struct GceClusterConfig {
     /// communications. Cannot be specified with subnetwork_uri. If neither
     /// `network_uri` nor `subnetwork_uri` is specified, the "default" network of
     /// the project is used, if it exists. Cannot be a "Custom Subnet Network" (see
-    /// [Using Subnetworks](https://cloud.google.com/compute/docs/subnetworks) for
+    /// [Using Subnetworks](<https://cloud.google.com/compute/docs/subnetworks>) for
     /// more information).
     ///
     /// A full URL, partial URI, or short name are valid. Examples:
     ///
-    /// * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default`
-    /// * `projects/[project_id]/regions/global/default`
+    /// * `<https://www.googleapis.com/compute/v1/projects/\[project_id\]/regions/global/default`>
+    /// * `projects/\[project_id\]/regions/global/default`
     /// * `default`
     #[prost(string, tag = "2")]
     pub network_uri: ::prost::alloc::string::String,
@@ -645,8 +645,8 @@ pub struct GceClusterConfig {
     ///
     /// A full URL, partial URI, or short name are valid. Examples:
     ///
-    /// * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0`
-    /// * `projects/[project_id]/regions/us-east1/subnetworks/sub0`
+    /// * `<https://www.googleapis.com/compute/v1/projects/\[project_id\]/regions/us-east1/subnetworks/sub0`>
+    /// * `projects/\[project_id\]/regions/us-east1/subnetworks/sub0`
     /// * `sub0`
     #[prost(string, tag = "6")]
     pub subnetwork_uri: ::prost::alloc::string::String,
@@ -665,15 +665,15 @@ pub struct GceClusterConfig {
     )]
     pub private_ipv6_google_access: i32,
     /// Optional. The [Dataproc service
-    /// account](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_dataproc)
+    /// account](<https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_dataproc>)
     /// (also see [VM Data Plane
-    /// identity](https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity))
+    /// identity](<https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity>))
     /// used by Dataproc cluster VM instances to access Google Cloud Platform
     /// services.
     ///
     /// If not specified, the
     /// [Compute Engine default service
-    /// account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account)
+    /// account](<https://cloud.google.com/compute/docs/access/service-accounts#default_service_account>)
     /// is used.
     #[prost(string, tag = "8")]
     pub service_account: ::prost::alloc::string::String,
@@ -681,25 +681,25 @@ pub struct GceClusterConfig {
     /// Compute Engine instances. The following base set of scopes is always
     /// included:
     ///
-    /// * https://www.googleapis.com/auth/cloud.useraccounts.readonly
-    /// * https://www.googleapis.com/auth/devstorage.read_write
-    /// * https://www.googleapis.com/auth/logging.write
+    /// * <https://www.googleapis.com/auth/cloud.useraccounts.readonly>
+    /// * <https://www.googleapis.com/auth/devstorage.read_write>
+    /// * <https://www.googleapis.com/auth/logging.write>
     ///
     /// If no scopes are specified, the following defaults are also provided:
     ///
-    /// * https://www.googleapis.com/auth/bigquery
-    /// * https://www.googleapis.com/auth/bigtable.admin.table
-    /// * https://www.googleapis.com/auth/bigtable.data
-    /// * https://www.googleapis.com/auth/devstorage.full_control
+    /// * <https://www.googleapis.com/auth/bigquery>
+    /// * <https://www.googleapis.com/auth/bigtable.admin.table>
+    /// * <https://www.googleapis.com/auth/bigtable.data>
+    /// * <https://www.googleapis.com/auth/devstorage.full_control>
     #[prost(string, repeated, tag = "3")]
     pub service_account_scopes: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// The Compute Engine tags to add to all instances (see [Tagging
-    /// instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+    /// instances](<https://cloud.google.com/compute/docs/label-or-tag-resources#tags>)).
     #[prost(string, repeated, tag = "4")]
     pub tags: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// The Compute Engine metadata entries to add to all instances (see
     /// [Project and instance
-    /// metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
+    /// metadata](<https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata>)).
     #[prost(map = "string, string", tag = "5")]
     pub metadata:
         ::std::collections::HashMap<::prost::alloc::string::String, ::prost::alloc::string::String>,
@@ -710,7 +710,7 @@ pub struct GceClusterConfig {
     #[prost(message, optional, tag = "13")]
     pub node_group_affinity: ::core::option::Option<NodeGroupAffinity>,
     /// Optional. Shielded Instance Config for clusters using [Compute Engine Shielded
-    /// VMs](https://cloud.google.com/security/shielded-cloud/shielded-vm).
+    /// VMs](<https://cloud.google.com/security/shielded-cloud/shielded-vm>).
     #[prost(message, optional, tag = "14")]
     pub shielded_instance_config: ::core::option::Option<ShieldedInstanceConfig>,
 }
@@ -720,12 +720,12 @@ pub mod gce_cluster_config {
     /// can communicate with Google Services through gRPC over IPv6.
     /// These values are directly mapped to corresponding values in the
     /// [Compute Engine Instance
-    /// fields](https://cloud.google.com/compute/docs/reference/rest/v1/instances).
+    /// fields](<https://cloud.google.com/compute/docs/reference/rest/v1/instances>).
     #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
     #[repr(i32)]
     pub enum PrivateIpv6GoogleAccess {
         /// If unspecified, Compute Engine default behavior will apply, which
-        /// is the same as [INHERIT_FROM_SUBNETWORK][google.cloud.dataproc.v1.GceClusterConfig.PrivateIpv6GoogleAccess.INHERIT_FROM_SUBNETWORK].
+        /// is the same as \[INHERIT_FROM_SUBNETWORK][google.cloud.dataproc.v1.GceClusterConfig.PrivateIpv6GoogleAccess.INHERIT_FROM_SUBNETWORK\].
         Unspecified = 0,
         /// Private access to and from Google Services configuration
         /// inherited from the subnetwork configuration. This is the
@@ -744,19 +744,19 @@ pub mod gce_cluster_config {
 pub struct NodeGroupAffinity {
     /// Required. The URI of a
     /// sole-tenant [node group
-    /// resource](https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups)
+    /// resource](<https://cloud.google.com/compute/docs/reference/rest/v1/nodeGroups>)
     /// that the cluster will be created on.
     ///
     /// A full URL, partial URI, or node group name are valid. Examples:
     ///
-    /// * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1`
-    /// * `projects/[project_id]/zones/us-central1-a/nodeGroups/node-group-1`
+    /// * `<https://www.googleapis.com/compute/v1/projects/\[project_id\]/zones/us-central1-a/nodeGroups/node-group-1`>
+    /// * `projects/\[project_id\]/zones/us-central1-a/nodeGroups/node-group-1`
     /// * `node-group-1`
     #[prost(string, tag = "1")]
     pub node_group_uri: ::prost::alloc::string::String,
 }
 /// Shielded Instance Config for clusters using [Compute Engine Shielded
-/// VMs](https://cloud.google.com/security/shielded-cloud/shielded-vm).
+/// VMs](<https://cloud.google.com/security/shielded-cloud/shielded-vm>).
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ShieldedInstanceConfig {
     /// Optional. Defines whether instances have Secure Boot enabled.
@@ -776,8 +776,8 @@ pub struct InstanceGroupConfig {
     /// Optional. The number of VM instances in the instance group.
     /// For [HA
     /// cluster](/dataproc/docs/concepts/configuring-clusters/high-availability)
-    /// [master_config](#FIELDS.master_config) groups, **must be set to 3**.
-    /// For standard cluster [master_config](#FIELDS.master_config) groups,
+    /// \[master_config\](#FIELDS.master_config) groups, **must be set to 3**.
+    /// For standard cluster \[master_config\](#FIELDS.master_config) groups,
     /// **must be set to 1**.
     #[prost(int32, tag = "1")]
     pub num_instances: i32,
@@ -791,15 +791,15 @@ pub struct InstanceGroupConfig {
     ///
     /// Image examples:
     ///
-    /// * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id]`
-    /// * `projects/[project_id]/global/images/[image-id]`
+    /// * `<https://www.googleapis.com/compute/beta/projects/\[project_id]/global/images/[image-id\]`>
+    /// * `projects/\[project_id]/global/images/[image-id\]`
     /// * `image-id`
     ///
     /// Image family examples. Dataproc will use the most recent
     /// image from the family:
     ///
-    /// * `https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name]`
-    /// * `projects/[project_id]/global/images/family/[custom-image-family-name]`
+    /// * `<https://www.googleapis.com/compute/beta/projects/\[project_id]/global/images/family/[custom-image-family-name\]`>
+    /// * `projects/\[project_id]/global/images/family/[custom-image-family-name\]`
     ///
     /// If the URI is unspecified, it will be inferred from
     /// `SoftwareConfig.image_version` or the system default.
@@ -809,13 +809,13 @@ pub struct InstanceGroupConfig {
     ///
     /// A full URL, partial URI, or short name are valid. Examples:
     ///
-    /// * `https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2`
-    /// * `projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2`
+    /// * `<https://www.googleapis.com/compute/v1/projects/\[project_id\]/zones/us-east1-a/machineTypes/n1-standard-2`>
+    /// * `projects/\[project_id\]/zones/us-east1-a/machineTypes/n1-standard-2`
     /// * `n1-standard-2`
     ///
     /// **Auto Zone Exception**: If you are using the Dataproc
     /// [Auto Zone
-    /// Placement](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement)
+    /// Placement](<https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement>)
     /// feature, you must use the short name of the machine type
     /// resource, for example, `n1-standard-2`.
     #[prost(string, tag = "4")]
@@ -847,7 +847,7 @@ pub struct InstanceGroupConfig {
     pub accelerators: ::prost::alloc::vec::Vec<AcceleratorConfig>,
     /// Optional. Specifies the minimum cpu platform for the Instance Group.
     /// See [Dataproc -> Minimum CPU
-    /// Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+    /// Platform](<https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu>).
     #[prost(string, tag = "9")]
     pub min_cpu_platform: ::prost::alloc::string::String,
 }
@@ -855,7 +855,7 @@ pub struct InstanceGroupConfig {
 pub mod instance_group_config {
     /// Controls the use of
     /// [preemptible instances]
-    /// (https://cloud.google.com/compute/docs/instances/preemptible)
+    /// (<https://cloud.google.com/compute/docs/instances/preemptible>)
     /// within the group.
     #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
     #[repr(i32)]
@@ -887,23 +887,23 @@ pub struct ManagedGroupConfig {
 }
 /// Specifies the type and number of accelerator cards attached to the instances
 /// of an instance. See [GPUs on Compute
-/// Engine](https://cloud.google.com/compute/docs/gpus/).
+/// Engine](<https://cloud.google.com/compute/docs/gpus/>).
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AcceleratorConfig {
     /// Full URL, partial URI, or short name of the accelerator type resource to
     /// expose to this instance. See
     /// [Compute Engine
-    /// AcceleratorTypes](https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes).
+    /// AcceleratorTypes](<https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes>).
     ///
     /// Examples:
     ///
-    /// * `https://www.googleapis.com/compute/beta/projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80`
-    /// * `projects/[project_id]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80`
+    /// * `<https://www.googleapis.com/compute/beta/projects/\[project_id\]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80`>
+    /// * `projects/\[project_id\]/zones/us-east1-a/acceleratorTypes/nvidia-tesla-k80`
     /// * `nvidia-tesla-k80`
     ///
     /// **Auto Zone Exception**: If you are using the Dataproc
     /// [Auto Zone
-    /// Placement](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement)
+    /// Placement](<https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement>)
     /// feature, you must use the short name of the accelerator type
     /// resource, for example, `nvidia-tesla-k80`.
     #[prost(string, tag = "1")]
@@ -919,7 +919,7 @@ pub struct DiskConfig {
     /// Valid values: "pd-balanced" (Persistent Disk Balanced Solid State Drive),
     /// "pd-ssd" (Persistent Disk Solid State Drive),
     /// or "pd-standard" (Persistent Disk Hard Disk Drive).
-    /// See [Disk types](https://cloud.google.com/compute/docs/disks#disk-types).
+    /// See [Disk types](<https://cloud.google.com/compute/docs/disks#disk-types>).
     #[prost(string, tag = "3")]
     pub boot_disk_type: ::prost::alloc::string::String,
     /// Optional. Size in GB of the boot disk (default is 500GB).
@@ -927,7 +927,7 @@ pub struct DiskConfig {
     pub boot_disk_size_gb: i32,
     /// Optional. Number of attached SSDs, from 0 to 4 (default is 0).
     /// If SSDs are not attached, the boot disk is used to store runtime logs and
-    /// [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data.
+    /// \[HDFS\](<https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html>) data.
     /// If one or more SSDs are attached, this runtime bulk
     /// data is spread across them, and the boot disk contains only basic
     /// config and installed binaries.
@@ -943,7 +943,7 @@ pub struct NodeInitializationAction {
     pub executable_file: ::prost::alloc::string::String,
     /// Optional. Amount of time executable has to complete. Default is
     /// 10 minutes (see JSON representation of
-    /// [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json)).
+    /// \[Duration\](<https://developers.google.com/protocol-buffers/docs/proto3#json>)).
     ///
     /// Cluster creation fails with an explanatory error message (the
     /// name of the executable that caused the error and the exceeded timeout
@@ -961,7 +961,7 @@ pub struct ClusterStatus {
     #[prost(string, tag = "2")]
     pub detail: ::prost::alloc::string::String,
     /// Output only. Time when this state was entered (see JSON representation of
-    /// [Timestamp](https://developers.google.com/protocol-buffers/docs/proto3#json)).
+    /// \[Timestamp\](<https://developers.google.com/protocol-buffers/docs/proto3#json>)).
     #[prost(message, optional, tag = "3")]
     pub state_start_time: ::core::option::Option<::prost_types::Timestamp>,
     /// Output only. Additional state information that includes
@@ -1109,10 +1109,10 @@ pub struct IdentityConfig {
 pub struct SoftwareConfig {
     /// Optional. The version of software inside the cluster. It must be one of the
     /// supported [Dataproc
-    /// Versions](https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions),
+    /// Versions](<https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions>),
     /// such as "1.2" (including a subminor version, such as "1.2.29"), or the
     /// ["preview"
-    /// version](https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions).
+    /// version](<https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions>).
     /// If unspecified, it defaults to the latest Debian version.
     #[prost(string, tag = "1")]
     pub image_version: ::prost::alloc::string::String,
@@ -1133,7 +1133,7 @@ pub struct SoftwareConfig {
     /// * yarn:   `yarn-site.xml`
     ///
     /// For more information, see [Cluster
-    /// properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+    /// properties](<https://cloud.google.com/dataproc/docs/concepts/cluster-properties>).
     #[prost(map = "string, string", tag = "2")]
     pub properties:
         ::std::collections::HashMap<::prost::alloc::string::String, ::prost::alloc::string::String>,
@@ -1148,13 +1148,13 @@ pub struct LifecycleConfig {
     /// are running). Passing this threshold will cause the cluster to be
     /// deleted. Minimum value is 5 minutes; maximum value is 14 days (see JSON
     /// representation of
-    /// [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json)).
+    /// \[Duration\](<https://developers.google.com/protocol-buffers/docs/proto3#json>)).
     #[prost(message, optional, tag = "1")]
     pub idle_delete_ttl: ::core::option::Option<::prost_types::Duration>,
     /// Output only. The time when cluster became idle (most recent job finished)
     /// and became eligible for deletion due to idleness (see JSON representation
     /// of
-    /// [Timestamp](https://developers.google.com/protocol-buffers/docs/proto3#json)).
+    /// \[Timestamp\](<https://developers.google.com/protocol-buffers/docs/proto3#json>)).
     #[prost(message, optional, tag = "4")]
     pub idle_start_time: ::core::option::Option<::prost_types::Timestamp>,
     /// Either the exact time the cluster should be deleted at or
@@ -1169,13 +1169,13 @@ pub mod lifecycle_config {
     #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum Ttl {
         /// Optional. The time when cluster will be auto-deleted (see JSON representation of
-        /// [Timestamp](https://developers.google.com/protocol-buffers/docs/proto3#json)).
+        /// \[Timestamp\](<https://developers.google.com/protocol-buffers/docs/proto3#json>)).
         #[prost(message, tag = "2")]
         AutoDeleteTime(::prost_types::Timestamp),
         /// Optional. The lifetime duration of cluster. The cluster will be
         /// auto-deleted at the end of this period. Minimum value is 10 minutes;
         /// maximum value is 14 days (see JSON representation of
-        /// [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json)).
+        /// \[Duration\](<https://developers.google.com/protocol-buffers/docs/proto3#json>)).
         #[prost(message, tag = "3")]
         AutoDeleteTtl(::prost_types::Duration),
     }
@@ -1187,7 +1187,7 @@ pub struct MetastoreConfig {
     ///
     /// Example:
     ///
-    /// * `projects/[project_id]/locations/[dataproc_region]/services/[service-name]`
+    /// * `projects/\[project_id]/locations/[dataproc_region]/services/[service-name\]`
     #[prost(string, tag = "1")]
     pub dataproc_metastore_service: ::prost::alloc::string::String,
 }
@@ -1218,13 +1218,13 @@ pub struct CreateClusterRequest {
     #[prost(message, optional, tag = "2")]
     pub cluster: ::core::option::Option<Cluster>,
     /// Optional. A unique id used to identify the request. If the server receives two
-    /// [CreateClusterRequest](https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.CreateClusterRequest)s
+    /// \[CreateClusterRequest\](<https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.CreateClusterRequest>)s
     /// with the same id, then the second request will be ignored and the
-    /// first [google.longrunning.Operation][google.longrunning.Operation] created and stored in the backend
+    /// first \[google.longrunning.Operation][google.longrunning.Operation\] created and stored in the backend
     /// is returned.
     ///
     /// It is recommended to always set this value to a
-    /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    /// \[UUID\](<https://en.wikipedia.org/wiki/Universally_unique_identifier>).
     ///
     /// The id must contain only letters (a-z, A-Z), numbers (0-9),
     /// underscores (_), and hyphens (-). The maximum length is 40 characters.
@@ -1253,7 +1253,7 @@ pub struct UpdateClusterRequest {
     /// in progress to finish before forcefully removing nodes (and potentially
     /// interrupting jobs). Default timeout is 0 (for forceful decommission), and
     /// the maximum allowed timeout is 1 day. (see JSON representation of
-    /// [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json)).
+    /// \[Duration\](<https://developers.google.com/protocol-buffers/docs/proto3#json>)).
     ///
     /// Only supported on Dataproc image versions 1.2 and higher.
     #[prost(message, optional, tag = "6")]
@@ -1313,13 +1313,13 @@ pub struct UpdateClusterRequest {
     pub update_mask: ::core::option::Option<::prost_types::FieldMask>,
     /// Optional. A unique id used to identify the request. If the server
     /// receives two
-    /// [UpdateClusterRequest](https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.UpdateClusterRequest)s
+    /// \[UpdateClusterRequest\](<https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.UpdateClusterRequest>)s
     /// with the same id, then the second request will be ignored and the
-    /// first [google.longrunning.Operation][google.longrunning.Operation] created and stored in the
+    /// first \[google.longrunning.Operation][google.longrunning.Operation\] created and stored in the
     /// backend is returned.
     ///
     /// It is recommended to always set this value to a
-    /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    /// \[UUID\](<https://en.wikipedia.org/wiki/Universally_unique_identifier>).
     ///
     /// The id must contain only letters (a-z, A-Z), numbers (0-9),
     /// underscores (_), and hyphens (-). The maximum length is 40 characters.
@@ -1345,13 +1345,13 @@ pub struct StopClusterRequest {
     pub cluster_uuid: ::prost::alloc::string::String,
     /// Optional. A unique id used to identify the request. If the server
     /// receives two
-    /// [StopClusterRequest](https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.StopClusterRequest)s
+    /// \[StopClusterRequest\](<https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.StopClusterRequest>)s
     /// with the same id, then the second request will be ignored and the
-    /// first [google.longrunning.Operation][google.longrunning.Operation] created and stored in the
+    /// first \[google.longrunning.Operation][google.longrunning.Operation\] created and stored in the
     /// backend is returned.
     ///
     /// Recommendation: Set this value to a
-    /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    /// \[UUID\](<https://en.wikipedia.org/wiki/Universally_unique_identifier>).
     ///
     /// The id must contain only letters (a-z, A-Z), numbers (0-9),
     /// underscores (_), and hyphens (-). The maximum length is 40 characters.
@@ -1377,13 +1377,13 @@ pub struct StartClusterRequest {
     pub cluster_uuid: ::prost::alloc::string::String,
     /// Optional. A unique id used to identify the request. If the server
     /// receives two
-    /// [StartClusterRequest](https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.StartClusterRequest)s
+    /// \[StartClusterRequest\](<https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.StartClusterRequest>)s
     /// with the same id, then the second request will be ignored and the
-    /// first [google.longrunning.Operation][google.longrunning.Operation] created and stored in the
+    /// first \[google.longrunning.Operation][google.longrunning.Operation\] created and stored in the
     /// backend is returned.
     ///
     /// Recommendation: Set this value to a
-    /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    /// \[UUID\](<https://en.wikipedia.org/wiki/Universally_unique_identifier>).
     ///
     /// The id must contain only letters (a-z, A-Z), numbers (0-9),
     /// underscores (_), and hyphens (-). The maximum length is 40 characters.
@@ -1409,13 +1409,13 @@ pub struct DeleteClusterRequest {
     pub cluster_uuid: ::prost::alloc::string::String,
     /// Optional. A unique id used to identify the request. If the server
     /// receives two
-    /// [DeleteClusterRequest](https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.DeleteClusterRequest)s
+    /// \[DeleteClusterRequest\](<https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.DeleteClusterRequest>)s
     /// with the same id, then the second request will be ignored and the
-    /// first [google.longrunning.Operation][google.longrunning.Operation] created and stored in the
+    /// first \[google.longrunning.Operation][google.longrunning.Operation\] created and stored in the
     /// backend is returned.
     ///
     /// It is recommended to always set this value to a
-    /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    /// \[UUID\](<https://en.wikipedia.org/wiki/Universally_unique_identifier>).
     ///
     /// The id must contain only letters (a-z, A-Z), numbers (0-9),
     /// underscores (_), and hyphens (-). The maximum length is 40 characters.
@@ -1451,8 +1451,8 @@ pub struct ListClustersRequest {
     ///
     /// field = value [AND [field = value]] ...
     ///
-    /// where **field** is one of `status.state`, `clusterName`, or `labels.[KEY]`,
-    /// and `[KEY]` is a label key. **value** can be `*` to match all values.
+    /// where **field** is one of `status.state`, `clusterName`, or `labels.\[KEY\]`,
+    /// and `\[KEY\]` is a label key. **value** can be `*` to match all values.
     /// `status.state` can be one of the following: `ACTIVE`, `INACTIVE`,
     /// `CREATING`, `RUNNING`, `ERROR`, `DELETING`, or `UPDATING`. `ACTIVE`
     /// contains the `CREATING`, `UPDATING`, and `RUNNING` states. `INACTIVE`
@@ -1551,7 +1551,7 @@ pub mod cluster_controller_client {
     impl<T> ClusterControllerClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -1770,7 +1770,7 @@ pub struct LoggingConfig {
 /// Nested message and enum types in `LoggingConfig`.
 pub mod logging_config {
     /// The Log4j level for job execution. When running an
-    /// [Apache Hive](http://hive.apache.org/) job, Cloud
+    /// [Apache Hive](<http://hive.apache.org/>) job, Cloud
     /// Dataproc configures the Hive client to an equivalent verbosity level.
     #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
     #[repr(i32)]
@@ -1797,9 +1797,9 @@ pub mod logging_config {
 }
 /// A Dataproc job for running
 /// [Apache Hadoop
-/// MapReduce](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html)
+/// MapReduce](<https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html>)
 /// jobs on [Apache Hadoop
-/// YARN](https://hadoop.apache.org/docs/r2.7.1/hadoop-yarn/hadoop-yarn-site/YARN.html).
+/// YARN](<https://hadoop.apache.org/docs/r2.7.1/hadoop-yarn/hadoop-yarn-site/YARN.html>).
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct HadoopJob {
     /// Optional. The arguments to pass to the driver. Do not
@@ -1860,7 +1860,7 @@ pub mod hadoop_job {
         MainClass(::prost::alloc::string::String),
     }
 }
-/// A Dataproc job for running [Apache Spark](http://spark.apache.org/)
+/// A Dataproc job for running [Apache Spark](<http://spark.apache.org/>)
 /// applications on YARN.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SparkJob {
@@ -1920,7 +1920,7 @@ pub mod spark_job {
 }
 /// A Dataproc job for running
 /// [Apache
-/// PySpark](https://spark.apache.org/docs/0.9.0/python-programming-guide.html)
+/// PySpark](<https://spark.apache.org/docs/0.9.0/python-programming-guide.html>)
 /// applications on YARN.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PySparkJob {
@@ -1981,7 +1981,7 @@ pub struct QueryList {
     #[prost(string, repeated, tag = "1")]
     pub queries: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
-/// A Dataproc job for running [Apache Hive](https://hive.apache.org/)
+/// A Dataproc job for running [Apache Hive](<https://hive.apache.org/>)
 /// queries on YARN.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct HiveJob {
@@ -2027,7 +2027,7 @@ pub mod hive_job {
     }
 }
 /// A Dataproc job for running [Apache Spark
-/// SQL](http://spark.apache.org/sql/) queries.
+/// SQL](<http://spark.apache.org/sql/>) queries.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SparkSqlJob {
     /// Optional. Mapping of query variable names to values (equivalent to the
@@ -2066,7 +2066,7 @@ pub mod spark_sql_job {
         QueryList(super::QueryList),
     }
 }
-/// A Dataproc job for running [Apache Pig](https://pig.apache.org/)
+/// A Dataproc job for running [Apache Pig](<https://pig.apache.org/>)
 /// queries on YARN.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PigJob {
@@ -2076,7 +2076,7 @@ pub struct PigJob {
     #[prost(bool, tag = "3")]
     pub continue_on_failure: bool,
     /// Optional. Mapping of query variable names to values (equivalent to the Pig
-    /// command: `name=[value]`).
+    /// command: `name=\[value\]`).
     #[prost(map = "string, string", tag = "4")]
     pub script_variables:
         ::std::collections::HashMap<::prost::alloc::string::String, ::prost::alloc::string::String>,
@@ -2114,7 +2114,7 @@ pub mod pig_job {
     }
 }
 /// A Dataproc job for running
-/// [Apache SparkR](https://spark.apache.org/docs/latest/sparkr.html)
+/// [Apache SparkR](<https://spark.apache.org/docs/latest/sparkr.html>)
 /// applications on YARN.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SparkRJob {
@@ -2147,9 +2147,9 @@ pub struct SparkRJob {
     #[prost(message, optional, tag = "6")]
     pub logging_config: ::core::option::Option<LoggingConfig>,
 }
-/// A Dataproc job for running [Presto](https://prestosql.io/) queries.
+/// A Dataproc job for running \[Presto\](<https://prestosql.io/>) queries.
 /// **IMPORTANT**: The [Dataproc Presto Optional
-/// Component](https://cloud.google.com/dataproc/docs/concepts/components/presto)
+/// Component](<https://cloud.google.com/dataproc/docs/concepts/components/presto>)
 /// must be enabled when the cluster is created to submit a Presto job to the
 /// cluster.
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -2167,7 +2167,7 @@ pub struct PrestoJob {
     #[prost(string, repeated, tag = "5")]
     pub client_tags: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// Optional. A mapping of property names to values. Used to set Presto
-    /// [session properties](https://prestodb.io/docs/current/sql/set-session.html)
+    /// [session properties](<https://prestodb.io/docs/current/sql/set-session.html>)
     /// Equivalent to using the --session flag in the Presto CLI
     #[prost(map = "string, string", tag = "6")]
     pub properties:
@@ -2388,10 +2388,10 @@ pub struct Job {
     pub driver_control_files_uri: ::prost::alloc::string::String,
     /// Optional. The labels to associate with this job.
     /// Label **keys** must contain 1 to 63 characters, and must conform to
-    /// [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt).
+    /// [RFC 1035](<https://www.ietf.org/rfc/rfc1035.txt>).
     /// Label **values** may be empty, but, if present, must contain 1 to 63
     /// characters, and must conform to [RFC
-    /// 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be
+    /// 1035](<https://www.ietf.org/rfc/rfc1035.txt>). No more than 32 labels can be
     /// associated with a job.
     #[prost(map = "string, string", tag = "18")]
     pub labels:
@@ -2479,13 +2479,13 @@ pub struct SubmitJobRequest {
     pub job: ::core::option::Option<Job>,
     /// Optional. A unique id used to identify the request. If the server
     /// receives two
-    /// [SubmitJobRequest](https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.SubmitJobRequest)s
+    /// \[SubmitJobRequest\](<https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.SubmitJobRequest>)s
     /// with the same id, then the second request will be ignored and the
-    /// first [Job][google.cloud.dataproc.v1.Job] created and stored in the backend
+    /// first \[Job][google.cloud.dataproc.v1.Job\] created and stored in the backend
     /// is returned.
     ///
     /// It is recommended to always set this value to a
-    /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    /// \[UUID\](<https://en.wikipedia.org/wiki/Universally_unique_identifier>).
     ///
     /// The id must contain only letters (a-z, A-Z), numbers (0-9),
     /// underscores (_), and hyphens (-). The maximum length is 40 characters.
@@ -2554,7 +2554,7 @@ pub struct ListJobsRequest {
     ///
     /// [field = value] AND [field [= value]] ...
     ///
-    /// where **field** is `status.state` or `labels.[KEY]`, and `[KEY]` is a label
+    /// where **field** is `status.state` or `labels.\[KEY\]`, and `\[KEY\]` is a label
     /// key. **value** can be `*` to match all values.
     /// `status.state` can be either `ACTIVE` or `NON_ACTIVE`.
     /// Only the logical `AND` operator is supported; space-separated items are
@@ -2658,7 +2658,7 @@ pub mod job_controller_client {
     impl<T> JobControllerClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -2892,7 +2892,7 @@ pub struct WorkflowTemplate {
     #[prost(string, tag = "2")]
     pub id: ::prost::alloc::string::String,
     /// Output only. The resource name of the workflow template, as described
-    /// in https://cloud.google.com/apis/design/resource_names.
+    /// in <https://cloud.google.com/apis/design/resource_names.>
     ///
     /// * For `projects.regions.workflowTemplates`, the resource name of the
     ///   template has the following format:
@@ -2925,11 +2925,11 @@ pub struct WorkflowTemplate {
     /// instance.
     ///
     /// Label **keys** must contain 1 to 63 characters, and must conform to
-    /// [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt).
+    /// [RFC 1035](<https://www.ietf.org/rfc/rfc1035.txt>).
     ///
     /// Label **values** may be empty, but, if present, must contain 1 to 63
     /// characters, and must conform to
-    /// [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt).
+    /// [RFC 1035](<https://www.ietf.org/rfc/rfc1035.txt>).
     ///
     /// No more than 32 labels can be associated with a template.
     #[prost(map = "string, string", tag = "6")]
@@ -2948,7 +2948,7 @@ pub struct WorkflowTemplate {
     pub parameters: ::prost::alloc::vec::Vec<TemplateParameter>,
     /// Optional. Timeout duration for the DAG of jobs, expressed in seconds (see
     /// [JSON representation of
-    /// duration](https://developers.google.com/protocol-buffers/docs/proto3#json)).
+    /// duration](<https://developers.google.com/protocol-buffers/docs/proto3#json>)).
     /// The timeout duration must be from 10 minutes ("600s") to 24 hours
     /// ("86400s"). The timer begins when the first job is submitted. If the
     /// workflow is running at the end of the timeout period, any remaining jobs
@@ -3004,10 +3004,10 @@ pub struct ManagedCluster {
     ///
     /// Label keys must be between 1 and 63 characters long, and must conform to
     /// the following PCRE regular expression:
-    /// [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+    /// \[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-\]{0,62}
     ///
     /// Label values must be between 1 and 63 characters long, and must conform to
-    /// the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+    /// the following PCRE regular expression: \[\p{Ll}\p{Lo}\p{N}_-\]{0,63}
     ///
     /// No more than 32 labels can be associated with a given cluster.
     #[prost(map = "string, string", tag = "4")]
@@ -3038,7 +3038,7 @@ pub struct OrderedJob {
     ///
     /// The step id is used as prefix for job id, as job
     /// `goog-dataproc-workflow-step-id` label, and in
-    /// [prerequisiteStepIds][google.cloud.dataproc.v1.OrderedJob.prerequisite_step_ids]
+    /// \[prerequisiteStepIds][google.cloud.dataproc.v1.OrderedJob.prerequisite_step_ids\]
     /// field from other steps.
     ///
     /// The id must contain only letters (a-z, A-Z), numbers (0-9),
@@ -3050,10 +3050,10 @@ pub struct OrderedJob {
     ///
     /// Label keys must be between 1 and 63 characters long, and must conform to
     /// the following regular expression:
-    /// [\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}
+    /// \[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-\]{0,62}
     ///
     /// Label values must be between 1 and 63 characters long, and must conform to
-    /// the following regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}
+    /// the following regular expression: \[\p{Ll}\p{Lo}\p{N}_-\]{0,63}
     ///
     /// No more than 32 labels can be associated with a given job.
     #[prost(map = "string, string", tag = "8")]
@@ -3126,36 +3126,36 @@ pub struct TemplateParameter {
     /// paths.
     ///
     /// A field path is similar in syntax to a
-    /// [google.protobuf.FieldMask][google.protobuf.FieldMask]. For example, a
+    /// \[google.protobuf.FieldMask][google.protobuf.FieldMask\]. For example, a
     /// field path that references the zone field of a workflow template's cluster
     /// selector would be specified as `placement.clusterSelector.zone`.
     ///
     /// Also, field paths can reference fields using the following syntax:
     ///
     /// * Values in maps can be referenced by key:
-    ///     * labels['key']
-    ///     * placement.clusterSelector.clusterLabels['key']
-    ///     * placement.managedCluster.labels['key']
-    ///     * placement.clusterSelector.clusterLabels['key']
-    ///     * jobs['step-id'].labels['key']
+    ///     * labels\['key'\]
+    ///     * placement.clusterSelector.clusterLabels\['key'\]
+    ///     * placement.managedCluster.labels\['key'\]
+    ///     * placement.clusterSelector.clusterLabels\['key'\]
+    ///     * jobs\['step-id'].labels['key'\]
     ///
     /// * Jobs in the jobs list can be referenced by step-id:
-    ///     * jobs['step-id'].hadoopJob.mainJarFileUri
-    ///     * jobs['step-id'].hiveJob.queryFileUri
-    ///     * jobs['step-id'].pySparkJob.mainPythonFileUri
-    ///     * jobs['step-id'].hadoopJob.jarFileUris[0]
-    ///     * jobs['step-id'].hadoopJob.archiveUris[0]
-    ///     * jobs['step-id'].hadoopJob.fileUris[0]
-    ///     * jobs['step-id'].pySparkJob.pythonFileUris[0]
+    ///     * jobs\['step-id'\].hadoopJob.mainJarFileUri
+    ///     * jobs\['step-id'\].hiveJob.queryFileUri
+    ///     * jobs\['step-id'\].pySparkJob.mainPythonFileUri
+    ///     * jobs\['step-id'].hadoopJob.jarFileUris[0\]
+    ///     * jobs\['step-id'].hadoopJob.archiveUris[0\]
+    ///     * jobs\['step-id'].hadoopJob.fileUris[0\]
+    ///     * jobs\['step-id'].pySparkJob.pythonFileUris[0\]
     ///
     /// * Items in repeated fields can be referenced by a zero-based index:
-    ///     * jobs['step-id'].sparkJob.args[0]
+    ///     * jobs\['step-id'].sparkJob.args[0\]
     ///
     /// * Other examples:
-    ///     * jobs['step-id'].hadoopJob.properties['key']
-    ///     * jobs['step-id'].hadoopJob.args[0]
-    ///     * jobs['step-id'].hiveJob.scriptVariables['key']
-    ///     * jobs['step-id'].hadoopJob.mainJarFileUri
+    ///     * jobs\['step-id'].hadoopJob.properties['key'\]
+    ///     * jobs\['step-id'].hadoopJob.args[0\]
+    ///     * jobs\['step-id'].hiveJob.scriptVariables['key'\]
+    ///     * jobs\['step-id'\].hadoopJob.mainJarFileUri
     ///     * placement.clusterSelector.zone
     ///
     /// It may not be possible to parameterize maps and repeated fields in their
@@ -3164,7 +3164,7 @@ pub struct TemplateParameter {
     /// invalid:
     ///
     /// - placement.clusterSelector.clusterLabels
-    /// - jobs['step-id'].sparkJob.args
+    /// - jobs\['step-id'\].sparkJob.args
     #[prost(string, repeated, tag = "2")]
     pub fields: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// Optional. Brief description of the parameter.
@@ -3215,7 +3215,7 @@ pub struct ValueValidation {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct WorkflowMetadata {
     /// Output only. The resource name of the workflow template as described
-    /// in https://cloud.google.com/apis/design/resource_names.
+    /// in <https://cloud.google.com/apis/design/resource_names.>
     ///
     /// * For `projects.regions.workflowTemplates`, the resource name of the
     ///   template has the following format:
@@ -3260,16 +3260,16 @@ pub struct WorkflowMetadata {
     pub cluster_uuid: ::prost::alloc::string::String,
     /// Output only. The timeout duration for the DAG of jobs, expressed in seconds
     /// (see [JSON representation of
-    /// duration](https://developers.google.com/protocol-buffers/docs/proto3#json)).
+    /// duration](<https://developers.google.com/protocol-buffers/docs/proto3#json>)).
     #[prost(message, optional, tag = "12")]
     pub dag_timeout: ::core::option::Option<::prost_types::Duration>,
     /// Output only. DAG start time, only set for workflows with
-    /// [dag_timeout][google.cloud.dataproc.v1.WorkflowMetadata.dag_timeout] when
+    /// \[dag_timeout][google.cloud.dataproc.v1.WorkflowMetadata.dag_timeout\] when
     /// DAG begins.
     #[prost(message, optional, tag = "13")]
     pub dag_start_time: ::core::option::Option<::prost_types::Timestamp>,
     /// Output only. DAG end time, only set for workflows with
-    /// [dag_timeout][google.cloud.dataproc.v1.WorkflowMetadata.dag_timeout] when
+    /// \[dag_timeout][google.cloud.dataproc.v1.WorkflowMetadata.dag_timeout\] when
     /// DAG ends.
     #[prost(message, optional, tag = "14")]
     pub dag_end_time: ::core::option::Option<::prost_types::Timestamp>,
@@ -3354,7 +3354,7 @@ pub mod workflow_node {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateWorkflowTemplateRequest {
     /// Required. The resource name of the region or location, as described
-    /// in https://cloud.google.com/apis/design/resource_names.
+    /// in <https://cloud.google.com/apis/design/resource_names.>
     ///
     /// * For `projects.regions.workflowTemplates,create`, the resource name of the
     ///   region has the following format:
@@ -3373,7 +3373,7 @@ pub struct CreateWorkflowTemplateRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetWorkflowTemplateRequest {
     /// Required. The resource name of the workflow template, as described
-    /// in https://cloud.google.com/apis/design/resource_names.
+    /// in <https://cloud.google.com/apis/design/resource_names.>
     ///
     /// * For `projects.regions.workflowTemplates.get`, the resource name of the
     ///   template has the following format:
@@ -3395,7 +3395,7 @@ pub struct GetWorkflowTemplateRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct InstantiateWorkflowTemplateRequest {
     /// Required. The resource name of the workflow template, as described
-    /// in https://cloud.google.com/apis/design/resource_names.
+    /// in <https://cloud.google.com/apis/design/resource_names.>
     ///
     /// * For `projects.regions.workflowTemplates.instantiate`, the resource name
     /// of the template has the following format:
@@ -3419,7 +3419,7 @@ pub struct InstantiateWorkflowTemplateRequest {
     /// concurrent instances started due to retries.
     ///
     /// It is recommended to always set this value to a
-    /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    /// \[UUID\](<https://en.wikipedia.org/wiki/Universally_unique_identifier>).
     ///
     /// The tag must contain only letters (a-z, A-Z), numbers (0-9),
     /// underscores (_), and hyphens (-). The maximum length is 40 characters.
@@ -3435,7 +3435,7 @@ pub struct InstantiateWorkflowTemplateRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct InstantiateInlineWorkflowTemplateRequest {
     /// Required. The resource name of the region or location, as described
-    /// in https://cloud.google.com/apis/design/resource_names.
+    /// in <https://cloud.google.com/apis/design/resource_names.>
     ///
     /// * For `projects.regions.workflowTemplates,instantiateinline`, the resource
     ///   name of the region has the following format:
@@ -3454,7 +3454,7 @@ pub struct InstantiateInlineWorkflowTemplateRequest {
     /// concurrent instances started due to retries.
     ///
     /// It is recommended to always set this value to a
-    /// [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+    /// \[UUID\](<https://en.wikipedia.org/wiki/Universally_unique_identifier>).
     ///
     /// The tag must contain only letters (a-z, A-Z), numbers (0-9),
     /// underscores (_), and hyphens (-). The maximum length is 40 characters.
@@ -3474,7 +3474,7 @@ pub struct UpdateWorkflowTemplateRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListWorkflowTemplatesRequest {
     /// Required. The resource name of the region or location, as described
-    /// in https://cloud.google.com/apis/design/resource_names.
+    /// in <https://cloud.google.com/apis/design/resource_names.>
     ///
     /// * For `projects.regions.workflowTemplates,list`, the resource
     ///   name of the region has the following format:
@@ -3511,7 +3511,7 @@ pub struct ListWorkflowTemplatesResponse {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DeleteWorkflowTemplateRequest {
     /// Required. The resource name of the workflow template, as described
-    /// in https://cloud.google.com/apis/design/resource_names.
+    /// in <https://cloud.google.com/apis/design/resource_names.>
     ///
     /// * For `projects.regions.workflowTemplates.delete`, the resource name
     /// of the template has the following format:
@@ -3541,7 +3541,7 @@ pub mod workflow_template_service_client {
     impl<T> WorkflowTemplateServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

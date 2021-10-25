@@ -1,5 +1,5 @@
 /// Represents a [Metrics
-/// Scope](https://cloud.google.com/monitoring/settings#concept-scope) in Cloud
+/// Scope](<https://cloud.google.com/monitoring/settings#concept-scope>) in Cloud
 /// Monitoring, which specifies one or more Google projects and zero or more AWS
 /// accounts to monitor together.
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -23,7 +23,7 @@ pub struct MetricsScope {
     pub monitored_projects: ::prost::alloc::vec::Vec<MonitoredProject>,
 }
 /// A [project being
-/// monitored](https://cloud.google.com/monitoring/settings/multiple-projects#create-multi)
+/// monitored](<https://cloud.google.com/monitoring/settings/multiple-projects#create-multi>)
 /// by a `Metrics Scope`.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MonitoredProject {
@@ -88,7 +88,7 @@ pub struct DeleteMonitoredProjectRequest {
     /// `locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}/projects/{MONITORED_PROJECT_ID_OR_NUMBER}`
     ///
     /// Authorization requires the following [Google
-    /// IAM](https://cloud.google.com/iam) permissions on both the `Metrics Scope`
+    /// IAM](<https://cloud.google.com/iam>) permissions on both the `Metrics Scope`
     /// and on the `MonitoredProject`: `monitoring.metricsScopes.link`
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
@@ -138,7 +138,7 @@ pub mod metrics_scopes_client {
     impl<T> MetricsScopesClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

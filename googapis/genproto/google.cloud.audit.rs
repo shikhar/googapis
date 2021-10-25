@@ -86,7 +86,7 @@ pub struct AuthenticationInfo {
     /// callers, the `principal_subject` field is populated instead of this field.
     /// For privacy reasons, the principal email address is sometimes redacted.
     /// For more information, see
-    /// https://cloud.google.com/logging/docs/audit#user-id.
+    /// <https://cloud.google.com/logging/docs/audit#user-id.>
     #[prost(string, tag = "1")]
     pub principal_email: ::prost::alloc::string::String,
     /// The authority selector specified by the requestor, if any.
@@ -157,7 +157,7 @@ pub struct RequestMetadata {
     /// organization (or project) as the accessed resource, `caller_ip` will
     /// be the VM's internal IPv4 address, otherwise the `caller_ip` will be
     /// redacted to "gce-internal-ip".
-    /// See https://cloud.google.com/compute/docs/vpc/ for more information.
+    /// See <https://cloud.google.com/compute/docs/vpc/> for more information.
     #[prost(string, tag = "1")]
     pub caller_ip: ::prost::alloc::string::String,
     /// The user agent of the caller.
@@ -168,7 +168,7 @@ pub struct RequestMetadata {
     ///     The request was made by the Google API client for Python.
     /// +   `Cloud SDK Command Line Tool apitools-client/1.0 gcloud/0.9.62`:
     ///     The request was made by the Google Cloud SDK CLI (gcloud).
-    /// +   `AppEngine-Google; (+http://code.google.com/appengine; appid:
+    /// +   `AppEngine-Google; (+<http://code.google.com/appengine;> appid:
     /// s~my-project`:
     ///     The request was made from the `my-project` App Engine app.
     #[prost(string, tag = "2")]
@@ -176,7 +176,7 @@ pub struct RequestMetadata {
     /// The network of the caller.
     /// Set only if the network host project is part of the same GCP organization
     /// (or project) as the accessed resource.
-    /// See https://cloud.google.com/compute/docs/vpc/ for more information.
+    /// See <https://cloud.google.com/compute/docs/vpc/> for more information.
     /// This is a scheme-less URI full resource name. For example:
     ///
     ///     "//compute.googleapis.com/projects/PROJECT_ID/global/networks/NETWORK_ID"
@@ -234,7 +234,7 @@ pub struct ServiceAccountDelegationInfo {
     /// `principal://iam.googleapis.com/{identity pool name}/subject/{subject)`
     /// except for some GKE identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD)
     /// that are still in the legacy format `serviceAccount:{identity pool
-    /// name}[{subject}]`
+    /// name}\[{subject}\]`
     #[prost(string, tag = "3")]
     pub principal_subject: ::prost::alloc::string::String,
     /// Entity that creates credentials for service account and assumes its
@@ -939,7 +939,7 @@ pub mod big_query_audit_metadata {
         pub job_stats: ::core::option::Option<JobStats>,
     }
     /// Job configuration.
-    /// See the [Jobs](https://cloud.google.com/bigquery/docs/reference/v2/jobs)
+    /// See the \[Jobs\](<https://cloud.google.com/bigquery/docs/reference/v2/jobs>)
     /// API resource for more details on individual fields.
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct JobConfig {

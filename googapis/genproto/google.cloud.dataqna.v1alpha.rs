@@ -259,7 +259,7 @@ pub mod auto_suggestion_service_client {
     impl<T> AutoSuggestionServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -476,7 +476,7 @@ pub mod execution_info {
 }
 /// BigQuery job information. This can be used to query the BigQuery API and
 /// retrieve the current job's status (using
-/// [jobs.get](https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs/get)).
+/// \[jobs.get\](<https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs/get>)).
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BigQueryJob {
     /// The job ID.
@@ -580,31 +580,31 @@ pub mod interpretation_structure {
         /// Show a table.
         Table = 1,
         /// Show a [bar
-        /// chart](https://developers.google.com/chart/interactive/docs/gallery/barchart).
+        /// chart](<https://developers.google.com/chart/interactive/docs/gallery/barchart>).
         BarChart = 2,
         /// Show a [column
-        /// chart](https://developers.google.com/chart/interactive/docs/gallery/columnchart).
+        /// chart](<https://developers.google.com/chart/interactive/docs/gallery/columnchart>).
         ColumnChart = 3,
         /// Show a
-        /// [timeline](https://developers.google.com/chart/interactive/docs/gallery/timeline).
+        /// \[timeline\](<https://developers.google.com/chart/interactive/docs/gallery/timeline>).
         Timeline = 4,
         /// Show a [scatter
-        /// plot](https://developers.google.com/chart/interactive/docs/gallery/scatterchart).
+        /// plot](<https://developers.google.com/chart/interactive/docs/gallery/scatterchart>).
         ScatterPlot = 5,
         /// Show a [pie
-        /// chart](https://developers.google.com/chart/interactive/docs/gallery/piechart).
+        /// chart](<https://developers.google.com/chart/interactive/docs/gallery/piechart>).
         PieChart = 6,
         /// Show a [line
-        /// chart](https://developers.google.com/chart/interactive/docs/gallery/linechart).
+        /// chart](<https://developers.google.com/chart/interactive/docs/gallery/linechart>).
         LineChart = 7,
         /// Show an [area
-        /// chart](https://developers.google.com/chart/interactive/docs/gallery/areachart).
+        /// chart](<https://developers.google.com/chart/interactive/docs/gallery/areachart>).
         AreaChart = 8,
         /// Show a [combo
-        /// chart](https://developers.google.com/chart/interactive/docs/gallery/combochart).
+        /// chart](<https://developers.google.com/chart/interactive/docs/gallery/combochart>).
         ComboChart = 9,
         /// Show a
-        /// [histogram](https://developers.google.com/chart/interactive/docs/gallery/histogram).
+        /// \[histogram\](<https://developers.google.com/chart/interactive/docs/gallery/histogram>).
         Histogram = 10,
         /// This denotes queries when the user has not specified the particular type
         /// of chart and has mentioned only a generic chart name such as "Chart",
@@ -786,7 +786,7 @@ pub mod question_service_client {
     impl<T> QuestionServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

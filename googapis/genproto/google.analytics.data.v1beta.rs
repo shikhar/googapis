@@ -60,14 +60,14 @@ pub struct MinuteRange {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Dimension {
     /// The name of the dimension. See the [API
-    /// Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#dimensions)
+    /// Dimensions](<https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#dimensions>)
     /// for the list of dimension names.
     ///
     /// If `dimensionExpression` is specified, `name` can be any string that you
     /// would like within the allowed character set. For example if a
     /// `dimensionExpression` concatenates `country` and `city`, you could call
     /// that dimension `countryAndCity`. Dimension names that you choose must match
-    /// the regular expression "^[a-zA-Z0-9_]$".
+    /// the regular expression "^\[a-zA-Z0-9_\]$".
     ///
     /// Dimensions are referenced by `name` in `dimensionFilter`, `orderBys`,
     /// `dimensionExpression`, and `pivots`.
@@ -136,14 +136,14 @@ pub mod dimension_expression {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Metric {
     /// The name of the metric. See the [API
-    /// Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#metrics)
+    /// Metrics](<https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#metrics>)
     /// for the list of metric names.
     ///
     /// If `expression` is specified, `name` can be any string that you would like
     /// within the allowed character set. For example if `expression` is
     /// `screenPageViews/sessions`, you could call that metric's name =
     /// `viewsPerSession`. Metric names that you choose must match the regular
-    /// expression "^[a-zA-Z0-9_]$".
+    /// expression "^\[a-zA-Z0-9_\]$".
     ///
     /// Metrics are referenced by `name` in `metricFilter`, `orderBys`, and metric
     /// `expression`.
@@ -467,7 +467,7 @@ pub struct Pivot {
 /// the `cohortsRange` object.
 ///
 /// For examples, see [Cohort Report
-/// Examples](https://developers.google.com/analytics/devguides/reporting/data/v1/advanced#cohort_report_examples).
+/// Examples](<https://developers.google.com/analytics/devguides/reporting/data/v1/advanced#cohort_report_examples>).
 ///
 /// The report response could show a weekly time series where say your app has
 /// retained 60% of this cohort after three weeks and 25% of this cohort after
@@ -787,7 +787,7 @@ pub struct QuotaStatus {
 /// Explains a dimension.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DimensionMetadata {
-    /// This dimension's name. Useable in [Dimension](#Dimension)'s `name`. For
+    /// This dimension's name. Useable in \[Dimension\](#Dimension)'s `name`. For
     /// example, `eventName`.
     #[prost(string, tag = "1")]
     pub api_name: ::prost::alloc::string::String,
@@ -815,7 +815,7 @@ pub struct DimensionMetadata {
 /// Explains a metric.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MetricMetadata {
-    /// A metric name. Useable in [Metric](#Metric)'s `name`. For example,
+    /// A metric name. Useable in \[Metric\](#Metric)'s `name`. For example,
     /// `eventCount`.
     #[prost(string, tag = "1")]
     pub api_name: ::prost::alloc::string::String,
@@ -836,7 +836,7 @@ pub struct MetricMetadata {
     #[prost(enumeration = "MetricType", tag = "5")]
     pub r#type: i32,
     /// The mathematical expression for this derived metric. Can be used in
-    /// [Metric](#Metric)'s `expression` field for equivalent reports. Most metrics
+    /// \[Metric\](#Metric)'s `expression` field for equivalent reports. Most metrics
     /// are not expressions, and for non-expressions, this field is empty.
     #[prost(string, tag = "6")]
     pub expression: ::prost::alloc::string::String,
@@ -941,7 +941,7 @@ pub enum Compatibility {
 pub struct CheckCompatibilityRequest {
     /// A Google Analytics GA4 property identifier whose events are tracked. To
     /// learn more, see [where to find your Property
-    /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
+    /// ID](<https://developers.google.com/analytics/devguides/reporting/data/v1/property-id>).
     /// `property` should be the same value as in your `runReport` request.
     ///
     /// Example: properties/1234
@@ -1002,7 +1002,7 @@ pub struct RunReportRequest {
     /// A Google Analytics GA4 property identifier whose events are tracked.
     /// Specified in the URL path and not the body. To learn more, see [where to
     /// find your Property
-    /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
+    /// ID](<https://developers.google.com/analytics/devguides/reporting/data/v1/property-id>).
     /// Within a batch request, this property should either be unspecified or
     /// consistent with the batch-level property.
     ///
@@ -1024,7 +1024,7 @@ pub struct RunReportRequest {
     pub date_ranges: ::prost::alloc::vec::Vec<DateRange>,
     /// Dimension filters allow you to ask for only specific dimension values in
     /// the report. To learn more, see [Fundamentals of Dimension
-    /// Filters](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#dimension_filters)
+    /// Filters](<https://developers.google.com/analytics/devguides/reporting/data/v1/basics#dimension_filters>)
     /// for examples. Metrics cannot be used in this filter.
     #[prost(message, optional, tag = "5")]
     pub dimension_filter: ::core::option::Option<FilterExpression>,
@@ -1040,7 +1040,7 @@ pub struct RunReportRequest {
     /// request returns the second `limit` of rows.
     ///
     /// To learn more about this pagination parameter, see
-    /// [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
+    /// \[Pagination\](<https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination>).
     #[prost(int64, tag = "7")]
     pub offset: i64,
     /// The number of rows to return. If unspecified, 10,000 rows are returned. The
@@ -1054,7 +1054,7 @@ pub struct RunReportRequest {
     /// set `limit` to a higher value.
     ///
     /// To learn more about this pagination parameter, see
-    /// [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
+    /// \[Pagination\](<https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination>).
     #[prost(int64, tag = "8")]
     pub limit: i64,
     /// Aggregation of metrics. Aggregated metric values will be shown in rows
@@ -1078,7 +1078,7 @@ pub struct RunReportRequest {
     #[prost(bool, tag = "13")]
     pub keep_empty_rows: bool,
     /// Toggles whether to return the current state of this Analytics Property's
-    /// quota. Quota is returned in [PropertyQuota](#PropertyQuota).
+    /// quota. Quota is returned in \[PropertyQuota\](#PropertyQuota).
     #[prost(bool, tag = "14")]
     pub return_property_quota: bool,
 }
@@ -1112,7 +1112,7 @@ pub struct RunReportResponse {
     /// response will contain `rowCount` of 175 but only 50 rows.
     ///
     /// To learn more about this pagination parameter, see
-    /// [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
+    /// \[Pagination\](<https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination>).
     #[prost(int32, tag = "7")]
     pub row_count: i32,
     /// Metadata for the report.
@@ -1133,7 +1133,7 @@ pub struct RunPivotReportRequest {
     /// A Google Analytics GA4 property identifier whose events are tracked.
     /// Specified in the URL path and not the body. To learn more, see [where to
     /// find your Property
-    /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
+    /// ID](<https://developers.google.com/analytics/devguides/reporting/data/v1/property-id>).
     /// Within a batch request, this property should either be unspecified or
     /// consistent with the batch-level property.
     ///
@@ -1185,7 +1185,7 @@ pub struct RunPivotReportRequest {
     #[prost(bool, tag = "10")]
     pub keep_empty_rows: bool,
     /// Toggles whether to return the current state of this Analytics Property's
-    /// quota. Quota is returned in [PropertyQuota](#PropertyQuota).
+    /// quota. Quota is returned in \[PropertyQuota\](#PropertyQuota).
     #[prost(bool, tag = "11")]
     pub return_property_quota: bool,
 }
@@ -1265,7 +1265,7 @@ pub struct BatchRunReportsRequest {
     /// A Google Analytics GA4 property identifier whose events are tracked.
     /// Specified in the URL path and not the body. To learn more, see [where to
     /// find your Property
-    /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
+    /// ID](<https://developers.google.com/analytics/devguides/reporting/data/v1/property-id>).
     /// This property must be specified for the batch. The property within
     /// RunReportRequest may either be unspecified or consistent with this
     /// property.
@@ -1296,7 +1296,7 @@ pub struct BatchRunPivotReportsRequest {
     /// A Google Analytics GA4 property identifier whose events are tracked.
     /// Specified in the URL path and not the body. To learn more, see [where to
     /// find your Property
-    /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
+    /// ID](<https://developers.google.com/analytics/devguides/reporting/data/v1/property-id>).
     /// This property must be specified for the batch. The property within
     /// RunPivotReportRequest may either be unspecified or consistent with this
     /// property.
@@ -1328,7 +1328,7 @@ pub struct GetMetadataRequest {
     /// specified in the URL path and not URL parameters. Property is a numeric
     /// Google Analytics GA4 Property identifier. To learn more, see [where to find
     /// your Property
-    /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
+    /// ID](<https://developers.google.com/analytics/devguides/reporting/data/v1/property-id>).
     ///
     /// Example: properties/1234/metadata
     ///
@@ -1344,7 +1344,7 @@ pub struct RunRealtimeReportRequest {
     /// A Google Analytics GA4 property identifier whose events are tracked.
     /// Specified in the URL path and not the body. To learn more, see [where to
     /// find your Property
-    /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
+    /// ID](<https://developers.google.com/analytics/devguides/reporting/data/v1/property-id>).
     ///
     /// Example: properties/1234
     #[prost(string, tag = "1")]
@@ -1383,7 +1383,7 @@ pub struct RunRealtimeReportRequest {
     #[prost(message, repeated, tag = "8")]
     pub order_bys: ::prost::alloc::vec::Vec<OrderBy>,
     /// Toggles whether to return the current state of this Analytics Property's
-    /// Realtime quota. Quota is returned in [PropertyQuota](#PropertyQuota).
+    /// Realtime quota. Quota is returned in \[PropertyQuota\](#PropertyQuota).
     #[prost(bool, tag = "9")]
     pub return_property_quota: bool,
     /// The minute ranges of event data to read. If unspecified, one minute range
@@ -1445,7 +1445,7 @@ pub mod beta_analytics_data_client {
     impl<T> BetaAnalyticsDataClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

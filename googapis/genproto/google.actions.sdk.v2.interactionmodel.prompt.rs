@@ -32,7 +32,7 @@ pub struct StaticCanvasPrompt {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct StaticImagePrompt {
     /// Required. The source url of the image. Images can be JPG, PNG and GIF (animated and
-    /// non-animated). For example,`https://www.agentx.com/logo.png`.
+    /// non-animated). For example,`<https://www.agentx.com/logo.png`.>
     #[prost(string, tag = "1")]
     pub url: ::prost::alloc::string::String,
     /// Required. A text description of the image to be used for accessibility, e.g. screen

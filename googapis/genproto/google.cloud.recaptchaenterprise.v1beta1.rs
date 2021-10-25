@@ -342,7 +342,7 @@ pub mod recaptcha_enterprise_service_v1_beta1_client {
     impl<T> RecaptchaEnterpriseServiceV1Beta1Client<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

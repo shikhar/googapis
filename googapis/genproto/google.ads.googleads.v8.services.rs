@@ -1,5 +1,5 @@
 /// Request message for
-/// [AccessibleBiddingStrategyService.GetAccessibleBiddingStrategy][google.ads.googleads.v8.services.AccessibleBiddingStrategyService.GetAccessibleBiddingStrategy].
+/// \[AccessibleBiddingStrategyService.GetAccessibleBiddingStrategy][google.ads.googleads.v8.services.AccessibleBiddingStrategyService.GetAccessibleBiddingStrategy\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAccessibleBiddingStrategyRequest {
     /// Required. The resource name of the accessible bidding strategy to fetch.
@@ -18,7 +18,7 @@ pub mod accessible_bidding_strategy_service_client {
     impl<T> AccessibleBiddingStrategyServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -77,7 +77,7 @@ pub mod accessible_bidding_strategy_service_client {
     }
 }
 /// Request message for
-/// [AccountBudgetProposalService.GetAccountBudgetProposal][google.ads.googleads.v8.services.AccountBudgetProposalService.GetAccountBudgetProposal].
+/// \[AccountBudgetProposalService.GetAccountBudgetProposal][google.ads.googleads.v8.services.AccountBudgetProposalService.GetAccountBudgetProposal\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAccountBudgetProposalRequest {
     /// Required. The resource name of the account-level budget proposal to fetch.
@@ -85,7 +85,7 @@ pub struct GetAccountBudgetProposalRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [AccountBudgetProposalService.MutateAccountBudgetProposal][google.ads.googleads.v8.services.AccountBudgetProposalService.MutateAccountBudgetProposal].
+/// \[AccountBudgetProposalService.MutateAccountBudgetProposal][google.ads.googleads.v8.services.AccountBudgetProposalService.MutateAccountBudgetProposal\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateAccountBudgetProposalRequest {
     /// Required. The ID of the customer.
@@ -174,7 +174,7 @@ pub mod account_budget_proposal_service_client {
     impl<T> AccountBudgetProposalServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -271,7 +271,7 @@ pub mod account_budget_proposal_service_client {
     }
 }
 /// Request message for
-/// [AccountBudgetService.GetAccountBudget][google.ads.googleads.v8.services.AccountBudgetService.GetAccountBudget].
+/// \[AccountBudgetService.GetAccountBudget][google.ads.googleads.v8.services.AccountBudgetService.GetAccountBudget\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAccountBudgetRequest {
     /// Required. The resource name of the account-level budget to fetch.
@@ -292,7 +292,7 @@ pub mod account_budget_service_client {
     impl<T> AccountBudgetServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -358,7 +358,7 @@ pub mod account_budget_service_client {
         }
     }
 }
-/// Request message for [AccountLinkService.GetAccountLink][google.ads.googleads.v8.services.AccountLinkService.GetAccountLink].
+/// Request message for \[AccountLinkService.GetAccountLink][google.ads.googleads.v8.services.AccountLinkService.GetAccountLink\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAccountLinkRequest {
     /// Required. Resource name of the account link.
@@ -366,7 +366,7 @@ pub struct GetAccountLinkRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [AccountLinkService.CreateAccountLink][google.ads.googleads.v8.services.AccountLinkService.CreateAccountLink].
+/// \[AccountLinkService.CreateAccountLink][google.ads.googleads.v8.services.AccountLinkService.CreateAccountLink\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateAccountLinkRequest {
     /// Required. The ID of the customer for which the account link is created.
@@ -377,14 +377,14 @@ pub struct CreateAccountLinkRequest {
     pub account_link: ::core::option::Option<super::resources::AccountLink>,
 }
 /// Response message for
-/// [AccountLinkService.CreateAccountLink][google.ads.googleads.v8.services.AccountLinkService.CreateAccountLink].
+/// \[AccountLinkService.CreateAccountLink][google.ads.googleads.v8.services.AccountLinkService.CreateAccountLink\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateAccountLinkResponse {
     /// Returned for successful operations. Resource name of the account link.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [AccountLinkService.MutateAccountLink][google.ads.googleads.v8.services.AccountLinkService.MutateAccountLink].
+/// Request message for \[AccountLinkService.MutateAccountLink][google.ads.googleads.v8.services.AccountLinkService.MutateAccountLink\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateAccountLinkRequest {
     /// Required. The ID of the customer being modified.
@@ -458,7 +458,7 @@ pub mod account_link_service_client {
     impl<T> AccountLinkServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -583,7 +583,7 @@ pub mod account_link_service_client {
         }
     }
 }
-/// Request message for [AdGroupAdAssetViewService.GetAdGroupAdAssetView][google.ads.googleads.v8.services.AdGroupAdAssetViewService.GetAdGroupAdAssetView].
+/// Request message for \[AdGroupAdAssetViewService.GetAdGroupAdAssetView][google.ads.googleads.v8.services.AdGroupAdAssetViewService.GetAdGroupAdAssetView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdGroupAdAssetViewRequest {
     /// Required. The resource name of the ad group ad asset view to fetch.
@@ -602,7 +602,7 @@ pub mod ad_group_ad_asset_view_service_client {
     impl<T> AdGroupAdAssetViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -668,14 +668,14 @@ pub mod ad_group_ad_asset_view_service_client {
         }
     }
 }
-/// Request message for [AdGroupAdLabelService.GetAdGroupAdLabel][google.ads.googleads.v8.services.AdGroupAdLabelService.GetAdGroupAdLabel].
+/// Request message for \[AdGroupAdLabelService.GetAdGroupAdLabel][google.ads.googleads.v8.services.AdGroupAdLabelService.GetAdGroupAdLabel\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdGroupAdLabelRequest {
     /// Required. The resource name of the ad group ad label to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [AdGroupAdLabelService.MutateAdGroupAdLabels][google.ads.googleads.v8.services.AdGroupAdLabelService.MutateAdGroupAdLabels].
+/// Request message for \[AdGroupAdLabelService.MutateAdGroupAdLabels][google.ads.googleads.v8.services.AdGroupAdLabelService.MutateAdGroupAdLabels\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateAdGroupAdLabelsRequest {
     /// Required. ID of the customer whose ad group ad labels are being modified.
@@ -752,7 +752,7 @@ pub mod ad_group_ad_label_service_client {
     impl<T> AdGroupAdLabelServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -848,14 +848,14 @@ pub mod ad_group_ad_label_service_client {
         }
     }
 }
-/// Request message for [AdGroupAdService.GetAdGroupAd][google.ads.googleads.v8.services.AdGroupAdService.GetAdGroupAd].
+/// Request message for \[AdGroupAdService.GetAdGroupAd][google.ads.googleads.v8.services.AdGroupAdService.GetAdGroupAd\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdGroupAdRequest {
     /// Required. The resource name of the ad to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [AdGroupAdService.MutateAdGroupAds][google.ads.googleads.v8.services.AdGroupAdService.MutateAdGroupAds].
+/// Request message for \[AdGroupAdService.MutateAdGroupAds][google.ads.googleads.v8.services.AdGroupAdService.MutateAdGroupAds\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateAdGroupAdsRequest {
     /// Required. The ID of the customer whose ads are being modified.
@@ -952,7 +952,7 @@ pub mod ad_group_ad_service_client {
     impl<T> AdGroupAdServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -1079,14 +1079,14 @@ pub mod ad_group_ad_service_client {
         }
     }
 }
-/// Request message for [AdGroupAssetService.GetAdGroupAsset][google.ads.googleads.v8.services.AdGroupAssetService.GetAdGroupAsset].
+/// Request message for \[AdGroupAssetService.GetAdGroupAsset][google.ads.googleads.v8.services.AdGroupAssetService.GetAdGroupAsset\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdGroupAssetRequest {
     /// Required. The resource name of the ad group asset to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [AdGroupAssetService.MutateAdGroupAssets][google.ads.googleads.v8.services.AdGroupAssetService.MutateAdGroupAssets].
+/// Request message for \[AdGroupAssetService.MutateAdGroupAssets][google.ads.googleads.v8.services.AdGroupAssetService.MutateAdGroupAssets\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateAdGroupAssetsRequest {
     /// Required. The ID of the customer whose ad group assets are being modified.
@@ -1181,7 +1181,7 @@ pub mod ad_group_asset_service_client {
     impl<T> AdGroupAssetServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -1277,7 +1277,7 @@ pub mod ad_group_asset_service_client {
         }
     }
 }
-/// Request message for [AdGroupAudienceViewService.GetAdGroupAudienceView][google.ads.googleads.v8.services.AdGroupAudienceViewService.GetAdGroupAudienceView].
+/// Request message for \[AdGroupAudienceViewService.GetAdGroupAudienceView][google.ads.googleads.v8.services.AdGroupAudienceViewService.GetAdGroupAudienceView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdGroupAudienceViewRequest {
     /// Required. The resource name of the ad group audience view to fetch.
@@ -1296,7 +1296,7 @@ pub mod ad_group_audience_view_service_client {
     impl<T> AdGroupAudienceViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -1360,14 +1360,14 @@ pub mod ad_group_audience_view_service_client {
         }
     }
 }
-/// Request message for [AdGroupBidModifierService.GetAdGroupBidModifier][google.ads.googleads.v8.services.AdGroupBidModifierService.GetAdGroupBidModifier].
+/// Request message for \[AdGroupBidModifierService.GetAdGroupBidModifier][google.ads.googleads.v8.services.AdGroupBidModifierService.GetAdGroupBidModifier\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdGroupBidModifierRequest {
     /// Required. The resource name of the ad group bid modifier to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [AdGroupBidModifierService.MutateAdGroupBidModifiers][google.ads.googleads.v8.services.AdGroupBidModifierService.MutateAdGroupBidModifiers].
+/// Request message for \[AdGroupBidModifierService.MutateAdGroupBidModifiers][google.ads.googleads.v8.services.AdGroupBidModifierService.MutateAdGroupBidModifiers\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateAdGroupBidModifiersRequest {
     /// Required. ID of the customer whose ad group bid modifiers are being modified.
@@ -1462,7 +1462,7 @@ pub mod ad_group_bid_modifier_service_client {
     impl<T> AdGroupBidModifierServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -1571,7 +1571,7 @@ pub mod ad_group_bid_modifier_service_client {
     }
 }
 /// Request message for
-/// [AdGroupCriterionLabelService.GetAdGroupCriterionLabel][google.ads.googleads.v8.services.AdGroupCriterionLabelService.GetAdGroupCriterionLabel].
+/// \[AdGroupCriterionLabelService.GetAdGroupCriterionLabel][google.ads.googleads.v8.services.AdGroupCriterionLabelService.GetAdGroupCriterionLabel\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdGroupCriterionLabelRequest {
     /// Required. The resource name of the ad group criterion label to fetch.
@@ -1579,7 +1579,7 @@ pub struct GetAdGroupCriterionLabelRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [AdGroupCriterionLabelService.MutateAdGroupCriterionLabels][google.ads.googleads.v8.services.AdGroupCriterionLabelService.MutateAdGroupCriterionLabels].
+/// \[AdGroupCriterionLabelService.MutateAdGroupCriterionLabels][google.ads.googleads.v8.services.AdGroupCriterionLabelService.MutateAdGroupCriterionLabels\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateAdGroupCriterionLabelsRequest {
     /// Required. ID of the customer whose ad group criterion labels are being modified.
@@ -1655,7 +1655,7 @@ pub mod ad_group_criterion_label_service_client {
     impl<T> AdGroupCriterionLabelServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -1746,14 +1746,14 @@ pub mod ad_group_criterion_label_service_client {
         }
     }
 }
-/// Request message for [AdGroupCriterionService.GetAdGroupCriterion][google.ads.googleads.v8.services.AdGroupCriterionService.GetAdGroupCriterion].
+/// Request message for \[AdGroupCriterionService.GetAdGroupCriterion][google.ads.googleads.v8.services.AdGroupCriterionService.GetAdGroupCriterion\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdGroupCriterionRequest {
     /// Required. The resource name of the criterion to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [AdGroupCriterionService.MutateAdGroupCriteria][google.ads.googleads.v8.services.AdGroupCriterionService.MutateAdGroupCriteria].
+/// Request message for \[AdGroupCriterionService.MutateAdGroupCriteria][google.ads.googleads.v8.services.AdGroupCriterionService.MutateAdGroupCriteria\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateAdGroupCriteriaRequest {
     /// Required. ID of the customer whose criteria are being modified.
@@ -1858,7 +1858,7 @@ pub mod ad_group_criterion_service_client {
     impl<T> AdGroupCriterionServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -1977,7 +1977,7 @@ pub mod ad_group_criterion_service_client {
     }
 }
 /// Request message for
-/// [AdGroupCriterionSimulationService.GetAdGroupCriterionSimulation][google.ads.googleads.v8.services.AdGroupCriterionSimulationService.GetAdGroupCriterionSimulation].
+/// \[AdGroupCriterionSimulationService.GetAdGroupCriterionSimulation][google.ads.googleads.v8.services.AdGroupCriterionSimulationService.GetAdGroupCriterionSimulation\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdGroupCriterionSimulationRequest {
     /// Required. The resource name of the ad group criterion simulation to fetch.
@@ -1996,7 +1996,7 @@ pub mod ad_group_criterion_simulation_service_client {
     impl<T> AdGroupCriterionSimulationServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -2066,7 +2066,7 @@ pub mod ad_group_criterion_simulation_service_client {
     }
 }
 /// Request message for
-/// [AdGroupExtensionSettingService.GetAdGroupExtensionSetting][google.ads.googleads.v8.services.AdGroupExtensionSettingService.GetAdGroupExtensionSetting].
+/// \[AdGroupExtensionSettingService.GetAdGroupExtensionSetting][google.ads.googleads.v8.services.AdGroupExtensionSettingService.GetAdGroupExtensionSetting\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdGroupExtensionSettingRequest {
     /// Required. The resource name of the ad group extension setting to fetch.
@@ -2074,7 +2074,7 @@ pub struct GetAdGroupExtensionSettingRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [AdGroupExtensionSettingService.MutateAdGroupExtensionSettings][google.ads.googleads.v8.services.AdGroupExtensionSettingService.MutateAdGroupExtensionSettings].
+/// \[AdGroupExtensionSettingService.MutateAdGroupExtensionSettings][google.ads.googleads.v8.services.AdGroupExtensionSettingService.MutateAdGroupExtensionSettings\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateAdGroupExtensionSettingsRequest {
     /// Required. The ID of the customer whose ad group extension settings are being
@@ -2175,7 +2175,7 @@ pub mod ad_group_extension_setting_service_client {
     impl<T> AdGroupExtensionSettingServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -2286,14 +2286,14 @@ pub mod ad_group_extension_setting_service_client {
         }
     }
 }
-/// Request message for [AdGroupFeedService.GetAdGroupFeed][google.ads.googleads.v8.services.AdGroupFeedService.GetAdGroupFeed].
+/// Request message for \[AdGroupFeedService.GetAdGroupFeed][google.ads.googleads.v8.services.AdGroupFeedService.GetAdGroupFeed\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdGroupFeedRequest {
     /// Required. The resource name of the ad group feed to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [AdGroupFeedService.MutateAdGroupFeeds][google.ads.googleads.v8.services.AdGroupFeedService.MutateAdGroupFeeds].
+/// Request message for \[AdGroupFeedService.MutateAdGroupFeeds][google.ads.googleads.v8.services.AdGroupFeedService.MutateAdGroupFeeds\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateAdGroupFeedsRequest {
     /// Required. The ID of the customer whose ad group feeds are being modified.
@@ -2387,7 +2387,7 @@ pub mod ad_group_feed_service_client {
     impl<T> AdGroupFeedServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -2494,14 +2494,14 @@ pub mod ad_group_feed_service_client {
         }
     }
 }
-/// Request message for [AdGroupLabelService.GetAdGroupLabel][google.ads.googleads.v8.services.AdGroupLabelService.GetAdGroupLabel].
+/// Request message for \[AdGroupLabelService.GetAdGroupLabel][google.ads.googleads.v8.services.AdGroupLabelService.GetAdGroupLabel\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdGroupLabelRequest {
     /// Required. The resource name of the ad group label to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [AdGroupLabelService.MutateAdGroupLabels][google.ads.googleads.v8.services.AdGroupLabelService.MutateAdGroupLabels].
+/// Request message for \[AdGroupLabelService.MutateAdGroupLabels][google.ads.googleads.v8.services.AdGroupLabelService.MutateAdGroupLabels\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateAdGroupLabelsRequest {
     /// Required. ID of the customer whose ad group labels are being modified.
@@ -2577,7 +2577,7 @@ pub mod ad_group_label_service_client {
     impl<T> AdGroupLabelServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -2673,14 +2673,14 @@ pub mod ad_group_label_service_client {
         }
     }
 }
-/// Request message for [AdGroupService.GetAdGroup][google.ads.googleads.v8.services.AdGroupService.GetAdGroup].
+/// Request message for \[AdGroupService.GetAdGroup][google.ads.googleads.v8.services.AdGroupService.GetAdGroup\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdGroupRequest {
     /// Required. The resource name of the ad group to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [AdGroupService.MutateAdGroups][google.ads.googleads.v8.services.AdGroupService.MutateAdGroups].
+/// Request message for \[AdGroupService.MutateAdGroups][google.ads.googleads.v8.services.AdGroupService.MutateAdGroups\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateAdGroupsRequest {
     /// Required. The ID of the customer whose ad groups are being modified.
@@ -2772,7 +2772,7 @@ pub mod ad_group_service_client {
     impl<T> AdGroupServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -2887,7 +2887,7 @@ pub mod ad_group_service_client {
         }
     }
 }
-/// Request message for [AdGroupSimulationService.GetAdGroupSimulation][google.ads.googleads.v8.services.AdGroupSimulationService.GetAdGroupSimulation].
+/// Request message for \[AdGroupSimulationService.GetAdGroupSimulation][google.ads.googleads.v8.services.AdGroupSimulationService.GetAdGroupSimulation\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdGroupSimulationRequest {
     /// Required. The resource name of the ad group simulation to fetch.
@@ -2906,7 +2906,7 @@ pub mod ad_group_simulation_service_client {
     impl<T> AdGroupSimulationServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -2972,14 +2972,14 @@ pub mod ad_group_simulation_service_client {
         }
     }
 }
-/// Request message for [AdParameterService.GetAdParameter][google.ads.googleads.v8.services.AdParameterService.GetAdParameter]
+/// Request message for \[AdParameterService.GetAdParameter][google.ads.googleads.v8.services.AdParameterService.GetAdParameter\]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdParameterRequest {
     /// Required. The resource name of the ad parameter to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [AdParameterService.MutateAdParameters][google.ads.googleads.v8.services.AdParameterService.MutateAdParameters]
+/// Request message for \[AdParameterService.MutateAdParameters][google.ads.googleads.v8.services.AdParameterService.MutateAdParameters\]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateAdParametersRequest {
     /// Required. The ID of the customer whose ad parameters are being modified.
@@ -3073,7 +3073,7 @@ pub mod ad_parameter_service_client {
     impl<T> AdParameterServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -3170,7 +3170,7 @@ pub mod ad_parameter_service_client {
         }
     }
 }
-/// Request message for [AdScheduleViewService.GetAdScheduleView][google.ads.googleads.v8.services.AdScheduleViewService.GetAdScheduleView].
+/// Request message for \[AdScheduleViewService.GetAdScheduleView][google.ads.googleads.v8.services.AdScheduleViewService.GetAdScheduleView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdScheduleViewRequest {
     /// Required. The resource name of the ad schedule view to fetch.
@@ -3189,7 +3189,7 @@ pub mod ad_schedule_view_service_client {
     impl<T> AdScheduleViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -3255,14 +3255,14 @@ pub mod ad_schedule_view_service_client {
         }
     }
 }
-/// Request message for [AdService.GetAd][google.ads.googleads.v8.services.AdService.GetAd].
+/// Request message for \[AdService.GetAd][google.ads.googleads.v8.services.AdService.GetAd\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAdRequest {
     /// Required. The resource name of the ad to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [AdService.MutateAds][google.ads.googleads.v8.services.AdService.MutateAds].
+/// Request message for \[AdService.MutateAds][google.ads.googleads.v8.services.AdService.MutateAds\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateAdsRequest {
     /// Required. The ID of the customer whose ads are being modified.
@@ -3352,7 +3352,7 @@ pub mod ad_service_client {
     impl<T> AdServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -3475,7 +3475,7 @@ pub mod ad_service_client {
         }
     }
 }
-/// Request message for [AgeRangeViewService.GetAgeRangeView][google.ads.googleads.v8.services.AgeRangeViewService.GetAgeRangeView].
+/// Request message for \[AgeRangeViewService.GetAgeRangeView][google.ads.googleads.v8.services.AgeRangeViewService.GetAgeRangeView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAgeRangeViewRequest {
     /// Required. The resource name of the age range view to fetch.
@@ -3494,7 +3494,7 @@ pub mod age_range_view_service_client {
     impl<T> AgeRangeViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -3559,7 +3559,7 @@ pub mod age_range_view_service_client {
         }
     }
 }
-/// Request message for [AssetFieldTypeViewService.GetAssetFieldTypeView][google.ads.googleads.v8.services.AssetFieldTypeViewService.GetAssetFieldTypeView].
+/// Request message for \[AssetFieldTypeViewService.GetAssetFieldTypeView][google.ads.googleads.v8.services.AssetFieldTypeViewService.GetAssetFieldTypeView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAssetFieldTypeViewRequest {
     /// Required. The resource name of the asset field type view to fetch.
@@ -3578,7 +3578,7 @@ pub mod asset_field_type_view_service_client {
     impl<T> AssetFieldTypeViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -3636,14 +3636,14 @@ pub mod asset_field_type_view_service_client {
         }
     }
 }
-/// Request message for [AssetService.GetAsset][google.ads.googleads.v8.services.AssetService.GetAsset]
+/// Request message for \[AssetService.GetAsset][google.ads.googleads.v8.services.AssetService.GetAsset\]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetAssetRequest {
     /// Required. The resource name of the asset to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [AssetService.MutateAssets][google.ads.googleads.v8.services.AssetService.MutateAssets]
+/// Request message for \[AssetService.MutateAssets][google.ads.googleads.v8.services.AssetService.MutateAssets\]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateAssetsRequest {
     /// Required. The ID of the customer whose assets are being modified.
@@ -3736,7 +3736,7 @@ pub mod asset_service_client {
     impl<T> AssetServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -3848,7 +3848,7 @@ pub mod asset_service_client {
     }
 }
 /// Request message for
-/// [BiddingDataExclusionService.GetBiddingDataExclusion][google.ads.googleads.v8.services.BiddingDataExclusionService.GetBiddingDataExclusion].
+/// \[BiddingDataExclusionService.GetBiddingDataExclusion][google.ads.googleads.v8.services.BiddingDataExclusionService.GetBiddingDataExclusion\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetBiddingDataExclusionRequest {
     /// Required. The resource name of the data exclusion to fetch.
@@ -3856,7 +3856,7 @@ pub struct GetBiddingDataExclusionRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [BiddingDataExclusionService.MutateBiddingDataExclusions][google.ads.googleads.v8.services.BiddingDataExclusionService.MutateBiddingDataExclusions].
+/// \[BiddingDataExclusionService.MutateBiddingDataExclusions][google.ads.googleads.v8.services.BiddingDataExclusionService.MutateBiddingDataExclusions\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateBiddingDataExclusionsRequest {
     /// Required. ID of the customer whose data exclusions are being modified.
@@ -3954,7 +3954,7 @@ pub mod bidding_data_exclusion_service_client {
     impl<T> BiddingDataExclusionServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -4028,7 +4028,7 @@ pub mod bidding_data_exclusion_service_client {
     }
 }
 /// Request message for
-/// [BiddingSeasonalityAdjustmentService.GetBiddingSeasonalityAdjustment][google.ads.googleads.v8.services.BiddingSeasonalityAdjustmentService.GetBiddingSeasonalityAdjustment].
+/// \[BiddingSeasonalityAdjustmentService.GetBiddingSeasonalityAdjustment][google.ads.googleads.v8.services.BiddingSeasonalityAdjustmentService.GetBiddingSeasonalityAdjustment\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetBiddingSeasonalityAdjustmentRequest {
     /// Required. The resource name of the seasonality adjustment to fetch.
@@ -4036,7 +4036,7 @@ pub struct GetBiddingSeasonalityAdjustmentRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [BiddingSeasonalityAdjustmentService.MutateBiddingSeasonalityAdjustments][google.ads.googleads.v8.services.BiddingSeasonalityAdjustmentService.MutateBiddingSeasonalityAdjustments].
+/// \[BiddingSeasonalityAdjustmentService.MutateBiddingSeasonalityAdjustments][google.ads.googleads.v8.services.BiddingSeasonalityAdjustmentService.MutateBiddingSeasonalityAdjustments\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateBiddingSeasonalityAdjustmentsRequest {
     /// Required. ID of the customer whose seasonality adjustments are being modified.
@@ -4135,7 +4135,7 @@ pub mod bidding_seasonality_adjustment_service_client {
     impl<T> BiddingSeasonalityAdjustmentServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -4215,14 +4215,14 @@ pub mod bidding_seasonality_adjustment_service_client {
         }
     }
 }
-/// Request message for [BiddingStrategyService.GetBiddingStrategy][google.ads.googleads.v8.services.BiddingStrategyService.GetBiddingStrategy].
+/// Request message for \[BiddingStrategyService.GetBiddingStrategy][google.ads.googleads.v8.services.BiddingStrategyService.GetBiddingStrategy\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetBiddingStrategyRequest {
     /// Required. The resource name of the bidding strategy to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [BiddingStrategyService.MutateBiddingStrategies][google.ads.googleads.v8.services.BiddingStrategyService.MutateBiddingStrategies].
+/// Request message for \[BiddingStrategyService.MutateBiddingStrategies][google.ads.googleads.v8.services.BiddingStrategyService.MutateBiddingStrategies\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateBiddingStrategiesRequest {
     /// Required. The ID of the customer whose bidding strategies are being modified.
@@ -4317,7 +4317,7 @@ pub mod bidding_strategy_service_client {
     impl<T> BiddingStrategyServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -4430,14 +4430,14 @@ pub mod bidding_strategy_service_client {
         }
     }
 }
-/// Request message for [CampaignAssetService.GetCampaignAsset][google.ads.googleads.v8.services.CampaignAssetService.GetCampaignAsset].
+/// Request message for \[CampaignAssetService.GetCampaignAsset][google.ads.googleads.v8.services.CampaignAssetService.GetCampaignAsset\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCampaignAssetRequest {
     /// Required. The resource name of the campaign asset to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CampaignAssetService.MutateCampaignAssets][google.ads.googleads.v8.services.CampaignAssetService.MutateCampaignAssets].
+/// Request message for \[CampaignAssetService.MutateCampaignAssets][google.ads.googleads.v8.services.CampaignAssetService.MutateCampaignAssets\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCampaignAssetsRequest {
     /// Required. The ID of the customer whose campaign assets are being modified.
@@ -4532,7 +4532,7 @@ pub mod campaign_asset_service_client {
     impl<T> CampaignAssetServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -4630,7 +4630,7 @@ pub mod campaign_asset_service_client {
         }
     }
 }
-/// Request message for [CampaignBidModifierService.GetCampaignBidModifier][google.ads.googleads.v8.services.CampaignBidModifierService.GetCampaignBidModifier].
+/// Request message for \[CampaignBidModifierService.GetCampaignBidModifier][google.ads.googleads.v8.services.CampaignBidModifierService.GetCampaignBidModifier\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCampaignBidModifierRequest {
     /// Required. The resource name of the campaign bid modifier to fetch.
@@ -4638,7 +4638,7 @@ pub struct GetCampaignBidModifierRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [CampaignBidModifierService.MutateCampaignBidModifiers][google.ads.googleads.v8.services.CampaignBidModifierService.MutateCampaignBidModifiers].
+/// \[CampaignBidModifierService.MutateCampaignBidModifiers][google.ads.googleads.v8.services.CampaignBidModifierService.MutateCampaignBidModifiers\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCampaignBidModifiersRequest {
     /// Required. ID of the customer whose campaign bid modifiers are being modified.
@@ -4733,7 +4733,7 @@ pub mod campaign_bid_modifier_service_client {
     impl<T> CampaignBidModifierServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -4838,14 +4838,14 @@ pub mod campaign_bid_modifier_service_client {
         }
     }
 }
-/// Request message for [CampaignBudgetService.GetCampaignBudget][google.ads.googleads.v8.services.CampaignBudgetService.GetCampaignBudget].
+/// Request message for \[CampaignBudgetService.GetCampaignBudget][google.ads.googleads.v8.services.CampaignBudgetService.GetCampaignBudget\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCampaignBudgetRequest {
     /// Required. The resource name of the campaign budget to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CampaignBudgetService.MutateCampaignBudgets][google.ads.googleads.v8.services.CampaignBudgetService.MutateCampaignBudgets].
+/// Request message for \[CampaignBudgetService.MutateCampaignBudgets][google.ads.googleads.v8.services.CampaignBudgetService.MutateCampaignBudgets\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCampaignBudgetsRequest {
     /// Required. The ID of the customer whose campaign budgets are being modified.
@@ -4939,7 +4939,7 @@ pub mod campaign_budget_service_client {
     impl<T> CampaignBudgetServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -5042,14 +5042,14 @@ pub mod campaign_budget_service_client {
         }
     }
 }
-/// Request message for [CampaignCriterionService.GetCampaignCriterion][google.ads.googleads.v8.services.CampaignCriterionService.GetCampaignCriterion].
+/// Request message for \[CampaignCriterionService.GetCampaignCriterion][google.ads.googleads.v8.services.CampaignCriterionService.GetCampaignCriterion\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCampaignCriterionRequest {
     /// Required. The resource name of the criterion to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CampaignCriterionService.MutateCampaignCriteria][google.ads.googleads.v8.services.CampaignCriterionService.MutateCampaignCriteria].
+/// Request message for \[CampaignCriterionService.MutateCampaignCriteria][google.ads.googleads.v8.services.CampaignCriterionService.MutateCampaignCriteria\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCampaignCriteriaRequest {
     /// Required. The ID of the customer whose criteria are being modified.
@@ -5143,7 +5143,7 @@ pub mod campaign_criterion_service_client {
     impl<T> CampaignCriterionServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -5257,14 +5257,14 @@ pub mod campaign_criterion_service_client {
         }
     }
 }
-/// Request message for [CampaignDraftService.GetCampaignDraft][google.ads.googleads.v8.services.CampaignDraftService.GetCampaignDraft].
+/// Request message for \[CampaignDraftService.GetCampaignDraft][google.ads.googleads.v8.services.CampaignDraftService.GetCampaignDraft\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCampaignDraftRequest {
     /// Required. The resource name of the campaign draft to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CampaignDraftService.MutateCampaignDrafts][google.ads.googleads.v8.services.CampaignDraftService.MutateCampaignDrafts].
+/// Request message for \[CampaignDraftService.MutateCampaignDrafts][google.ads.googleads.v8.services.CampaignDraftService.MutateCampaignDrafts\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCampaignDraftsRequest {
     /// Required. The ID of the customer whose campaign drafts are being modified.
@@ -5291,7 +5291,7 @@ pub struct MutateCampaignDraftsRequest {
     )]
     pub response_content_type: i32,
 }
-/// Request message for [CampaignDraftService.PromoteCampaignDraft][google.ads.googleads.v8.services.CampaignDraftService.PromoteCampaignDraft].
+/// Request message for \[CampaignDraftService.PromoteCampaignDraft][google.ads.googleads.v8.services.CampaignDraftService.PromoteCampaignDraft\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PromoteCampaignDraftRequest {
     /// Required. The resource name of the campaign draft to promote.
@@ -5358,7 +5358,7 @@ pub struct MutateCampaignDraftResult {
     #[prost(message, optional, tag = "2")]
     pub campaign_draft: ::core::option::Option<super::resources::CampaignDraft>,
 }
-/// Request message for [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v8.services.CampaignDraftService.ListCampaignDraftAsyncErrors].
+/// Request message for \[CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v8.services.CampaignDraftService.ListCampaignDraftAsyncErrors\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListCampaignDraftAsyncErrorsRequest {
     /// Required. The name of the campaign draft from which to retrieve the async errors.
@@ -5376,7 +5376,7 @@ pub struct ListCampaignDraftAsyncErrorsRequest {
     #[prost(int32, tag = "3")]
     pub page_size: i32,
 }
-/// Response message for [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v8.services.CampaignDraftService.ListCampaignDraftAsyncErrors].
+/// Response message for \[CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v8.services.CampaignDraftService.ListCampaignDraftAsyncErrors\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListCampaignDraftAsyncErrorsResponse {
     /// Details of the errors when performing the asynchronous operation.
@@ -5401,7 +5401,7 @@ pub mod campaign_draft_service_client {
     impl<T> CampaignDraftServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -5560,14 +5560,14 @@ pub mod campaign_draft_service_client {
         }
     }
 }
-/// Request message for [CampaignExperimentService.GetCampaignExperiment][google.ads.googleads.v8.services.CampaignExperimentService.GetCampaignExperiment].
+/// Request message for \[CampaignExperimentService.GetCampaignExperiment][google.ads.googleads.v8.services.CampaignExperimentService.GetCampaignExperiment\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCampaignExperimentRequest {
     /// Required. The resource name of the campaign experiment to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CampaignExperimentService.MutateCampaignExperiments][google.ads.googleads.v8.services.CampaignExperimentService.MutateCampaignExperiments].
+/// Request message for \[CampaignExperimentService.MutateCampaignExperiments][google.ads.googleads.v8.services.CampaignExperimentService.MutateCampaignExperiments\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCampaignExperimentsRequest {
     /// Required. The ID of the customer whose campaign experiments are being modified.
@@ -5646,7 +5646,7 @@ pub struct MutateCampaignExperimentResult {
     #[prost(message, optional, tag = "2")]
     pub campaign_experiment: ::core::option::Option<super::resources::CampaignExperiment>,
 }
-/// Request message for [CampaignExperimentService.CreateCampaignExperiment][google.ads.googleads.v8.services.CampaignExperimentService.CreateCampaignExperiment].
+/// Request message for \[CampaignExperimentService.CreateCampaignExperiment][google.ads.googleads.v8.services.CampaignExperimentService.CreateCampaignExperiment\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateCampaignExperimentRequest {
     /// Required. The ID of the customer whose campaign experiment is being created.
@@ -5668,7 +5668,7 @@ pub struct CreateCampaignExperimentMetadata {
     #[prost(string, tag = "1")]
     pub campaign_experiment: ::prost::alloc::string::String,
 }
-/// Request message for [CampaignExperimentService.GraduateCampaignExperiment][google.ads.googleads.v8.services.CampaignExperimentService.GraduateCampaignExperiment].
+/// Request message for \[CampaignExperimentService.GraduateCampaignExperiment][google.ads.googleads.v8.services.CampaignExperimentService.GraduateCampaignExperiment\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GraduateCampaignExperimentRequest {
     /// Required. The resource name of the campaign experiment to graduate.
@@ -5691,7 +5691,7 @@ pub struct GraduateCampaignExperimentResponse {
     #[prost(string, tag = "1")]
     pub graduated_campaign: ::prost::alloc::string::String,
 }
-/// Request message for [CampaignExperimentService.PromoteCampaignExperiment][google.ads.googleads.v8.services.CampaignExperimentService.PromoteCampaignExperiment].
+/// Request message for \[CampaignExperimentService.PromoteCampaignExperiment][google.ads.googleads.v8.services.CampaignExperimentService.PromoteCampaignExperiment\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PromoteCampaignExperimentRequest {
     /// Required. The resource name of the campaign experiment to promote.
@@ -5702,7 +5702,7 @@ pub struct PromoteCampaignExperimentRequest {
     #[prost(bool, tag = "2")]
     pub validate_only: bool,
 }
-/// Request message for [CampaignExperimentService.EndCampaignExperiment][google.ads.googleads.v8.services.CampaignExperimentService.EndCampaignExperiment].
+/// Request message for \[CampaignExperimentService.EndCampaignExperiment][google.ads.googleads.v8.services.CampaignExperimentService.EndCampaignExperiment\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EndCampaignExperimentRequest {
     /// Required. The resource name of the campaign experiment to end.
@@ -5714,7 +5714,7 @@ pub struct EndCampaignExperimentRequest {
     pub validate_only: bool,
 }
 /// Request message for
-/// [CampaignExperimentService.ListCampaignExperimentAsyncErrors][google.ads.googleads.v8.services.CampaignExperimentService.ListCampaignExperimentAsyncErrors].
+/// \[CampaignExperimentService.ListCampaignExperimentAsyncErrors][google.ads.googleads.v8.services.CampaignExperimentService.ListCampaignExperimentAsyncErrors\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListCampaignExperimentAsyncErrorsRequest {
     /// Required. The name of the campaign experiment from which to retrieve the async
@@ -5734,7 +5734,7 @@ pub struct ListCampaignExperimentAsyncErrorsRequest {
     pub page_size: i32,
 }
 /// Response message for
-/// [CampaignExperimentService.ListCampaignExperimentAsyncErrors][google.ads.googleads.v8.services.CampaignExperimentService.ListCampaignExperimentAsyncErrors].
+/// \[CampaignExperimentService.ListCampaignExperimentAsyncErrors][google.ads.googleads.v8.services.CampaignExperimentService.ListCampaignExperimentAsyncErrors\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListCampaignExperimentAsyncErrorsResponse {
     /// Details of the errors when performing the asynchronous operation.
@@ -5768,7 +5768,7 @@ pub mod campaign_experiment_service_client {
     impl<T> CampaignExperimentServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -6013,7 +6013,7 @@ pub mod campaign_experiment_service_client {
     }
 }
 /// Request message for
-/// [CampaignExtensionSettingService.GetCampaignExtensionSetting][google.ads.googleads.v8.services.CampaignExtensionSettingService.GetCampaignExtensionSetting].
+/// \[CampaignExtensionSettingService.GetCampaignExtensionSetting][google.ads.googleads.v8.services.CampaignExtensionSettingService.GetCampaignExtensionSetting\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCampaignExtensionSettingRequest {
     /// Required. The resource name of the campaign extension setting to fetch.
@@ -6021,7 +6021,7 @@ pub struct GetCampaignExtensionSettingRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [CampaignExtensionSettingService.MutateCampaignExtensionSettings][google.ads.googleads.v8.services.CampaignExtensionSettingService.MutateCampaignExtensionSettings].
+/// \[CampaignExtensionSettingService.MutateCampaignExtensionSettings][google.ads.googleads.v8.services.CampaignExtensionSettingService.MutateCampaignExtensionSettings\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCampaignExtensionSettingsRequest {
     /// Required. The ID of the customer whose campaign extension settings are being
@@ -6122,7 +6122,7 @@ pub mod campaign_extension_setting_service_client {
     impl<T> CampaignExtensionSettingServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -6232,14 +6232,14 @@ pub mod campaign_extension_setting_service_client {
         }
     }
 }
-/// Request message for [CampaignFeedService.GetCampaignFeed][google.ads.googleads.v8.services.CampaignFeedService.GetCampaignFeed].
+/// Request message for \[CampaignFeedService.GetCampaignFeed][google.ads.googleads.v8.services.CampaignFeedService.GetCampaignFeed\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCampaignFeedRequest {
     /// Required. The resource name of the campaign feed to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CampaignFeedService.MutateCampaignFeeds][google.ads.googleads.v8.services.CampaignFeedService.MutateCampaignFeeds].
+/// Request message for \[CampaignFeedService.MutateCampaignFeeds][google.ads.googleads.v8.services.CampaignFeedService.MutateCampaignFeeds\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCampaignFeedsRequest {
     /// Required. The ID of the customer whose campaign feeds are being modified.
@@ -6333,7 +6333,7 @@ pub mod campaign_feed_service_client {
     impl<T> CampaignFeedServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -6441,14 +6441,14 @@ pub mod campaign_feed_service_client {
         }
     }
 }
-/// Request message for [CampaignLabelService.GetCampaignLabel][google.ads.googleads.v8.services.CampaignLabelService.GetCampaignLabel].
+/// Request message for \[CampaignLabelService.GetCampaignLabel][google.ads.googleads.v8.services.CampaignLabelService.GetCampaignLabel\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCampaignLabelRequest {
     /// Required. The resource name of the campaign-label relationship to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CampaignLabelService.MutateCampaignLabels][google.ads.googleads.v8.services.CampaignLabelService.MutateCampaignLabels].
+/// Request message for \[CampaignLabelService.MutateCampaignLabels][google.ads.googleads.v8.services.CampaignLabelService.MutateCampaignLabels\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCampaignLabelsRequest {
     /// Required. ID of the customer whose campaign-label relationships are being modified.
@@ -6524,7 +6524,7 @@ pub mod campaign_label_service_client {
     impl<T> CampaignLabelServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -6621,14 +6621,14 @@ pub mod campaign_label_service_client {
         }
     }
 }
-/// Request message for [CampaignService.GetCampaign][google.ads.googleads.v8.services.CampaignService.GetCampaign].
+/// Request message for \[CampaignService.GetCampaign][google.ads.googleads.v8.services.CampaignService.GetCampaign\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCampaignRequest {
     /// Required. The resource name of the campaign to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CampaignService.MutateCampaigns][google.ads.googleads.v8.services.CampaignService.MutateCampaigns].
+/// Request message for \[CampaignService.MutateCampaigns][google.ads.googleads.v8.services.CampaignService.MutateCampaigns\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCampaignsRequest {
     /// Required. The ID of the customer whose campaigns are being modified.
@@ -6721,7 +6721,7 @@ pub mod campaign_service_client {
     impl<T> CampaignServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -6840,14 +6840,14 @@ pub mod campaign_service_client {
         }
     }
 }
-/// Request message for [CampaignSharedSetService.GetCampaignSharedSet][google.ads.googleads.v8.services.CampaignSharedSetService.GetCampaignSharedSet].
+/// Request message for \[CampaignSharedSetService.GetCampaignSharedSet][google.ads.googleads.v8.services.CampaignSharedSetService.GetCampaignSharedSet\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCampaignSharedSetRequest {
     /// Required. The resource name of the campaign shared set to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CampaignSharedSetService.MutateCampaignSharedSets][google.ads.googleads.v8.services.CampaignSharedSetService.MutateCampaignSharedSets].
+/// Request message for \[CampaignSharedSetService.MutateCampaignSharedSets][google.ads.googleads.v8.services.CampaignSharedSetService.MutateCampaignSharedSets\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCampaignSharedSetsRequest {
     /// Required. The ID of the customer whose campaign shared sets are being modified.
@@ -6935,7 +6935,7 @@ pub mod campaign_shared_set_service_client {
     impl<T> CampaignSharedSetServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -7041,14 +7041,14 @@ pub mod campaign_shared_set_service_client {
         }
     }
 }
-/// Request message for [ConversionActionService.GetConversionAction][google.ads.googleads.v8.services.ConversionActionService.GetConversionAction].
+/// Request message for \[ConversionActionService.GetConversionAction][google.ads.googleads.v8.services.ConversionActionService.GetConversionAction\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetConversionActionRequest {
     /// Required. The resource name of the conversion action to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [ConversionActionService.MutateConversionActions][google.ads.googleads.v8.services.ConversionActionService.MutateConversionActions].
+/// Request message for \[ConversionActionService.MutateConversionActions][google.ads.googleads.v8.services.ConversionActionService.MutateConversionActions\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateConversionActionsRequest {
     /// Required. The ID of the customer whose conversion actions are being modified.
@@ -7106,7 +7106,7 @@ pub mod conversion_action_operation {
         Remove(::prost::alloc::string::String),
     }
 }
-/// Response message for [ConversionActionService.MutateConversionActions][google.ads.googleads.v8.services.ConversionActionService.MutateConversionActions].
+/// Response message for \[ConversionActionService.MutateConversionActions][google.ads.googleads.v8.services.ConversionActionService.MutateConversionActions\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateConversionActionsResponse {
     /// Errors that pertain to operation failures in the partial failure mode.
@@ -7143,7 +7143,7 @@ pub mod conversion_action_service_client {
     impl<T> ConversionActionServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -7247,7 +7247,7 @@ pub mod conversion_action_service_client {
     }
 }
 /// Request message for
-/// [ConversionCustomVariableService.GetConversionCustomVariable][google.ads.googleads.v8.services.ConversionCustomVariableService.GetConversionCustomVariable].
+/// \[ConversionCustomVariableService.GetConversionCustomVariable][google.ads.googleads.v8.services.ConversionCustomVariableService.GetConversionCustomVariable\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetConversionCustomVariableRequest {
     /// Required. The resource name of the conversion custom variable to fetch.
@@ -7255,7 +7255,7 @@ pub struct GetConversionCustomVariableRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [ConversionCustomVariableService.MutateConversionCustomVariables][google.ads.googleads.v8.services.ConversionCustomVariableService.MutateConversionCustomVariables].
+/// \[ConversionCustomVariableService.MutateConversionCustomVariables][google.ads.googleads.v8.services.ConversionCustomVariableService.MutateConversionCustomVariables\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateConversionCustomVariablesRequest {
     /// Required. The ID of the customer whose conversion custom variables are being
@@ -7313,7 +7313,7 @@ pub mod conversion_custom_variable_operation {
     }
 }
 /// Response message for
-/// [ConversionCustomVariableService.MutateConversionCustomVariables][google.ads.googleads.v8.services.ConversionCustomVariableService.MutateConversionCustomVariables].
+/// \[ConversionCustomVariableService.MutateConversionCustomVariables][google.ads.googleads.v8.services.ConversionCustomVariableService.MutateConversionCustomVariables\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateConversionCustomVariablesResponse {
     /// Errors that pertain to operation failures in the partial failure mode.
@@ -7351,7 +7351,7 @@ pub mod conversion_custom_variable_service_client {
     impl<T> ConversionCustomVariableServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -7443,7 +7443,7 @@ pub mod conversion_custom_variable_service_client {
     }
 }
 /// Request message for
-/// [ConversionValueRuleService.GetConversionValueRule][google.ads.googleads.v8.services.ConversionValueRuleService.GetConversionValueRule].
+/// \[ConversionValueRuleService.GetConversionValueRule][google.ads.googleads.v8.services.ConversionValueRuleService.GetConversionValueRule\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetConversionValueRuleRequest {
     /// Required. The resource name of the conversion value rule to fetch.
@@ -7451,7 +7451,7 @@ pub struct GetConversionValueRuleRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [ConversionValueRuleService.MutateConversionValueRules][google.ads.googleads.v8.services.ConversionValueRuleService.MutateConversionValueRules].
+/// \[ConversionValueRuleService.MutateConversionValueRules][google.ads.googleads.v8.services.ConversionValueRuleService.MutateConversionValueRules\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateConversionValueRulesRequest {
     /// Required. The ID of the customer whose conversion value rules are being modified.
@@ -7510,7 +7510,7 @@ pub mod conversion_value_rule_operation {
     }
 }
 /// Response message for
-/// [ConversionValueRuleService.MutateConversionValueRules][google.ads.googleads.v8.services.ConversionValueRuleService.MutateConversionValueRules].
+/// \[ConversionValueRuleService.MutateConversionValueRules][google.ads.googleads.v8.services.ConversionValueRuleService.MutateConversionValueRules\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateConversionValueRulesResponse {
     /// All results for the mutate.
@@ -7547,7 +7547,7 @@ pub mod conversion_value_rule_service_client {
     impl<T> ConversionValueRuleServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -7621,7 +7621,7 @@ pub mod conversion_value_rule_service_client {
     }
 }
 /// Request message for
-/// [ConversionValueRuleSetService.GetConversionValueRuleSet][google.ads.googleads.v8.services.ConversionValueRuleSetService.GetConversionValueRuleSet].
+/// \[ConversionValueRuleSetService.GetConversionValueRuleSet][google.ads.googleads.v8.services.ConversionValueRuleSetService.GetConversionValueRuleSet\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetConversionValueRuleSetRequest {
     /// Required. The resource name of the conversion value rule set to fetch.
@@ -7629,7 +7629,7 @@ pub struct GetConversionValueRuleSetRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [ConversionValueRuleSetService.MutateConversionValueRuleSets][google.ads.googleads.v8.services.ConversionValueRuleSetService.MutateConversionValueRuleSets].
+/// \[ConversionValueRuleSetService.MutateConversionValueRuleSets][google.ads.googleads.v8.services.ConversionValueRuleSetService.MutateConversionValueRuleSets\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateConversionValueRuleSetsRequest {
     /// Required. The ID of the customer whose conversion value rule sets are being modified.
@@ -7691,7 +7691,7 @@ pub mod conversion_value_rule_set_operation {
     }
 }
 /// Response message for
-/// [ConversionValueRuleSetService.MutateConversionValueRuleSets][google.ads.googleads.v8.services.ConversionValueRuleSetService.MutateConversionValueRuleSets].
+/// \[ConversionValueRuleSetService.MutateConversionValueRuleSets][google.ads.googleads.v8.services.ConversionValueRuleSetService.MutateConversionValueRuleSets\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateConversionValueRuleSetsResponse {
     /// All results for the mutate.
@@ -7728,7 +7728,7 @@ pub mod conversion_value_rule_set_service_client {
     impl<T> ConversionValueRuleSetServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -7801,14 +7801,14 @@ pub mod conversion_value_rule_set_service_client {
         }
     }
 }
-/// Request message for [CustomerAssetService.GetCustomerAsset][google.ads.googleads.v8.services.CustomerAssetService.GetCustomerAsset].
+/// Request message for \[CustomerAssetService.GetCustomerAsset][google.ads.googleads.v8.services.CustomerAssetService.GetCustomerAsset\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCustomerAssetRequest {
     /// Required. The resource name of the customer asset to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CustomerAssetService.MutateCustomerAssets][google.ads.googleads.v8.services.CustomerAssetService.MutateCustomerAssets].
+/// Request message for \[CustomerAssetService.MutateCustomerAssets][google.ads.googleads.v8.services.CustomerAssetService.MutateCustomerAssets\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCustomerAssetsRequest {
     /// Required. The ID of the customer whose customer assets are being modified.
@@ -7903,7 +7903,7 @@ pub mod customer_asset_service_client {
     impl<T> CustomerAssetServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -7999,7 +7999,7 @@ pub mod customer_asset_service_client {
     }
 }
 /// Request message for
-/// [CustomerExtensionSettingService.GetCustomerExtensionSetting][google.ads.googleads.v8.services.CustomerExtensionSettingService.GetCustomerExtensionSetting].
+/// \[CustomerExtensionSettingService.GetCustomerExtensionSetting][google.ads.googleads.v8.services.CustomerExtensionSettingService.GetCustomerExtensionSetting\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCustomerExtensionSettingRequest {
     /// Required. The resource name of the customer extension setting to fetch.
@@ -8007,7 +8007,7 @@ pub struct GetCustomerExtensionSettingRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [CustomerExtensionSettingService.MutateCustomerExtensionSettings][google.ads.googleads.v8.services.CustomerExtensionSettingService.MutateCustomerExtensionSettings].
+/// \[CustomerExtensionSettingService.MutateCustomerExtensionSettings][google.ads.googleads.v8.services.CustomerExtensionSettingService.MutateCustomerExtensionSettings\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCustomerExtensionSettingsRequest {
     /// Required. The ID of the customer whose customer extension settings are being
@@ -8108,7 +8108,7 @@ pub mod customer_extension_setting_service_client {
     impl<T> CustomerExtensionSettingServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -8216,14 +8216,14 @@ pub mod customer_extension_setting_service_client {
         }
     }
 }
-/// Request message for [CustomerFeedService.GetCustomerFeed][google.ads.googleads.v8.services.CustomerFeedService.GetCustomerFeed].
+/// Request message for \[CustomerFeedService.GetCustomerFeed][google.ads.googleads.v8.services.CustomerFeedService.GetCustomerFeed\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCustomerFeedRequest {
     /// Required. The resource name of the customer feed to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CustomerFeedService.MutateCustomerFeeds][google.ads.googleads.v8.services.CustomerFeedService.MutateCustomerFeeds].
+/// Request message for \[CustomerFeedService.MutateCustomerFeeds][google.ads.googleads.v8.services.CustomerFeedService.MutateCustomerFeeds\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCustomerFeedsRequest {
     /// Required. The ID of the customer whose customer feeds are being modified.
@@ -8317,7 +8317,7 @@ pub mod customer_feed_service_client {
     impl<T> CustomerFeedServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -8424,14 +8424,14 @@ pub mod customer_feed_service_client {
         }
     }
 }
-/// Request message for [CustomerLabelService.GetCustomerLabel][google.ads.googleads.v8.services.CustomerLabelService.GetCustomerLabel].
+/// Request message for \[CustomerLabelService.GetCustomerLabel][google.ads.googleads.v8.services.CustomerLabelService.GetCustomerLabel\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCustomerLabelRequest {
     /// Required. The resource name of the customer-label relationship to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CustomerLabelService.MutateCustomerLabels][google.ads.googleads.v8.services.CustomerLabelService.MutateCustomerLabels].
+/// Request message for \[CustomerLabelService.MutateCustomerLabels][google.ads.googleads.v8.services.CustomerLabelService.MutateCustomerLabels\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCustomerLabelsRequest {
     /// Required. ID of the customer whose customer-label relationships are being modified.
@@ -8507,7 +8507,7 @@ pub mod customer_label_service_client {
     impl<T> CustomerLabelServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -8603,7 +8603,7 @@ pub mod customer_label_service_client {
     }
 }
 /// Request message for
-/// [CustomerNegativeCriterionService.GetCustomerNegativeCriterion][google.ads.googleads.v8.services.CustomerNegativeCriterionService.GetCustomerNegativeCriterion].
+/// \[CustomerNegativeCriterionService.GetCustomerNegativeCriterion][google.ads.googleads.v8.services.CustomerNegativeCriterionService.GetCustomerNegativeCriterion\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCustomerNegativeCriterionRequest {
     /// Required. The resource name of the criterion to fetch.
@@ -8611,7 +8611,7 @@ pub struct GetCustomerNegativeCriterionRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [CustomerNegativeCriterionService.MutateCustomerNegativeCriteria][google.ads.googleads.v8.services.CustomerNegativeCriterionService.MutateCustomerNegativeCriteria].
+/// \[CustomerNegativeCriterionService.MutateCustomerNegativeCriteria][google.ads.googleads.v8.services.CustomerNegativeCriterionService.MutateCustomerNegativeCriteria\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCustomerNegativeCriteriaRequest {
     /// Required. The ID of the customer whose criteria are being modified.
@@ -8701,7 +8701,7 @@ pub mod customer_negative_criterion_service_client {
     impl<T> CustomerNegativeCriterionServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -8795,14 +8795,14 @@ pub mod customer_negative_criterion_service_client {
         }
     }
 }
-/// Request message for [CustomerService.GetCustomer][google.ads.googleads.v8.services.CustomerService.GetCustomer].
+/// Request message for \[CustomerService.GetCustomer][google.ads.googleads.v8.services.CustomerService.GetCustomer\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCustomerRequest {
     /// Required. The resource name of the customer to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CustomerService.MutateCustomer][google.ads.googleads.v8.services.CustomerService.MutateCustomer].
+/// Request message for \[CustomerService.MutateCustomer][google.ads.googleads.v8.services.CustomerService.MutateCustomer\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCustomerRequest {
     /// Required. The ID of the customer being modified.
@@ -8823,7 +8823,7 @@ pub struct MutateCustomerRequest {
     )]
     pub response_content_type: i32,
 }
-/// Request message for [CustomerService.CreateCustomerClient][google.ads.googleads.v8.services.CustomerService.CreateCustomerClient].
+/// Request message for \[CustomerService.CreateCustomerClient][google.ads.googleads.v8.services.CustomerService.CreateCustomerClient\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateCustomerClientRequest {
     /// Required. The ID of the Manager under whom client customer is being created.
@@ -8885,10 +8885,10 @@ pub struct MutateCustomerResult {
     #[prost(message, optional, tag = "2")]
     pub customer: ::core::option::Option<super::resources::Customer>,
 }
-/// Request message for [CustomerService.ListAccessibleCustomers][google.ads.googleads.v8.services.CustomerService.ListAccessibleCustomers].
+/// Request message for \[CustomerService.ListAccessibleCustomers][google.ads.googleads.v8.services.CustomerService.ListAccessibleCustomers\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListAccessibleCustomersRequest {}
-/// Response message for [CustomerService.ListAccessibleCustomers][google.ads.googleads.v8.services.CustomerService.ListAccessibleCustomers].
+/// Response message for \[CustomerService.ListAccessibleCustomers][google.ads.googleads.v8.services.CustomerService.ListAccessibleCustomers\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListAccessibleCustomersResponse {
     /// Resource name of customers directly accessible by the
@@ -8908,7 +8908,7 @@ pub mod customer_service_client {
     impl<T> CustomerServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -9058,14 +9058,14 @@ pub mod customer_service_client {
         }
     }
 }
-/// Request message for [ExtensionFeedItemService.GetExtensionFeedItem][google.ads.googleads.v8.services.ExtensionFeedItemService.GetExtensionFeedItem].
+/// Request message for \[ExtensionFeedItemService.GetExtensionFeedItem][google.ads.googleads.v8.services.ExtensionFeedItemService.GetExtensionFeedItem\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetExtensionFeedItemRequest {
     /// Required. The resource name of the extension feed item to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [ExtensionFeedItemService.MutateExtensionFeedItems][google.ads.googleads.v8.services.ExtensionFeedItemService.MutateExtensionFeedItems].
+/// Request message for \[ExtensionFeedItemService.MutateExtensionFeedItems][google.ads.googleads.v8.services.ExtensionFeedItemService.MutateExtensionFeedItems\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateExtensionFeedItemsRequest {
     /// Required. The ID of the customer whose extension feed items are being
@@ -9161,7 +9161,7 @@ pub mod extension_feed_item_service_client {
     impl<T> ExtensionFeedItemServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -9269,14 +9269,14 @@ pub mod extension_feed_item_service_client {
         }
     }
 }
-/// Request message for [FeedItemService.GetFeedItem][google.ads.googleads.v8.services.FeedItemService.GetFeedItem].
+/// Request message for \[FeedItemService.GetFeedItem][google.ads.googleads.v8.services.FeedItemService.GetFeedItem\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetFeedItemRequest {
     /// Required. The resource name of the feed item to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [FeedItemService.MutateFeedItems][google.ads.googleads.v8.services.FeedItemService.MutateFeedItems].
+/// Request message for \[FeedItemService.MutateFeedItems][google.ads.googleads.v8.services.FeedItemService.MutateFeedItems\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateFeedItemsRequest {
     /// Required. The ID of the customer whose feed items are being modified.
@@ -9369,7 +9369,7 @@ pub mod feed_item_service_client {
     impl<T> FeedItemServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -9479,14 +9479,14 @@ pub mod feed_item_service_client {
         }
     }
 }
-/// Request message for [FeedItemSetLinkService.GetFeedItemSetLinks][].
+/// Request message for \[FeedItemSetLinkService.GetFeedItemSetLinks][\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetFeedItemSetLinkRequest {
     /// Required. The resource name of the feed item set link to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [FeedItemSetLinkService.MutateFeedItemSetLinks][google.ads.googleads.v8.services.FeedItemSetLinkService.MutateFeedItemSetLinks].
+/// Request message for \[FeedItemSetLinkService.MutateFeedItemSetLinks][google.ads.googleads.v8.services.FeedItemSetLinkService.MutateFeedItemSetLinks\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateFeedItemSetLinksRequest {
     /// Required. The ID of the customer whose feed item set links are being modified.
@@ -9556,7 +9556,7 @@ pub mod feed_item_set_link_service_client {
     impl<T> FeedItemSetLinkServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -9647,14 +9647,14 @@ pub mod feed_item_set_link_service_client {
         }
     }
 }
-/// Request message for [FeedItemSetService.GetFeedItemSet][google.ads.googleads.v8.services.FeedItemSetService.GetFeedItemSet].
+/// Request message for \[FeedItemSetService.GetFeedItemSet][google.ads.googleads.v8.services.FeedItemSetService.GetFeedItemSet\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetFeedItemSetRequest {
     /// Required. The resource name of the feed item set to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [FeedItemSetService.MutateFeedItemSets][google.ads.googleads.v8.services.FeedItemSetService.MutateFeedItemSets].
+/// Request message for \[FeedItemSetService.MutateFeedItemSets][google.ads.googleads.v8.services.FeedItemSetService.MutateFeedItemSets\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateFeedItemSetsRequest {
     /// Required. The ID of the customer whose feed item sets are being modified.
@@ -9729,7 +9729,7 @@ pub mod feed_item_set_service_client {
     impl<T> FeedItemSetServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -9821,14 +9821,14 @@ pub mod feed_item_set_service_client {
         }
     }
 }
-/// Request message for [FeedItemTargetService.GetFeedItemTarget][google.ads.googleads.v8.services.FeedItemTargetService.GetFeedItemTarget].
+/// Request message for \[FeedItemTargetService.GetFeedItemTarget][google.ads.googleads.v8.services.FeedItemTargetService.GetFeedItemTarget\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetFeedItemTargetRequest {
     /// Required. The resource name of the feed item targets to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [FeedItemTargetService.MutateFeedItemTargets][google.ads.googleads.v8.services.FeedItemTargetService.MutateFeedItemTargets].
+/// Request message for \[FeedItemTargetService.MutateFeedItemTargets][google.ads.googleads.v8.services.FeedItemTargetService.MutateFeedItemTargets\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateFeedItemTargetsRequest {
     /// Required. The ID of the customer whose feed item targets are being modified.
@@ -9916,7 +9916,7 @@ pub mod feed_item_target_service_client {
     impl<T> FeedItemTargetServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -10020,14 +10020,14 @@ pub mod feed_item_target_service_client {
         }
     }
 }
-/// Request message for [FeedMappingService.GetFeedMapping][google.ads.googleads.v8.services.FeedMappingService.GetFeedMapping].
+/// Request message for \[FeedMappingService.GetFeedMapping][google.ads.googleads.v8.services.FeedMappingService.GetFeedMapping\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetFeedMappingRequest {
     /// Required. The resource name of the feed mapping to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [FeedMappingService.MutateFeedMappings][google.ads.googleads.v8.services.FeedMappingService.MutateFeedMappings].
+/// Request message for \[FeedMappingService.MutateFeedMappings][google.ads.googleads.v8.services.FeedMappingService.MutateFeedMappings\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateFeedMappingsRequest {
     /// Required. The ID of the customer whose feed mappings are being modified.
@@ -10114,7 +10114,7 @@ pub mod feed_mapping_service_client {
     impl<T> FeedMappingServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -10218,14 +10218,14 @@ pub mod feed_mapping_service_client {
         }
     }
 }
-/// Request message for [FeedService.GetFeed][google.ads.googleads.v8.services.FeedService.GetFeed].
+/// Request message for \[FeedService.GetFeed][google.ads.googleads.v8.services.FeedService.GetFeed\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetFeedRequest {
     /// Required. The resource name of the feed to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [FeedService.MutateFeeds][google.ads.googleads.v8.services.FeedService.MutateFeeds].
+/// Request message for \[FeedService.MutateFeeds][google.ads.googleads.v8.services.FeedService.MutateFeeds\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateFeedsRequest {
     /// Required. The ID of the customer whose feeds are being modified.
@@ -10318,7 +10318,7 @@ pub mod feed_service_client {
     impl<T> FeedServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -10428,7 +10428,7 @@ pub mod feed_service_client {
     }
 }
 /// Request message for
-/// [KeywordPlanAdGroupKeywordService.GetKeywordPlanAdGroupKeyword][google.ads.googleads.v8.services.KeywordPlanAdGroupKeywordService.GetKeywordPlanAdGroupKeyword].
+/// \[KeywordPlanAdGroupKeywordService.GetKeywordPlanAdGroupKeyword][google.ads.googleads.v8.services.KeywordPlanAdGroupKeywordService.GetKeywordPlanAdGroupKeyword\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetKeywordPlanAdGroupKeywordRequest {
     /// Required. The resource name of the ad group keyword to fetch.
@@ -10436,7 +10436,7 @@ pub struct GetKeywordPlanAdGroupKeywordRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [KeywordPlanAdGroupKeywordService.MutateKeywordPlanAdGroupKeywords][google.ads.googleads.v8.services.KeywordPlanAdGroupKeywordService.MutateKeywordPlanAdGroupKeywords].
+/// \[KeywordPlanAdGroupKeywordService.MutateKeywordPlanAdGroupKeywords][google.ads.googleads.v8.services.KeywordPlanAdGroupKeywordService.MutateKeywordPlanAdGroupKeywords\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateKeywordPlanAdGroupKeywordsRequest {
     /// Required. The ID of the customer whose Keyword Plan ad group keywords are being
@@ -10530,7 +10530,7 @@ pub mod keyword_plan_ad_group_keyword_service_client {
     impl<T> KeywordPlanAdGroupKeywordServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -10627,14 +10627,14 @@ pub mod keyword_plan_ad_group_keyword_service_client {
         }
     }
 }
-/// Request message for [KeywordPlanAdGroupService.GetKeywordPlanAdGroup][google.ads.googleads.v8.services.KeywordPlanAdGroupService.GetKeywordPlanAdGroup].
+/// Request message for \[KeywordPlanAdGroupService.GetKeywordPlanAdGroup][google.ads.googleads.v8.services.KeywordPlanAdGroupService.GetKeywordPlanAdGroup\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetKeywordPlanAdGroupRequest {
     /// Required. The resource name of the Keyword Plan ad group to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [KeywordPlanAdGroupService.MutateKeywordPlanAdGroups][google.ads.googleads.v8.services.KeywordPlanAdGroupService.MutateKeywordPlanAdGroups].
+/// Request message for \[KeywordPlanAdGroupService.MutateKeywordPlanAdGroups][google.ads.googleads.v8.services.KeywordPlanAdGroupService.MutateKeywordPlanAdGroups\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateKeywordPlanAdGroupsRequest {
     /// Required. The ID of the customer whose Keyword Plan ad groups are being modified.
@@ -10719,7 +10719,7 @@ pub mod keyword_plan_ad_group_service_client {
     impl<T> KeywordPlanAdGroupServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -10819,7 +10819,7 @@ pub mod keyword_plan_ad_group_service_client {
     }
 }
 /// Request message for
-/// [KeywordPlanCampaignKeywordService.GetKeywordPlanCampaignKeyword][google.ads.googleads.v8.services.KeywordPlanCampaignKeywordService.GetKeywordPlanCampaignKeyword].
+/// \[KeywordPlanCampaignKeywordService.GetKeywordPlanCampaignKeyword][google.ads.googleads.v8.services.KeywordPlanCampaignKeywordService.GetKeywordPlanCampaignKeyword\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetKeywordPlanCampaignKeywordRequest {
     /// Required. The resource name of the plan to fetch.
@@ -10827,7 +10827,7 @@ pub struct GetKeywordPlanCampaignKeywordRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [KeywordPlanCampaignKeywordService.MutateKeywordPlanCampaignKeywords][google.ads.googleads.v8.services.KeywordPlanCampaignKeywordService.MutateKeywordPlanCampaignKeywords].
+/// \[KeywordPlanCampaignKeywordService.MutateKeywordPlanCampaignKeywords][google.ads.googleads.v8.services.KeywordPlanCampaignKeywordService.MutateKeywordPlanCampaignKeywords\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateKeywordPlanCampaignKeywordsRequest {
     /// Required. The ID of the customer whose campaign keywords are being modified.
@@ -10919,7 +10919,7 @@ pub mod keyword_plan_campaign_keyword_service_client {
     impl<T> KeywordPlanCampaignKeywordServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -11018,7 +11018,7 @@ pub mod keyword_plan_campaign_keyword_service_client {
         }
     }
 }
-/// Request message for [KeywordPlanCampaignService.GetKeywordPlanCampaign][google.ads.googleads.v8.services.KeywordPlanCampaignService.GetKeywordPlanCampaign].
+/// Request message for \[KeywordPlanCampaignService.GetKeywordPlanCampaign][google.ads.googleads.v8.services.KeywordPlanCampaignService.GetKeywordPlanCampaign\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetKeywordPlanCampaignRequest {
     /// Required. The resource name of the Keyword Plan campaign to fetch.
@@ -11026,7 +11026,7 @@ pub struct GetKeywordPlanCampaignRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [KeywordPlanCampaignService.MutateKeywordPlanCampaigns][google.ads.googleads.v8.services.KeywordPlanCampaignService.MutateKeywordPlanCampaigns].
+/// \[KeywordPlanCampaignService.MutateKeywordPlanCampaigns][google.ads.googleads.v8.services.KeywordPlanCampaignService.MutateKeywordPlanCampaigns\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateKeywordPlanCampaignsRequest {
     /// Required. The ID of the customer whose Keyword Plan campaigns are being modified.
@@ -11110,7 +11110,7 @@ pub mod keyword_plan_campaign_service_client {
     impl<T> KeywordPlanCampaignServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -11208,14 +11208,14 @@ pub mod keyword_plan_campaign_service_client {
         }
     }
 }
-/// Request message for [KeywordPlanService.GetKeywordPlan][google.ads.googleads.v8.services.KeywordPlanService.GetKeywordPlan].
+/// Request message for \[KeywordPlanService.GetKeywordPlan][google.ads.googleads.v8.services.KeywordPlanService.GetKeywordPlan\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetKeywordPlanRequest {
     /// Required. The resource name of the plan to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [KeywordPlanService.MutateKeywordPlans][google.ads.googleads.v8.services.KeywordPlanService.MutateKeywordPlans].
+/// Request message for \[KeywordPlanService.MutateKeywordPlans][google.ads.googleads.v8.services.KeywordPlanService.MutateKeywordPlans\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateKeywordPlansRequest {
     /// Required. The ID of the customer whose keyword plans are being modified.
@@ -11286,14 +11286,14 @@ pub struct MutateKeywordPlansResult {
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [KeywordPlanService.GenerateForecastCurve][google.ads.googleads.v8.services.KeywordPlanService.GenerateForecastCurve].
+/// Request message for \[KeywordPlanService.GenerateForecastCurve][google.ads.googleads.v8.services.KeywordPlanService.GenerateForecastCurve\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenerateForecastCurveRequest {
     /// Required. The resource name of the keyword plan to be forecasted.
     #[prost(string, tag = "1")]
     pub keyword_plan: ::prost::alloc::string::String,
 }
-/// Response message for [KeywordPlanService.GenerateForecastCurve][google.ads.googleads.v8.services.KeywordPlanService.GenerateForecastCurve].
+/// Response message for \[KeywordPlanService.GenerateForecastCurve][google.ads.googleads.v8.services.KeywordPlanService.GenerateForecastCurve\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenerateForecastCurveResponse {
     /// List of forecast curves for the keyword plan campaign.
@@ -11301,14 +11301,14 @@ pub struct GenerateForecastCurveResponse {
     #[prost(message, repeated, tag = "1")]
     pub campaign_forecast_curves: ::prost::alloc::vec::Vec<KeywordPlanCampaignForecastCurve>,
 }
-/// Request message for [KeywordPlanService.GenerateForecastTimeSeries][google.ads.googleads.v8.services.KeywordPlanService.GenerateForecastTimeSeries].
+/// Request message for \[KeywordPlanService.GenerateForecastTimeSeries][google.ads.googleads.v8.services.KeywordPlanService.GenerateForecastTimeSeries\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenerateForecastTimeSeriesRequest {
     /// Required. The resource name of the keyword plan to be forecasted.
     #[prost(string, tag = "1")]
     pub keyword_plan: ::prost::alloc::string::String,
 }
-/// Response message for [KeywordPlanService.GenerateForecastTimeSeries][google.ads.googleads.v8.services.KeywordPlanService.GenerateForecastTimeSeries].
+/// Response message for \[KeywordPlanService.GenerateForecastTimeSeries][google.ads.googleads.v8.services.KeywordPlanService.GenerateForecastTimeSeries\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenerateForecastTimeSeriesResponse {
     /// List of weekly time series forecasts for the keyword plan campaign.
@@ -11316,14 +11316,14 @@ pub struct GenerateForecastTimeSeriesResponse {
     #[prost(message, repeated, tag = "1")]
     pub weekly_time_series_forecasts: ::prost::alloc::vec::Vec<KeywordPlanWeeklyTimeSeriesForecast>,
 }
-/// Request message for [KeywordPlanService.GenerateForecastMetrics][google.ads.googleads.v8.services.KeywordPlanService.GenerateForecastMetrics].
+/// Request message for \[KeywordPlanService.GenerateForecastMetrics][google.ads.googleads.v8.services.KeywordPlanService.GenerateForecastMetrics\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenerateForecastMetricsRequest {
     /// Required. The resource name of the keyword plan to be forecasted.
     #[prost(string, tag = "1")]
     pub keyword_plan: ::prost::alloc::string::String,
 }
-/// Response message for [KeywordPlanService.GenerateForecastMetrics][google.ads.googleads.v8.services.KeywordPlanService.GenerateForecastMetrics].
+/// Response message for \[KeywordPlanService.GenerateForecastMetrics][google.ads.googleads.v8.services.KeywordPlanService.GenerateForecastMetrics\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenerateForecastMetricsResponse {
     /// List of campaign forecasts.
@@ -11443,7 +11443,7 @@ pub struct ForecastMetrics {
     #[prost(int64, optional, tag = "11")]
     pub cost_micros: ::core::option::Option<i64>,
 }
-/// Request message for [KeywordPlanService.GenerateHistoricalMetrics][google.ads.googleads.v8.services.KeywordPlanService.GenerateHistoricalMetrics].
+/// Request message for \[KeywordPlanService.GenerateHistoricalMetrics][google.ads.googleads.v8.services.KeywordPlanService.GenerateHistoricalMetrics\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenerateHistoricalMetricsRequest {
     /// Required. The resource name of the keyword plan of which historical metrics are
@@ -11457,7 +11457,7 @@ pub struct GenerateHistoricalMetricsRequest {
     #[prost(message, optional, tag = "3")]
     pub historical_metrics_options: ::core::option::Option<super::common::HistoricalMetricsOptions>,
 }
-/// Response message for [KeywordPlanService.GenerateHistoricalMetrics][google.ads.googleads.v8.services.KeywordPlanService.GenerateHistoricalMetrics].
+/// Response message for \[KeywordPlanService.GenerateHistoricalMetrics][google.ads.googleads.v8.services.KeywordPlanService.GenerateHistoricalMetrics\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenerateHistoricalMetricsResponse {
     /// List of keyword historical metrics.
@@ -11503,7 +11503,7 @@ pub mod keyword_plan_service_client {
     impl<T> KeywordPlanServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -11719,14 +11719,14 @@ pub mod keyword_plan_service_client {
         }
     }
 }
-/// Request message for [LabelService.GetLabel][google.ads.googleads.v8.services.LabelService.GetLabel].
+/// Request message for \[LabelService.GetLabel][google.ads.googleads.v8.services.LabelService.GetLabel\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetLabelRequest {
     /// Required. The resource name of the label to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [LabelService.MutateLabels][google.ads.googleads.v8.services.LabelService.MutateLabels].
+/// Request message for \[LabelService.MutateLabels][google.ads.googleads.v8.services.LabelService.MutateLabels\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateLabelsRequest {
     /// Required. ID of the customer whose labels are being modified.
@@ -11818,7 +11818,7 @@ pub mod label_service_client {
     impl<T> LabelServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -11925,14 +11925,14 @@ pub mod label_service_client {
         }
     }
 }
-/// Request message for [MediaFileService.GetMediaFile][google.ads.googleads.v8.services.MediaFileService.GetMediaFile]
+/// Request message for \[MediaFileService.GetMediaFile][google.ads.googleads.v8.services.MediaFileService.GetMediaFile\]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetMediaFileRequest {
     /// Required. The resource name of the media file to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [MediaFileService.MutateMediaFiles][google.ads.googleads.v8.services.MediaFileService.MutateMediaFiles]
+/// Request message for \[MediaFileService.MutateMediaFiles][google.ads.googleads.v8.services.MediaFileService.MutateMediaFiles\]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateMediaFilesRequest {
     /// Required. The ID of the customer whose media files are being modified.
@@ -12013,7 +12013,7 @@ pub mod media_file_service_client {
     impl<T> MediaFileServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -12118,14 +12118,14 @@ pub mod media_file_service_client {
         }
     }
 }
-/// Request message for [RemarketingActionService.GetRemarketingAction][google.ads.googleads.v8.services.RemarketingActionService.GetRemarketingAction].
+/// Request message for \[RemarketingActionService.GetRemarketingAction][google.ads.googleads.v8.services.RemarketingActionService.GetRemarketingAction\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetRemarketingActionRequest {
     /// Required. The resource name of the remarketing action to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [RemarketingActionService.MutateRemarketingActions][google.ads.googleads.v8.services.RemarketingActionService.MutateRemarketingActions].
+/// Request message for \[RemarketingActionService.MutateRemarketingActions][google.ads.googleads.v8.services.RemarketingActionService.MutateRemarketingActions\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateRemarketingActionsRequest {
     /// Required. The ID of the customer whose remarketing actions are being modified.
@@ -12202,7 +12202,7 @@ pub mod remarketing_action_service_client {
     impl<T> RemarketingActionServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -12293,14 +12293,14 @@ pub mod remarketing_action_service_client {
         }
     }
 }
-/// Request message for [SharedCriterionService.GetSharedCriterion][google.ads.googleads.v8.services.SharedCriterionService.GetSharedCriterion].
+/// Request message for \[SharedCriterionService.GetSharedCriterion][google.ads.googleads.v8.services.SharedCriterionService.GetSharedCriterion\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetSharedCriterionRequest {
     /// Required. The resource name of the shared criterion to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [SharedCriterionService.MutateSharedCriteria][google.ads.googleads.v8.services.SharedCriterionService.MutateSharedCriteria].
+/// Request message for \[SharedCriterionService.MutateSharedCriteria][google.ads.googleads.v8.services.SharedCriterionService.MutateSharedCriteria\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateSharedCriteriaRequest {
     /// Required. The ID of the customer whose shared criteria are being modified.
@@ -12388,7 +12388,7 @@ pub mod shared_criterion_service_client {
     impl<T> SharedCriterionServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -12493,14 +12493,14 @@ pub mod shared_criterion_service_client {
         }
     }
 }
-/// Request message for [SharedSetService.GetSharedSet][google.ads.googleads.v8.services.SharedSetService.GetSharedSet].
+/// Request message for \[SharedSetService.GetSharedSet][google.ads.googleads.v8.services.SharedSetService.GetSharedSet\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetSharedSetRequest {
     /// Required. The resource name of the shared set to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [SharedSetService.MutateSharedSets][google.ads.googleads.v8.services.SharedSetService.MutateSharedSets].
+/// Request message for \[SharedSetService.MutateSharedSets][google.ads.googleads.v8.services.SharedSetService.MutateSharedSets\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateSharedSetsRequest {
     /// Required. The ID of the customer whose shared sets are being modified.
@@ -12594,7 +12594,7 @@ pub mod shared_set_service_client {
     impl<T> SharedSetServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -12701,7 +12701,7 @@ pub mod shared_set_service_client {
         }
     }
 }
-/// Request message for [SmartCampaignSettingService.GetSmartCampaignSetting][google.ads.googleads.v8.services.SmartCampaignSettingService.GetSmartCampaignSetting].
+/// Request message for \[SmartCampaignSettingService.GetSmartCampaignSetting][google.ads.googleads.v8.services.SmartCampaignSettingService.GetSmartCampaignSetting\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetSmartCampaignSettingRequest {
     /// Required. The resource name of the Smart campaign setting to fetch.
@@ -12709,7 +12709,7 @@ pub struct GetSmartCampaignSettingRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [SmartCampaignSettingService.MutateSmartCampaignSetting][].
+/// \[SmartCampaignSettingService.MutateSmartCampaignSetting][\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateSmartCampaignSettingsRequest {
     /// Required. The ID of the customer whose Smart campaign settings are being modified.
@@ -12784,7 +12784,7 @@ pub mod smart_campaign_setting_service_client {
     impl<T> SmartCampaignSettingServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -12856,14 +12856,14 @@ pub mod smart_campaign_setting_service_client {
         }
     }
 }
-/// Request message for [UserListService.GetUserList][google.ads.googleads.v8.services.UserListService.GetUserList].
+/// Request message for \[UserListService.GetUserList][google.ads.googleads.v8.services.UserListService.GetUserList\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetUserListRequest {
     /// Required. The resource name of the user list to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [UserListService.MutateUserLists][google.ads.googleads.v8.services.UserListService.MutateUserLists].
+/// Request message for \[UserListService.MutateUserLists][google.ads.googleads.v8.services.UserListService.MutateUserLists\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateUserListsRequest {
     /// Required. The ID of the customer whose user lists are being modified.
@@ -12945,7 +12945,7 @@ pub mod user_list_service_client {
     impl<T> UserListServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -13049,7 +13049,7 @@ pub mod user_list_service_client {
         }
     }
 }
-/// Request message for [GoogleAdsService.Search][google.ads.googleads.v8.services.GoogleAdsService.Search].
+/// Request message for \[GoogleAdsService.Search][google.ads.googleads.v8.services.GoogleAdsService.Search\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchGoogleAdsRequest {
     /// Required. The ID of the customer being queried.
@@ -13086,7 +13086,7 @@ pub struct SearchGoogleAdsRequest {
     )]
     pub summary_row_setting: i32,
 }
-/// Response message for [GoogleAdsService.Search][google.ads.googleads.v8.services.GoogleAdsService.Search].
+/// Response message for \[GoogleAdsService.Search][google.ads.googleads.v8.services.GoogleAdsService.Search\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchGoogleAdsResponse {
     /// The list of rows that matched the query.
@@ -13111,7 +13111,7 @@ pub struct SearchGoogleAdsResponse {
     #[prost(message, optional, tag = "6")]
     pub summary_row: ::core::option::Option<GoogleAdsRow>,
 }
-/// Request message for [GoogleAdsService.SearchStream][google.ads.googleads.v8.services.GoogleAdsService.SearchStream].
+/// Request message for \[GoogleAdsService.SearchStream][google.ads.googleads.v8.services.GoogleAdsService.SearchStream\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchGoogleAdsStreamRequest {
     /// Required. The ID of the customer being queried.
@@ -13129,7 +13129,7 @@ pub struct SearchGoogleAdsStreamRequest {
     )]
     pub summary_row_setting: i32,
 }
-/// Response message for [GoogleAdsService.SearchStream][google.ads.googleads.v8.services.GoogleAdsService.SearchStream].
+/// Response message for \[GoogleAdsService.SearchStream][google.ads.googleads.v8.services.GoogleAdsService.SearchStream\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchGoogleAdsStreamResponse {
     /// The list of rows that matched the query.
@@ -13560,7 +13560,7 @@ pub struct GoogleAdsRow {
     #[prost(message, optional, tag = "102")]
     pub segments: ::core::option::Option<super::common::Segments>,
 }
-/// Request message for [GoogleAdsService.Mutate][google.ads.googleads.v8.services.GoogleAdsService.Mutate].
+/// Request message for \[GoogleAdsService.Mutate][google.ads.googleads.v8.services.GoogleAdsService.Mutate\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateGoogleAdsRequest {
     /// Required. The ID of the customer whose resources are being modified.
@@ -13589,7 +13589,7 @@ pub struct MutateGoogleAdsRequest {
     )]
     pub response_content_type: i32,
 }
-/// Response message for [GoogleAdsService.Mutate][google.ads.googleads.v8.services.GoogleAdsService.Mutate].
+/// Response message for \[GoogleAdsService.Mutate][google.ads.googleads.v8.services.GoogleAdsService.Mutate\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateGoogleAdsResponse {
     /// Errors that pertain to operation failures in the partial failure mode.
@@ -13984,7 +13984,7 @@ pub mod google_ads_service_client {
     impl<T> GoogleAdsServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -14215,7 +14215,7 @@ pub mod google_ads_service_client {
         }
     }
 }
-/// Request message for [BatchJobService.MutateBatchJob][google.ads.googleads.v8.services.BatchJobService.MutateBatchJob].
+/// Request message for \[BatchJobService.MutateBatchJob][google.ads.googleads.v8.services.BatchJobService.MutateBatchJob\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateBatchJobRequest {
     /// Required. The ID of the customer for which to create a batch job.
@@ -14242,7 +14242,7 @@ pub mod batch_job_operation {
         Create(super::super::resources::BatchJob),
     }
 }
-/// Response message for [BatchJobService.MutateBatchJob][google.ads.googleads.v8.services.BatchJobService.MutateBatchJob].
+/// Response message for \[BatchJobService.MutateBatchJob][google.ads.googleads.v8.services.BatchJobService.MutateBatchJob\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateBatchJobResponse {
     /// The result for the mutate.
@@ -14256,21 +14256,21 @@ pub struct MutateBatchJobResult {
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [BatchJobService.GetBatchJob][google.ads.googleads.v8.services.BatchJobService.GetBatchJob].
+/// Request message for \[BatchJobService.GetBatchJob][google.ads.googleads.v8.services.BatchJobService.GetBatchJob\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetBatchJobRequest {
     /// Required. The resource name of the batch job to get.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [BatchJobService.RunBatchJob][google.ads.googleads.v8.services.BatchJobService.RunBatchJob].
+/// Request message for \[BatchJobService.RunBatchJob][google.ads.googleads.v8.services.BatchJobService.RunBatchJob\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RunBatchJobRequest {
     /// Required. The resource name of the BatchJob to run.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [BatchJobService.AddBatchJobOperations][google.ads.googleads.v8.services.BatchJobService.AddBatchJobOperations].
+/// Request message for \[BatchJobService.AddBatchJobOperations][google.ads.googleads.v8.services.BatchJobService.AddBatchJobOperations\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddBatchJobOperationsRequest {
     /// Required. The resource name of the batch job.
@@ -14296,7 +14296,7 @@ pub struct AddBatchJobOperationsRequest {
     #[prost(message, repeated, tag = "3")]
     pub mutate_operations: ::prost::alloc::vec::Vec<MutateOperation>,
 }
-/// Response message for [BatchJobService.AddBatchJobOperations][google.ads.googleads.v8.services.BatchJobService.AddBatchJobOperations].
+/// Response message for \[BatchJobService.AddBatchJobOperations][google.ads.googleads.v8.services.BatchJobService.AddBatchJobOperations\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddBatchJobOperationsResponse {
     /// The total number of operations added so far for this batch job.
@@ -14308,7 +14308,7 @@ pub struct AddBatchJobOperationsResponse {
     #[prost(string, tag = "2")]
     pub next_sequence_token: ::prost::alloc::string::String,
 }
-/// Request message for [BatchJobService.ListBatchJobResults][google.ads.googleads.v8.services.BatchJobService.ListBatchJobResults].
+/// Request message for \[BatchJobService.ListBatchJobResults][google.ads.googleads.v8.services.BatchJobService.ListBatchJobResults\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListBatchJobResultsRequest {
     /// Required. The resource name of the batch job whose results are being listed.
@@ -14333,7 +14333,7 @@ pub struct ListBatchJobResultsRequest {
     )]
     pub response_content_type: i32,
 }
-/// Response message for [BatchJobService.ListBatchJobResults][google.ads.googleads.v8.services.BatchJobService.ListBatchJobResults].
+/// Response message for \[BatchJobService.ListBatchJobResults][google.ads.googleads.v8.services.BatchJobService.ListBatchJobResults\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListBatchJobResultsResponse {
     /// The list of rows that matched the query.
@@ -14372,7 +14372,7 @@ pub mod batch_job_service_client {
     impl<T> BatchJobServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -14551,7 +14551,7 @@ pub mod batch_job_service_client {
     }
 }
 /// Request message for
-/// [BiddingStrategySimulationService.GetBiddingStrategySimulation][google.ads.googleads.v8.services.BiddingStrategySimulationService.GetBiddingStrategySimulation].
+/// \[BiddingStrategySimulationService.GetBiddingStrategySimulation][google.ads.googleads.v8.services.BiddingStrategySimulationService.GetBiddingStrategySimulation\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetBiddingStrategySimulationRequest {
     /// Required. The resource name of the bidding strategy simulation to fetch.
@@ -14570,7 +14570,7 @@ pub mod bidding_strategy_simulation_service_client {
     impl<T> BiddingStrategySimulationServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -14629,7 +14629,7 @@ pub mod bidding_strategy_simulation_service_client {
     }
 }
 /// Request message for
-/// [BillingSetupService.GetBillingSetup][google.ads.googleads.v8.services.BillingSetupService.GetBillingSetup].
+/// \[BillingSetupService.GetBillingSetup][google.ads.googleads.v8.services.BillingSetupService.GetBillingSetup\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetBillingSetupRequest {
     /// Required. The resource name of the billing setup to fetch.
@@ -14707,7 +14707,7 @@ pub mod billing_setup_service_client {
     impl<T> BillingSetupServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -14801,7 +14801,7 @@ pub mod billing_setup_service_client {
         }
     }
 }
-/// Request message for [CampaignAudienceViewService.GetCampaignAudienceView][google.ads.googleads.v8.services.CampaignAudienceViewService.GetCampaignAudienceView].
+/// Request message for \[CampaignAudienceViewService.GetCampaignAudienceView][google.ads.googleads.v8.services.CampaignAudienceViewService.GetCampaignAudienceView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCampaignAudienceViewRequest {
     /// Required. The resource name of the campaign audience view to fetch.
@@ -14820,7 +14820,7 @@ pub mod campaign_audience_view_service_client {
     impl<T> CampaignAudienceViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -14885,7 +14885,7 @@ pub mod campaign_audience_view_service_client {
     }
 }
 /// Request message for
-/// [CampaignCriterionSimulationService.GetCampaignCriterionSimulation][google.ads.googleads.v8.services.CampaignCriterionSimulationService.GetCampaignCriterionSimulation].
+/// \[CampaignCriterionSimulationService.GetCampaignCriterionSimulation][google.ads.googleads.v8.services.CampaignCriterionSimulationService.GetCampaignCriterionSimulation\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCampaignCriterionSimulationRequest {
     /// Required. The resource name of the campaign criterion simulation to fetch.
@@ -14904,7 +14904,7 @@ pub mod campaign_criterion_simulation_service_client {
     impl<T> CampaignCriterionSimulationServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -14974,7 +14974,7 @@ pub mod campaign_criterion_simulation_service_client {
     }
 }
 /// Request message for
-/// [CampaignSimulationService.GetCampaignSimulation][google.ads.googleads.v8.services.CampaignSimulationService.GetCampaignSimulation].
+/// \[CampaignSimulationService.GetCampaignSimulation][google.ads.googleads.v8.services.CampaignSimulationService.GetCampaignSimulation\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCampaignSimulationRequest {
     /// Required. The resource name of the campaign simulation to fetch.
@@ -14993,7 +14993,7 @@ pub mod campaign_simulation_service_client {
     impl<T> CampaignSimulationServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -15051,7 +15051,7 @@ pub mod campaign_simulation_service_client {
         }
     }
 }
-/// Request message for [CarrierConstantService.GetCarrierConstant][google.ads.googleads.v8.services.CarrierConstantService.GetCarrierConstant].
+/// Request message for \[CarrierConstantService.GetCarrierConstant][google.ads.googleads.v8.services.CarrierConstantService.GetCarrierConstant\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCarrierConstantRequest {
     /// Required. Resource name of the carrier constant to fetch.
@@ -15070,7 +15070,7 @@ pub mod carrier_constant_service_client {
     impl<T> CarrierConstantServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -15136,7 +15136,7 @@ pub mod carrier_constant_service_client {
         }
     }
 }
-/// Request message for '[ChangeStatusService.GetChangeStatus][google.ads.googleads.v8.services.ChangeStatusService.GetChangeStatus]'.
+/// Request message for '\[ChangeStatusService.GetChangeStatus][google.ads.googleads.v8.services.ChangeStatusService.GetChangeStatus\]'.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetChangeStatusRequest {
     /// Required. The resource name of the change status to fetch.
@@ -15155,7 +15155,7 @@ pub mod change_status_service_client {
     impl<T> ChangeStatusServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -15220,7 +15220,7 @@ pub mod change_status_service_client {
         }
     }
 }
-/// Request message for [ClickViewService.GetClickView][google.ads.googleads.v8.services.ClickViewService.GetClickView].
+/// Request message for \[ClickViewService.GetClickView][google.ads.googleads.v8.services.ClickViewService.GetClickView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetClickViewRequest {
     /// Required. The resource name of the click view to fetch.
@@ -15239,7 +15239,7 @@ pub mod click_view_service_client {
     impl<T> ClickViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -15304,7 +15304,7 @@ pub mod click_view_service_client {
         }
     }
 }
-/// Request message for [CombinedAudienceService.GetCombinedAudience][google.ads.googleads.v8.services.CombinedAudienceService.GetCombinedAudience].
+/// Request message for \[CombinedAudienceService.GetCombinedAudience][google.ads.googleads.v8.services.CombinedAudienceService.GetCombinedAudience\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCombinedAudienceRequest {
     /// Required. The resource name of the combined audience to fetch.
@@ -15325,7 +15325,7 @@ pub mod combined_audience_service_client {
     impl<T> CombinedAudienceServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -15392,7 +15392,7 @@ pub mod combined_audience_service_client {
     }
 }
 /// Request message for
-/// [ConversionAdjustmentUploadService.UploadConversionAdjustments][google.ads.googleads.v8.services.ConversionAdjustmentUploadService.UploadConversionAdjustments].
+/// \[ConversionAdjustmentUploadService.UploadConversionAdjustments][google.ads.googleads.v8.services.ConversionAdjustmentUploadService.UploadConversionAdjustments\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UploadConversionAdjustmentsRequest {
     /// Required. The ID of the customer performing the upload.
@@ -15406,7 +15406,7 @@ pub struct UploadConversionAdjustmentsRequest {
     /// in one transaction if and only if they are all valid. This should always be
     /// set to true.
     /// See
-    /// https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+    /// <https://developers.google.com/google-ads/api/docs/best-practices/partial-failures>
     /// for more information about partial failure.
     #[prost(bool, tag = "3")]
     pub partial_failure: bool,
@@ -15416,7 +15416,7 @@ pub struct UploadConversionAdjustmentsRequest {
     pub validate_only: bool,
 }
 /// Response message for
-/// [ConversionAdjustmentUploadService.UploadConversionAdjustments][google.ads.googleads.v8.services.ConversionAdjustmentUploadService.UploadConversionAdjustments].
+/// \[ConversionAdjustmentUploadService.UploadConversionAdjustments][google.ads.googleads.v8.services.ConversionAdjustmentUploadService.UploadConversionAdjustments\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UploadConversionAdjustmentsResponse {
     /// Errors that pertain to conversion adjustment failures in the partial
@@ -15424,7 +15424,7 @@ pub struct UploadConversionAdjustmentsResponse {
     /// errors occur outside the adjustments (e.g. auth errors), we return an RPC
     /// level error.
     /// See
-    /// https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+    /// <https://developers.google.com/google-ads/api/docs/best-practices/partial-failures>
     /// for more information about partial failure.
     #[prost(message, optional, tag = "1")]
     pub partial_failure_error: ::core::option::Option<super::super::super::super::rpc::Status>,
@@ -15579,7 +15579,7 @@ pub mod conversion_adjustment_upload_service_client {
     impl<T> ConversionAdjustmentUploadServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -15647,7 +15647,7 @@ pub mod conversion_adjustment_upload_service_client {
         }
     }
 }
-/// Request message for [ConversionUploadService.UploadClickConversions][google.ads.googleads.v8.services.ConversionUploadService.UploadClickConversions].
+/// Request message for \[ConversionUploadService.UploadClickConversions][google.ads.googleads.v8.services.ConversionUploadService.UploadClickConversions\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UploadClickConversionsRequest {
     /// Required. The ID of the customer performing the upload.
@@ -15661,7 +15661,7 @@ pub struct UploadClickConversionsRequest {
     /// out in one transaction if and only if they are all valid.
     /// This should always be set to true.
     /// See
-    /// https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+    /// <https://developers.google.com/google-ads/api/docs/best-practices/partial-failures>
     /// for more information about partial failure.
     #[prost(bool, tag = "3")]
     pub partial_failure: bool,
@@ -15670,14 +15670,14 @@ pub struct UploadClickConversionsRequest {
     #[prost(bool, tag = "4")]
     pub validate_only: bool,
 }
-/// Response message for [ConversionUploadService.UploadClickConversions][google.ads.googleads.v8.services.ConversionUploadService.UploadClickConversions].
+/// Response message for \[ConversionUploadService.UploadClickConversions][google.ads.googleads.v8.services.ConversionUploadService.UploadClickConversions\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UploadClickConversionsResponse {
     /// Errors that pertain to conversion failures in the partial failure mode.
     /// Returned when all errors occur inside the conversions. If any errors occur
     /// outside the conversions (e.g. auth errors), we return an RPC level error.
     /// See
-    /// https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+    /// <https://developers.google.com/google-ads/api/docs/best-practices/partial-failures>
     /// for more information about partial failure.
     #[prost(message, optional, tag = "1")]
     pub partial_failure_error: ::core::option::Option<super::super::super::super::rpc::Status>,
@@ -15687,7 +15687,7 @@ pub struct UploadClickConversionsResponse {
     #[prost(message, repeated, tag = "2")]
     pub results: ::prost::alloc::vec::Vec<ClickConversionResult>,
 }
-/// Request message for [ConversionUploadService.UploadCallConversions][google.ads.googleads.v8.services.ConversionUploadService.UploadCallConversions].
+/// Request message for \[ConversionUploadService.UploadCallConversions][google.ads.googleads.v8.services.ConversionUploadService.UploadCallConversions\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UploadCallConversionsRequest {
     /// Required. The ID of the customer performing the upload.
@@ -15701,7 +15701,7 @@ pub struct UploadCallConversionsRequest {
     /// out in one transaction if and only if they are all valid.
     /// This should always be set to true.
     /// See
-    /// https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+    /// <https://developers.google.com/google-ads/api/docs/best-practices/partial-failures>
     /// for more information about partial failure.
     #[prost(bool, tag = "3")]
     pub partial_failure: bool,
@@ -15710,14 +15710,14 @@ pub struct UploadCallConversionsRequest {
     #[prost(bool, tag = "4")]
     pub validate_only: bool,
 }
-/// Response message for [ConversionUploadService.UploadCallConversions][google.ads.googleads.v8.services.ConversionUploadService.UploadCallConversions].
+/// Response message for \[ConversionUploadService.UploadCallConversions][google.ads.googleads.v8.services.ConversionUploadService.UploadCallConversions\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UploadCallConversionsResponse {
     /// Errors that pertain to conversion failures in the partial failure mode.
     /// Returned when all errors occur inside the conversions. If any errors occur
     /// outside the conversions (e.g. auth errors), we return an RPC level error.
     /// See
-    /// https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
+    /// <https://developers.google.com/google-ads/api/docs/best-practices/partial-failures>
     /// for more information about partial failure.
     #[prost(message, optional, tag = "1")]
     pub partial_failure_error: ::core::option::Option<super::super::super::super::rpc::Status>,
@@ -15923,7 +15923,7 @@ pub mod conversion_upload_service_client {
     impl<T> ConversionUploadServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -16016,7 +16016,7 @@ pub mod conversion_upload_service_client {
         }
     }
 }
-/// Request message for [CurrencyConstantService.GetCurrencyConstant][google.ads.googleads.v8.services.CurrencyConstantService.GetCurrencyConstant].
+/// Request message for \[CurrencyConstantService.GetCurrencyConstant][google.ads.googleads.v8.services.CurrencyConstantService.GetCurrencyConstant\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCurrencyConstantRequest {
     /// Required. Resource name of the currency constant to fetch.
@@ -16035,7 +16035,7 @@ pub mod currency_constant_service_client {
     impl<T> CurrencyConstantServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -16101,14 +16101,14 @@ pub mod currency_constant_service_client {
         }
     }
 }
-/// Request message for [CustomAudienceService.GetCustomAudience][google.ads.googleads.v8.services.CustomAudienceService.GetCustomAudience].
+/// Request message for \[CustomAudienceService.GetCustomAudience][google.ads.googleads.v8.services.CustomAudienceService.GetCustomAudience\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCustomAudienceRequest {
     /// Required. The resource name of the custom audience to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CustomAudienceService.MutateCustomAudiences][google.ads.googleads.v8.services.CustomAudienceService.MutateCustomAudiences].
+/// Request message for \[CustomAudienceService.MutateCustomAudiences][google.ads.googleads.v8.services.CustomAudienceService.MutateCustomAudiences\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCustomAudiencesRequest {
     /// Required. The ID of the customer whose custom audiences are being modified.
@@ -16179,7 +16179,7 @@ pub mod custom_audience_service_client {
     impl<T> CustomAudienceServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -16277,14 +16277,14 @@ pub mod custom_audience_service_client {
         }
     }
 }
-/// Request message for [CustomInterestService.GetCustomInterest][google.ads.googleads.v8.services.CustomInterestService.GetCustomInterest].
+/// Request message for \[CustomInterestService.GetCustomInterest][google.ads.googleads.v8.services.CustomInterestService.GetCustomInterest\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCustomInterestRequest {
     /// Required. The resource name of the custom interest to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CustomInterestService.MutateCustomInterests][google.ads.googleads.v8.services.CustomInterestService.MutateCustomInterests].
+/// Request message for \[CustomInterestService.MutateCustomInterests][google.ads.googleads.v8.services.CustomInterestService.MutateCustomInterests\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCustomInterestsRequest {
     /// Required. The ID of the customer whose custom interests are being modified.
@@ -16349,7 +16349,7 @@ pub mod custom_interest_service_client {
     impl<T> CustomInterestServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -16445,14 +16445,14 @@ pub mod custom_interest_service_client {
         }
     }
 }
-/// Request message for [CustomerClientLinkService.GetCustomerClientLink][google.ads.googleads.v8.services.CustomerClientLinkService.GetCustomerClientLink].
+/// Request message for \[CustomerClientLinkService.GetCustomerClientLink][google.ads.googleads.v8.services.CustomerClientLinkService.GetCustomerClientLink\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCustomerClientLinkRequest {
     /// Required. The resource name of the customer client link to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CustomerClientLinkService.MutateCustomerClientLink][google.ads.googleads.v8.services.CustomerClientLinkService.MutateCustomerClientLink].
+/// Request message for \[CustomerClientLinkService.MutateCustomerClientLink][google.ads.googleads.v8.services.CustomerClientLinkService.MutateCustomerClientLink\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCustomerClientLinkRequest {
     /// Required. The ID of the customer whose customer link are being modified.
@@ -16515,7 +16515,7 @@ pub mod customer_client_link_service_client {
     impl<T> CustomerClientLinkServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -16611,7 +16611,7 @@ pub mod customer_client_link_service_client {
         }
     }
 }
-/// Request message for [CustomerClientService.GetCustomerClient][google.ads.googleads.v8.services.CustomerClientService.GetCustomerClient].
+/// Request message for \[CustomerClientService.GetCustomerClient][google.ads.googleads.v8.services.CustomerClientService.GetCustomerClient\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCustomerClientRequest {
     /// Required. The resource name of the client to fetch.
@@ -16630,7 +16630,7 @@ pub mod customer_client_service_client {
     impl<T> CustomerClientServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -16696,14 +16696,14 @@ pub mod customer_client_service_client {
         }
     }
 }
-/// Request message for [CustomerManagerLinkService.GetCustomerManagerLink][google.ads.googleads.v8.services.CustomerManagerLinkService.GetCustomerManagerLink].
+/// Request message for \[CustomerManagerLinkService.GetCustomerManagerLink][google.ads.googleads.v8.services.CustomerManagerLinkService.GetCustomerManagerLink\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCustomerManagerLinkRequest {
     /// Required. The resource name of the CustomerManagerLink to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [CustomerManagerLinkService.MutateCustomerManagerLink][google.ads.googleads.v8.services.CustomerManagerLinkService.MutateCustomerManagerLink].
+/// Request message for \[CustomerManagerLinkService.MutateCustomerManagerLink][google.ads.googleads.v8.services.CustomerManagerLinkService.MutateCustomerManagerLink\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCustomerManagerLinkRequest {
     /// Required. The ID of the customer whose customer manager links are being modified.
@@ -16717,7 +16717,7 @@ pub struct MutateCustomerManagerLinkRequest {
     #[prost(bool, tag = "3")]
     pub validate_only: bool,
 }
-/// Request message for [CustomerManagerLinkService.MoveManagerLink][google.ads.googleads.v8.services.CustomerManagerLinkService.MoveManagerLink].
+/// Request message for \[CustomerManagerLinkService.MoveManagerLink][google.ads.googleads.v8.services.CustomerManagerLinkService.MoveManagerLink\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MoveManagerLinkRequest {
     /// Required. The ID of the client customer that is being moved.
@@ -16796,7 +16796,7 @@ pub mod customer_manager_link_service_client {
     impl<T> CustomerManagerLinkServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -16922,7 +16922,7 @@ pub mod customer_manager_link_service_client {
     }
 }
 /// Request message for
-/// [CustomerUserAccessInvitation.GetCustomerUserAccessInvitation][]
+/// \[CustomerUserAccessInvitation.GetCustomerUserAccessInvitation][\]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCustomerUserAccessInvitationRequest {
     /// Required. Resource name of the access invitation.
@@ -16930,7 +16930,7 @@ pub struct GetCustomerUserAccessInvitationRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [CustomerUserAccessInvitation.MutateCustomerUserAccessInvitation][]
+/// \[CustomerUserAccessInvitation.MutateCustomerUserAccessInvitation][\]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCustomerUserAccessInvitationRequest {
     /// Required. The ID of the customer whose access invitation is being modified.
@@ -16994,7 +16994,7 @@ pub mod customer_user_access_invitation_service_client {
     impl<T> CustomerUserAccessInvitationServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -17089,7 +17089,7 @@ pub mod customer_user_access_invitation_service_client {
     }
 }
 /// Request message for
-/// [CustomerUserAccessService.GetCustomerUserAccess][google.ads.googleads.v8.services.CustomerUserAccessService.GetCustomerUserAccess].
+/// \[CustomerUserAccessService.GetCustomerUserAccess][google.ads.googleads.v8.services.CustomerUserAccessService.GetCustomerUserAccess\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetCustomerUserAccessRequest {
     /// Required. Resource name of the customer user access.
@@ -17097,7 +17097,7 @@ pub struct GetCustomerUserAccessRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Mutate Request for
-/// [CustomerUserAccessService.MutateCustomerUserAccess][google.ads.googleads.v8.services.CustomerUserAccessService.MutateCustomerUserAccess].
+/// \[CustomerUserAccessService.MutateCustomerUserAccess][google.ads.googleads.v8.services.CustomerUserAccessService.MutateCustomerUserAccess\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateCustomerUserAccessRequest {
     /// Required. The ID of the customer being modified.
@@ -17160,7 +17160,7 @@ pub mod customer_user_access_service_client {
     impl<T> CustomerUserAccessServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -17254,7 +17254,7 @@ pub mod customer_user_access_service_client {
         }
     }
 }
-/// Request message for [DetailPlacementViewService.GetDetailPlacementView][google.ads.googleads.v8.services.DetailPlacementViewService.GetDetailPlacementView].
+/// Request message for \[DetailPlacementViewService.GetDetailPlacementView][google.ads.googleads.v8.services.DetailPlacementViewService.GetDetailPlacementView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetDetailPlacementViewRequest {
     /// Required. The resource name of the Detail Placement view to fetch.
@@ -17273,7 +17273,7 @@ pub mod detail_placement_view_service_client {
     impl<T> DetailPlacementViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -17337,7 +17337,7 @@ pub mod detail_placement_view_service_client {
         }
     }
 }
-/// Request message for [DetailedDemographicService.GetDetailedDemographic][google.ads.googleads.v8.services.DetailedDemographicService.GetDetailedDemographic].
+/// Request message for \[DetailedDemographicService.GetDetailedDemographic][google.ads.googleads.v8.services.DetailedDemographicService.GetDetailedDemographic\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetDetailedDemographicRequest {
     /// Required. Resource name of the DetailedDemographic to fetch.
@@ -17356,7 +17356,7 @@ pub mod detailed_demographic_service_client {
     impl<T> DetailedDemographicServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -17412,7 +17412,7 @@ pub mod detailed_demographic_service_client {
         }
     }
 }
-/// Request message for [DisplayKeywordViewService.GetDisplayKeywordView][google.ads.googleads.v8.services.DisplayKeywordViewService.GetDisplayKeywordView].
+/// Request message for \[DisplayKeywordViewService.GetDisplayKeywordView][google.ads.googleads.v8.services.DisplayKeywordViewService.GetDisplayKeywordView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetDisplayKeywordViewRequest {
     /// Required. The resource name of the display keyword view to fetch.
@@ -17431,7 +17431,7 @@ pub mod display_keyword_view_service_client {
     impl<T> DisplayKeywordViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -17497,7 +17497,7 @@ pub mod display_keyword_view_service_client {
         }
     }
 }
-/// Request message for [DistanceViewService.GetDistanceView][google.ads.googleads.v8.services.DistanceViewService.GetDistanceView].
+/// Request message for \[DistanceViewService.GetDistanceView][google.ads.googleads.v8.services.DistanceViewService.GetDistanceView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetDistanceViewRequest {
     /// Required. The resource name of the distance view to fetch.
@@ -17516,7 +17516,7 @@ pub mod distance_view_service_client {
     impl<T> DistanceViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -17582,7 +17582,7 @@ pub mod distance_view_service_client {
     }
 }
 /// Request message for
-/// [DomainCategoryService.GetDomainCategory][google.ads.googleads.v8.services.DomainCategoryService.GetDomainCategory].
+/// \[DomainCategoryService.GetDomainCategory][google.ads.googleads.v8.services.DomainCategoryService.GetDomainCategory\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetDomainCategoryRequest {
     /// Required. Resource name of the domain category to fetch.
@@ -17601,7 +17601,7 @@ pub mod domain_category_service_client {
     impl<T> DomainCategoryServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -17668,7 +17668,7 @@ pub mod domain_category_service_client {
     }
 }
 /// Request message for
-/// [DynamicSearchAdsSearchTermViewService.GetDynamicSearchAdsSearchTermView][google.ads.googleads.v8.services.DynamicSearchAdsSearchTermViewService.GetDynamicSearchAdsSearchTermView].
+/// \[DynamicSearchAdsSearchTermViewService.GetDynamicSearchAdsSearchTermView][google.ads.googleads.v8.services.DynamicSearchAdsSearchTermViewService.GetDynamicSearchAdsSearchTermView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetDynamicSearchAdsSearchTermViewRequest {
     /// Required. The resource name of the dynamic search ads search term view to fetch.
@@ -17687,7 +17687,7 @@ pub mod dynamic_search_ads_search_term_view_service_client {
     impl<T> DynamicSearchAdsSearchTermViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -17757,7 +17757,7 @@ pub mod dynamic_search_ads_search_term_view_service_client {
     }
 }
 /// Request message for
-/// [ExpandedLandingPageViewService.GetExpandedLandingPageView][google.ads.googleads.v8.services.ExpandedLandingPageViewService.GetExpandedLandingPageView].
+/// \[ExpandedLandingPageViewService.GetExpandedLandingPageView][google.ads.googleads.v8.services.ExpandedLandingPageViewService.GetExpandedLandingPageView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetExpandedLandingPageViewRequest {
     /// Required. The resource name of the expanded landing page view to fetch.
@@ -17776,7 +17776,7 @@ pub mod expanded_landing_page_view_service_client {
     impl<T> ExpandedLandingPageViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -17840,7 +17840,7 @@ pub mod expanded_landing_page_view_service_client {
         }
     }
 }
-/// Request message for [FeedPlaceholderViewService.GetFeedPlaceholderView][google.ads.googleads.v8.services.FeedPlaceholderViewService.GetFeedPlaceholderView].
+/// Request message for \[FeedPlaceholderViewService.GetFeedPlaceholderView][google.ads.googleads.v8.services.FeedPlaceholderViewService.GetFeedPlaceholderView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetFeedPlaceholderViewRequest {
     /// Required. The resource name of the feed placeholder view to fetch.
@@ -17859,7 +17859,7 @@ pub mod feed_placeholder_view_service_client {
     impl<T> FeedPlaceholderViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -17923,7 +17923,7 @@ pub mod feed_placeholder_view_service_client {
         }
     }
 }
-/// Request message for [GenderViewService.GetGenderView][google.ads.googleads.v8.services.GenderViewService.GetGenderView].
+/// Request message for \[GenderViewService.GetGenderView][google.ads.googleads.v8.services.GenderViewService.GetGenderView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetGenderViewRequest {
     /// Required. The resource name of the gender view to fetch.
@@ -17942,7 +17942,7 @@ pub mod gender_view_service_client {
     impl<T> GenderViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -18007,7 +18007,7 @@ pub mod gender_view_service_client {
         }
     }
 }
-/// Request message for [GeoTargetConstantService.GetGeoTargetConstant][google.ads.googleads.v8.services.GeoTargetConstantService.GetGeoTargetConstant].
+/// Request message for \[GeoTargetConstantService.GetGeoTargetConstant][google.ads.googleads.v8.services.GeoTargetConstantService.GetGeoTargetConstant\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetGeoTargetConstantRequest {
     /// Required. The resource name of the geo target constant to fetch.
@@ -18015,7 +18015,7 @@ pub struct GetGeoTargetConstantRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [GeoTargetConstantService.SuggestGeoTargetConstants][google.ads.googleads.v8.services.GeoTargetConstantService.SuggestGeoTargetConstants].
+/// \[GeoTargetConstantService.SuggestGeoTargetConstants][google.ads.googleads.v8.services.GeoTargetConstantService.SuggestGeoTargetConstants\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SuggestGeoTargetConstantsRequest {
     /// If possible, returned geo targets are translated using this locale. If not,
@@ -18057,7 +18057,7 @@ pub mod suggest_geo_target_constants_request {
         GeoTargets(GeoTargets),
     }
 }
-/// Response message for [GeoTargetConstantService.SuggestGeoTargetConstants][google.ads.googleads.v8.services.GeoTargetConstantService.SuggestGeoTargetConstants].
+/// Response message for \[GeoTargetConstantService.SuggestGeoTargetConstants][google.ads.googleads.v8.services.GeoTargetConstantService.SuggestGeoTargetConstants\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SuggestGeoTargetConstantsResponse {
     /// Geo target constant suggestions.
@@ -18100,7 +18100,7 @@ pub mod geo_target_constant_service_client {
     impl<T> GeoTargetConstantServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -18191,7 +18191,7 @@ pub mod geo_target_constant_service_client {
         }
     }
 }
-/// Request message for [GeographicViewService.GetGeographicView][google.ads.googleads.v8.services.GeographicViewService.GetGeographicView].
+/// Request message for \[GeographicViewService.GetGeographicView][google.ads.googleads.v8.services.GeographicViewService.GetGeographicView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetGeographicViewRequest {
     /// Required. The resource name of the geographic view to fetch.
@@ -18210,7 +18210,7 @@ pub mod geographic_view_service_client {
     impl<T> GeographicViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -18276,14 +18276,14 @@ pub mod geographic_view_service_client {
         }
     }
 }
-/// Request message for [GoogleAdsFieldService.GetGoogleAdsField][google.ads.googleads.v8.services.GoogleAdsFieldService.GetGoogleAdsField].
+/// Request message for \[GoogleAdsFieldService.GetGoogleAdsField][google.ads.googleads.v8.services.GoogleAdsFieldService.GetGoogleAdsField\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetGoogleAdsFieldRequest {
     /// Required. The resource name of the field to get.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [GoogleAdsFieldService.SearchGoogleAdsFields][google.ads.googleads.v8.services.GoogleAdsFieldService.SearchGoogleAdsFields].
+/// Request message for \[GoogleAdsFieldService.SearchGoogleAdsFields][google.ads.googleads.v8.services.GoogleAdsFieldService.SearchGoogleAdsFields\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchGoogleAdsFieldsRequest {
     /// Required. The query string.
@@ -18300,7 +18300,7 @@ pub struct SearchGoogleAdsFieldsRequest {
     #[prost(int32, tag = "3")]
     pub page_size: i32,
 }
-/// Response message for [GoogleAdsFieldService.SearchGoogleAdsFields][google.ads.googleads.v8.services.GoogleAdsFieldService.SearchGoogleAdsFields].
+/// Response message for \[GoogleAdsFieldService.SearchGoogleAdsFields][google.ads.googleads.v8.services.GoogleAdsFieldService.SearchGoogleAdsFields\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchGoogleAdsFieldsResponse {
     /// The list of fields that matched the query.
@@ -18327,7 +18327,7 @@ pub mod google_ads_field_service_client {
     impl<T> GoogleAdsFieldServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -18419,7 +18419,7 @@ pub mod google_ads_field_service_client {
         }
     }
 }
-/// Request message for [GroupPlacementViewService.GetGroupPlacementView][google.ads.googleads.v8.services.GroupPlacementViewService.GetGroupPlacementView].
+/// Request message for \[GroupPlacementViewService.GetGroupPlacementView][google.ads.googleads.v8.services.GroupPlacementViewService.GetGroupPlacementView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetGroupPlacementViewRequest {
     /// Required. The resource name of the Group Placement view to fetch.
@@ -18438,7 +18438,7 @@ pub mod group_placement_view_service_client {
     impl<T> GroupPlacementViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -18504,7 +18504,7 @@ pub mod group_placement_view_service_client {
         }
     }
 }
-/// Request message for [HotelGroupViewService.GetHotelGroupView][google.ads.googleads.v8.services.HotelGroupViewService.GetHotelGroupView].
+/// Request message for \[HotelGroupViewService.GetHotelGroupView][google.ads.googleads.v8.services.HotelGroupViewService.GetHotelGroupView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetHotelGroupViewRequest {
     /// Required. Resource name of the Hotel Group View to fetch.
@@ -18523,7 +18523,7 @@ pub mod hotel_group_view_service_client {
     impl<T> HotelGroupViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -18589,7 +18589,7 @@ pub mod hotel_group_view_service_client {
         }
     }
 }
-/// Request message for [HotelPerformanceViewService.GetHotelPerformanceView][google.ads.googleads.v8.services.HotelPerformanceViewService.GetHotelPerformanceView].
+/// Request message for \[HotelPerformanceViewService.GetHotelPerformanceView][google.ads.googleads.v8.services.HotelPerformanceViewService.GetHotelPerformanceView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetHotelPerformanceViewRequest {
     /// Required. Resource name of the Hotel Performance View to fetch.
@@ -18608,7 +18608,7 @@ pub mod hotel_performance_view_service_client {
     impl<T> HotelPerformanceViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -18672,7 +18672,7 @@ pub mod hotel_performance_view_service_client {
         }
     }
 }
-/// Request message for [IncomeRangeViewService.GetIncomeRangeView][google.ads.googleads.v8.services.IncomeRangeViewService.GetIncomeRangeView].
+/// Request message for \[IncomeRangeViewService.GetIncomeRangeView][google.ads.googleads.v8.services.IncomeRangeViewService.GetIncomeRangeView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetIncomeRangeViewRequest {
     /// Required. The resource name of the income range view to fetch.
@@ -18691,7 +18691,7 @@ pub mod income_range_view_service_client {
     impl<T> IncomeRangeViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -18780,7 +18780,7 @@ pub struct ListInvoicesRequest {
     )]
     pub issue_month: i32,
 }
-/// Response message for [InvoiceService.ListInvoices][google.ads.googleads.v8.services.InvoiceService.ListInvoices].
+/// Response message for \[InvoiceService.ListInvoices][google.ads.googleads.v8.services.InvoiceService.ListInvoices\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListInvoicesResponse {
     /// The list of invoices that match the billing setup and time period.
@@ -18799,7 +18799,7 @@ pub mod invoice_service_client {
     impl<T> InvoiceServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -18866,7 +18866,7 @@ pub mod invoice_service_client {
         }
     }
 }
-/// Request message for [KeywordPlanIdeaService.GenerateKeywordIdeas][google.ads.googleads.v8.services.KeywordPlanIdeaService.GenerateKeywordIdeas].
+/// Request message for \[KeywordPlanIdeaService.GenerateKeywordIdeas][google.ads.googleads.v8.services.KeywordPlanIdeaService.GenerateKeywordIdeas\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenerateKeywordIdeasRequest {
     /// The ID of the customer with the recommendation.
@@ -18974,7 +18974,7 @@ pub struct UrlSeed {
     #[prost(string, optional, tag = "2")]
     pub url: ::core::option::Option<::prost::alloc::string::String>,
 }
-/// Response message for [KeywordPlanIdeaService.GenerateKeywordIdeas][google.ads.googleads.v8.services.KeywordPlanIdeaService.GenerateKeywordIdeas].
+/// Response message for \[KeywordPlanIdeaService.GenerateKeywordIdeas][google.ads.googleads.v8.services.KeywordPlanIdeaService.GenerateKeywordIdeas\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenerateKeywordIdeaResponse {
     /// Results of generating keyword ideas.
@@ -19023,7 +19023,7 @@ pub mod keyword_plan_idea_service_client {
     impl<T> KeywordPlanIdeaServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -19090,7 +19090,7 @@ pub mod keyword_plan_idea_service_client {
         }
     }
 }
-/// Request message for [KeywordThemeConstantService.GetKeywordThemeConstant][google.ads.googleads.v8.services.KeywordThemeConstantService.GetKeywordThemeConstant].
+/// Request message for \[KeywordThemeConstantService.GetKeywordThemeConstant][google.ads.googleads.v8.services.KeywordThemeConstantService.GetKeywordThemeConstant\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetKeywordThemeConstantRequest {
     /// Required. The resource name of the keyword theme constant to fetch.
@@ -19098,7 +19098,7 @@ pub struct GetKeywordThemeConstantRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [KeywordThemeConstantService.SuggestKeywordThemeConstants][google.ads.googleads.v8.services.KeywordThemeConstantService.SuggestKeywordThemeConstants].
+/// \[KeywordThemeConstantService.SuggestKeywordThemeConstants][google.ads.googleads.v8.services.KeywordThemeConstantService.SuggestKeywordThemeConstants\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SuggestKeywordThemeConstantsRequest {
     /// The query text of a keyword theme that will be used to map to similar
@@ -19115,7 +19115,7 @@ pub struct SuggestKeywordThemeConstantsRequest {
     pub language_code: ::prost::alloc::string::String,
 }
 /// Response message for
-/// [KeywordThemeConstantService.SuggestKeywordThemeConstants][google.ads.googleads.v8.services.KeywordThemeConstantService.SuggestKeywordThemeConstants].
+/// \[KeywordThemeConstantService.SuggestKeywordThemeConstants][google.ads.googleads.v8.services.KeywordThemeConstantService.SuggestKeywordThemeConstants\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SuggestKeywordThemeConstantsResponse {
     /// Smart Campaign keyword theme suggestions.
@@ -19134,7 +19134,7 @@ pub mod keyword_theme_constant_service_client {
     impl<T> KeywordThemeConstantServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -19214,7 +19214,7 @@ pub mod keyword_theme_constant_service_client {
         }
     }
 }
-/// Request message for [KeywordViewService.GetKeywordView][google.ads.googleads.v8.services.KeywordViewService.GetKeywordView].
+/// Request message for \[KeywordViewService.GetKeywordView][google.ads.googleads.v8.services.KeywordViewService.GetKeywordView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetKeywordViewRequest {
     /// Required. The resource name of the keyword view to fetch.
@@ -19233,7 +19233,7 @@ pub mod keyword_view_service_client {
     impl<T> KeywordViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -19298,7 +19298,7 @@ pub mod keyword_view_service_client {
         }
     }
 }
-/// Request message for [LandingPageViewService.GetLandingPageView][google.ads.googleads.v8.services.LandingPageViewService.GetLandingPageView].
+/// Request message for \[LandingPageViewService.GetLandingPageView][google.ads.googleads.v8.services.LandingPageViewService.GetLandingPageView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetLandingPageViewRequest {
     /// Required. The resource name of the landing page view to fetch.
@@ -19317,7 +19317,7 @@ pub mod landing_page_view_service_client {
     impl<T> LandingPageViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -19383,7 +19383,7 @@ pub mod landing_page_view_service_client {
         }
     }
 }
-/// Request message for [LanguageConstantService.GetLanguageConstant][google.ads.googleads.v8.services.LanguageConstantService.GetLanguageConstant].
+/// Request message for \[LanguageConstantService.GetLanguageConstant][google.ads.googleads.v8.services.LanguageConstantService.GetLanguageConstant\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetLanguageConstantRequest {
     /// Required. Resource name of the language constant to fetch.
@@ -19402,7 +19402,7 @@ pub mod language_constant_service_client {
     impl<T> LanguageConstantServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -19468,7 +19468,7 @@ pub mod language_constant_service_client {
         }
     }
 }
-/// Request message for [LifeEventService.GetLifeEvent][google.ads.googleads.v8.services.LifeEventService.GetLifeEvent].
+/// Request message for \[LifeEventService.GetLifeEvent][google.ads.googleads.v8.services.LifeEventService.GetLifeEvent\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetLifeEventRequest {
     /// Required. Resource name of the LifeEvent to fetch.
@@ -19487,7 +19487,7 @@ pub mod life_event_service_client {
     impl<T> LifeEventServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -19544,7 +19544,7 @@ pub mod life_event_service_client {
         }
     }
 }
-/// Request message for [LocationViewService.GetLocationView][google.ads.googleads.v8.services.LocationViewService.GetLocationView].
+/// Request message for \[LocationViewService.GetLocationView][google.ads.googleads.v8.services.LocationViewService.GetLocationView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetLocationViewRequest {
     /// Required. The resource name of the location view to fetch.
@@ -19563,7 +19563,7 @@ pub mod location_view_service_client {
     impl<T> LocationViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -19628,7 +19628,7 @@ pub mod location_view_service_client {
         }
     }
 }
-/// Request message for [ManagedPlacementViewService.GetManagedPlacementView][google.ads.googleads.v8.services.ManagedPlacementViewService.GetManagedPlacementView].
+/// Request message for \[ManagedPlacementViewService.GetManagedPlacementView][google.ads.googleads.v8.services.ManagedPlacementViewService.GetManagedPlacementView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetManagedPlacementViewRequest {
     /// Required. The resource name of the Managed Placement View to fetch.
@@ -19647,7 +19647,7 @@ pub mod managed_placement_view_service_client {
     impl<T> ManagedPlacementViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -19711,7 +19711,7 @@ pub mod managed_placement_view_service_client {
         }
     }
 }
-/// Request message for [MerchantCenterLinkService.ListMerchantCenterLinks][google.ads.googleads.v8.services.MerchantCenterLinkService.ListMerchantCenterLinks].
+/// Request message for \[MerchantCenterLinkService.ListMerchantCenterLinks][google.ads.googleads.v8.services.MerchantCenterLinkService.ListMerchantCenterLinks\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListMerchantCenterLinksRequest {
     /// Required. The ID of the customer onto which to apply the Merchant Center link list
@@ -19719,21 +19719,21 @@ pub struct ListMerchantCenterLinksRequest {
     #[prost(string, tag = "1")]
     pub customer_id: ::prost::alloc::string::String,
 }
-/// Response message for [MerchantCenterLinkService.ListMerchantCenterLinks][google.ads.googleads.v8.services.MerchantCenterLinkService.ListMerchantCenterLinks].
+/// Response message for \[MerchantCenterLinkService.ListMerchantCenterLinks][google.ads.googleads.v8.services.MerchantCenterLinkService.ListMerchantCenterLinks\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListMerchantCenterLinksResponse {
     /// Merchant Center links available for the requested customer
     #[prost(message, repeated, tag = "1")]
     pub merchant_center_links: ::prost::alloc::vec::Vec<super::resources::MerchantCenterLink>,
 }
-/// Request message for [MerchantCenterLinkService.GetMerchantCenterLink][google.ads.googleads.v8.services.MerchantCenterLinkService.GetMerchantCenterLink].
+/// Request message for \[MerchantCenterLinkService.GetMerchantCenterLink][google.ads.googleads.v8.services.MerchantCenterLinkService.GetMerchantCenterLink\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetMerchantCenterLinkRequest {
     /// Required. Resource name of the Merchant Center link.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [MerchantCenterLinkService.MutateMerchantCenterLink][google.ads.googleads.v8.services.MerchantCenterLinkService.MutateMerchantCenterLink].
+/// Request message for \[MerchantCenterLinkService.MutateMerchantCenterLink][google.ads.googleads.v8.services.MerchantCenterLinkService.MutateMerchantCenterLink\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MutateMerchantCenterLinkRequest {
     /// Required. The ID of the customer being modified.
@@ -19801,7 +19801,7 @@ pub mod merchant_center_link_service_client {
     impl<T> MerchantCenterLinkServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -19917,7 +19917,7 @@ pub mod merchant_center_link_service_client {
     }
 }
 /// Request message for
-/// [MobileAppCategoryConstantService.GetMobileAppCategoryConstant][google.ads.googleads.v8.services.MobileAppCategoryConstantService.GetMobileAppCategoryConstant].
+/// \[MobileAppCategoryConstantService.GetMobileAppCategoryConstant][google.ads.googleads.v8.services.MobileAppCategoryConstantService.GetMobileAppCategoryConstant\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetMobileAppCategoryConstantRequest {
     /// Required. Resource name of the mobile app category constant to fetch.
@@ -19936,7 +19936,7 @@ pub mod mobile_app_category_constant_service_client {
     impl<T> MobileAppCategoryConstantServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -20002,7 +20002,7 @@ pub mod mobile_app_category_constant_service_client {
         }
     }
 }
-/// Request message for [MobileDeviceConstantService.GetMobileDeviceConstant][google.ads.googleads.v8.services.MobileDeviceConstantService.GetMobileDeviceConstant].
+/// Request message for \[MobileDeviceConstantService.GetMobileDeviceConstant][google.ads.googleads.v8.services.MobileDeviceConstantService.GetMobileDeviceConstant\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetMobileDeviceConstantRequest {
     /// Required. Resource name of the mobile device to fetch.
@@ -20021,7 +20021,7 @@ pub mod mobile_device_constant_service_client {
     impl<T> MobileDeviceConstantServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -20086,7 +20086,7 @@ pub mod mobile_device_constant_service_client {
     }
 }
 /// Request message for
-/// [OfflineUserDataJobService.CreateOfflineUserDataJob][google.ads.googleads.v8.services.OfflineUserDataJobService.CreateOfflineUserDataJob].
+/// \[OfflineUserDataJobService.CreateOfflineUserDataJob][google.ads.googleads.v8.services.OfflineUserDataJobService.CreateOfflineUserDataJob\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateOfflineUserDataJobRequest {
     /// Required. The ID of the customer for which to create an offline user data job.
@@ -20101,21 +20101,21 @@ pub struct CreateOfflineUserDataJobRequest {
     pub validate_only: bool,
 }
 /// Response message for
-/// [OfflineUserDataJobService.CreateOfflineUserDataJob][google.ads.googleads.v8.services.OfflineUserDataJobService.CreateOfflineUserDataJob].
+/// \[OfflineUserDataJobService.CreateOfflineUserDataJob][google.ads.googleads.v8.services.OfflineUserDataJobService.CreateOfflineUserDataJob\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateOfflineUserDataJobResponse {
     /// The resource name of the OfflineUserDataJob.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [OfflineUserDataJobService.GetOfflineUserDataJob][google.ads.googleads.v8.services.OfflineUserDataJobService.GetOfflineUserDataJob].
+/// Request message for \[OfflineUserDataJobService.GetOfflineUserDataJob][google.ads.googleads.v8.services.OfflineUserDataJobService.GetOfflineUserDataJob\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetOfflineUserDataJobRequest {
     /// Required. The resource name of the OfflineUserDataJob to get.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [OfflineUserDataJobService.RunOfflineUserDataJob][google.ads.googleads.v8.services.OfflineUserDataJobService.RunOfflineUserDataJob].
+/// Request message for \[OfflineUserDataJobService.RunOfflineUserDataJob][google.ads.googleads.v8.services.OfflineUserDataJobService.RunOfflineUserDataJob\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RunOfflineUserDataJobRequest {
     /// Required. The resource name of the OfflineUserDataJob to run.
@@ -20127,7 +20127,7 @@ pub struct RunOfflineUserDataJobRequest {
     pub validate_only: bool,
 }
 /// Request message for
-/// [OfflineUserDataJobService.AddOfflineUserDataJobOperations][google.ads.googleads.v8.services.OfflineUserDataJobService.AddOfflineUserDataJobOperations].
+/// \[OfflineUserDataJobService.AddOfflineUserDataJobOperations][google.ads.googleads.v8.services.OfflineUserDataJobService.AddOfflineUserDataJobOperations\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddOfflineUserDataJobOperationsRequest {
     /// Required. The resource name of the OfflineUserDataJob.
@@ -20171,7 +20171,7 @@ pub mod offline_user_data_job_operation {
     }
 }
 /// Response message for
-/// [OfflineUserDataJobService.AddOfflineUserDataJobOperations][google.ads.googleads.v8.services.OfflineUserDataJobService.AddOfflineUserDataJobOperations].
+/// \[OfflineUserDataJobService.AddOfflineUserDataJobOperations][google.ads.googleads.v8.services.OfflineUserDataJobService.AddOfflineUserDataJobOperations\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddOfflineUserDataJobOperationsResponse {
     /// Errors that pertain to operation failures in the partial failure mode.
@@ -20193,7 +20193,7 @@ pub mod offline_user_data_job_service_client {
     impl<T> OfflineUserDataJobServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -20349,7 +20349,7 @@ pub mod offline_user_data_job_service_client {
     }
 }
 /// Request message for
-/// [OperatingSystemVersionConstantService.GetOperatingSystemVersionConstant][google.ads.googleads.v8.services.OperatingSystemVersionConstantService.GetOperatingSystemVersionConstant].
+/// \[OperatingSystemVersionConstantService.GetOperatingSystemVersionConstant][google.ads.googleads.v8.services.OperatingSystemVersionConstantService.GetOperatingSystemVersionConstant\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetOperatingSystemVersionConstantRequest {
     /// Required. Resource name of the OS version to fetch.
@@ -20368,7 +20368,7 @@ pub mod operating_system_version_constant_service_client {
     impl<T> OperatingSystemVersionConstantServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -20438,7 +20438,7 @@ pub mod operating_system_version_constant_service_client {
     }
 }
 /// Request message for
-/// [PaidOrganicSearchTermViewService.GetPaidOrganicSearchTermView][google.ads.googleads.v8.services.PaidOrganicSearchTermViewService.GetPaidOrganicSearchTermView].
+/// \[PaidOrganicSearchTermViewService.GetPaidOrganicSearchTermView][google.ads.googleads.v8.services.PaidOrganicSearchTermViewService.GetPaidOrganicSearchTermView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetPaidOrganicSearchTermViewRequest {
     /// Required. The resource name of the paid organic search term view to fetch.
@@ -20457,7 +20457,7 @@ pub mod paid_organic_search_term_view_service_client {
     impl<T> PaidOrganicSearchTermViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -20523,7 +20523,7 @@ pub mod paid_organic_search_term_view_service_client {
         }
     }
 }
-/// Request message for [ParentalStatusViewService.GetParentalStatusView][google.ads.googleads.v8.services.ParentalStatusViewService.GetParentalStatusView].
+/// Request message for \[ParentalStatusViewService.GetParentalStatusView][google.ads.googleads.v8.services.ParentalStatusViewService.GetParentalStatusView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetParentalStatusViewRequest {
     /// Required. The resource name of the parental status view to fetch.
@@ -20542,7 +20542,7 @@ pub mod parental_status_view_service_client {
     impl<T> ParentalStatusViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -20615,7 +20615,7 @@ pub struct ListPaymentsAccountsRequest {
     #[prost(string, tag = "1")]
     pub customer_id: ::prost::alloc::string::String,
 }
-/// Response message for [PaymentsAccountService.ListPaymentsAccounts][google.ads.googleads.v8.services.PaymentsAccountService.ListPaymentsAccounts].
+/// Response message for \[PaymentsAccountService.ListPaymentsAccounts][google.ads.googleads.v8.services.PaymentsAccountService.ListPaymentsAccounts\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListPaymentsAccountsResponse {
     /// The list of accessible payments accounts.
@@ -20635,7 +20635,7 @@ pub mod payments_account_service_client {
     impl<T> PaymentsAccountServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -20704,7 +20704,7 @@ pub mod payments_account_service_client {
     }
 }
 /// Request message for
-/// [ProductBiddingCategoryConstantService.GetProductBiddingCategoryConstant][google.ads.googleads.v8.services.ProductBiddingCategoryConstantService.GetProductBiddingCategoryConstant].
+/// \[ProductBiddingCategoryConstantService.GetProductBiddingCategoryConstant][google.ads.googleads.v8.services.ProductBiddingCategoryConstantService.GetProductBiddingCategoryConstant\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetProductBiddingCategoryConstantRequest {
     /// Required. Resource name of the Product Bidding Category to fetch.
@@ -20723,7 +20723,7 @@ pub mod product_bidding_category_constant_service_client {
     impl<T> ProductBiddingCategoryConstantServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -20792,7 +20792,7 @@ pub mod product_bidding_category_constant_service_client {
         }
     }
 }
-/// Request message for [ProductGroupViewService.GetProductGroupView][google.ads.googleads.v8.services.ProductGroupViewService.GetProductGroupView].
+/// Request message for \[ProductGroupViewService.GetProductGroupView][google.ads.googleads.v8.services.ProductGroupViewService.GetProductGroupView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetProductGroupViewRequest {
     /// Required. The resource name of the product group view to fetch.
@@ -20811,7 +20811,7 @@ pub mod product_group_view_service_client {
     impl<T> ProductGroupViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -20877,7 +20877,7 @@ pub mod product_group_view_service_client {
         }
     }
 }
-/// Request message for [ReachPlanService.ListPlannableLocations][google.ads.googleads.v8.services.ReachPlanService.ListPlannableLocations].
+/// Request message for \[ReachPlanService.ListPlannableLocations][google.ads.googleads.v8.services.ReachPlanService.ListPlannableLocations\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListPlannableLocationsRequest {}
 /// The list of plannable locations.
@@ -20886,7 +20886,7 @@ pub struct ListPlannableLocationsResponse {
     /// The list of locations available for planning (Countries, DMAs,
     /// sub-countries).
     /// For locations like Countries and DMAs see
-    /// https://developers.google.com/google-ads/api/reference/data/geotargets for
+    /// <https://developers.google.com/google-ads/api/reference/data/geotargets> for
     /// more information.
     #[prost(message, repeated, tag = "1")]
     pub plannable_locations: ::prost::alloc::vec::Vec<PlannableLocation>,
@@ -20963,7 +20963,7 @@ pub struct PlannableTargeting {
     )]
     pub networks: ::prost::alloc::vec::Vec<i32>,
 }
-/// Request message for [ReachPlanService.GenerateProductMixIdeas][google.ads.googleads.v8.services.ReachPlanService.GenerateProductMixIdeas].
+/// Request message for \[ReachPlanService.GenerateProductMixIdeas][google.ads.googleads.v8.services.ReachPlanService.GenerateProductMixIdeas\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenerateProductMixIdeasRequest {
     /// Required. The ID of the customer.
@@ -21035,7 +21035,7 @@ pub struct ProductAllocation {
     #[prost(int64, optional, tag = "4")]
     pub budget_micros: ::core::option::Option<i64>,
 }
-/// Request message for [ReachPlanService.GenerateReachForecast][google.ads.googleads.v8.services.ReachPlanService.GenerateReachForecast].
+/// Request message for \[ReachPlanService.GenerateReachForecast][google.ads.googleads.v8.services.ReachPlanService.GenerateReachForecast\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GenerateReachForecastRequest {
     /// Required. The ID of the customer.
@@ -21068,7 +21068,7 @@ pub struct GenerateReachForecastRequest {
     #[prost(message, optional, tag = "8")]
     pub cookie_frequency_cap_setting: ::core::option::Option<FrequencyCap>,
     /// Desired minimum effective frequency (the number of times a person was
-    /// exposed to the ad) for the reported reach metrics [1-10].
+    /// exposed to the ad) for the reported reach metrics \[1-10\].
     /// This won't affect the targeting, but just the reporting.
     /// If not specified, a default of 1 is applied.
     ///
@@ -21076,7 +21076,7 @@ pub struct GenerateReachForecastRequest {
     #[prost(int32, optional, tag = "11")]
     pub min_effective_frequency: ::core::option::Option<i32>,
     /// The highest minimum effective frequency (the number of times a person was
-    /// exposed to the ad) value [1-10] to include in
+    /// exposed to the ad) value \[1-10\] to include in
     /// Forecast.effective_frequency_breakdowns.
     /// If not specified, Forecast.effective_frequency_breakdowns will not be
     /// provided.
@@ -21239,7 +21239,7 @@ pub struct Forecast {
     #[prost(int64, optional, tag = "8")]
     pub total_impressions: ::core::option::Option<i64>,
     /// Number of times the ad's impressions were considered viewable.
-    /// See https://support.google.com/google-ads/answer/7029393 for
+    /// See <https://support.google.com/google-ads/answer/7029393> for
     /// more information about what makes an ad viewable and how
     /// viewability is measured.
     #[prost(int64, optional, tag = "9")]
@@ -21296,7 +21296,7 @@ pub struct PlannedProductForecast {
     #[prost(int64, tag = "4")]
     pub total_impressions: i64,
     /// Number of times the ad's impressions were considered viewable.
-    /// See https://support.google.com/google-ads/answer/7029393 for
+    /// See <https://support.google.com/google-ads/answer/7029393> for
     /// more information about what makes an ad viewable and how
     /// viewability is measured.
     #[prost(int64, optional, tag = "5")]
@@ -21321,7 +21321,7 @@ pub struct OnTargetAudienceMetrics {
 /// frequency.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EffectiveFrequencyBreakdown {
-    /// The effective frequency [1-10].
+    /// The effective frequency \[1-10\].
     #[prost(int32, tag = "1")]
     pub effective_frequency: i32,
     /// The number of unique people reached at least effective_frequency times that
@@ -21357,7 +21357,7 @@ pub mod reach_plan_service_client {
     impl<T> ReachPlanServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -21505,14 +21505,14 @@ pub mod reach_plan_service_client {
         }
     }
 }
-/// Request message for [RecommendationService.GetRecommendation][google.ads.googleads.v8.services.RecommendationService.GetRecommendation].
+/// Request message for \[RecommendationService.GetRecommendation][google.ads.googleads.v8.services.RecommendationService.GetRecommendation\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetRecommendationRequest {
     /// Required. The resource name of the recommendation to fetch.
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [RecommendationService.ApplyRecommendation][google.ads.googleads.v8.services.RecommendationService.ApplyRecommendation].
+/// Request message for \[RecommendationService.ApplyRecommendation][google.ads.googleads.v8.services.RecommendationService.ApplyRecommendation\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ApplyRecommendationRequest {
     /// Required. The ID of the customer with the recommendation.
@@ -21676,7 +21676,7 @@ pub mod apply_recommendation_operation {
         ResponsiveSearchAd(ResponsiveSearchAdParameters),
     }
 }
-/// Response message for [RecommendationService.ApplyRecommendation][google.ads.googleads.v8.services.RecommendationService.ApplyRecommendation].
+/// Response message for \[RecommendationService.ApplyRecommendation][google.ads.googleads.v8.services.RecommendationService.ApplyRecommendation\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ApplyRecommendationResponse {
     /// Results of operations to apply recommendations.
@@ -21696,7 +21696,7 @@ pub struct ApplyRecommendationResult {
     #[prost(string, tag = "1")]
     pub resource_name: ::prost::alloc::string::String,
 }
-/// Request message for [RecommendationService.DismissRecommendation][google.ads.googleads.v8.services.RecommendationService.DismissRecommendation].
+/// Request message for \[RecommendationService.DismissRecommendation][google.ads.googleads.v8.services.RecommendationService.DismissRecommendation\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DismissRecommendationRequest {
     /// Required. The ID of the customer with the recommendation.
@@ -21725,7 +21725,7 @@ pub mod dismiss_recommendation_request {
         pub resource_name: ::prost::alloc::string::String,
     }
 }
-/// Response message for [RecommendationService.DismissRecommendation][google.ads.googleads.v8.services.RecommendationService.DismissRecommendation].
+/// Response message for \[RecommendationService.DismissRecommendation][google.ads.googleads.v8.services.RecommendationService.DismissRecommendation\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DismissRecommendationResponse {
     /// Results of operations to dismiss recommendations.
@@ -21761,7 +21761,7 @@ pub mod recommendation_service_client {
     impl<T> RecommendationServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -21883,7 +21883,7 @@ pub mod recommendation_service_client {
         }
     }
 }
-/// Request message for [SearchTermViewService.GetSearchTermView][google.ads.googleads.v8.services.SearchTermViewService.GetSearchTermView].
+/// Request message for \[SearchTermViewService.GetSearchTermView][google.ads.googleads.v8.services.SearchTermViewService.GetSearchTermView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetSearchTermViewRequest {
     /// Required. The resource name of the search term view to fetch.
@@ -21902,7 +21902,7 @@ pub mod search_term_view_service_client {
     impl<T> SearchTermViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -21969,7 +21969,7 @@ pub mod search_term_view_service_client {
     }
 }
 /// Request message for
-/// [ShoppingPerformanceViewService.GetShoppingPerformanceView][google.ads.googleads.v8.services.ShoppingPerformanceViewService.GetShoppingPerformanceView].
+/// \[ShoppingPerformanceViewService.GetShoppingPerformanceView][google.ads.googleads.v8.services.ShoppingPerformanceViewService.GetShoppingPerformanceView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetShoppingPerformanceViewRequest {
     /// Required. The resource name of the Shopping performance view to fetch.
@@ -21988,7 +21988,7 @@ pub mod shopping_performance_view_service_client {
     impl<T> ShoppingPerformanceViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -22053,7 +22053,7 @@ pub mod shopping_performance_view_service_client {
     }
 }
 /// Request message for
-/// [SmartCampaignSearchTermViewService.GetSmartCampaignSearchTermView][google.ads.googleads.v8.services.SmartCampaignSearchTermViewService.GetSmartCampaignSearchTermView].
+/// \[SmartCampaignSearchTermViewService.GetSmartCampaignSearchTermView][google.ads.googleads.v8.services.SmartCampaignSearchTermViewService.GetSmartCampaignSearchTermView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetSmartCampaignSearchTermViewRequest {
     /// Required. The resource name of the Smart campaign search term view to fetch.
@@ -22072,7 +22072,7 @@ pub mod smart_campaign_search_term_view_service_client {
     impl<T> SmartCampaignSearchTermViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -22142,7 +22142,7 @@ pub mod smart_campaign_search_term_view_service_client {
     }
 }
 /// Request message for
-/// [SmartCampaignSuggestService.SuggestSmartCampaignBudgets][].
+/// \[SmartCampaignSuggestService.SuggestSmartCampaignBudgets][\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SuggestSmartCampaignBudgetOptionsRequest {
     /// Required. The ID of the customer whose budget options are to be suggested.
@@ -22233,7 +22233,7 @@ pub mod smart_campaign_suggestion_info {
         /// accounts/{accountId}/locations/{locationId}. The last {locationId}
         /// component from the GMB API represents the business_location_id.
         /// See the [Google My Business API]
-        /// (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
+        /// (<https://developers.google.com/my-business/reference/rest/v4/accounts.locations>)
         #[prost(int64, tag = "2")]
         BusinessLocationId(i64),
     }
@@ -22250,7 +22250,7 @@ pub mod smart_campaign_suggestion_info {
     }
 }
 /// Response message for
-/// [SmartCampaignSuggestService.SuggestSmartCampaignBudgets][]. Depending on
+/// \[SmartCampaignSuggestService.SuggestSmartCampaignBudgets][\]. Depending on
 /// whether the system could suggest the options, either all of the options or
 /// none of them might be returned.
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -22293,7 +22293,7 @@ pub mod suggest_smart_campaign_budget_options_response {
     }
 }
 /// Request message for
-/// [SmartCampaignSuggestService.SuggestSmartCampaignAd][google.ads.googleads.v8.services.SmartCampaignSuggestService.SuggestSmartCampaignAd].
+/// \[SmartCampaignSuggestService.SuggestSmartCampaignAd][google.ads.googleads.v8.services.SmartCampaignSuggestService.SuggestSmartCampaignAd\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SuggestSmartCampaignAdRequest {
     /// Required. The ID of the customer.
@@ -22307,7 +22307,7 @@ pub struct SuggestSmartCampaignAdRequest {
     pub suggestion_info: ::core::option::Option<SmartCampaignSuggestionInfo>,
 }
 /// Response message for
-/// [SmartCampaignSuggestService.SuggestSmartCampaignAd][google.ads.googleads.v8.services.SmartCampaignSuggestService.SuggestSmartCampaignAd].
+/// \[SmartCampaignSuggestService.SuggestSmartCampaignAd][google.ads.googleads.v8.services.SmartCampaignSuggestService.SuggestSmartCampaignAd\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SuggestSmartCampaignAdResponse {
     /// Optional. Ad info includes 3 creative headlines and 2 creative descriptions.
@@ -22326,7 +22326,7 @@ pub mod smart_campaign_suggest_service_client {
     impl<T> SmartCampaignSuggestServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -22399,7 +22399,7 @@ pub mod smart_campaign_suggest_service_client {
     }
 }
 /// Request message for
-/// [ThirdPartyAppAnalyticsLinkService.GetThirdPartyAppAnalyticsLink][google.ads.googleads.v8.services.ThirdPartyAppAnalyticsLinkService.GetThirdPartyAppAnalyticsLink].
+/// \[ThirdPartyAppAnalyticsLinkService.GetThirdPartyAppAnalyticsLink][google.ads.googleads.v8.services.ThirdPartyAppAnalyticsLinkService.GetThirdPartyAppAnalyticsLink\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetThirdPartyAppAnalyticsLinkRequest {
     /// Resource name of the third party app analytics link.
@@ -22407,7 +22407,7 @@ pub struct GetThirdPartyAppAnalyticsLinkRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [ThirdPartyAppAnalyticsLinkService.RegenerateShareableLinkId][google.ads.googleads.v8.services.ThirdPartyAppAnalyticsLinkService.RegenerateShareableLinkId].
+/// \[ThirdPartyAppAnalyticsLinkService.RegenerateShareableLinkId][google.ads.googleads.v8.services.ThirdPartyAppAnalyticsLinkService.RegenerateShareableLinkId\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RegenerateShareableLinkIdRequest {
     /// Resource name of the third party app analytics link.
@@ -22415,7 +22415,7 @@ pub struct RegenerateShareableLinkIdRequest {
     pub resource_name: ::prost::alloc::string::String,
 }
 /// Response message for
-/// [ThirdPartyAppAnalyticsLinkService.RegenerateShareableLinkId][google.ads.googleads.v8.services.ThirdPartyAppAnalyticsLinkService.RegenerateShareableLinkId].
+/// \[ThirdPartyAppAnalyticsLinkService.RegenerateShareableLinkId][google.ads.googleads.v8.services.ThirdPartyAppAnalyticsLinkService.RegenerateShareableLinkId\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RegenerateShareableLinkIdResponse {}
 #[doc = r" Generated client implementations."]
@@ -22431,7 +22431,7 @@ pub mod third_party_app_analytics_link_service_client {
     impl<T> ThirdPartyAppAnalyticsLinkServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -22525,7 +22525,7 @@ pub mod third_party_app_analytics_link_service_client {
         }
     }
 }
-/// Request message for [TopicConstantService.GetTopicConstant][google.ads.googleads.v8.services.TopicConstantService.GetTopicConstant].
+/// Request message for \[TopicConstantService.GetTopicConstant][google.ads.googleads.v8.services.TopicConstantService.GetTopicConstant\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetTopicConstantRequest {
     /// Required. Resource name of the Topic to fetch.
@@ -22544,7 +22544,7 @@ pub mod topic_constant_service_client {
     impl<T> TopicConstantServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -22610,7 +22610,7 @@ pub mod topic_constant_service_client {
         }
     }
 }
-/// Request message for [TopicViewService.GetTopicView][google.ads.googleads.v8.services.TopicViewService.GetTopicView].
+/// Request message for \[TopicViewService.GetTopicView][google.ads.googleads.v8.services.TopicViewService.GetTopicView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetTopicViewRequest {
     /// Required. The resource name of the topic view to fetch.
@@ -22629,7 +22629,7 @@ pub mod topic_view_service_client {
     impl<T> TopicViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -22694,7 +22694,7 @@ pub mod topic_view_service_client {
         }
     }
 }
-/// Request message for [UserDataService.UploadUserData][google.ads.googleads.v8.services.UserDataService.UploadUserData]
+/// Request message for \[UserDataService.UploadUserData][google.ads.googleads.v8.services.UserDataService.UploadUserData\]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UploadUserDataRequest {
     /// Required. The ID of the customer for which to update the user data.
@@ -22737,7 +22737,7 @@ pub mod user_data_operation {
         Remove(super::super::common::UserData),
     }
 }
-/// Response message for [UserDataService.UploadUserData][google.ads.googleads.v8.services.UserDataService.UploadUserData]
+/// Response message for \[UserDataService.UploadUserData][google.ads.googleads.v8.services.UserDataService.UploadUserData\]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UploadUserDataResponse {
     /// The date time at which the request was received by API, formatted as
@@ -22761,7 +22761,7 @@ pub mod user_data_service_client {
     impl<T> UserDataServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -22831,7 +22831,7 @@ pub mod user_data_service_client {
         }
     }
 }
-/// Request message for [UserInterestService.GetUserInterest][google.ads.googleads.v8.services.UserInterestService.GetUserInterest].
+/// Request message for \[UserInterestService.GetUserInterest][google.ads.googleads.v8.services.UserInterestService.GetUserInterest\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetUserInterestRequest {
     /// Required. Resource name of the UserInterest to fetch.
@@ -22850,7 +22850,7 @@ pub mod user_interest_service_client {
     impl<T> UserInterestServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -22915,7 +22915,7 @@ pub mod user_interest_service_client {
         }
     }
 }
-/// Request message for [UserLocationViewService.GetUserLocationView][google.ads.googleads.v8.services.UserLocationViewService.GetUserLocationView].
+/// Request message for \[UserLocationViewService.GetUserLocationView][google.ads.googleads.v8.services.UserLocationViewService.GetUserLocationView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetUserLocationViewRequest {
     /// Required. The resource name of the user location view to fetch.
@@ -22934,7 +22934,7 @@ pub mod user_location_view_service_client {
     impl<T> UserLocationViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -23000,7 +23000,7 @@ pub mod user_location_view_service_client {
         }
     }
 }
-/// Request message for [VideoService.GetVideo][google.ads.googleads.v8.services.VideoService.GetVideo].
+/// Request message for \[VideoService.GetVideo][google.ads.googleads.v8.services.VideoService.GetVideo\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetVideoRequest {
     /// Required. The resource name of the video to fetch.
@@ -23019,7 +23019,7 @@ pub mod video_service_client {
     impl<T> VideoServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -23084,7 +23084,7 @@ pub mod video_service_client {
         }
     }
 }
-/// Request message for [WebpageViewService.GetWebpageView][google.ads.googleads.v8.services.WebpageViewService.GetWebpageView].
+/// Request message for \[WebpageViewService.GetWebpageView][google.ads.googleads.v8.services.WebpageViewService.GetWebpageView\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetWebpageViewRequest {
     /// Required. The resource name of the webpage view to fetch.
@@ -23103,7 +23103,7 @@ pub mod webpage_view_service_client {
     impl<T> WebpageViewServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

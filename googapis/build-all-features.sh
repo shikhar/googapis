@@ -98,7 +98,7 @@ features=(
   google-cloud-billing-budgets-v1
   google-cloud-billing-budgets-v1beta1
   google-cloud-billing-v1
-  google-cloud-binaryauthorization-v1
+  # google-cloud-binaryauthorization-v1
   google-cloud-binaryauthorization-v1beta1
   google-cloud-channel-v1
   google-cloud-clouddms-logging-v1

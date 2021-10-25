@@ -60,14 +60,14 @@ pub struct Property {
     /// NOTE: Changing the time zone only affects data going forward, and is not
     /// applied retroactively.
     ///
-    /// Format: https://www.iana.org/time-zones
+    /// Format: <https://www.iana.org/time-zones>
     /// Example: "America/Los_Angeles"
     #[prost(string, tag = "7")]
     pub time_zone: ::prost::alloc::string::String,
     /// The currency type used in reports involving monetary values.
     ///
     ///
-    /// Format: https://en.wikipedia.org/wiki/ISO_4217
+    /// Format: <https://en.wikipedia.org/wiki/ISO_4217>
     /// Examples: "USD", "EUR", "JPY"
     #[prost(string, tag = "8")]
     pub currency_code: ::prost::alloc::string::String,
@@ -163,7 +163,7 @@ pub struct WebDataStream {
     #[prost(message, optional, tag = "5")]
     pub update_time: ::core::option::Option<::prost_types::Timestamp>,
     /// Immutable. Domain name of the web app being measured, or empty.
-    /// Example: "http://www.google.com", "https://www.google.com"
+    /// Example: "<http://www.google.com",> "<https://www.google.com">
     #[prost(string, tag = "6")]
     pub default_uri: ::prost::alloc::string::String,
     /// Required. Human-readable display name for the Data Stream.
@@ -2305,7 +2305,7 @@ pub mod analytics_admin_service_client {
     impl<T> AnalyticsAdminServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

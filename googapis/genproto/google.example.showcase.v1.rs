@@ -102,7 +102,7 @@ pub mod compliance_client {
     impl<T> ComplianceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -421,7 +421,7 @@ pub mod echo_client {
     impl<T> EchoClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -671,7 +671,7 @@ pub mod sequence_service_client {
     impl<T> SequenceServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -769,7 +769,7 @@ pub mod sequence_service_client {
 /// code generation spec is in use.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Session {
-    /// The name of the session. The ID must conform to ^[a-z]+$
+    /// The name of the session. The ID must conform to ^\[a-z\]+$
     /// If this is not provided, Showcase chooses one at random.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
@@ -1062,7 +1062,7 @@ pub mod testing_client {
     impl<T> TestingClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

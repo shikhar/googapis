@@ -301,14 +301,14 @@ pub struct SpriteSheet {
     #[prost(string, tag = "2")]
     pub file_prefix: ::prost::alloc::string::String,
     /// Required. The width of sprite in pixels. Must be an even integer. To preserve the
-    /// source aspect ratio, set the [SpriteSheet.sprite_width_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_width_pixels] field or
-    /// the [SpriteSheet.sprite_height_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_height_pixels] field, but not both (the API will
+    /// source aspect ratio, set the \[SpriteSheet.sprite_width_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_width_pixels\] field or
+    /// the \[SpriteSheet.sprite_height_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_height_pixels\] field, but not both (the API will
     /// automatically calculate the missing field).
     #[prost(int32, tag = "3")]
     pub sprite_width_pixels: i32,
     /// Required. The height of sprite in pixels. Must be an even integer. To preserve the
-    /// source aspect ratio, set the [SpriteSheet.sprite_height_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_height_pixels] field or
-    /// the [SpriteSheet.sprite_width_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_width_pixels] field, but not both (the API will
+    /// source aspect ratio, set the \[SpriteSheet.sprite_height_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_height_pixels\] field or
+    /// the \[SpriteSheet.sprite_width_pixels][google.cloud.video.transcoder.v1.SpriteSheet.sprite_width_pixels\] field, but not both (the API will
     /// automatically calculate the missing field).
     #[prost(int32, tag = "4")]
     pub sprite_height_pixels: i32,
@@ -631,7 +631,7 @@ pub mod video_stream {
         /// input frame rate. The API will generate an output FPS that is divisible
         /// by the input FPS, and smaller or equal to the target FPS. See
         /// [Calculating frame
-        /// rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for
+        /// rate](<https://cloud.google.com/transcoder/docs/concepts/frame-rate>) for
         /// more information.
         #[prost(double, tag = "3")]
         pub frame_rate: f64,
@@ -710,14 +710,14 @@ pub mod video_stream {
         /// *   `high` (default)
         ///
         /// The available options are
-        /// [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Profile){:
+        /// \[FFmpeg-compatible\](<https://trac.ffmpeg.org/wiki/Encode/H.264#Profile>){:
         /// class="external" }. Note that certain values for this field may cause the
         /// transcoder to override other fields you set in the `H264CodecSettings`
         /// message.
         #[prost(string, tag = "18")]
         pub profile: ::prost::alloc::string::String,
         /// Enforces the specified codec tune. The available options are
-        /// [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune){:
+        /// \[FFmpeg-compatible\](<https://trac.ffmpeg.org/wiki/Encode/H.264#Tune>){:
         /// class="external" }. Note that certain values for this field may cause the
         /// transcoder to override other fields you set in the `H264CodecSettings`
         /// message.
@@ -725,7 +725,7 @@ pub mod video_stream {
         pub tune: ::prost::alloc::string::String,
         /// Enforces the specified codec preset. The default is `veryfast`. The
         /// available options are
-        /// [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Preset){:
+        /// \[FFmpeg-compatible\](<https://trac.ffmpeg.org/wiki/Encode/H.264#Preset>){:
         /// class="external" }. Note that certain values for this field may cause the
         /// transcoder to override other fields you set in the `H264CodecSettings`
         /// message.
@@ -746,8 +746,8 @@ pub mod video_stream {
             GopFrameCount(i32),
             /// Select the GOP size based on the specified duration. The default is
             /// `"3s"`. Note that `gopDuration` must be less than or equal to
-            /// [`segmentDuration`](#SegmentSettings), and
-            /// [`segmentDuration`](#SegmentSettings) must be divisible by
+            /// \[`segmentDuration`\](#SegmentSettings), and
+            /// \[`segmentDuration`\](#SegmentSettings) must be divisible by
             /// `gopDuration`.
             #[prost(message, tag = "10")]
             GopDuration(::prost_types::Duration),
@@ -771,7 +771,7 @@ pub mod video_stream {
         /// input frame rate. The API will generate an output FPS that is divisible
         /// by the input FPS, and smaller or equal to the target FPS. See
         /// [Calculating frame
-        /// rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for
+        /// rate](<https://cloud.google.com/transcoder/docs/concepts/frame-rate>) for
         /// more information.
         #[prost(double, tag = "3")]
         pub frame_rate: f64,
@@ -860,14 +860,14 @@ pub mod video_stream {
         /// *   `main444-12-intra`
         ///
         /// The available options are
-        /// [FFmpeg-compatible](https://x265.readthedocs.io/){:
+        /// \[FFmpeg-compatible\](<https://x265.readthedocs.io/>){:
         /// class="external" }. Note that certain values for this field may cause the
         /// transcoder to override other fields you set in the `H265CodecSettings`
         /// message.
         #[prost(string, tag = "17")]
         pub profile: ::prost::alloc::string::String,
         /// Enforces the specified codec tune. The available options are
-        /// [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.265){:
+        /// \[FFmpeg-compatible\](<https://trac.ffmpeg.org/wiki/Encode/H.265>){:
         /// class="external" }. Note that certain values for this field may cause the
         /// transcoder to override other fields you set in the `H265CodecSettings`
         /// message.
@@ -875,7 +875,7 @@ pub mod video_stream {
         pub tune: ::prost::alloc::string::String,
         /// Enforces the specified codec preset. The default is `veryfast`. The
         /// available options are
-        /// [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.265){:
+        /// \[FFmpeg-compatible\](<https://trac.ffmpeg.org/wiki/Encode/H.265>){:
         /// class="external" }. Note that certain values for this field may cause the
         /// transcoder to override other fields you set in the `H265CodecSettings`
         /// message.
@@ -896,8 +896,8 @@ pub mod video_stream {
             GopFrameCount(i32),
             /// Select the GOP size based on the specified duration. The default is
             /// `"3s"`. Note that `gopDuration` must be less than or equal to
-            /// [`segmentDuration`](#SegmentSettings), and
-            /// [`segmentDuration`](#SegmentSettings) must be divisible by
+            /// \[`segmentDuration`\](#SegmentSettings), and
+            /// \[`segmentDuration`\](#SegmentSettings) must be divisible by
             /// `gopDuration`.
             #[prost(message, tag = "10")]
             GopDuration(::prost_types::Duration),
@@ -921,7 +921,7 @@ pub mod video_stream {
         /// input frame rate. The API will generate an output FPS that is divisible
         /// by the input FPS, and smaller or equal to the target FPS. See
         /// [Calculating frame
-        /// rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for
+        /// rate](<https://cloud.google.com/transcoder/docs/concepts/frame-rate>) for
         /// more information.
         #[prost(double, tag = "3")]
         pub frame_rate: f64,
@@ -963,7 +963,7 @@ pub mod video_stream {
         /// *   `profile3`
         ///
         /// The available options are
-        /// [WebM-compatible](https://www.webmproject.org/vp9/profiles/){:
+        /// \[WebM-compatible\](<https://www.webmproject.org/vp9/profiles/>){:
         /// class="external" }. Note that certain values for this field may cause the
         /// transcoder to override other fields you set in the `Vp9CodecSettings`
         /// message.
@@ -984,8 +984,8 @@ pub mod video_stream {
             GopFrameCount(i32),
             /// Select the GOP size based on the specified duration. The default is
             /// `"3s"`. Note that `gopDuration` must be less than or equal to
-            /// [`segmentDuration`](#SegmentSettings), and
-            /// [`segmentDuration`](#SegmentSettings) must be divisible by
+            /// \[`segmentDuration`\](#SegmentSettings), and
+            /// \[`segmentDuration`\](#SegmentSettings) must be divisible by
             /// `gopDuration`.
             #[prost(message, tag = "9")]
             GopDuration(::prost_types::Duration),
@@ -1111,8 +1111,8 @@ pub mod text_stream {
 pub struct SegmentSettings {
     /// Duration of the segments in seconds. The default is `"6.0s"`. Note that
     /// `segmentDuration` must be greater than or equal to
-    /// [`gopDuration`](#videostream), and `segmentDuration` must be divisible by
-    /// [`gopDuration`](#videostream).
+    /// \[`gopDuration`\](#videostream), and `segmentDuration` must be divisible by
+    /// \[`gopDuration`\](#videostream).
     #[prost(message, optional, tag = "1")]
     pub segment_duration: ::core::option::Option<::prost_types::Duration>,
     /// Required. Create an individual segment file. The default is `false`.
@@ -1206,11 +1206,11 @@ pub struct ListJobsRequest {
     #[prost(string, tag = "3")]
     pub page_token: ::prost::alloc::string::String,
     /// The filter expression, following the syntax outlined in
-    /// https://google.aip.dev/160.
+    /// <https://google.aip.dev/160.>
     #[prost(string, tag = "4")]
     pub filter: ::prost::alloc::string::String,
     /// One or more fields to compare and use to sort the output.
-    /// See https://google.aip.dev/132#ordering.
+    /// See <https://google.aip.dev/132#ordering.>
     #[prost(string, tag = "5")]
     pub order_by: ::prost::alloc::string::String,
 }
@@ -1257,7 +1257,7 @@ pub struct CreateJobTemplateRequest {
     /// of the job template's resource name.
     ///
     /// This value should be 4-63 characters, and valid characters must match the
-    /// regular expression `[a-zA-Z][a-zA-Z0-9_-]*`.
+    /// regular expression `\[a-zA-Z][a-zA-Z0-9_-\]*`.
     #[prost(string, tag = "3")]
     pub job_template_id: ::prost::alloc::string::String,
 }
@@ -1276,11 +1276,11 @@ pub struct ListJobTemplatesRequest {
     #[prost(string, tag = "3")]
     pub page_token: ::prost::alloc::string::String,
     /// The filter expression, following the syntax outlined in
-    /// https://google.aip.dev/160.
+    /// <https://google.aip.dev/160.>
     #[prost(string, tag = "4")]
     pub filter: ::prost::alloc::string::String,
     /// One or more fields to compare and use to sort the output.
-    /// See https://google.aip.dev/132#ordering.
+    /// See <https://google.aip.dev/132#ordering.>
     #[prost(string, tag = "5")]
     pub order_by: ::prost::alloc::string::String,
 }
@@ -1331,7 +1331,7 @@ pub mod transcoder_service_client {
     impl<T> TranscoderServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

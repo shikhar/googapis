@@ -18,7 +18,7 @@ pub struct OperationMetadata {
     pub status_message: ::prost::alloc::string::String,
     /// Output only. Identifies whether the user has requested cancellation
     /// of the operation. Operations that have successfully been cancelled
-    /// have [Operation.error][] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+    /// have \[Operation.error][\] value with a \[google.rpc.Status.code][google.rpc.Status.code\] of 1,
     /// corresponding to `Code.CANCELLED`.
     #[prost(bool, tag = "6")]
     pub requested_cancellation: bool,
@@ -30,7 +30,7 @@ pub struct OperationMetadata {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct TrafficPortSelector {
     /// Optional. A list of ports. Can be port numbers or port range
-    /// (example, [80-90] specifies all ports from 80 to 90, including
+    /// (example, \[80-90\] specifies all ports from 80 to 90, including
     /// 80 and 90) or named ports or * to specify all ports. If the
     /// list is empty, all ports are selected.
     #[prost(string, repeated, tag = "1")]
@@ -283,7 +283,7 @@ pub mod network_services_client {
     impl<T> NetworkServicesClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

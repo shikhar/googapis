@@ -24,7 +24,7 @@ pub struct CloudFunction {
     /// function, optional when updating an existing function. For a complete
     /// list of possible choices, see the
     /// [`gcloud` command
-    /// reference](https://cloud.google.com/sdk/gcloud/reference/functions/deploy#--runtime).
+    /// reference](<https://cloud.google.com/sdk/gcloud/reference/functions/deploy#--runtime>).
     #[prost(string, tag = "19")]
     pub runtime: ::prost::alloc::string::String,
     /// The function execution timeout. Execution is considered failed and
@@ -67,7 +67,7 @@ pub struct CloudFunction {
     /// This field is mutually exclusive with `vpc_connector` and will be replaced
     /// by it.
     ///
-    /// See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for
+    /// See [the VPC documentation](<https://cloud.google.com/compute/docs/vpc>) for
     /// more information on connecting Cloud projects.
     #[prost(string, tag = "18")]
     pub network: ::prost::alloc::string::String,
@@ -83,7 +83,7 @@ pub struct CloudFunction {
     /// This field is mutually exclusive with `network` field and will eventually
     /// replace it.
     ///
-    /// See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for
+    /// See [the VPC documentation](<https://cloud.google.com/compute/docs/vpc>) for
     /// more information on connecting Cloud projects.
     #[prost(string, tag = "22")]
     pub vpc_connector: ::prost::alloc::string::String,
@@ -153,7 +153,7 @@ pub mod cloud_function {
         #[prost(message, tag = "4")]
         SourceRepository(super::SourceRepository),
         /// The Google Cloud Storage signed URL used for source uploading, generated
-        /// by calling [google.cloud.functions.v1.GenerateUploadUrl].
+        /// by calling \[google.cloud.functions.v1.GenerateUploadUrl\].
         ///
         /// The signature is validated on write methods (Create, Update)
         /// The signature is stripped from the Function object on read methods (Get,
@@ -181,12 +181,12 @@ pub struct SourceRepository {
     /// formats:
     ///
     /// To refer to a specific commit:
-    /// `https://source.developers.google.com/projects/*/repos/*/revisions/*/paths/*`
+    /// `<https://source.developers.google.com/projects/*/repos/*/revisions/*/paths/*`>
     /// To refer to a moveable alias (branch):
-    /// `https://source.developers.google.com/projects/*/repos/*/moveable-aliases/*/paths/*`
+    /// `<https://source.developers.google.com/projects/*/repos/*/moveable-aliases/*/paths/*`>
     /// In particular, to refer to HEAD use `master` moveable alias.
     /// To refer to a specific fixed alias (tag):
-    /// `https://source.developers.google.com/projects/*/repos/*/fixed-aliases/*/paths/*`
+    /// `<https://source.developers.google.com/projects/*/repos/*/fixed-aliases/*/paths/*`>
     ///
     /// You may omit `paths/*` if you want to use the main directory.
     #[prost(string, tag = "1")]
@@ -363,7 +363,7 @@ pub struct ListFunctionsResponse {
     pub functions: ::prost::alloc::vec::Vec<CloudFunction>,
     /// If not empty, indicates that there may be more functions that match
     /// the request; this value should be passed in a new
-    /// [google.cloud.functions.v1.ListFunctionsRequest][google.cloud.functions.v1.ListFunctionsRequest]
+    /// \[google.cloud.functions.v1.ListFunctionsRequest][google.cloud.functions.v1.ListFunctionsRequest\]
     /// to get more functions.
     #[prost(string, tag = "2")]
     pub next_page_token: ::prost::alloc::string::String,
@@ -471,7 +471,7 @@ pub mod cloud_functions_service_client {
     impl<T> CloudFunctionsServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -755,7 +755,7 @@ pub mod cloud_functions_service_client {
         }
     }
 }
-/// Metadata describing an [Operation][google.longrunning.Operation]
+/// Metadata describing an \[Operation][google.longrunning.Operation\]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OperationMetadataV1 {
     /// Target of the operation - for example

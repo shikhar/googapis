@@ -2,7 +2,7 @@
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct NetworkConfig {
     /// The name of the Google Compute Engine
-    /// [VPC network](https://cloud.google.com/vpc/docs/vpc) to which the
+    /// [VPC network](<https://cloud.google.com/vpc/docs/vpc>) to which the
     /// instance is connected.
     #[prost(string, tag = "1")]
     pub network: ::prost::alloc::string::String,
@@ -12,7 +12,7 @@ pub struct NetworkConfig {
     pub modes: ::prost::alloc::vec::Vec<i32>,
     /// A /29 CIDR block in one of the
     /// [internal IP address
-    /// ranges](https://www.arin.net/reference/research/statistics/address_filters/)
+    /// ranges](<https://www.arin.net/reference/research/statistics/address_filters/>)
     /// that identifies the range of IP addresses reserved for this instance. For
     /// example, 10.0.0.0/29 or 192.168.0.0/29. The range you specify can't overlap
     /// with either existing subnets or assigned IP address ranges for other Cloud
@@ -233,7 +233,7 @@ pub struct CreateInstanceRequest {
     /// The name must be unique for the specified project and location.
     #[prost(string, tag = "2")]
     pub instance_id: ::prost::alloc::string::String,
-    /// Required. An [instance resource][google.cloud.filestore.v1.Instance]
+    /// Required. An [instance resource]\[google.cloud.filestore.v1.Instance\]
     #[prost(message, optional, tag = "3")]
     pub instance: ::core::option::Option<Instance>,
 }
@@ -414,7 +414,7 @@ pub struct CreateBackupRequest {
     /// backup locations map to GCP regions, for example **us-west1**.
     #[prost(string, tag = "1")]
     pub parent: ::prost::alloc::string::String,
-    /// Required. A [backup resource][google.cloud.filestore.v1.Backup]
+    /// Required. A [backup resource]\[google.cloud.filestore.v1.Backup\]
     #[prost(message, optional, tag = "2")]
     pub backup: ::core::option::Option<Backup>,
     /// Required. The ID to use for the backup.
@@ -438,7 +438,7 @@ pub struct DeleteBackupRequest {
 /// UpdateBackupRequest updates description and/or labels for a backup.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateBackupRequest {
-    /// Required. A [backup resource][google.cloud.filestore.v1.Backup]
+    /// Required. A [backup resource]\[google.cloud.filestore.v1.Backup\]
     #[prost(message, optional, tag = "1")]
     pub backup: ::core::option::Option<Backup>,
     /// Required. Mask of fields to update.  At least one path must be supplied in this
@@ -529,7 +529,7 @@ pub mod cloud_filestore_manager_client {
     impl<T> CloudFilestoreManagerClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

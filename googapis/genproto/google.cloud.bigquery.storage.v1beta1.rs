@@ -19,7 +19,7 @@ pub struct ArrowRecordBatch {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AvroSchema {
     /// Json serialized schema, as described at
-    /// https://avro.apache.org/docs/1.8.1/spec.html
+    /// <https://avro.apache.org/docs/1.8.1/spec.html>
     #[prost(string, tag = "1")]
     pub schema: ::prost::alloc::string::String,
 }
@@ -334,7 +334,7 @@ pub enum DataFormat {
     /// Data format is unspecified.
     Unspecified = 0,
     /// Avro is a standard open source row based file format.
-    /// See https://avro.apache.org/ for more details.
+    /// See <https://avro.apache.org/> for more details.
     Avro = 1,
     Arrow = 3,
 }
@@ -371,7 +371,7 @@ pub mod big_query_storage_client {
     impl<T> BigQueryStorageClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

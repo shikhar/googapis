@@ -17,13 +17,13 @@ pub struct ParsedExpr {
 /// operators with the exception of the '.' operator are modelled as function
 /// calls. This makes it easy to represent new operators into the existing AST.
 ///
-/// All references within expressions must resolve to a [Decl][google.api.expr.v1alpha1.Decl] provided at
+/// All references within expressions must resolve to a \[Decl][google.api.expr.v1alpha1.Decl\] provided at
 /// type-check for an expression to be valid. A reference may either be a bare
 /// identifier `name` or a qualified identifier `google.api.name`. References
 /// may either refer to a value or a function declaration.
 ///
 /// For example, the expression `google.api.name.startsWith('expr')` references
-/// the declaration `google.api.name` within a [Expr.Select][google.api.expr.v1alpha1.Expr.Select] expression, and
+/// the declaration `google.api.name` within a \[Expr.Select][google.api.expr.v1alpha1.Expr.Select\] expression, and
 /// the function declaration `startsWith`.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Expr {
@@ -44,7 +44,7 @@ pub mod expr {
         /// Required. Holds a single, unqualified identifier, possibly preceded by a
         /// '.'.
         ///
-        /// Qualified names are represented by the [Expr.Select][google.api.expr.v1alpha1.Expr.Select] expression.
+        /// Qualified names are represented by the \[Expr.Select][google.api.expr.v1alpha1.Expr.Select\] expression.
         #[prost(string, tag = "1")]
         pub name: ::prost::alloc::string::String,
     }
@@ -233,7 +233,7 @@ pub mod expr {
 /// primitives.
 ///
 /// Lists and structs are not included as constants as these aggregate types may
-/// contain [Expr][google.api.expr.v1alpha1.Expr] elements which require evaluation and are thus not constant.
+/// contain \[Expr][google.api.expr.v1alpha1.Expr\] elements which require evaluation and are thus not constant.
 ///
 /// Examples of literals include: `"hello"`, `b'bytes'`, `1u`, `4.2`, `-2`,
 /// `true`, `null`.
@@ -297,8 +297,8 @@ pub struct SourceInfo {
     /// Monotonically increasing list of character offsets where newlines appear.
     ///
     /// The line number of a given position is the index `i` where for a given
-    /// `id` the `line_offsets[i] < id_positions[id] < line_offsets[i+1]`. The
-    /// column may be derivd from `id_positions[id] - line_offsets[i]`.
+    /// `id` the `line_offsets\[i\] < id_positions\[id\] < line_offsets\[i+1\]`. The
+    /// column may be derivd from `id_positions\[id\] - line_offsets\[i\]`.
     #[prost(int32, repeated, tag = "3")]
     pub line_offsets: ::prost::alloc::vec::Vec<i32>,
     /// A map from the parse node id (e.g. `Expr.id`) to the character offset
@@ -532,9 +532,9 @@ pub struct Decl {
     /// Declarations are organized in containers and this represents the full path
     /// to the declaration in its container, as in `google.api.expr.Decl`.
     ///
-    /// Declarations used as [FunctionDecl.Overload][google.api.expr.v1alpha1.Decl.FunctionDecl.Overload] parameters may or may not
+    /// Declarations used as \[FunctionDecl.Overload][google.api.expr.v1alpha1.Decl.FunctionDecl.Overload\] parameters may or may not
     /// have a name depending on whether the overload is function declaration or a
-    /// function definition containing a result [Expr][google.api.expr.v1alpha1.Expr].
+    /// function definition containing a result \[Expr][google.api.expr.v1alpha1.Expr\].
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// Required. The declaration kind.
@@ -577,11 +577,11 @@ pub mod decl {
     /// Nested message and enum types in `FunctionDecl`.
     pub mod function_decl {
         /// An overload indicates a function's parameter types and return type, and
-        /// may optionally include a function body described in terms of [Expr][google.api.expr.v1alpha1.Expr]
+        /// may optionally include a function body described in terms of \[Expr][google.api.expr.v1alpha1.Expr\]
         /// values.
         ///
         /// Functions overloads are declared in either a function or method
-        /// call-style. For methods, the `params[0]` is the expected type of the
+        /// call-style. For methods, the `params\[0\]` is the expected type of the
         /// target receiver.
         ///
         /// Overloads must have non-overlapping argument types after erasure of all
@@ -591,11 +591,11 @@ pub mod decl {
             /// Required. Globally unique overload name of the function which reflects
             /// the function name and argument types.
             ///
-            /// This will be used by a [Reference][google.api.expr.v1alpha1.Reference] to indicate the `overload_id` that
+            /// This will be used by a \[Reference][google.api.expr.v1alpha1.Reference\] to indicate the `overload_id` that
             /// was resolved for the function `name`.
             #[prost(string, tag = "1")]
             pub overload_id: ::prost::alloc::string::String,
-            /// List of function parameter [Type][google.api.expr.v1alpha1.Type] values.
+            /// List of function parameter \[Type][google.api.expr.v1alpha1.Type\] values.
             ///
             /// Param types are disjoint after generic type parameters have been
             /// replaced with the type `DYN`. Since the `DYN` type is compatible with
@@ -620,7 +620,7 @@ pub mod decl {
             /// Whether the function is to be used in a method call-style `x.f(...)`
             /// of a function call-style `f(x, ...)`.
             ///
-            /// For methods, the first parameter declaration, `params[0]` is the
+            /// For methods, the first parameter declaration, `params\[0\]` is the
             /// expected type of the target receiver.
             #[prost(bool, tag = "5")]
             pub is_instance_function: bool,
@@ -653,7 +653,7 @@ pub struct Reference {
     /// presented candidates must happen at runtime because of dynamic types. The
     /// type checker attempts to narrow down this list as much as possible.
     ///
-    /// Empty if this is not a reference to a [Decl.FunctionDecl][google.api.expr.v1alpha1.Decl.FunctionDecl].
+    /// Empty if this is not a reference to a \[Decl.FunctionDecl][google.api.expr.v1alpha1.Decl.FunctionDecl\].
     #[prost(string, repeated, tag = "3")]
     pub overload_id: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// For references to constants, this may contain the value of the
@@ -834,11 +834,11 @@ pub mod expr_value {
         /// unknowns *might* be included included when evaluation could result in
         /// different unknowns. For example:
         ///
-        ///     (<unknown[1]> || true) && <unknown[2]> -> <unknown[2]>
-        ///     <unknown[1]> || <unknown[2]> -> <unknown[1,2]>
-        ///     <unknown[1]>.foo -> <unknown[1]>
-        ///     foo(<unknown[1]>) -> <unknown[1]>
-        ///     <unknown[1]> + <unknown[2]> -> <unknown[1]> or <unknown[2[>
+        ///     (<unknown\[1\]> || true) && <unknown\[2\]> -> <unknown\[2\]>
+        ///     <unknown\[1\]> || <unknown\[2\]> -> <unknown\[1,2\]>
+        ///     <unknown\[1\]>.foo -> <unknown\[1\]>
+        ///     foo(<unknown\[1\]>) -> <unknown\[1\]>
+        ///     <unknown\[1\]> + <unknown\[2\]> -> <unknown\[1\]> or <unknown[2[>
         ///
         /// Unknown takes precidence over Error in cases where a `Value` can short
         /// circuit the result:
@@ -881,7 +881,7 @@ pub struct ParseRequest {
     /// Tag for version of CEL syntax, for future use.
     #[prost(string, tag = "2")]
     pub syntax_version: ::prost::alloc::string::String,
-    /// File or resource for source text, used in [SourceInfo][google.api.expr.v1alpha1.SourceInfo].
+    /// File or resource for source text, used in \[SourceInfo][google.api.expr.v1alpha1.SourceInfo\].
     #[prost(string, tag = "3")]
     pub source_location: ::prost::alloc::string::String,
     /// Prevent macro expansion.  See "Macros" in Language Defiinition.
@@ -894,7 +894,7 @@ pub struct ParseResponse {
     /// The parsed representation, or unset if parsing failed.
     #[prost(message, optional, tag = "1")]
     pub parsed_expr: ::core::option::Option<ParsedExpr>,
-    /// Any number of issues with [StatusDetails][] as the details.
+    /// Any number of issues with \[StatusDetails][\] as the details.
     #[prost(message, repeated, tag = "2")]
     pub issues: ::prost::alloc::vec::Vec<super::super::super::rpc::Status>,
 }
@@ -913,7 +913,7 @@ pub struct CheckRequest {
     /// Language Definition.
     #[prost(string, tag = "3")]
     pub container: ::prost::alloc::string::String,
-    /// If true, use only the declarations in [type_env][google.api.expr.v1alpha1.CheckRequest.type_env].  If false (default),
+    /// If true, use only the declarations in \[type_env][google.api.expr.v1alpha1.CheckRequest.type_env\].  If false (default),
     /// add declarations for the standard definitions to the type environment.  See
     /// "Standard Definitions" in the Language Definition.
     #[prost(bool, tag = "4")]
@@ -925,7 +925,7 @@ pub struct CheckResponse {
     /// The annotated representation, or unset if checking failed.
     #[prost(message, optional, tag = "1")]
     pub checked_expr: ::core::option::Option<CheckedExpr>,
-    /// Any number of issues with [StatusDetails][] as the details.
+    /// Any number of issues with \[StatusDetails][\] as the details.
     #[prost(message, repeated, tag = "2")]
     pub issues: ::prost::alloc::vec::Vec<super::super::super::rpc::Status>,
 }
@@ -933,10 +933,10 @@ pub struct CheckResponse {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct EvalRequest {
     /// Bindings for the external variables.  The types SHOULD be compatible
-    /// with the type environment in [CheckRequest][google.api.expr.v1alpha1.CheckRequest], if checked.
+    /// with the type environment in \[CheckRequest][google.api.expr.v1alpha1.CheckRequest\], if checked.
     #[prost(map = "string, message", tag = "3")]
     pub bindings: ::std::collections::HashMap<::prost::alloc::string::String, ExprValue>,
-    /// SHOULD be the same container as used in [CheckRequest][google.api.expr.v1alpha1.CheckRequest], if checked.
+    /// SHOULD be the same container as used in \[CheckRequest][google.api.expr.v1alpha1.CheckRequest\], if checked.
     #[prost(string, tag = "4")]
     pub container: ::prost::alloc::string::String,
     /// Required. Either the parsed or annotated representation of the CEL program.
@@ -962,15 +962,15 @@ pub struct EvalResponse {
     /// The execution result, or unset if execution couldn't start.
     #[prost(message, optional, tag = "1")]
     pub result: ::core::option::Option<ExprValue>,
-    /// Any number of issues with [StatusDetails][] as the details.
-    /// Note that CEL execution errors are reified into [ExprValue][google.api.expr.v1alpha1.ExprValue].
+    /// Any number of issues with \[StatusDetails][\] as the details.
+    /// Note that CEL execution errors are reified into \[ExprValue][google.api.expr.v1alpha1.ExprValue\].
     /// Nevertheless, we'll allow out-of-band issues to be raised,
     /// which also makes the replies more regular.
     #[prost(message, repeated, tag = "2")]
     pub issues: ::prost::alloc::vec::Vec<super::super::super::rpc::Status>,
 }
 /// Warnings or errors in service execution are represented by
-/// [google.rpc.Status][google.rpc.Status] messages, with the following message
+/// \[google.rpc.Status][google.rpc.Status\] messages, with the following message
 /// in the details field.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct IssueDetails {
@@ -980,7 +980,7 @@ pub struct IssueDetails {
     /// Position in the source, if known.
     #[prost(message, optional, tag = "2")]
     pub position: ::core::option::Option<SourcePosition>,
-    /// Expression ID from [Expr][google.api.expr.v1alpha1.Expr], 0 if unknown.
+    /// Expression ID from \[Expr][google.api.expr.v1alpha1.Expr\], 0 if unknown.
     #[prost(int64, tag = "3")]
     pub id: i64,
 }
@@ -1017,7 +1017,7 @@ pub mod conformance_service_client {
     impl<T> ConformanceServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

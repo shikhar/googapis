@@ -28,7 +28,7 @@ pub struct StartMfaPhoneRequestInfo {
     /// Android only. Used to assert application identity in place of a
     /// recaptcha token. A SafetyNet Token can be generated via the
     /// [SafetyNet Android Attestation
-    /// API](https://developer.android.com/training/safetynet/attestation.html),
+    /// API](<https://developer.android.com/training/safetynet/attestation.html>),
     /// with the Base64 encoding of the `phone_number` field as the nonce.
     #[prost(string, tag = "6")]
     pub safety_net_token: ::prost::alloc::string::String,
@@ -209,7 +209,7 @@ pub mod account_management_service_client {
     impl<T> AccountManagementServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -408,7 +408,7 @@ pub mod authentication_service_client {
     impl<T> AuthenticationServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

@@ -631,14 +631,14 @@ pub struct Action {
     /// stderr: The stderr of the action
     /// baseline.lcov: Baseline coverage file to be parsed by the server. This
     ///     uses a stripped down implementation of the LCOV standard.
-    ///     http://ltp.sourceforge.net/coverage/lcov/geninfo.1.php
+    ///     <http://ltp.sourceforge.net/coverage/lcov/geninfo.1.php>
     ///
     /// For test actions:
     /// test.xml: The test suite / test case data in XML format.
     /// test.log: The combined stdout and stderr of the test process.
     /// test.lcov: Coverage file to be parsed by the server. This uses a stripped
     ///     down implementation of the LCOV standard.
-    ///     http://ltp.sourceforge.net/coverage/lcov/geninfo.1.php
+    ///     <http://ltp.sourceforge.net/coverage/lcov/geninfo.1.php>
     #[prost(message, repeated, tag = "8")]
     pub files: ::prost::alloc::vec::Vec<File>,
     /// List of names of file sets that are referenced from this Action.
@@ -1250,10 +1250,10 @@ pub struct CommandLine {
     /// A label describing this command line.
     #[prost(string, tag = "1")]
     pub label: ::prost::alloc::string::String,
-    /// The command-line tool that is run: argv[0].
+    /// The command-line tool that is run: argv\[0\].
     #[prost(string, tag = "2")]
     pub tool: ::prost::alloc::string::String,
-    /// The arguments to the above tool: argv[1]...argv[N].
+    /// The arguments to the above tool: argv\[1]...argv[N\].
     #[prost(string, repeated, tag = "3")]
     pub args: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// The subcommand that was run with the tool, usually "build" or "test".
@@ -1272,7 +1272,7 @@ pub struct InvocationAttributes {
     /// As input, callers can set this field to a project id (string) or a
     /// stringified int64 project number. As output, the API populates this field
     /// with the stringified int64 project number (per
-    /// https://google.aip.dev/cloud/2510).
+    /// <https://google.aip.dev/cloud/2510>).
     #[prost(string, tag = "1")]
     pub project_id: ::prost::alloc::string::String,
     /// The list of users in the command chain.  The first user in this sequence
@@ -2065,7 +2065,7 @@ pub mod result_store_download_client {
     impl<T> ResultStoreDownloadClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -2598,7 +2598,7 @@ pub mod result_store_file_download_client {
     impl<T> ResultStoreFileDownloadClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -3339,14 +3339,14 @@ pub struct UploadRequest {
     /// ConfiguredTarget: [*, status_attributes.*].
     /// Action: [*, status_attributes.*, timing.*, test_action.test_suite,
     /// test_action.infrastructure_failure_info].
-    /// FileSet: [*].
+    /// FileSet: \[*\].
     ///
     /// For Merge Operations:
     ///
     /// Invocation: [invocation_attributes.labels, workspace_info.command_lines,
     /// properties, files, file_processing_errors].
-    /// Target: [files].
-    /// ConfiguredTarget: [files].
+    /// Target: \[files\].
+    /// ConfiguredTarget: \[files\].
     /// Action: [files, file_processing_errors].
     #[prost(message, optional, tag = "3")]
     pub update_mask: ::core::option::Option<::prost_types::FieldMask>,
@@ -3460,7 +3460,7 @@ pub mod result_store_upload_client {
     impl<T> ResultStoreUploadClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

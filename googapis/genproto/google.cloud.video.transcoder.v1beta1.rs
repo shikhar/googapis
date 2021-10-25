@@ -67,7 +67,7 @@ pub mod job {
     /// The origin URI.
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct OriginUri {
-        /// HLS manifest URI per https://tools.ietf.org/html/rfc8216#section-4.3.4.
+        /// HLS manifest URI per <https://tools.ietf.org/html/rfc8216#section-4.3.4.>
         /// If multiple HLS manifests are created, only the first one is listed.
         #[prost(string, tag = "1")]
         pub hls: ::prost::alloc::string::String,
@@ -331,14 +331,14 @@ pub struct SpriteSheet {
     #[prost(string, tag = "2")]
     pub file_prefix: ::prost::alloc::string::String,
     /// Required. The width of sprite in pixels. Must be an even integer. To preserve the
-    /// source aspect ratio, set the [SpriteSheet.sprite_width_pixels][google.cloud.video.transcoder.v1beta1.SpriteSheet.sprite_width_pixels] field or
-    /// the [SpriteSheet.sprite_height_pixels][google.cloud.video.transcoder.v1beta1.SpriteSheet.sprite_height_pixels] field, but not both (the API will
+    /// source aspect ratio, set the \[SpriteSheet.sprite_width_pixels][google.cloud.video.transcoder.v1beta1.SpriteSheet.sprite_width_pixels\] field or
+    /// the \[SpriteSheet.sprite_height_pixels][google.cloud.video.transcoder.v1beta1.SpriteSheet.sprite_height_pixels\] field, but not both (the API will
     /// automatically calculate the missing field).
     #[prost(int32, tag = "3")]
     pub sprite_width_pixels: i32,
     /// Required. The height of sprite in pixels. Must be an even integer. To preserve the
-    /// source aspect ratio, set the [SpriteSheet.sprite_height_pixels][google.cloud.video.transcoder.v1beta1.SpriteSheet.sprite_height_pixels] field or
-    /// the [SpriteSheet.sprite_width_pixels][google.cloud.video.transcoder.v1beta1.SpriteSheet.sprite_width_pixels] field, but not both (the API will
+    /// source aspect ratio, set the \[SpriteSheet.sprite_height_pixels][google.cloud.video.transcoder.v1beta1.SpriteSheet.sprite_height_pixels\] field or
+    /// the \[SpriteSheet.sprite_width_pixels][google.cloud.video.transcoder.v1beta1.SpriteSheet.sprite_width_pixels\] field, but not both (the API will
     /// automatically calculate the missing field).
     #[prost(int32, tag = "4")]
     pub sprite_height_pixels: i32,
@@ -651,14 +651,14 @@ pub struct VideoStream {
     /// *   `high` (default)
     ///
     /// The available options are
-    /// <a href="https://trac.ffmpeg.org/wiki/Encode/H.264#Profile"
+    /// <a href="<https://trac.ffmpeg.org/wiki/Encode/H.264#Profile">
     /// class="external">FFmpeg-compatible</a>. Note that certain values for this
     /// field may cause the transcoder to override other fields you set in the
     /// `VideoStream` message.
     #[prost(string, tag = "2")]
     pub profile: ::prost::alloc::string::String,
     /// Enforces the specified codec tune. The available options are
-    /// <a href="https://trac.ffmpeg.org/wiki/Encode/H.264#Tune"
+    /// <a href="<https://trac.ffmpeg.org/wiki/Encode/H.264#Tune">
     /// class="external">FFmpeg-compatible</a>. Note that certain values for this
     /// field may cause the transcoder to override other fields you set in the
     /// `VideoStream` message.
@@ -666,7 +666,7 @@ pub struct VideoStream {
     pub tune: ::prost::alloc::string::String,
     /// Enforces the specified codec preset. The default is `veryfast`. The
     /// available options are
-    /// <a href="https://trac.ffmpeg.org/wiki/Encode/H.264#Preset"
+    /// <a href="<https://trac.ffmpeg.org/wiki/Encode/H.264#Preset">
     /// class="external">FFmpeg-compatible</a>. Note that certain values for this
     /// field may cause the transcoder to override other fields you set in the
     /// `VideoStream` message.
@@ -749,7 +749,7 @@ pub struct VideoStream {
     /// input frame rate. The API will generate an output FPS that is divisible by
     /// the input FPS, and smaller or equal to the target FPS. See
     /// [Calculate frame
-    /// rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for
+    /// rate](<https://cloud.google.com/transcoder/docs/concepts/frame-rate>) for
     /// more information.
     #[prost(double, tag = "20")]
     pub frame_rate: f64,
@@ -773,8 +773,8 @@ pub mod video_stream {
         GopFrameCount(i32),
         /// Select the GOP size based on the specified duration. The default is
         /// `"3s"`. Note that `gopDuration` must be less than or equal to
-        /// [`segmentDuration`](#SegmentSettings), and
-        /// [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
+        /// \[`segmentDuration`\](#SegmentSettings), and
+        /// \[`segmentDuration`\](#SegmentSettings) must be divisible by `gopDuration`.
         #[prost(message, tag = "16")]
         GopDuration(::prost_types::Duration),
     }
@@ -879,7 +879,7 @@ pub struct TextStream {
     pub codec: ::prost::alloc::string::String,
     /// Required. The BCP-47 language code, such as `"en-US"` or `"sr-Latn"`. For more
     /// information, see
-    /// https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+    /// <https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.>
     #[prost(string, tag = "2")]
     pub language_code: ::prost::alloc::string::String,
     /// The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
@@ -919,8 +919,8 @@ pub mod text_stream {
 pub struct SegmentSettings {
     /// Duration of the segments in seconds. The default is `"6.0s"`. Note that
     /// `segmentDuration` must be greater than or equal to
-    /// [`gopDuration`](#videostream), and `segmentDuration` must be divisible by
-    /// [`gopDuration`](#videostream).
+    /// \[`gopDuration`\](#videostream), and `segmentDuration` must be divisible by
+    /// \[`gopDuration`\](#videostream).
     #[prost(message, optional, tag = "1")]
     pub segment_duration: ::core::option::Option<::prost_types::Duration>,
     /// Required. Create an individual segment file. The default is `false`.
@@ -1077,7 +1077,7 @@ pub struct CreateJobTemplateRequest {
     /// of the job template's resource name.
     ///
     /// This value should be 4-63 characters, and valid characters must match the
-    /// regular expression `[a-zA-Z][a-zA-Z0-9_-]*`.
+    /// regular expression `\[a-zA-Z][a-zA-Z0-9_-\]*`.
     #[prost(string, tag = "3")]
     pub job_template_id: ::prost::alloc::string::String,
 }
@@ -1140,7 +1140,7 @@ pub mod transcoder_service_client {
     impl<T> TranscoderServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

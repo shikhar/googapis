@@ -255,7 +255,7 @@ pub mod account_budget {
         /// to this budget, if applicable.
         ///
         /// The different kinds of adjustments are described here:
-        /// https://support.google.com/google-ads/answer/1704323
+        /// <https://support.google.com/google-ads/answer/1704323>
         ///
         /// For example, a debit adjustment reduces how much the account is
         /// allowed to spend.
@@ -491,10 +491,10 @@ pub struct ThirdPartyAppAnalyticsLinkIdentifier {
     /// was collected to the Google Ads API. For iOS, the ID string is the 9 digit
     /// string that appears at the end of an App Store URL (e.g., "422689480" for
     /// "Gmail" whose App Store link is
-    /// https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
+    /// <https://apps.apple.com/us/app/gmail-email-by-google/id422689480>). For
     /// Android, the ID string is the application's package name (e.g.,
     /// "com.google.android.gm" for "Gmail" given Google Play link
-    /// https://play.google.com/store/apps/details?id=com.google.android.gm)
+    /// <https://play.google.com/store/apps/details?id=com.google.android.gm>)
     /// This field should not be empty when creating a new third
     /// party app analytics link. It is unable to be modified after the creation of
     /// the link.
@@ -768,7 +768,7 @@ pub struct AdGroup {
     pub target_roas: ::core::option::Option<f64>,
     /// The percent cpc bid amount, expressed as a fraction of the advertised price
     /// for some good or service. The valid range for the fraction is [0,1) and the
-    /// value stored here is 1,000,000 * [fraction].
+    /// value stored here is 1,000,000 * \[fraction\].
     #[prost(int64, optional, tag = "45")]
     pub percent_cpc_bid_micros: ::core::option::Option<i64>,
     /// Settings for the Display Campaign Optimizer, initially termed "Explorer".
@@ -1148,7 +1148,7 @@ pub struct AdGroupCriterion {
     /// Output only. List of disapproval reasons of the criterion.
     ///
     /// The different reasons for disapproving a criterion can be found here:
-    /// https://support.google.com/adspolicy/answer/6008942
+    /// <https://support.google.com/adspolicy/answer/6008942>
     ///
     /// This field is read-only.
     #[prost(string, repeated, tag = "59")]
@@ -1171,7 +1171,7 @@ pub struct AdGroupCriterion {
     pub cpv_bid_micros: ::core::option::Option<i64>,
     /// The CPC bid amount, expressed as a fraction of the advertised price
     /// for some good or service. The valid range for the fraction is [0,1) and the
-    /// value stored here is 1,000,000 * [fraction].
+    /// value stored here is 1,000,000 * \[fraction\].
     #[prost(int64, optional, tag = "65")]
     pub percent_cpc_bid_micros: ::core::option::Option<i64>,
     /// Output only. The effective CPC (cost-per-click) bid.
@@ -2327,7 +2327,7 @@ pub struct Campaign {
     /// campaigns.
     ///
     /// See "About optimization score" at
-    /// https://support.google.com/google-ads/answer/9061546.
+    /// <https://support.google.com/google-ads/answer/9061546.>
     ///
     /// This field is read-only.
     #[prost(double, optional, tag = "66")]
@@ -4102,7 +4102,7 @@ pub mod conversion_action {
 
 /// A conversion custom variable
 /// See "About custom variables for conversions" at
-/// https://support.google.com/google-ads/answer/9964350
+/// <https://support.google.com/google-ads/answer/9964350>
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ConversionCustomVariable {
     /// Immutable. The resource name of the conversion custom variable.
@@ -4340,7 +4340,7 @@ pub struct Customer {
     pub auto_tagging_enabled: ::core::option::Option<bool>,
     /// Output only. Whether the Customer has a Partners program badge. If the Customer is not
     /// associated with the Partners program, this will be false. For more
-    /// information, see https://support.google.com/partners/answer/3125774.
+    /// information, see <https://support.google.com/partners/answer/3125774.>
     #[prost(bool, optional, tag = "26")]
     pub has_partners_badge: ::core::option::Option<bool>,
     /// Output only. Whether the customer is a manager.
@@ -4374,7 +4374,7 @@ pub struct Customer {
     /// for all manager customers, and for unscored non-manager customers.
     ///
     /// See "About optimization score" at
-    /// https://support.google.com/google-ads/answer/9061546.
+    /// <https://support.google.com/google-ads/answer/9061546.>
     ///
     /// This field is read-only.
     #[prost(double, optional, tag = "29")]
@@ -4475,7 +4475,7 @@ pub struct CustomerClient {
     #[prost(string, optional, tag = "12")]
     pub client_customer: ::core::option::Option<::prost::alloc::string::String>,
     /// Output only. Specifies whether this is a
-    /// [hidden account](https://support.google.com/google-ads/answer/7519830).
+    /// [hidden account](<https://support.google.com/google-ads/answer/7519830>).
     /// Read only.
     #[prost(bool, optional, tag = "13")]
     pub hidden: ::core::option::Option<bool>,
@@ -4841,7 +4841,7 @@ pub struct DistanceView {
 /// A category generated automatically by crawling a domain. If a campaign uses
 /// the DynamicSearchAdsSetting, then domain categories will be generated for
 /// the domain. The categories can be targeted using WebpageConditionInfo.
-/// See: https://support.google.com/google-ads/answer/2471185
+/// See: <https://support.google.com/google-ads/answer/2471185>
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DomainCategory {
     /// Output only. The resource name of the domain category.
@@ -6244,7 +6244,7 @@ pub struct MediaBundle {
     #[prost(bytes = "vec", optional, tag = "3")]
     pub data: ::core::option::Option<::prost::alloc::vec::Vec<u8>>,
     /// Output only. The url to access the uploaded zipped data.
-    /// E.g. https://tpc.googlesyndication.com/simgad/123
+    /// E.g. <https://tpc.googlesyndication.com/simgad/123>
     /// This field is read-only.
     #[prost(string, optional, tag = "2")]
     pub url: ::core::option::Option<::prost::alloc::string::String>,
@@ -6263,7 +6263,7 @@ pub struct MediaVideo {
     #[prost(int64, optional, tag = "5")]
     pub ad_duration_millis: ::core::option::Option<i64>,
     /// Immutable. The YouTube video ID (as seen in YouTube URLs). Adding prefix
-    /// "https://www.youtube.com/watch?v=" to this ID will get the YouTube
+    /// "<https://www.youtube.com/watch?v="> to this ID will get the YouTube
     /// streaming URL for this video.
     #[prost(string, optional, tag = "6")]
     pub youtube_video_id: ::core::option::Option<::prost::alloc::string::String>,
@@ -6411,7 +6411,7 @@ pub mod offline_user_data_job {
 
 /// A mobile operating system version or a range of versions, depending on
 /// `operator_type`. List of available mobile platforms at
-/// https://developers.google.com/adwords/api/docs/appendix/codes-formats#mobile-platforms
+/// <https://developers.google.com/adwords/api/docs/appendix/codes-formats#mobile-platforms>
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OperatingSystemVersionConstant {
     /// Output only. The resource name of the operating system version constant.
@@ -6517,7 +6517,7 @@ pub struct ProductBiddingCategoryConstant {
     /// Output only. ID of the product bidding category.
     ///
     /// This ID is equivalent to the google_product_category ID as described in
-    /// this article: https://support.google.com/merchants/answer/6324436.
+    /// this article: <https://support.google.com/merchants/answer/6324436.>
     #[prost(int64, optional, tag = "10")]
     pub id: ::core::option::Option<i64>,
     /// Output only. Two-letter upper-case country code of the product bidding category.
@@ -7097,7 +7097,7 @@ pub struct TopicConstant {
     /// describes a more specific sub-category. For example,
     /// {"Pets & Animals", "Pets", "Dogs"} represents the
     /// "Pets & Animals/Pets/Dogs" category. List of available topic categories at
-    /// https://developers.google.com/adwords/api/docs/appendix/verticals
+    /// <https://developers.google.com/adwords/api/docs/appendix/verticals>
     #[prost(string, repeated, tag = "7")]
     pub path: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
@@ -7267,7 +7267,7 @@ pub struct UserList {
     #[prost(bool, optional, tag = "34")]
     pub eligible_for_display: ::core::option::Option<bool>,
     /// Output only. Indicates match rate for Customer Match lists. The range of this field is
-    /// [0-100]. This will be null for other list types or when it's not possible
+    /// \[0-100\]. This will be null for other list types or when it's not possible
     /// to calculate the match rate.
     ///
     /// This field is read-only.

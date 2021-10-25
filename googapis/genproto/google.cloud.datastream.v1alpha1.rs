@@ -341,7 +341,7 @@ pub struct MysqlColumn {
     #[prost(string, tag = "1")]
     pub column_name: ::prost::alloc::string::String,
     /// The MySQL data type. Full data types list can be found here:
-    /// https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+    /// <https://dev.mysql.com/doc/refman/8.0/en/data-types.html>
     #[prost(string, tag = "2")]
     pub data_type: ::prost::alloc::string::String,
     /// Column length.
@@ -1103,7 +1103,7 @@ pub struct OperationMetadata {
     pub status_message: ::prost::alloc::string::String,
     /// Output only. Identifies whether the user has requested cancellation
     /// of the operation. Operations that have successfully been cancelled
-    /// have [Operation.error][] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+    /// have \[Operation.error][\] value with a \[google.rpc.Status.code][google.rpc.Status.code\] of 1,
     /// corresponding to `Code.CANCELLED`.
     #[prost(bool, tag = "6")]
     pub requested_cancellation: bool,
@@ -1321,7 +1321,7 @@ pub mod datastream_client {
     impl<T> DatastreamClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

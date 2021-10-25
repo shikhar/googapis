@@ -8,7 +8,7 @@ pub struct Folder {
     pub name: ::prost::alloc::string::String,
     /// Required. The folder's parent's resource name.
     /// Updates to the folder's parent must be performed using
-    /// [MoveFolder][google.cloud.resourcemanager.v3.Folders.MoveFolder].
+    /// \[MoveFolder][google.cloud.resourcemanager.v3.Folders.MoveFolder\].
     #[prost(string, tag = "2")]
     pub parent: ::prost::alloc::string::String,
     /// The folder's display name.
@@ -17,13 +17,13 @@ pub struct Folder {
     /// The display name must start and end with a letter or digit, may contain
     /// letters, digits, spaces, hyphens and underscores and can be no longer
     /// than 30 characters. This is captured by the regular expression:
-    /// `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
+    /// `\[\p{L}\p{N}\]([\p{L}\p{N}_- ]{0,28}\[\p{L}\p{N}\])?`.
     #[prost(string, tag = "3")]
     pub display_name: ::prost::alloc::string::String,
     /// Output only. The lifecycle state of the folder.
     /// Updates to the state must be performed using
-    /// [DeleteFolder][google.cloud.resourcemanager.v3.Folders.DeleteFolder] and
-    /// [UndeleteFolder][google.cloud.resourcemanager.v3.Folders.UndeleteFolder].
+    /// \[DeleteFolder][google.cloud.resourcemanager.v3.Folders.DeleteFolder\] and
+    /// \[UndeleteFolder][google.cloud.resourcemanager.v3.Folders.UndeleteFolder\].
     #[prost(enumeration = "folder::State", tag = "4")]
     pub state: i32,
     /// Output only. Timestamp when the folder was created.
@@ -82,7 +82,7 @@ pub struct ListFoldersRequest {
     #[prost(string, tag = "3")]
     pub page_token: ::prost::alloc::string::String,
     /// Optional. Controls whether folders in the
-    /// [DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED]
+    /// \[DELETE_REQUESTED][google.cloud.resourcemanager.v3.Folder.State.DELETE_REQUESTED\]
     /// state should be returned. Defaults to false.
     #[prost(bool, tag = "4")]
     pub show_deleted: bool,
@@ -174,12 +174,12 @@ pub struct CreateFolderMetadata {
     pub parent: ::prost::alloc::string::String,
 }
 /// The request sent to the
-/// [UpdateFolder][google.cloud.resourcemanager.v3.Folder.UpdateFolder]
+/// \[UpdateFolder][google.cloud.resourcemanager.v3.Folder.UpdateFolder\]
 /// method.
 ///
 /// Only the `display_name` field can be changed. All other fields will be
 /// ignored. Use the
-/// [MoveFolder][google.cloud.resourcemanager.v3.Folders.MoveFolder] method to
+/// \[MoveFolder][google.cloud.resourcemanager.v3.Folders.MoveFolder\] method to
 /// change the `parent` field.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateFolderRequest {
@@ -260,7 +260,7 @@ pub mod folders_client {
     impl<T> FoldersClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -614,7 +614,7 @@ pub mod folders_client {
 pub struct Organization {
     /// Output only. The resource name of the organization. This is the
     /// organization's relative path in the API. Its format is
-    /// "organizations/[organization_id]". For example, "organizations/1234".
+    /// "organizations/\[organization_id\]". For example, "organizations/1234".
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// Output only. A human-readable string that refers to the organization in the
@@ -680,7 +680,7 @@ pub mod organization {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetOrganizationRequest {
     /// Required. The resource name of the Organization to fetch. This is the organization's
-    /// relative path in the API, formatted as "organizations/[organizationId]".
+    /// relative path in the API, formatted as "organizations/\[organizationId\]".
     /// For example, "organizations/1234".
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
@@ -751,7 +751,7 @@ pub mod organizations_client {
     impl<T> OrganizationsClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -954,10 +954,10 @@ pub struct Project {
     /// Optional. The labels associated with this project.
     ///
     /// Label keys must be between 1 and 63 characters long and must conform
-    /// to the following regular expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?.
+    /// to the following regular expression: \\[a-z\](\[-a-z0-9\]*\[a-z0-9\\])?.
     ///
     /// Label values must be between 0 and 63 characters long and must conform
-    /// to the regular expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?.
+    /// to the regular expression (\\[a-z\](\[-a-z0-9\]*\[a-z0-9\\])?)?.
     ///
     /// No more than 256 labels can be associated with a given resource.
     ///
@@ -982,15 +982,15 @@ pub mod project {
         Active = 1,
         /// The project has been marked for deletion by the user
         /// (by invoking
-        /// [DeleteProject][google.cloud.resourcemanager.v3.Projects.DeleteProject])
+        /// \[DeleteProject][google.cloud.resourcemanager.v3.Projects.DeleteProject\])
         /// or by the system (Google Cloud Platform).
-        /// This can generally be reversed by invoking [UndeleteProject]
-        /// [google.cloud.resourcemanager.v3.Projects.UndeleteProject].
+        /// This can generally be reversed by invoking \[UndeleteProject\]
+        /// \[google.cloud.resourcemanager.v3.Projects.UndeleteProject\].
         DeleteRequested = 2,
     }
 }
 /// The request sent to the
-/// [GetProject][google.cloud.resourcemanager.v3.Projects.GetProject]
+/// \[GetProject][google.cloud.resourcemanager.v3.Projects.GetProject\]
 /// method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetProjectRequest {
@@ -999,7 +999,7 @@ pub struct GetProjectRequest {
     pub name: ::prost::alloc::string::String,
 }
 /// The request sent to the
-/// [ListProjects][google.cloud.resourcemanager.v3.Projects.ListProjects]
+/// \[ListProjects][google.cloud.resourcemanager.v3.Projects.ListProjects\]
 /// method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListProjectsRequest {
@@ -1009,8 +1009,8 @@ pub struct ListProjectsRequest {
     /// directly under that folder.
     #[prost(string, tag = "1")]
     pub parent: ::prost::alloc::string::String,
-    /// Optional. A pagination token returned from a previous call to [ListProjects]
-    /// [google.cloud.resourcemanager.v3.Projects.ListProjects]
+    /// Optional. A pagination token returned from a previous call to \[ListProjects\]
+    /// \[google.cloud.resourcemanager.v3.Projects.ListProjects\]
     /// that indicates from where listing should continue.
     #[prost(string, tag = "2")]
     pub page_token: ::prost::alloc::string::String,
@@ -1025,7 +1025,7 @@ pub struct ListProjectsRequest {
     pub show_deleted: bool,
 }
 /// A page of the response received from the
-/// [ListProjects][google.cloud.resourcemanager.v3.Projects.ListProjects]
+/// \[ListProjects][google.cloud.resourcemanager.v3.Projects.ListProjects\]
 /// method.
 ///
 /// A paginated response where more pages are available has
@@ -1054,7 +1054,7 @@ pub struct ListProjectsResponse {
     pub next_page_token: ::prost::alloc::string::String,
 }
 /// The request sent to the
-/// [SearchProjects][google.cloud.resourcemanager.v3.Projects.SearchProjects]
+/// \[SearchProjects][google.cloud.resourcemanager.v3.Projects.SearchProjects\]
 /// method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchProjectsRequest {
@@ -1095,8 +1095,8 @@ pub struct SearchProjectsRequest {
     /// has the `resourcemanager.projects.get` permission.
     #[prost(string, tag = "1")]
     pub query: ::prost::alloc::string::String,
-    /// Optional. A pagination token returned from a previous call to [ListProjects]
-    /// [google.cloud.resourcemanager.v3.Projects.ListProjects]
+    /// Optional. A pagination token returned from a previous call to \[ListProjects\]
+    /// \[google.cloud.resourcemanager.v3.Projects.ListProjects\]
     /// that indicates from where listing should continue.
     #[prost(string, tag = "2")]
     pub page_token: ::prost::alloc::string::String,
@@ -1107,7 +1107,7 @@ pub struct SearchProjectsRequest {
     pub page_size: i32,
 }
 /// A page of the response received from the
-/// [SearchProjects][google.cloud.resourcemanager.v3.Projects.SearchProjects]
+/// \[SearchProjects][google.cloud.resourcemanager.v3.Projects.SearchProjects\]
 /// method.
 ///
 /// A paginated response where more pages are available has
@@ -1134,7 +1134,7 @@ pub struct SearchProjectsResponse {
     pub next_page_token: ::prost::alloc::string::String,
 }
 /// The request sent to the
-/// [CreateProject][google.cloud.resourcemanager.v3.Projects.CreateProject]
+/// \[CreateProject][google.cloud.resourcemanager.v3.Projects.CreateProject\]
 /// method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateProjectRequest {
@@ -1168,11 +1168,11 @@ pub struct CreateProjectMetadata {
     pub ready: bool,
 }
 /// The request sent to the
-/// [UpdateProject][google.cloud.resourcemanager.v3.Projects.UpdateProject]
+/// \[UpdateProject][google.cloud.resourcemanager.v3.Projects.UpdateProject\]
 /// method.
 ///
 /// Only the `display_name` and `labels` fields can be change. Use the
-/// [MoveProject][google.cloud.resourcemanager.v3.Projects.MoveProject] method to
+/// \[MoveProject][google.cloud.resourcemanager.v3.Projects.MoveProject\] method to
 /// change the `parent` field.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateProjectRequest {
@@ -1188,7 +1188,7 @@ pub struct UpdateProjectRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateProjectMetadata {}
 /// The request sent to
-/// [MoveProject][google.cloud.resourcemanager.v3.Projects.MoveProject]
+/// \[MoveProject][google.cloud.resourcemanager.v3.Projects.MoveProject\]
 /// method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MoveProjectRequest {
@@ -1203,7 +1203,7 @@ pub struct MoveProjectRequest {
 /// returned by MoveProject.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct MoveProjectMetadata {}
-/// [DeleteProject][google.cloud.resourcemanager.v3.Projects.DeleteProject]
+/// \[DeleteProject][google.cloud.resourcemanager.v3.Projects.DeleteProject\]
 /// method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DeleteProjectRequest {
@@ -1215,8 +1215,8 @@ pub struct DeleteProjectRequest {
 /// returned by `DeleteProject`.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DeleteProjectMetadata {}
-/// The request sent to the [UndeleteProject]
-/// [google.cloud.resourcemanager.v3.Projects.UndeleteProject]
+/// The request sent to the \[UndeleteProject\]
+/// \[google.cloud.resourcemanager.v3.Projects.UndeleteProject\]
 /// method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UndeleteProjectRequest {
@@ -1242,7 +1242,7 @@ pub mod projects_client {
     impl<T> ProjectsClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -1711,7 +1711,7 @@ pub mod tag_bindings_client {
     impl<T> TagBindingsClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -1829,7 +1829,7 @@ pub struct TagKey {
     /// unique for TagKeys within the same tag namespace.
     ///
     /// The short name must be 1-63 characters, beginning and ending with
-    /// an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_),
+    /// an alphanumeric character (\[a-z0-9A-Z\]) with dashes (-), underscores (_),
     /// dots (.), and alphanumerics between.
     #[prost(string, tag = "3")]
     pub short_name: ::prost::alloc::string::String,
@@ -1957,7 +1957,7 @@ pub mod tag_keys_client {
     impl<T> TagKeysClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -2182,7 +2182,7 @@ pub struct TagValue {
     /// unique for TagValues within the same parent TagKey.
     ///
     /// The short name must be 63 characters or less, beginning and ending with
-    /// an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_),
+    /// an alphanumeric character (\[a-z0-9A-Z\]) with dashes (-), underscores (_),
     /// dots (.), and alphanumerics between.
     #[prost(string, tag = "3")]
     pub short_name: ::prost::alloc::string::String,
@@ -2309,7 +2309,7 @@ pub mod tag_values_client {
     impl<T> TagValuesClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

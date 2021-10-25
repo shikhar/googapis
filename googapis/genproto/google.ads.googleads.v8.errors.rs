@@ -28,7 +28,7 @@ pub mod access_invitation_error_enum {
         /// Pending invitation limit exceeded for the customer.
         PendingInvitationsLimitExceeded = 8,
         /// Email address doesn't conform to the email domain policy. Please see
-        /// https://support.google.com/google-ads/answer/2375456
+        /// <https://support.google.com/google-ads/answer/2375456>
         EmailDomainPolicyViolated = 9,
     }
 }
@@ -375,7 +375,7 @@ pub mod ad_error_enum {
         /// URL must not contain a query.
         UrlQueryNotAllowed = 100,
         /// A url scheme is not allowed in front of tag in tracking url template
-        /// (e.g. http://{lpurl})
+        /// (e.g. <http://{lpurl}>)
         UrlSchemeBeforeExpandedDynamicSearchAdTag = 102,
         /// The user does not have permissions to create a template ad for the given
         /// template.
@@ -439,7 +439,7 @@ pub mod ad_error_enum {
         /// The associated ad is not compatible with restriction type.
         IncompatibleWithRestrictionType = 130,
         /// Consent for call recording is required for creating/updating call only
-        /// ads. Please see https://support.google.com/google-ads/answer/7412639.
+        /// ads. Please see <https://support.google.com/google-ads/answer/7412639.>
         CustomerConsentForCallRecordingRequired = 131,
         /// Either an image or a media bundle is required in a display upload ad.
         MissingImageOrMediaBundle = 132,
@@ -947,11 +947,11 @@ pub mod authentication_error_enum {
         UserIdInvalid = 22,
         /// An account administrator changed this account's authentication settings.
         /// To access this Google Ads account, enable 2-Step Verification in your
-        /// Google account at https://www.google.com/landing/2step.
+        /// Google account at <https://www.google.com/landing/2step.>
         TwoStepVerificationNotEnrolled = 23,
         /// An account administrator changed this account's authentication settings.
         /// To access this Google Ads account, enable Advanced Protection in your
-        /// Google account at https://landing.google.com/advancedprotection.
+        /// Google account at <https://landing.google.com/advancedprotection.>
         AdvancedProtectionNotEnrolled = 24,
     }
 }
@@ -973,7 +973,7 @@ pub mod authorization_error_enum {
         /// User doesn't have permission to access customer. Note: If you're
         /// accessing a client customer, the manager's customer ID must be set in the
         /// `login-customer-id` header. Learn more at
-        /// https://developers.google.com/google-ads/api/docs/concepts/call-structure#cid
+        /// <https://developers.google.com/google-ads/api/docs/concepts/call-structure#cid>
         UserPermissionDenied = 2,
         /// The developer token is not on the allow-list.
         DeveloperTokenNotOnAllowlist = 13,
@@ -2328,7 +2328,7 @@ pub mod criterion_error_enum {
         /// Start date is after end date.
         HotelCheckInDateRangeReversed = 134,
         /// Broad match modifier (BMM) keywords can no longer be created. Please see
-        /// https://ads-developers.googleblog.com/2021/06/broad-match-modifier-upcoming-changes.html.
+        /// <https://ads-developers.googleblog.com/2021/06/broad-match-modifier-upcoming-changes.html.>
         BroadMatchModifierKeywordNotAllowed = 135,
     }
 }
@@ -2754,7 +2754,7 @@ pub mod extension_feed_item_error_enum {
         CalltrackingNotSupportedForCountry = 16,
         /// Customer hasn't consented for call recording, which is required for
         /// creating/updating call feed items. Please see
-        /// https://support.google.com/google-ads/answer/7412639.
+        /// <https://support.google.com/google-ads/answer/7412639.>
         CustomerConsentForCallRecordingRequired = 17,
         /// App id provided for an app extension is invalid.
         InvalidAppId = 18,
@@ -2982,7 +2982,7 @@ pub mod extension_setting_error_enum {
         UnsupportedLanguage = 65,
         /// Customer hasn't consented for call recording, which is required for
         /// adding/updating call extensions. Please see
-        /// https://support.google.com/google-ads/answer/7412639.
+        /// <https://support.google.com/google-ads/answer/7412639.>
         CustomerConsentForCallRecordingRequired = 66,
         /// The UPDATE operation does not specify any fields other than the resource
         /// name in the update mask.
@@ -3400,7 +3400,7 @@ pub mod feed_item_validation_error_enum {
         InvalidFinalUrlSuffixFormat = 83,
         /// Consent for call recording, which is required for the use of call
         /// extensions, was not provided by the advertiser. Please see
-        /// https://support.google.com/google-ads/answer/7412639.
+        /// <https://support.google.com/google-ads/answer/7412639.>
         CustomerConsentForCallRecordingRequired = 84,
         /// Multiple message delivery options are set.
         OnlyOneDeliveryOptionIsAllowed = 85,

@@ -5,7 +5,7 @@
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DeliveryPipeline {
     /// Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/
-    /// locations/{location}/deliveryPipelines/[a-z][a-z0-9\-]{0,62}.
+    /// locations/{location}/deliveryPipelines/\[a-z][a-z0-9\-\]{0,62}.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// Output only. Unique identifier of the `DeliveryPipeline`.
@@ -16,7 +16,7 @@ pub struct DeliveryPipeline {
     pub description: ::prost::alloc::string::String,
     /// User annotations. These attributes can only be set and used by the
     /// user, and not by Google Cloud Deploy. See
-    /// https://google.aip.dev/128#annotations for more details such as format and
+    /// <https://google.aip.dev/128#annotations> for more details such as format and
     /// size limitations.
     #[prost(map = "string, string", tag = "4")]
     pub annotations:
@@ -24,8 +24,8 @@ pub struct DeliveryPipeline {
     /// Labels are attributes that can be set and used by both the
     /// user and by Google Cloud Deploy. Labels must meet the following
     /// constraints: Each resource is limited to 64 labels. Keys must conform to
-    /// the regexp: [a-zA-Z][a-zA-Z0-9_-]{0,62} Values must conform to the regexp:
-    /// [a-zA-Z0-9_-]{0,63} Both keys and values are additionally constrained to be
+    /// the regexp: \[a-zA-Z][a-zA-Z0-9_-\]{0,62} Values must conform to the regexp:
+    /// \[a-zA-Z0-9_-\]{0,63} Both keys and values are additionally constrained to be
     /// <= 128 bytes in size.
     #[prost(map = "string, string", tag = "5")]
     pub labels:
@@ -142,11 +142,11 @@ pub struct ListDeliveryPipelinesRequest {
     /// the call that provided the page token.
     #[prost(string, tag = "3")]
     pub page_token: ::prost::alloc::string::String,
-    /// Filter builds to be returned. See https://google.aip.dev/160 for more
+    /// Filter builds to be returned. See <https://google.aip.dev/160> for more
     /// details.
     #[prost(string, tag = "4")]
     pub filter: ::prost::alloc::string::String,
-    /// Field to sort by. See https://google.aip.dev/132#ordering for more details.
+    /// Field to sort by. See <https://google.aip.dev/132#ordering> for more details.
     #[prost(string, tag = "5")]
     pub order_by: ::prost::alloc::string::String,
 }
@@ -290,7 +290,7 @@ pub struct DeleteDeliveryPipelineRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Target {
     /// Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/
-    /// deliveryPipelines/{deliveryPipeline}/targets/[a-z][a-z0-9\-]{0,62}.
+    /// deliveryPipelines/{deliveryPipeline}/targets/\[a-z][a-z0-9\-\]{0,62}.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// Output only. Resource id of the `Target`.
@@ -304,7 +304,7 @@ pub struct Target {
     pub description: ::prost::alloc::string::String,
     /// Optional. User annotations. These attributes can only be set and used by the
     /// user, and not by Google Cloud Deploy. See
-    /// https://google.aip.dev/128#annotations for more details such as format and
+    /// <https://google.aip.dev/128#annotations> for more details such as format and
     /// size limitations.
     #[prost(map = "string, string", tag = "5")]
     pub annotations:
@@ -312,8 +312,8 @@ pub struct Target {
     /// Optional. Labels are attributes that can be set and used by both the
     /// user and by Google Cloud Deploy. Labels must meet the following
     /// constraints: Each resource is limited to 64 labels. Keys must conform to
-    /// the regexp: [a-zA-Z][a-zA-Z0-9_-]{0,62} Values must conform to the regexp:
-    /// [a-zA-Z0-9_-]{0,63} Both keys and values are additionally constrained to be
+    /// the regexp: \[a-zA-Z][a-zA-Z0-9_-\]{0,62} Values must conform to the regexp:
+    /// \[a-zA-Z0-9_-\]{0,63} Both keys and values are additionally constrained to be
     /// <= 128 bytes in size.
     #[prost(map = "string, string", tag = "6")]
     pub labels:
@@ -457,11 +457,11 @@ pub struct ListTargetsRequest {
     /// the call that provided the page token.
     #[prost(string, tag = "3")]
     pub page_token: ::prost::alloc::string::String,
-    /// Optional. Filter builds to be returned. See https://google.aip.dev/160 for more
+    /// Optional. Filter builds to be returned. See <https://google.aip.dev/160> for more
     /// details.
     #[prost(string, tag = "4")]
     pub filter: ::prost::alloc::string::String,
-    /// Optional. Field to sort by. See https://google.aip.dev/132#ordering for more details.
+    /// Optional. Field to sort by. See <https://google.aip.dev/132#ordering> for more details.
     #[prost(string, tag = "5")]
     pub order_by: ::prost::alloc::string::String,
 }
@@ -602,7 +602,7 @@ pub struct DeleteTargetRequest {
 pub struct Release {
     /// Optional. Name of the `Release`. Format is projects/{project}/
     /// locations/{location}/deliveryPipelines/{deliveryPipeline}/
-    /// releases/[a-z][a-z0-9\-]{0,62}.
+    /// releases/\[a-z][a-z0-9\-\]{0,62}.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// Output only. Unique identifier of the `Release`.
@@ -613,7 +613,7 @@ pub struct Release {
     pub description: ::prost::alloc::string::String,
     /// User annotations. These attributes can only be set and used by the
     /// user, and not by Google Cloud Deploy. See
-    /// https://google.aip.dev/128#annotations for more details such as format and
+    /// <https://google.aip.dev/128#annotations> for more details such as format and
     /// size limitations.
     #[prost(map = "string, string", tag = "4")]
     pub annotations:
@@ -621,8 +621,8 @@ pub struct Release {
     /// Labels are attributes that can be set and used by both the
     /// user and by Google Cloud Deploy. Labels must meet the following
     /// constraints: Each resource is limited to 64 labels. Keys must conform to
-    /// the regexp: [a-zA-Z][a-zA-Z0-9_-]{0,62} Values must conform to the regexp:
-    /// [a-zA-Z0-9_-]{0,63} Both keys and values are additionally constrained to be
+    /// the regexp: \[a-zA-Z][a-zA-Z0-9_-\]{0,62} Values must conform to the regexp:
+    /// \[a-zA-Z0-9_-\]{0,63} Both keys and values are additionally constrained to be
     /// <= 128 bytes in size.
     #[prost(map = "string, string", tag = "5")]
     pub labels:
@@ -775,11 +775,11 @@ pub struct ListReleasesRequest {
     /// the call that provided the page token.
     #[prost(string, tag = "3")]
     pub page_token: ::prost::alloc::string::String,
-    /// Optional. Filter builds to be returned. See https://google.aip.dev/160 for more
+    /// Optional. Filter builds to be returned. See <https://google.aip.dev/160> for more
     /// details.
     #[prost(string, tag = "4")]
     pub filter: ::prost::alloc::string::String,
-    /// Optional. Field to sort by. See https://google.aip.dev/132#ordering for more details.
+    /// Optional. Field to sort by. See <https://google.aip.dev/132#ordering> for more details.
     #[prost(string, tag = "5")]
     pub order_by: ::prost::alloc::string::String,
 }
@@ -846,7 +846,7 @@ pub struct CreateReleaseRequest {
 pub struct Rollout {
     /// Optional. Name of the `Rollout`. Format is projects/{project}/
     /// locations/{location}/deliveryPipelines/{deliveryPipeline}/
-    /// releases/{release}/rollouts/[a-z][a-z0-9\-]{0,62}.
+    /// releases/{release}/rollouts/\[a-z][a-z0-9\-\]{0,62}.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// Output only. Unique identifier of the `Rollout`.
@@ -858,7 +858,7 @@ pub struct Rollout {
     pub description: ::prost::alloc::string::String,
     /// User annotations. These attributes can only be set and used by the
     /// user, and not by Google Cloud Deploy. See
-    /// https://google.aip.dev/128#annotations for more details such as format and
+    /// <https://google.aip.dev/128#annotations> for more details such as format and
     /// size limitations.
     #[prost(map = "string, string", tag = "4")]
     pub annotations:
@@ -866,8 +866,8 @@ pub struct Rollout {
     /// Labels are attributes that can be set and used by both the
     /// user and by Google Cloud Deploy. Labels must meet the following
     /// constraints: Each resource is limited to 64 labels. Keys must conform to
-    /// the regexp: [a-zA-Z][a-zA-Z0-9_-]{0,62} Values must conform to the regexp:
-    /// [a-zA-Z0-9_-]{0,63} Both keys and values are additionally constrained to be
+    /// the regexp: \[a-zA-Z][a-zA-Z0-9_-\]{0,62} Values must conform to the regexp:
+    /// \[a-zA-Z0-9_-\]{0,63} Both keys and values are additionally constrained to be
     /// <= 128 bytes in size.
     #[prost(map = "string, string", tag = "5")]
     pub labels:
@@ -968,11 +968,11 @@ pub struct ListRolloutsRequest {
     /// the call that provided the page token.
     #[prost(string, tag = "3")]
     pub page_token: ::prost::alloc::string::String,
-    /// Optional. Filter builds to be returned. See https://google.aip.dev/160 for more
+    /// Optional. Filter builds to be returned. See <https://google.aip.dev/160> for more
     /// details.
     #[prost(string, tag = "4")]
     pub filter: ::prost::alloc::string::String,
-    /// Optional. Field to sort by. See https://google.aip.dev/132#ordering for more details.
+    /// Optional. Field to sort by. See <https://google.aip.dev/132#ordering> for more details.
     #[prost(string, tag = "5")]
     pub order_by: ::prost::alloc::string::String,
 }
@@ -1052,7 +1052,7 @@ pub struct OperationMetadata {
     pub status_message: ::prost::alloc::string::String,
     /// Output only. Identifies whether the user has requested cancellation
     /// of the operation. Operations that have successfully been cancelled
-    /// have [Operation.error][] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+    /// have \[Operation.error][\] value with a \[google.rpc.Status.code][google.rpc.Status.code\] of 1,
     /// corresponding to `Code.CANCELLED`.
     #[prost(bool, tag = "6")]
     pub requested_cancellation: bool,
@@ -1119,7 +1119,7 @@ pub mod cloud_deploy_client {
     impl<T> CloudDeployClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

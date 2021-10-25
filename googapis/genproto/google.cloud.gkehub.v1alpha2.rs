@@ -10,7 +10,7 @@ pub struct Membership {
     ///   2. It must consist of lower case alphanumeric characters or `-`
     ///   3. It must start and end with an alphanumeric character
     ///
-    /// Which can be expressed as the regex: `[a-z0-9]([-a-z0-9]*[a-z0-9])?`,
+    /// Which can be expressed as the regex: `\[a-z0-9]([-a-z0-9]*[a-z0-9\])?`,
     /// with a maximum length of 63 characters.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
@@ -19,7 +19,7 @@ pub struct Membership {
     pub labels:
         ::std::collections::HashMap<::prost::alloc::string::String, ::prost::alloc::string::String>,
     /// Output only. Description of this membership, limited to 63 characters.
-    /// Must match the regex: `[a-zA-Z0-9][a-zA-Z0-9_\-\.\ ]*`
+    /// Must match the regex: `\[a-zA-Z0-9\][a-zA-Z0-9_\-\.\ ]*`
     ///
     /// This field is present for legacy purposes.
     #[prost(string, tag = "3")]
@@ -40,7 +40,7 @@ pub struct Membership {
     /// be modified after creation, but this is not recommended. For GKE clusters,
     /// external_id is managed by the Hub API and updates will be ignored.
     ///
-    /// The ID must match the regex: `[a-zA-Z0-9][a-zA-Z0-9_\-\.]*`
+    /// The ID must match the regex: `\[a-zA-Z0-9][a-zA-Z0-9_\-\.\]*`
     ///
     /// If this Membership represents a Kubernetes cluster, this value should be
     /// set to the UID of the `kube-system` namespace object.
@@ -48,7 +48,7 @@ pub struct Membership {
     pub external_id: ::prost::alloc::string::String,
     /// Optional. How to identify workloads from this Membership.
     /// See the documentation on Workload Identity for more details:
-    /// https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity
+    /// <https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity>
     #[prost(message, optional, tag = "10")]
     pub authority: ::core::option::Option<Authority>,
     /// Output only. For clusters using Connect, the timestamp of the most recent connection
@@ -267,10 +267,10 @@ pub struct KubernetesMetadata {
 }
 /// Authority encodes how Google will recognize identities from this Membership.
 /// See the workload identity documentation for more details:
-/// https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity
+/// <https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity>
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Authority {
-    /// Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and
+    /// Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `<https://`> and
     /// be a valid URL with length <2000 characters.
     ///
     /// If set, then Google will allow valid OIDC tokens from this issuer to
@@ -348,7 +348,7 @@ pub struct ListMembershipsRequest {
     #[prost(string, tag = "3")]
     pub page_token: ::prost::alloc::string::String,
     /// Optional. Lists Memberships that match the filter expression, following the syntax
-    /// outlined in https://google.aip.dev/160.
+    /// outlined in <https://google.aip.dev/160.>
     ///
     /// Examples:
     ///
@@ -370,7 +370,7 @@ pub struct ListMembershipsRequest {
     #[prost(string, tag = "4")]
     pub filter: ::prost::alloc::string::String,
     /// Optional. One or more fields to compare and use to sort the output.
-    /// See https://google.aip.dev/132#ordering.
+    /// See <https://google.aip.dev/132#ordering.>
     #[prost(string, tag = "5")]
     pub order_by: ::prost::alloc::string::String,
 }
@@ -411,7 +411,7 @@ pub struct CreateMembershipRequest {
     ///   2. It must consist of lower case alphanumeric characters or `-`
     ///   3. It must start and end with an alphanumeric character
     ///
-    /// Which can be expressed as the regex: `[a-z0-9]([-a-z0-9]*[a-z0-9])?`,
+    /// Which can be expressed as the regex: `\[a-z0-9]([-a-z0-9]*[a-z0-9\])?`,
     /// with a maximum length of 63 characters.
     #[prost(string, tag = "2")]
     pub membership_id: ::prost::alloc::string::String,
@@ -575,7 +575,7 @@ pub struct OperationMetadata {
     pub status_detail: ::prost::alloc::string::String,
     /// Output only. Identifies whether the user has requested cancellation
     /// of the operation. Operations that have successfully been cancelled
-    /// have [Operation.error][] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+    /// have \[Operation.error][\] value with a \[google.rpc.Status.code][google.rpc.Status.code\] of 1,
     /// corresponding to `Code.CANCELLED`.
     #[prost(bool, tag = "6")]
     pub cancel_requested: bool,
@@ -602,7 +602,7 @@ pub mod gke_hub_client {
     impl<T> GkeHubClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

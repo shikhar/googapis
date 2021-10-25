@@ -18,7 +18,7 @@ pub struct OperationMetadata {
     pub status_message: ::prost::alloc::string::String,
     /// Output only. Identifies whether the user has requested cancellation
     /// of the operation. Operations that have successfully been cancelled
-    /// have [Operation.error][] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+    /// have \[Operation.error][\] value with a \[google.rpc.Status.code][google.rpc.Status.code\] of 1,
     /// corresponding to `Code.CANCELLED`.
     #[prost(bool, tag = "6")]
     pub requested_cancellation: bool,
@@ -95,7 +95,7 @@ pub struct Schedule {
     #[prost(message, optional, tag = "3")]
     pub cron_job_duration: ::core::option::Option<::prost_types::Duration>,
     /// The cron definition of the scheduled event. See
-    /// https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
+    /// <https://en.wikipedia.org/wiki/Cron.> Cron spec specifies the local time as
     /// defined by the realm.
     #[prost(string, tag = "4")]
     pub cron_spec: ::prost::alloc::string::String,
@@ -250,7 +250,7 @@ pub struct ListGameServerClustersRequest {
     /// Optional. The maximum number of items to return. If unspecified, the server
     /// will pick an appropriate default. The server may return fewer items than
     /// requested. A caller should only rely on response's
-    /// [next_page_token][google.cloud.gaming.v1.ListGameServerClustersResponse.next_page_token] to
+    /// \[next_page_token][google.cloud.gaming.v1.ListGameServerClustersResponse.next_page_token\] to
     /// determine if there are more GameServerClusters left to be queried.
     #[prost(int32, tag = "2")]
     pub page_size: i32,
@@ -261,7 +261,7 @@ pub struct ListGameServerClustersRequest {
     #[prost(string, tag = "4")]
     pub filter: ::prost::alloc::string::String,
     /// Optional. Specifies the ordering of results following syntax at
-    /// https://cloud.google.com/apis/design/design_patterns#sorting_order.
+    /// <https://cloud.google.com/apis/design/design_patterns#sorting_order.>
     #[prost(string, tag = "5")]
     pub order_by: ::prost::alloc::string::String,
     /// Optional. View for the returned GameServerCluster objects. When `FULL` is
@@ -393,7 +393,7 @@ pub struct UpdateGameServerClusterRequest {
     pub game_server_cluster: ::core::option::Option<GameServerCluster>,
     /// Required. Mask of fields to update. At least one path must be supplied in
     /// this field. For the `FieldMask` definition, see
-    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+    /// <https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask>
     #[prost(message, optional, tag = "2")]
     pub update_mask: ::core::option::Option<::prost_types::FieldMask>,
 }
@@ -406,7 +406,7 @@ pub struct PreviewUpdateGameServerClusterRequest {
     pub game_server_cluster: ::core::option::Option<GameServerCluster>,
     /// Required. Mask of fields to update. At least one path must be supplied in
     /// this field. For the `FieldMask` definition, see
-    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+    /// <https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask>
     #[prost(message, optional, tag = "2")]
     pub update_mask: ::core::option::Option<::prost_types::FieldMask>,
     /// Optional. The target timestamp to compute the preview.
@@ -527,7 +527,7 @@ pub struct KubernetesClusterState {
 /// Nested message and enum types in `KubernetesClusterState`.
 pub mod kubernetes_cluster_state {
     /// The state of the installed versions of Agones/Kubernetes. See also
-    /// https://cloud.google.com/game-servers/docs/versions-and-upgrades.
+    /// <https://cloud.google.com/game-servers/docs/versions-and-upgrades.>
     #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
     #[repr(i32)]
     pub enum InstallationState {
@@ -584,7 +584,7 @@ pub mod game_server_clusters_service_client {
     impl<T> GameServerClustersServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -783,7 +783,7 @@ pub struct ListGameServerConfigsRequest {
     /// Optional. The maximum number of items to return.  If unspecified, server
     /// will pick an appropriate default. Server may return fewer items than
     /// requested. A caller should only rely on response's
-    /// [next_page_token][google.cloud.gaming.v1.ListGameServerConfigsResponse.next_page_token] to
+    /// \[next_page_token][google.cloud.gaming.v1.ListGameServerConfigsResponse.next_page_token\] to
     /// determine if there are more GameServerConfigs left to be queried.
     #[prost(int32, tag = "2")]
     pub page_size: i32,
@@ -794,7 +794,7 @@ pub struct ListGameServerConfigsRequest {
     #[prost(string, tag = "4")]
     pub filter: ::prost::alloc::string::String,
     /// Optional. Specifies the ordering of results following syntax at
-    /// https://cloud.google.com/apis/design/design_patterns#sorting_order.
+    /// <https://cloud.google.com/apis/design/design_patterns#sorting_order.>
     #[prost(string, tag = "5")]
     pub order_by: ::prost::alloc::string::String,
 }
@@ -849,7 +849,7 @@ pub struct ScalingConfig {
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// Required. Agones fleet autoscaler spec. Example spec:
-    /// https://agones.dev/site/docs/reference/fleetautoscaler/
+    /// <https://agones.dev/site/docs/reference/fleetautoscaler/>
     #[prost(string, tag = "2")]
     pub fleet_autoscaler_spec: ::prost::alloc::string::String,
     /// Labels used to identify the game server clusters to which this Agones
@@ -865,7 +865,7 @@ pub struct ScalingConfig {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct FleetConfig {
     /// Agones fleet spec. Example spec:
-    /// `https://agones.dev/site/docs/reference/fleet/`.
+    /// `<https://agones.dev/site/docs/reference/fleet/`.>
     #[prost(string, tag = "1")]
     pub fleet_spec: ::prost::alloc::string::String,
     /// The name of the FleetConfig.
@@ -915,7 +915,7 @@ pub mod game_server_configs_service_client {
     impl<T> GameServerConfigsServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -1043,7 +1043,7 @@ pub struct ListGameServerDeploymentsRequest {
     /// Optional. The maximum number of items to return.  If unspecified, the server
     /// will pick an appropriate default. The server may return fewer items than
     /// requested. A caller should only rely on response's
-    /// [next_page_token][google.cloud.gaming.v1.ListGameServerDeploymentsResponse.next_page_token] to
+    /// \[next_page_token][google.cloud.gaming.v1.ListGameServerDeploymentsResponse.next_page_token\] to
     /// determine if there are more GameServerDeployments left to be queried.
     #[prost(int32, tag = "2")]
     pub page_size: i32,
@@ -1055,7 +1055,7 @@ pub struct ListGameServerDeploymentsRequest {
     #[prost(string, tag = "4")]
     pub filter: ::prost::alloc::string::String,
     /// Optional. Specifies the ordering of results following syntax at
-    /// https://cloud.google.com/apis/design/design_patterns#sorting_order.
+    /// <https://cloud.google.com/apis/design/design_patterns#sorting_order.>
     #[prost(string, tag = "5")]
     pub order_by: ::prost::alloc::string::String,
 }
@@ -1122,7 +1122,7 @@ pub struct UpdateGameServerDeploymentRequest {
     pub game_server_deployment: ::core::option::Option<GameServerDeployment>,
     /// Required. Mask of fields to update. At least one path must be supplied in
     /// this field. For the `FieldMask` definition, see
-    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+    /// <https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask>
     #[prost(message, optional, tag = "2")]
     pub update_mask: ::core::option::Option<::prost_types::FieldMask>,
 }
@@ -1136,7 +1136,7 @@ pub struct UpdateGameServerDeploymentRolloutRequest {
     pub rollout: ::core::option::Option<GameServerDeploymentRollout>,
     /// Required. Mask of fields to update. At least one path must be supplied in
     /// this field. For the `FieldMask` definition, see
-    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+    /// <https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask>
     #[prost(message, optional, tag = "2")]
     pub update_mask: ::core::option::Option<::prost_types::FieldMask>,
 }
@@ -1267,7 +1267,7 @@ pub struct PreviewGameServerDeploymentRolloutRequest {
     pub rollout: ::core::option::Option<GameServerDeploymentRollout>,
     /// Optional. Mask of fields to update. At least one path must be supplied in
     /// this field. For the `FieldMask` definition, see
-    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+    /// <https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask>
     #[prost(message, optional, tag = "2")]
     pub update_mask: ::core::option::Option<::prost_types::FieldMask>,
     /// Optional. The target timestamp to compute the preview. Defaults to the immediately
@@ -1302,7 +1302,7 @@ pub mod game_server_deployments_service_client {
     impl<T> GameServerDeploymentsServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -1521,7 +1521,7 @@ pub struct ListRealmsRequest {
     /// Optional. The maximum number of items to return.  If unspecified, server
     /// will pick an appropriate default. Server may return fewer items than
     /// requested. A caller should only rely on response's
-    /// [next_page_token][google.cloud.gaming.v1.ListRealmsResponse.next_page_token] to
+    /// \[next_page_token][google.cloud.gaming.v1.ListRealmsResponse.next_page_token\] to
     /// determine if there are more realms left to be queried.
     #[prost(int32, tag = "2")]
     pub page_size: i32,
@@ -1533,7 +1533,7 @@ pub struct ListRealmsRequest {
     #[prost(string, tag = "4")]
     pub filter: ::prost::alloc::string::String,
     /// Optional. Specifies the ordering of results following syntax at
-    /// https://cloud.google.com/apis/design/design_patterns#sorting_order.
+    /// <https://cloud.google.com/apis/design/design_patterns#sorting_order.>
     #[prost(string, tag = "5")]
     pub order_by: ::prost::alloc::string::String,
 }
@@ -1590,7 +1590,7 @@ pub struct UpdateRealmRequest {
     pub realm: ::core::option::Option<Realm>,
     /// Required. The update mask applies to the resource. For the `FieldMask`
     /// definition, see
-    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+    /// <https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask>
     #[prost(message, optional, tag = "2")]
     pub update_mask: ::core::option::Option<::prost_types::FieldMask>,
 }
@@ -1603,7 +1603,7 @@ pub struct PreviewRealmUpdateRequest {
     pub realm: ::core::option::Option<Realm>,
     /// Required. The update mask applies to the resource. For the `FieldMask`
     /// definition, see
-    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+    /// <https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask>
     #[prost(message, optional, tag = "2")]
     pub update_mask: ::core::option::Option<::prost_types::FieldMask>,
     /// Optional. The target timestamp to compute the preview.
@@ -1640,7 +1640,7 @@ pub struct Realm {
         ::std::collections::HashMap<::prost::alloc::string::String, ::prost::alloc::string::String>,
     /// Required. Time zone where all policies targeting this realm are evaluated. The value
     /// of this field must be from the IANA time zone database:
-    /// https://www.iana.org/time-zones.
+    /// <https://www.iana.org/time-zones.>
     #[prost(string, tag = "6")]
     pub time_zone: ::prost::alloc::string::String,
     /// ETag of the resource.
@@ -1663,7 +1663,7 @@ pub mod realms_service_client {
     impl<T> RealmsServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

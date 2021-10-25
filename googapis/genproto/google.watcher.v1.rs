@@ -10,7 +10,7 @@ pub struct Request {
     /// implementation-specific. However, some have predefined meaning
     /// and are listed here:
     ///
-    ///  * recursive = true|false [default=false]
+    ///  * recursive = true|false \[default=false\]
     ///    If set to true, indicates that the client wants to watch all elements
     ///    of entities in the subtree rooted at the entity's name in `target`. For
     ///    descendants that are not the immediate children of the target, the
@@ -79,7 +79,7 @@ pub struct Change {
     pub state: i32,
     /// The actual change data. This field is present only when `state() == EXISTS`
     /// or `state() == ERROR`. Please see
-    /// [google.protobuf.Any][google.protobuf.Any] about how to use the Any type.
+    /// \[google.protobuf.Any][google.protobuf.Any\] about how to use the Any type.
     #[prost(message, optional, tag = "6")]
     pub data: ::core::option::Option<::prost_types::Any>,
     /// If present, provides a compact representation of all the messages that have
@@ -110,7 +110,7 @@ pub mod change {
         InitialStateSkipped = 2,
         /// The element may exist, but some error has occurred. More information is
         /// available in the data field - the value is a serialized Status
-        /// proto (from [google.rpc.Status][])
+        /// proto (from \[google.rpc.Status][\])
         Error = 3,
     }
 }
@@ -128,7 +128,7 @@ pub mod watcher_client {
     impl<T> WatcherClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

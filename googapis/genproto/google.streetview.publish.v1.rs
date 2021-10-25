@@ -3,11 +3,11 @@
 pub struct UploadRef {
     /// Required. An upload reference should be unique for each user. It follows
     /// the form:
-    /// "https://streetviewpublish.googleapis.com/media/user/{account_id}/photo/{upload_reference}"
+    /// "<https://streetviewpublish.googleapis.com/media/user/{account_id}/photo/{upload_reference}">
     #[prost(string, tag = "1")]
     pub upload_url: ::prost::alloc::string::String,
 }
-/// Identifier for a [Photo][google.streetview.publish.v1.Photo].
+/// Identifier for a \[Photo][google.streetview.publish.v1.Photo\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PhotoId {
     /// Required. A unique identifier for a photo.
@@ -32,8 +32,8 @@ pub struct Level {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Pose {
     /// Latitude and longitude pair of the pose, as explained here:
-    /// https://cloud.google.com/datastore/docs/reference/rest/Shared.Types/LatLng
-    /// When creating a [Photo][google.streetview.publish.v1.Photo], if the
+    /// <https://cloud.google.com/datastore/docs/reference/rest/Shared.Types/LatLng>
+    /// When creating a \[Photo][google.streetview.publish.v1.Photo\], if the
     /// latitude and longitude pair are not provided, the geolocation from the
     /// exif header is used. A latitude and longitude pair not provided in the
     /// photo or exif header causes the create photo process to fail.
@@ -65,7 +65,7 @@ pub struct Pose {
     /// The estimated horizontal accuracy of this pose in meters with 68%
     /// confidence (one standard deviation). For example, on Android, this value is
     /// available from this method:
-    /// https://developer.android.com/reference/android/location/Location#getAccuracy().
+    /// <https://developer.android.com/reference/android/location/Location#getAccuracy(>).
     /// Other platforms have different methods of obtaining similar accuracy
     /// estimations.
     #[prost(float, tag = "9")]
@@ -75,7 +75,7 @@ pub struct Pose {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Place {
     /// Place identifier, as described in
-    /// https://developers.google.com/places/place-id.
+    /// <https://developers.google.com/places/place-id.>
     #[prost(string, tag = "1")]
     pub place_id: ::prost::alloc::string::String,
     /// Output-only. The name of the place, localized to the language_code.
@@ -108,9 +108,9 @@ pub struct Photo {
     pub upload_reference: ::core::option::Option<UploadRef>,
     /// Output only. The download URL for the photo bytes. This field is set only
     /// when
-    /// [GetPhotoRequest.view][google.streetview.publish.v1.GetPhotoRequest.view]
+    /// \[GetPhotoRequest.view][google.streetview.publish.v1.GetPhotoRequest.view\]
     /// is set to
-    /// [PhotoView.INCLUDE_DOWNLOAD_URL][google.streetview.publish.v1.PhotoView.INCLUDE_DOWNLOAD_URL].
+    /// \[PhotoView.INCLUDE_DOWNLOAD_URL][google.streetview.publish.v1.PhotoView.INCLUDE_DOWNLOAD_URL\].
     #[prost(string, tag = "3")]
     pub download_url: ::prost::alloc::string::String,
     /// Output only. The thumbnail URL for showing a preview of the given photo.
@@ -182,14 +182,14 @@ pub mod photo {
         RejectedUnknown = 2,
     }
 }
-/// Request to create a [Photo][google.streetview.publish.v1.Photo].
+/// Request to create a \[Photo][google.streetview.publish.v1.Photo\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreatePhotoRequest {
     /// Required. Photo to create.
     #[prost(message, optional, tag = "1")]
     pub photo: ::core::option::Option<Photo>,
 }
-/// Request to get a [Photo][google.streetview.publish.v1.Photo].
+/// Request to get a \[Photo][google.streetview.publish.v1.Photo\].
 ///
 /// By default
 ///
@@ -200,22 +200,22 @@ pub struct CreatePhotoRequest {
 /// * `view` controls if the download URL for the photo bytes is returned.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetPhotoRequest {
-    /// Required. ID of the [Photo][google.streetview.publish.v1.Photo].
+    /// Required. ID of the \[Photo][google.streetview.publish.v1.Photo\].
     #[prost(string, tag = "1")]
     pub photo_id: ::prost::alloc::string::String,
     /// Specifies if a download URL for the photo bytes should be returned in the
-    /// [Photo][google.streetview.publish.v1.Photo] response.
+    /// \[Photo][google.streetview.publish.v1.Photo\] response.
     #[prost(enumeration = "PhotoView", tag = "2")]
     pub view: i32,
     /// The BCP-47 language code, such as "en-US" or "sr-Latn". For more
     /// information, see
-    /// http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+    /// <http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.>
     /// If language_code is unspecified, the user's language preference for Google
     /// services is used.
     #[prost(string, tag = "3")]
     pub language_code: ::prost::alloc::string::String,
 }
-/// Request to get one or more [Photos][google.streetview.publish.v1.Photo].
+/// Request to get one or more \[Photos][google.streetview.publish.v1.Photo\].
 /// By default
 ///
 /// * does not return the download URL for the photo bytes.
@@ -225,7 +225,7 @@ pub struct GetPhotoRequest {
 /// * `view` controls if the download URL for the photo bytes is returned.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BatchGetPhotosRequest {
-    /// Required. IDs of the [Photos][google.streetview.publish.v1.Photo]. HTTP GET
+    /// Required. IDs of the \[Photos][google.streetview.publish.v1.Photo\]. HTTP GET
     /// requests require the following syntax for the URL query parameter:
     /// `photoIds=<id1>&photoIds=<id2>&...`.
     #[prost(string, repeated, tag = "1")]
@@ -236,35 +236,35 @@ pub struct BatchGetPhotosRequest {
     pub view: i32,
     /// The BCP-47 language code, such as "en-US" or "sr-Latn". For more
     /// information, see
-    /// http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+    /// <http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.>
     /// If language_code is unspecified, the user's language preference for Google
     /// services is used.
     #[prost(string, tag = "3")]
     pub language_code: ::prost::alloc::string::String,
 }
-/// Response to batch get of [Photos][google.streetview.publish.v1.Photo].
+/// Response to batch get of \[Photos][google.streetview.publish.v1.Photo\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BatchGetPhotosResponse {
     /// List of results for each individual
-    /// [Photo][google.streetview.publish.v1.Photo] requested, in the same order as
+    /// \[Photo][google.streetview.publish.v1.Photo\] requested, in the same order as
     /// the requests in
-    /// [BatchGetPhotos][google.streetview.publish.v1.StreetViewPublishService.BatchGetPhotos].
+    /// \[BatchGetPhotos][google.streetview.publish.v1.StreetViewPublishService.BatchGetPhotos\].
     #[prost(message, repeated, tag = "1")]
     pub results: ::prost::alloc::vec::Vec<PhotoResponse>,
 }
 /// Response payload for a single
-/// [Photo][google.streetview.publish.v1.Photo]
+/// \[Photo][google.streetview.publish.v1.Photo\]
 /// in batch operations including
-/// [BatchGetPhotos][google.streetview.publish.v1.StreetViewPublishService.BatchGetPhotos]
+/// \[BatchGetPhotos][google.streetview.publish.v1.StreetViewPublishService.BatchGetPhotos\]
 /// and
-/// [BatchUpdatePhotos][google.streetview.publish.v1.StreetViewPublishService.BatchUpdatePhotos].
+/// \[BatchUpdatePhotos][google.streetview.publish.v1.StreetViewPublishService.BatchUpdatePhotos\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PhotoResponse {
     /// The status for the operation to get or update a single photo in the batch
     /// request.
     #[prost(message, optional, tag = "1")]
     pub status: ::core::option::Option<super::super::super::rpc::Status>,
-    /// The [Photo][google.streetview.publish.v1.Photo] resource, if the request
+    /// The \[Photo][google.streetview.publish.v1.Photo\] resource, if the request
     /// was successful.
     #[prost(message, optional, tag = "2")]
     pub photo: ::core::option::Option<Photo>,
@@ -280,7 +280,7 @@ pub struct PhotoResponse {
 /// * `view` controls if the download URL for the photo bytes is returned.
 /// * `pageSize` determines the maximum number of photos to return.
 /// * `pageToken` is the next page token value returned from a previous
-/// [ListPhotos][google.streetview.publish.v1.StreetViewPublishService.ListPhotos]
+/// \[ListPhotos][google.streetview.publish.v1.StreetViewPublishService.ListPhotos\]
 ///     request, if any.
 /// * `filter` allows filtering by a given parameter. 'placeId' is the only
 /// parameter supported at the moment.
@@ -298,9 +298,9 @@ pub struct ListPhotosRequest {
     #[prost(int32, tag = "2")]
     pub page_size: i32,
     /// The
-    /// [nextPageToken][google.streetview.publish.v1.ListPhotosResponse.next_page_token]
+    /// \[nextPageToken][google.streetview.publish.v1.ListPhotosResponse.next_page_token\]
     /// value returned from a previous
-    /// [ListPhotos][google.streetview.publish.v1.StreetViewPublishService.ListPhotos]
+    /// \[ListPhotos][google.streetview.publish.v1.StreetViewPublishService.ListPhotos\]
     /// request, if any.
     #[prost(string, tag = "3")]
     pub page_token: ::prost::alloc::string::String,
@@ -311,7 +311,7 @@ pub struct ListPhotosRequest {
     pub filter: ::prost::alloc::string::String,
     /// The BCP-47 language code, such as "en-US" or "sr-Latn". For more
     /// information, see
-    /// http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+    /// <http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.>
     /// If language_code is unspecified, the user's language preference for Google
     /// services is used.
     #[prost(string, tag = "5")]
@@ -321,7 +321,7 @@ pub struct ListPhotosRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListPhotosResponse {
     /// List of photos. The
-    /// [pageSize][google.streetview.publish.v1.ListPhotosRequest.page_size] field
+    /// \[pageSize][google.streetview.publish.v1.ListPhotosRequest.page_size\] field
     /// in the request determines the number of items returned.
     #[prost(message, repeated, tag = "1")]
     pub photos: ::prost::alloc::vec::Vec<Photo>,
@@ -331,18 +331,18 @@ pub struct ListPhotosResponse {
     pub next_page_token: ::prost::alloc::string::String,
 }
 /// Request to update the metadata of a
-/// [Photo][google.streetview.publish.v1.Photo]. Updating the pixels of a photo
+/// \[Photo][google.streetview.publish.v1.Photo\]. Updating the pixels of a photo
 /// is not supported.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdatePhotoRequest {
-    /// Required. [Photo][google.streetview.publish.v1.Photo] object containing the
+    /// Required. \[Photo][google.streetview.publish.v1.Photo\] object containing the
     /// new metadata.
     #[prost(message, optional, tag = "1")]
     pub photo: ::core::option::Option<Photo>,
     /// Mask that identifies fields on the photo metadata to update.
-    /// If not present, the old [Photo][google.streetview.publish.v1.Photo]
+    /// If not present, the old \[Photo][google.streetview.publish.v1.Photo\]
     /// metadata is entirely replaced with the
-    /// new [Photo][google.streetview.publish.v1.Photo] metadata in this request.
+    /// new \[Photo][google.streetview.publish.v1.Photo\] metadata in this request.
     /// The update fails if invalid fields are specified. Multiple fields can be
     /// specified in a comma-delimited list.
     ///
@@ -359,10 +359,10 @@ pub struct UpdatePhotoRequest {
     ///
     ///
     /// <aside class="note"><b>Note:</b>  When
-    /// [updateMask][google.streetview.publish.v1.UpdatePhotoRequest.update_mask]
+    /// \[updateMask][google.streetview.publish.v1.UpdatePhotoRequest.update_mask\]
     /// contains repeated fields, the entire set of repeated values get replaced
     /// with the new contents. For example, if
-    /// [updateMask][google.streetview.publish.v1.UpdatePhotoRequest.update_mask]
+    /// \[updateMask][google.streetview.publish.v1.UpdatePhotoRequest.update_mask\]
     /// contains `connections` and `UpdatePhotoRequest.photo.connections` is empty,
     /// all connections are removed.</aside>
     #[prost(message, optional, tag = "2")]
@@ -373,46 +373,46 @@ pub struct UpdatePhotoRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BatchUpdatePhotosRequest {
     /// Required. List of
-    /// [UpdatePhotoRequests][google.streetview.publish.v1.UpdatePhotoRequest].
+    /// \[UpdatePhotoRequests][google.streetview.publish.v1.UpdatePhotoRequest\].
     #[prost(message, repeated, tag = "1")]
     pub update_photo_requests: ::prost::alloc::vec::Vec<UpdatePhotoRequest>,
 }
 /// Response to batch update of metadata of one or more
-/// [Photos][google.streetview.publish.v1.Photo].
+/// \[Photos][google.streetview.publish.v1.Photo\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BatchUpdatePhotosResponse {
     /// List of results for each individual
-    /// [Photo][google.streetview.publish.v1.Photo] updated, in the same order as
+    /// \[Photo][google.streetview.publish.v1.Photo\] updated, in the same order as
     /// the request.
     #[prost(message, repeated, tag = "1")]
     pub results: ::prost::alloc::vec::Vec<PhotoResponse>,
 }
-/// Request to delete a [Photo][google.streetview.publish.v1.Photo].
+/// Request to delete a \[Photo][google.streetview.publish.v1.Photo\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DeletePhotoRequest {
-    /// Required. ID of the [Photo][google.streetview.publish.v1.Photo].
+    /// Required. ID of the \[Photo][google.streetview.publish.v1.Photo\].
     #[prost(string, tag = "1")]
     pub photo_id: ::prost::alloc::string::String,
 }
-/// Request to delete multiple [Photos][google.streetview.publish.v1.Photo].
+/// Request to delete multiple \[Photos][google.streetview.publish.v1.Photo\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BatchDeletePhotosRequest {
-    /// Required. IDs of the [Photos][google.streetview.publish.v1.Photo]. HTTP
+    /// Required. IDs of the \[Photos][google.streetview.publish.v1.Photo\]. HTTP
     /// GET requests require the following syntax for the URL query parameter:
     /// `photoIds=<id1>&photoIds=<id2>&...`.
     #[prost(string, repeated, tag = "1")]
     pub photo_ids: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
 /// Response to batch delete of one or more
-/// [Photos][google.streetview.publish.v1.Photo].
+/// \[Photos][google.streetview.publish.v1.Photo\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BatchDeletePhotosResponse {
     /// The status for the operation to delete a single
-    /// [Photo][google.streetview.publish.v1.Photo] in the batch request.
+    /// \[Photo][google.streetview.publish.v1.Photo\] in the batch request.
     #[prost(message, repeated, tag = "1")]
     pub status: ::prost::alloc::vec::Vec<super::super::super::rpc::Status>,
 }
-/// Specifies which view of the [Photo][google.streetview.publish.v1.Photo]
+/// Specifies which view of the \[Photo][google.streetview.publish.v1.Photo\]
 /// to include in the response.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]
@@ -435,7 +435,7 @@ pub mod street_view_publish_service_client {
     impl<T> StreetViewPublishServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

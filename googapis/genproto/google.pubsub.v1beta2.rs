@@ -147,7 +147,7 @@ pub struct Subscription {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PushConfig {
     /// A URL locating the endpoint to which messages should be pushed.
-    /// For example, a Webhook endpoint might use "https://example.com/push".
+    /// For example, a Webhook endpoint might use "<https://example.com/push".>
     #[prost(string, tag = "1")]
     pub push_endpoint: ::prost::alloc::string::String,
     /// Endpoint configuration attributes.
@@ -312,7 +312,7 @@ pub mod subscriber_client {
     impl<T> SubscriberClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -527,7 +527,7 @@ pub mod publisher_client {
     impl<T> PublisherClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

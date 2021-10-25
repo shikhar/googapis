@@ -41,7 +41,7 @@ pub struct SourceLocation {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SourceReference {
     /// Optional. A URI string identifying the repository.
-    /// Example: "https://github.com/GoogleCloudPlatform/kubernetes.git"
+    /// Example: "<https://github.com/GoogleCloudPlatform/kubernetes.git">
     #[prost(string, tag = "1")]
     pub repository: ::prost::alloc::string::String,
     /// The canonical and persistent identifier of the deployed revision.
@@ -86,7 +86,7 @@ pub struct RequestLog {
     #[prost(string, tag = "10")]
     pub method: ::prost::alloc::string::String,
     /// Contains the path and query portion of the URL that was requested. For
-    /// example, if the URL was "http://example.com/app?name=val", the resource
+    /// example, if the URL was "<http://example.com/app?name=val",> the resource
     /// would be "/app?name=val".  The fragment identifier, which is identified by
     /// the `#` character, is not included.
     #[prost(string, tag = "11")]

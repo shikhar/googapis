@@ -7,7 +7,7 @@
 /// You can use this API resource to determine the inventory data of your VM.
 ///
 /// For more information, see [Information provided by OS inventory
-/// management](https://cloud.google.com/compute/docs/instances/os-inventory-management#data-collected).
+/// management](<https://cloud.google.com/compute/docs/instances/os-inventory-management#data-collected>).
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Inventory {
     /// Output only. The `Inventory` API resource name.
@@ -139,37 +139,37 @@ pub mod inventory {
         pub enum Details {
             /// Yum package info.
             /// For details about the yum package manager, see
-            /// https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-yum.
+            /// <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-yum.>
             #[prost(message, tag = "1")]
             YumPackage(super::VersionedPackage),
             /// Details of an APT package.
             /// For details about the apt package manager, see
-            /// https://wiki.debian.org/Apt.
+            /// <https://wiki.debian.org/Apt.>
             #[prost(message, tag = "2")]
             AptPackage(super::VersionedPackage),
             /// Details of a Zypper package.
             /// For details about the Zypper package manager, see
-            /// https://en.opensuse.org/SDB:Zypper_manual.
+            /// <https://en.opensuse.org/SDB:Zypper_manual.>
             #[prost(message, tag = "3")]
             ZypperPackage(super::VersionedPackage),
             /// Details of a Googet package.
             ///  For details about the googet package manager, see
-            ///  https://github.com/google/googet.
+            ///  <https://github.com/google/googet.>
             #[prost(message, tag = "4")]
             GoogetPackage(super::VersionedPackage),
             /// Details of a Zypper patch.
             /// For details about the Zypper package manager, see
-            /// https://en.opensuse.org/SDB:Zypper_manual.
+            /// <https://en.opensuse.org/SDB:Zypper_manual.>
             #[prost(message, tag = "5")]
             ZypperPatch(super::ZypperPatch),
             /// Details of a Windows Update package.
-            /// See https://docs.microsoft.com/en-us/windows/win32/api/_wua/ for
+            /// See <https://docs.microsoft.com/en-us/windows/win32/api/_wua/> for
             /// information about Windows Update.
             #[prost(message, tag = "6")]
             WuaPackage(super::WindowsUpdatePackage),
             /// Details of a Windows Quick Fix engineering package.
             /// See
-            /// https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/win32-quickfixengineering
+            /// <https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/win32-quickfixengineering>
             /// for info in Windows Quick Fix Engineering.
             #[prost(message, tag = "7")]
             QfePackage(super::WindowsQuickFixEngineeringPackage),
@@ -213,7 +213,7 @@ pub mod inventory {
     }
     /// Details related to a Windows Update package.
     /// Field data and names are taken from Windows Update API IUpdate Interface:
-    /// https://docs.microsoft.com/en-us/windows/win32/api/_wua/
+    /// <https://docs.microsoft.com/en-us/windows/win32/api/_wua/>
     /// Descriptive fields like title, and description are localized based on
     /// the locale of the VM being updated.
     #[derive(Clone, PartialEq, ::prost::Message)]
@@ -265,7 +265,7 @@ pub mod inventory {
     /// Information related to a Quick Fix Engineering package.
     /// Fields are taken from Windows QuickFixEngineering Interface and match
     /// the source names:
-    /// https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/win32-quickfixengineering
+    /// <https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/win32-quickfixengineering>
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct WindowsQuickFixEngineeringPackage {
         /// A short textual description of the QFE update.
@@ -285,7 +285,7 @@ pub mod inventory {
     /// Windows Registry. For more information about these fields, see
     ///
     /// [Windows Installer Properties for the Uninstall
-    /// Registry](https://docs.microsoft.com/en-us/windows/win32/msi/uninstall-registry-key){:
+    /// Registry](<https://docs.microsoft.com/en-us/windows/win32/msi/uninstall-registry-key>){:
     /// class="external" }
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct WindowsApplication {
@@ -473,7 +473,7 @@ pub struct ListPatchJobInstanceDetailsResponse {
 /// Patch details for a VM instance. For more information about reviewing VM
 /// instance details, see
 /// [Listing all VM instance details for a specific patch
-/// job](https://cloud.google.com/compute/docs/os-patch-management/manage-patch-jobs#list-instance-details).
+/// job](<https://cloud.google.com/compute/docs/os-patch-management/manage-patch-jobs#list-instance-details>).
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PatchJobInstanceDetails {
     /// The instance name in the form `projects/*/zones/*/instances/*`
@@ -530,7 +530,7 @@ pub struct ListPatchJobsResponse {
 ///
 /// For more information about patch jobs, see
 /// [Creating patch
-/// jobs](https://cloud.google.com/compute/docs/os-patch-management/create-patch-job).
+/// jobs](<https://cloud.google.com/compute/docs/os-patch-management/create-patch-job>).
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PatchJob {
     /// Unique identifier for this patch job in the form
@@ -828,7 +828,7 @@ pub struct YumSettings {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GooSettings {}
 /// Zypper patching is performed by running `zypper patch`.
-/// See also https://en.opensuse.org/SDB:Zypper_manual.
+/// See also <https://en.opensuse.org/SDB:Zypper_manual.>
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ZypperSettings {
     /// Adds the `--with-optional` flag to `zypper patch`.
@@ -877,47 +877,47 @@ pub struct WindowsUpdateSettings {
 /// Nested message and enum types in `WindowsUpdateSettings`.
 pub mod windows_update_settings {
     /// Microsoft Windows update classifications as defined in
-    /// [1]
-    /// https://support.microsoft.com/en-us/help/824684/description-of-the-standard-terminology-that-is-used-to-describe-micro
+    /// \[1\]
+    /// <https://support.microsoft.com/en-us/help/824684/description-of-the-standard-terminology-that-is-used-to-describe-micro>
     #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
     #[repr(i32)]
     pub enum Classification {
         /// Invalid. If classifications are included, they must be specified.
         Unspecified = 0,
         /// "A widely released fix for a specific problem that addresses a critical,
-        /// non-security-related bug." [1]
+        /// non-security-related bug." \[1\]
         Critical = 1,
         /// "A widely released fix for a product-specific, security-related
         /// vulnerability. Security vulnerabilities are rated by their severity. The
         /// severity rating is indicated in the Microsoft security bulletin as
-        /// critical, important, moderate, or low." [1]
+        /// critical, important, moderate, or low." \[1\]
         Security = 2,
         /// "A widely released and frequent software update that contains additions
         /// to a product's definition database. Definition databases are often used
         /// to detect objects that have specific attributes, such as malicious code,
-        /// phishing websites, or junk mail." [1]
+        /// phishing websites, or junk mail." \[1\]
         Definition = 3,
-        /// "Software that controls the input and output of a device." [1]
+        /// "Software that controls the input and output of a device." \[1\]
         Driver = 4,
         /// "New product functionality that is first distributed outside the context
         /// of a product release and that is typically included in the next full
-        /// product release." [1]
+        /// product release." \[1\]
         FeaturePack = 5,
         /// "A tested, cumulative set of all hotfixes, security updates, critical
         /// updates, and updates. Additionally, service packs may contain additional
         /// fixes for problems that are found internally since the release of the
         /// product. Service packs my also contain a limited number of
-        /// customer-requested design changes or features." [1]
+        /// customer-requested design changes or features." \[1\]
         ServicePack = 6,
-        /// "A utility or feature that helps complete a task or set of tasks." [1]
+        /// "A utility or feature that helps complete a task or set of tasks." \[1\]
         Tool = 7,
         /// "A tested, cumulative set of hotfixes, security updates, critical
         /// updates, and updates that are packaged together for easy deployment. A
         /// rollup generally targets a specific area, such as security, or a
-        /// component of a product, such as Internet Information Services (IIS)." [1]
+        /// component of a product, such as Internet Information Services (IIS)." \[1\]
         UpdateRollup = 8,
         /// "A widely released fix for a specific problem. An update addresses a
-        /// noncritical, non-security-related bug." [1]
+        /// noncritical, non-security-related bug." \[1\]
         Update = 9,
     }
 }
@@ -934,14 +934,14 @@ pub struct ExecStep {
 /// Common configurations for an ExecStep.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ExecStepConfig {
-    /// Defaults to [0]. A list of possible return values that the
+    /// Defaults to \[0\]. A list of possible return values that the
     /// execution can return to indicate a success.
     #[prost(int32, repeated, tag = "3")]
     pub allowed_success_codes: ::prost::alloc::vec::Vec<i32>,
     /// The script interpreter to use to run the script. If no interpreter is
     /// specified the script will be executed directly, which will likely
     /// only succeed for scripts with [shebang lines]
-    /// (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).
+    /// (<https://en.wikipedia.org/wiki/Shebang_\(Unix\>)).
     #[prost(enumeration = "exec_step_config::Interpreter", tag = "4")]
     pub interpreter: i32,
     /// Location of the executable.
@@ -1009,9 +1009,9 @@ pub struct PatchInstanceFilter {
     #[prost(string, repeated, tag = "3")]
     pub zones: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// Targets any of the VM instances specified. Instances are specified by their
-    /// URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`,
-    /// `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or
-    /// `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`
+    /// URI in the form `zones/\[ZONE]/instances/[INSTANCE_NAME\]`,
+    /// `projects/\[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME\]`, or
+    /// `<https://www.googleapis.com/compute/v1/projects/\[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME\]`>
     #[prost(string, repeated, tag = "4")]
     pub instances: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// Targets VMs whose name starts with one of these prefixes. Similar to
@@ -1023,7 +1023,7 @@ pub struct PatchInstanceFilter {
 /// Nested message and enum types in `PatchInstanceFilter`.
 pub mod patch_instance_filter {
     /// Targets a group of VM instances by using their [assigned
-    /// labels](https://cloud.google.com/compute/docs/labeling-resources). Labels
+    /// labels](<https://cloud.google.com/compute/docs/labeling-resources>). Labels
     /// are key-value pairs. A `GroupLabel` is a combination of labels
     /// that is used to target VMs for a patch job.
     ///
@@ -1097,7 +1097,7 @@ pub mod patch_rollout {
 /// complete a patch. These configurations include instance filter, package
 /// repository settings, and a schedule. For more information about creating and
 /// managing patch deployments, see [Scheduling patch
-/// jobs](https://cloud.google.com/compute/docs/os-patch-management/schedule-patch-jobs).
+/// jobs](<https://cloud.google.com/compute/docs/os-patch-management/schedule-patch-jobs>).
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PatchDeployment {
     /// Unique name for the patch deployment resource in a project. The patch
@@ -1121,15 +1121,15 @@ pub struct PatchDeployment {
     #[prost(message, optional, tag = "5")]
     pub duration: ::core::option::Option<::prost_types::Duration>,
     /// Output only. Time the patch deployment was created. Timestamp is in
-    /// [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+    /// \[RFC3339\](<https://www.ietf.org/rfc/rfc3339.txt>) text format.
     #[prost(message, optional, tag = "8")]
     pub create_time: ::core::option::Option<::prost_types::Timestamp>,
     /// Output only. Time the patch deployment was last updated. Timestamp is in
-    /// [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+    /// \[RFC3339\](<https://www.ietf.org/rfc/rfc3339.txt>) text format.
     #[prost(message, optional, tag = "9")]
     pub update_time: ::core::option::Option<::prost_types::Timestamp>,
     /// Output only. The last time a patch job was started by this deployment.
-    /// Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text
+    /// Timestamp is in \[RFC3339\](<https://www.ietf.org/rfc/rfc3339.txt>) text
     /// format.
     #[prost(message, optional, tag = "10")]
     pub last_execute_time: ::core::option::Option<::prost_types::Timestamp>,
@@ -1154,7 +1154,7 @@ pub mod patch_deployment {
     }
 }
 /// Sets the time for a one time patch deployment. Timestamp is in
-/// [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+/// \[RFC3339\](<https://www.ietf.org/rfc/rfc3339.txt>) text format.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct OneTimeSchedule {
     /// Required. The desired patch job execution time.
@@ -1340,7 +1340,7 @@ pub mod os_config_service_client {
     impl<T> OsConfigServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -1540,7 +1540,7 @@ pub mod os_config_service_client {
 /// Compute Engine virtual machine (VM) instance at a given point in time.
 ///
 /// For more information, see [Vulnerability
-/// reports](https://cloud.google.com/compute/docs/instances/os-inventory-management#vulnerability-reports).
+/// reports](<https://cloud.google.com/compute/docs/instances/os-inventory-management#vulnerability-reports>).
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct VulnerabilityReport {
     /// Output only. The `vulnerabilityReport` API resource name.
@@ -1682,16 +1682,16 @@ pub struct ListVulnerabilityReportsResponse {
     pub next_page_token: ::prost::alloc::string::String,
 }
 /// Common Vulnerability Scoring System version 3.
-/// For details, see https://www.first.org/cvss/specification-document
+/// For details, see <https://www.first.org/cvss/specification-document>
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CvsSv3 {
     /// The base score is a function of the base metric scores.
-    /// https://www.first.org/cvss/specification-document#Base-Metrics
+    /// <https://www.first.org/cvss/specification-document#Base-Metrics>
     #[prost(float, tag = "1")]
     pub base_score: f32,
     /// The Exploitability sub-score equation is derived from the Base
     /// Exploitability metrics.
-    /// https://www.first.org/cvss/specification-document#2-1-Exploitability-Metrics
+    /// <https://www.first.org/cvss/specification-document#2-1-Exploitability-Metrics>
     #[prost(float, tag = "2")]
     pub exploitability_score: f32,
     /// The Impact sub-score equation is derived from the Base Impact metrics.
@@ -1853,7 +1853,7 @@ pub mod os_config_zonal_service_client {
     impl<T> OsConfigZonalServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

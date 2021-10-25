@@ -1,4 +1,4 @@
-/// An intended audience of the [Product][google.cloud.retail.v2.Product] for
+/// An intended audience of the \[Product][google.cloud.retail.v2.Product\] for
 /// whom it's sold.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Audience {
@@ -10,9 +10,9 @@ pub struct Audience {
     /// is returned.
     ///
     /// Google Merchant Center property
-    /// [gender](https://support.google.com/merchants/answer/6324479). Schema.org
+    /// \[gender\](<https://support.google.com/merchants/answer/6324479>). Schema.org
     /// property
-    /// [Product.audience.suggestedGender](https://schema.org/suggestedGender).
+    /// \[Product.audience.suggestedGender\](<https://schema.org/suggestedGender>).
     #[prost(string, repeated, tag = "1")]
     pub genders: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// The age groups of the audience. Strongly encouraged to use the standard
@@ -25,14 +25,14 @@ pub struct Audience {
     /// is returned.
     ///
     /// Google Merchant Center property
-    /// [age_group](https://support.google.com/merchants/answer/6324463).
+    /// \[age_group\](<https://support.google.com/merchants/answer/6324463>).
     /// Schema.org property
-    /// [Product.audience.suggestedMinAge](https://schema.org/suggestedMinAge) and
-    /// [Product.audience.suggestedMaxAge](https://schema.org/suggestedMaxAge).
+    /// \[Product.audience.suggestedMinAge\](<https://schema.org/suggestedMinAge>) and
+    /// \[Product.audience.suggestedMaxAge\](<https://schema.org/suggestedMaxAge>).
     #[prost(string, repeated, tag = "2")]
     pub age_groups: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
-/// The color information of a [Product][google.cloud.retail.v2.Product].
+/// The color information of a \[Product][google.cloud.retail.v2.Product\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ColorInfo {
     /// The standard color families. Strongly recommended to use the following
@@ -46,8 +46,8 @@ pub struct ColorInfo {
     /// INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
-    /// [color](https://support.google.com/merchants/answer/6324487). Schema.org
-    /// property [Product.color](https://schema.org/color).
+    /// \[color\](<https://support.google.com/merchants/answer/6324487>). Schema.org
+    /// property \[Product.color\](<https://schema.org/color>).
     #[prost(string, repeated, tag = "1")]
     pub color_families: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// The color display names, which may be different from standard color family
@@ -60,13 +60,13 @@ pub struct ColorInfo {
     /// INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
-    /// [color](https://support.google.com/merchants/answer/6324487). Schema.org
-    /// property [Product.color](https://schema.org/color).
+    /// \[color\](<https://support.google.com/merchants/answer/6324487>). Schema.org
+    /// property \[Product.color\](<https://schema.org/color>).
     #[prost(string, repeated, tag = "2")]
     pub colors: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
 /// A custom attribute that is not explicitly modeled in
-/// [Product][google.cloud.retail.v2.Product].
+/// \[Product][google.cloud.retail.v2.Product\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CustomAttribute {
     /// The textual values of this custom attribute. For example, `["yellow",
@@ -76,8 +76,8 @@ pub struct CustomAttribute {
     /// must be a UTF-8 encoded string with a length limit of 256 characters.
     /// Otherwise, an INVALID_ARGUMENT error is returned.
     ///
-    /// Exactly one of [text][google.cloud.retail.v2.CustomAttribute.text] or
-    /// [numbers][google.cloud.retail.v2.CustomAttribute.numbers] should be set.
+    /// Exactly one of \[text][google.cloud.retail.v2.CustomAttribute.text\] or
+    /// \[numbers][google.cloud.retail.v2.CustomAttribute.numbers\] should be set.
     /// Otherwise, an INVALID_ARGUMENT error is returned.
     #[prost(string, repeated, tag = "1")]
     pub text: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
@@ -87,30 +87,30 @@ pub struct CustomAttribute {
     /// At most 400 values are allowed.Otherwise, an INVALID_ARGUMENT error is
     /// returned.
     ///
-    /// Exactly one of [text][google.cloud.retail.v2.CustomAttribute.text] or
-    /// [numbers][google.cloud.retail.v2.CustomAttribute.numbers] should be set.
+    /// Exactly one of \[text][google.cloud.retail.v2.CustomAttribute.text\] or
+    /// \[numbers][google.cloud.retail.v2.CustomAttribute.numbers\] should be set.
     /// Otherwise, an INVALID_ARGUMENT error is returned.
     #[prost(double, repeated, tag = "2")]
     pub numbers: ::prost::alloc::vec::Vec<f64>,
     /// If true, custom attribute values are searchable by text queries in
-    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+    /// \[SearchService.Search][google.cloud.retail.v2.SearchService.Search\].
     ///
-    /// This field is ignored in a [UserEvent][google.cloud.retail.v2.UserEvent].
+    /// This field is ignored in a \[UserEvent][google.cloud.retail.v2.UserEvent\].
     ///
-    /// Only set if type [text][google.cloud.retail.v2.CustomAttribute.text] is
+    /// Only set if type \[text][google.cloud.retail.v2.CustomAttribute.text\] is
     /// set. Otherwise, a INVALID_ARGUMENT error is returned.
     #[prost(bool, optional, tag = "3")]
     pub searchable: ::core::option::Option<bool>,
     /// If true, custom attribute values are indexed, so that it can be filtered,
     /// faceted or boosted in
-    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+    /// \[SearchService.Search][google.cloud.retail.v2.SearchService.Search\].
     ///
-    /// This field is ignored in a [UserEvent][google.cloud.retail.v2.UserEvent].
+    /// This field is ignored in a \[UserEvent][google.cloud.retail.v2.UserEvent\].
     ///
-    /// See [SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter],
-    /// [SearchRequest.facet_specs][google.cloud.retail.v2.SearchRequest.facet_specs]
+    /// See \[SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter\],
+    /// \[SearchRequest.facet_specs][google.cloud.retail.v2.SearchRequest.facet_specs\]
     /// and
-    /// [SearchRequest.boost_spec][google.cloud.retail.v2.SearchRequest.boost_spec]
+    /// \[SearchRequest.boost_spec][google.cloud.retail.v2.SearchRequest.boost_spec\]
     /// for more details.
     #[prost(bool, optional, tag = "4")]
     pub indexable: ::core::option::Option<bool>,
@@ -139,19 +139,19 @@ pub struct FulfillmentInfo {
     /// INVALID_ARGUMENT error is returned.
     #[prost(string, tag = "1")]
     pub r#type: ::prost::alloc::string::String,
-    /// The IDs for this [type][google.cloud.retail.v2.FulfillmentInfo.type], such
+    /// The IDs for this \[type][google.cloud.retail.v2.FulfillmentInfo.type\], such
     /// as the store IDs for
-    /// [FulfillmentInfo.type.pickup-in-store][google.cloud.retail.v2.FulfillmentInfo.type]
+    /// \[FulfillmentInfo.type.pickup-in-store][google.cloud.retail.v2.FulfillmentInfo.type\]
     /// or the region IDs for
-    /// [FulfillmentInfo.type.same-day-delivery][google.cloud.retail.v2.FulfillmentInfo.type].
+    /// \[FulfillmentInfo.type.same-day-delivery][google.cloud.retail.v2.FulfillmentInfo.type\].
     ///
     /// A maximum of 2000 values are allowed. Each value must be a string with a
-    /// length limit of 10 characters, matching the pattern [a-zA-Z0-9_-]+, such as
+    /// length limit of 10 characters, matching the pattern \[a-zA-Z0-9_-\]+, such as
     /// "store1" or "REGION-2". Otherwise, an INVALID_ARGUMENT error is returned.
     #[prost(string, repeated, tag = "2")]
     pub place_ids: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
 }
-/// [Product][google.cloud.retail.v2.Product] thumbnail/detail image.
+/// \[Product][google.cloud.retail.v2.Product\] thumbnail/detail image.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Image {
     /// Required. URI of the image.
@@ -160,8 +160,8 @@ pub struct Image {
     /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
-    /// [image_link](https://support.google.com/merchants/answer/6324350).
-    /// Schema.org property [Product.image](https://schema.org/image).
+    /// \[image_link\](<https://support.google.com/merchants/answer/6324350>).
+    /// Schema.org property \[Product.image\](<https://schema.org/image>).
     #[prost(string, tag = "1")]
     pub uri: ::prost::alloc::string::String,
     /// Height of the image in number of pixels.
@@ -184,7 +184,7 @@ pub struct Interval {
     /// the lower bound is negative infinity.
     ///
     /// This field must be not larger than
-    /// [max][google.cloud.retail.v2.Interval.max]. Otherwise, an INVALID_ARGUMENT
+    /// \[max][google.cloud.retail.v2.Interval.max\]. Otherwise, an INVALID_ARGUMENT
     /// error is returned.
     #[prost(oneof = "interval::Min", tags = "1, 2")]
     pub min: ::core::option::Option<interval::Min>,
@@ -192,7 +192,7 @@ pub struct Interval {
     /// the upper bound is positive infinity.
     ///
     /// This field must be not smaller than
-    /// [min][google.cloud.retail.v2.Interval.min]. Otherwise, an INVALID_ARGUMENT
+    /// \[min][google.cloud.retail.v2.Interval.min\]. Otherwise, an INVALID_ARGUMENT
     /// error is returned.
     #[prost(oneof = "interval::Max", tags = "3, 4")]
     pub max: ::core::option::Option<interval::Max>,
@@ -203,7 +203,7 @@ pub mod interval {
     /// the lower bound is negative infinity.
     ///
     /// This field must be not larger than
-    /// [max][google.cloud.retail.v2.Interval.max]. Otherwise, an INVALID_ARGUMENT
+    /// \[max][google.cloud.retail.v2.Interval.max\]. Otherwise, an INVALID_ARGUMENT
     /// error is returned.
     #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum Min {
@@ -218,7 +218,7 @@ pub mod interval {
     /// the upper bound is positive infinity.
     ///
     /// This field must be not smaller than
-    /// [min][google.cloud.retail.v2.Interval.min]. Otherwise, an INVALID_ARGUMENT
+    /// \[min][google.cloud.retail.v2.Interval.min\]. Otherwise, an INVALID_ARGUMENT
     /// error is returned.
     #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum Max {
@@ -230,83 +230,83 @@ pub mod interval {
         ExclusiveMaximum(f64),
     }
 }
-/// The price information of a [Product][google.cloud.retail.v2.Product].
+/// The price information of a \[Product][google.cloud.retail.v2.Product\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct PriceInfo {
     /// The 3-letter currency code defined in [ISO
-    /// 4217](https://www.iso.org/iso-4217-currency-codes.html).
+    /// 4217](<https://www.iso.org/iso-4217-currency-codes.html>).
     ///
     /// If this field is an unrecognizable currency code, an INVALID_ARGUMENT
     /// error is returned.
     ///
-    /// The [Product.Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT]
-    /// [Product][google.cloud.retail.v2.Product]s with the same
-    /// [Product.primary_product_id][google.cloud.retail.v2.Product.primary_product_id]
+    /// The \[Product.Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT\]
+    /// \[Product][google.cloud.retail.v2.Product\]s with the same
+    /// \[Product.primary_product_id][google.cloud.retail.v2.Product.primary_product_id\]
     /// must share the same
-    /// [currency_code][google.cloud.retail.v2.PriceInfo.currency_code]. Otherwise,
+    /// \[currency_code][google.cloud.retail.v2.PriceInfo.currency_code\]. Otherwise,
     /// a FAILED_PRECONDITION error is returned.
     #[prost(string, tag = "1")]
     pub currency_code: ::prost::alloc::string::String,
     /// Price of the product.
     ///
     /// Google Merchant Center property
-    /// [price](https://support.google.com/merchants/answer/6324371). Schema.org
-    /// property [Offer.priceSpecification](https://schema.org/priceSpecification).
+    /// \[price\](<https://support.google.com/merchants/answer/6324371>). Schema.org
+    /// property \[Offer.priceSpecification\](<https://schema.org/priceSpecification>).
     #[prost(float, tag = "2")]
     pub price: f32,
     /// Price of the product without any discount. If zero, by default set to be
-    /// the [price][google.cloud.retail.v2.PriceInfo.price].
+    /// the \[price][google.cloud.retail.v2.PriceInfo.price\].
     #[prost(float, tag = "3")]
     pub original_price: f32,
     /// The costs associated with the sale of a particular product. Used for gross
     /// profit reporting.
     ///
-    /// * Profit = [price][google.cloud.retail.v2.PriceInfo.price] -
-    /// [cost][google.cloud.retail.v2.PriceInfo.cost]
+    /// * Profit = \[price][google.cloud.retail.v2.PriceInfo.price\] -
+    /// \[cost][google.cloud.retail.v2.PriceInfo.cost\]
     ///
     /// Google Merchant Center property
-    /// [cost_of_goods_sold](https://support.google.com/merchants/answer/9017895).
+    /// \[cost_of_goods_sold\](<https://support.google.com/merchants/answer/9017895>).
     #[prost(float, tag = "4")]
     pub cost: f32,
-    /// The timestamp when the [price][google.cloud.retail.v2.PriceInfo.price]
+    /// The timestamp when the \[price][google.cloud.retail.v2.PriceInfo.price\]
     /// starts to be effective. This can be set as a future timestamp, and the
-    /// [price][google.cloud.retail.v2.PriceInfo.price] is only used for search
+    /// \[price][google.cloud.retail.v2.PriceInfo.price\] is only used for search
     /// after
-    /// [price_effective_time][google.cloud.retail.v2.PriceInfo.price_effective_time].
+    /// \[price_effective_time][google.cloud.retail.v2.PriceInfo.price_effective_time\].
     /// If so, the
-    /// [original_price][google.cloud.retail.v2.PriceInfo.original_price] must be
-    /// set and [original_price][google.cloud.retail.v2.PriceInfo.original_price]
+    /// \[original_price][google.cloud.retail.v2.PriceInfo.original_price\] must be
+    /// set and \[original_price][google.cloud.retail.v2.PriceInfo.original_price\]
     /// is used before
-    /// [price_effective_time][google.cloud.retail.v2.PriceInfo.price_effective_time].
+    /// \[price_effective_time][google.cloud.retail.v2.PriceInfo.price_effective_time\].
     ///
-    /// Do not set if [price][google.cloud.retail.v2.PriceInfo.price] is always
+    /// Do not set if \[price][google.cloud.retail.v2.PriceInfo.price\] is always
     /// effective because it will cause additional latency during search.
     #[prost(message, optional, tag = "5")]
     pub price_effective_time: ::core::option::Option<::prost_types::Timestamp>,
-    /// The timestamp when the [price][google.cloud.retail.v2.PriceInfo.price]
-    /// stops to be effective. The [price][google.cloud.retail.v2.PriceInfo.price]
+    /// The timestamp when the \[price][google.cloud.retail.v2.PriceInfo.price\]
+    /// stops to be effective. The \[price][google.cloud.retail.v2.PriceInfo.price\]
     /// is used for search before
-    /// [price_expire_time][google.cloud.retail.v2.PriceInfo.price_expire_time]. If
+    /// \[price_expire_time][google.cloud.retail.v2.PriceInfo.price_expire_time\]. If
     /// this field is set, the
-    /// [original_price][google.cloud.retail.v2.PriceInfo.original_price] must be
-    /// set and [original_price][google.cloud.retail.v2.PriceInfo.original_price]
+    /// \[original_price][google.cloud.retail.v2.PriceInfo.original_price\] must be
+    /// set and \[original_price][google.cloud.retail.v2.PriceInfo.original_price\]
     /// is used after
-    /// [price_expire_time][google.cloud.retail.v2.PriceInfo.price_expire_time].
+    /// \[price_expire_time][google.cloud.retail.v2.PriceInfo.price_expire_time\].
     ///
-    /// Do not set if [price][google.cloud.retail.v2.PriceInfo.price] is always
+    /// Do not set if \[price][google.cloud.retail.v2.PriceInfo.price\] is always
     /// effective because it will cause additional latency during search.
     #[prost(message, optional, tag = "6")]
     pub price_expire_time: ::core::option::Option<::prost_types::Timestamp>,
     /// Output only. The price range of all the child
-    /// [Product.Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT]
-    /// [Product][google.cloud.retail.v2.Product]s grouped together on the
-    /// [Product.Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
-    /// [Product][google.cloud.retail.v2.Product]. Only populated for
-    /// [Product.Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
-    /// [Product][google.cloud.retail.v2.Product]s.
+    /// \[Product.Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT\]
+    /// \[Product][google.cloud.retail.v2.Product\]s grouped together on the
+    /// \[Product.Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY\]
+    /// \[Product][google.cloud.retail.v2.Product\]. Only populated for
+    /// \[Product.Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY\]
+    /// \[Product][google.cloud.retail.v2.Product\]s.
     ///
     /// Note: This field is OUTPUT_ONLY for
-    /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct].
+    /// \[ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct\].
     /// Do not set this field in API requests.
     #[prost(message, optional, tag = "7")]
     pub price_range: ::core::option::Option<price_info::PriceRange>,
@@ -314,38 +314,38 @@ pub struct PriceInfo {
 /// Nested message and enum types in `PriceInfo`.
 pub mod price_info {
     /// The price range of all
-    /// [variant][google.cloud.retail.v2.Product.Type.VARIANT]
-    /// [Product][google.cloud.retail.v2.Product] having the same
-    /// [Product.primary_product_id][google.cloud.retail.v2.Product.primary_product_id].
+    /// \[variant][google.cloud.retail.v2.Product.Type.VARIANT\]
+    /// \[Product][google.cloud.retail.v2.Product\] having the same
+    /// \[Product.primary_product_id][google.cloud.retail.v2.Product.primary_product_id\].
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct PriceRange {
         /// The inclusive
-        /// [Product.pricing_info.price][google.cloud.retail.v2.PriceInfo.price]
-        /// interval of all [variant][google.cloud.retail.v2.Product.Type.VARIANT]
-        /// [Product][google.cloud.retail.v2.Product] having the same
-        /// [Product.primary_product_id][google.cloud.retail.v2.Product.primary_product_id].
+        /// \[Product.pricing_info.price][google.cloud.retail.v2.PriceInfo.price\]
+        /// interval of all \[variant][google.cloud.retail.v2.Product.Type.VARIANT\]
+        /// \[Product][google.cloud.retail.v2.Product\] having the same
+        /// \[Product.primary_product_id][google.cloud.retail.v2.Product.primary_product_id\].
         #[prost(message, optional, tag = "1")]
         pub price: ::core::option::Option<super::Interval>,
         /// The inclusive
-        /// [Product.pricing_info.original_price][google.cloud.retail.v2.PriceInfo.original_price]
-        /// internal of all [variant][google.cloud.retail.v2.Product.Type.VARIANT]
-        /// [Product][google.cloud.retail.v2.Product] having the same
-        /// [Product.primary_product_id][google.cloud.retail.v2.Product.primary_product_id].
+        /// \[Product.pricing_info.original_price][google.cloud.retail.v2.PriceInfo.original_price\]
+        /// internal of all \[variant][google.cloud.retail.v2.Product.Type.VARIANT\]
+        /// \[Product][google.cloud.retail.v2.Product\] having the same
+        /// \[Product.primary_product_id][google.cloud.retail.v2.Product.primary_product_id\].
         #[prost(message, optional, tag = "2")]
         pub original_price: ::core::option::Option<super::Interval>,
     }
 }
-/// The rating of a [Product][google.cloud.retail.v2.Product].
+/// The rating of a \[Product][google.cloud.retail.v2.Product\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Rating {
     /// The total number of ratings. This value is independent of the value of
-    /// [rating_histogram][google.cloud.retail.v2.Rating.rating_histogram].
+    /// \[rating_histogram][google.cloud.retail.v2.Rating.rating_histogram\].
     ///
     /// This value must be nonnegative. Otherwise, an INVALID_ARGUMENT error is
     /// returned.
     #[prost(int32, tag = "1")]
     pub rating_count: i32,
-    /// The average rating of the [Product][google.cloud.retail.v2.Product].
+    /// The average rating of the \[Product][google.cloud.retail.v2.Product\].
     ///
     /// The rating is scaled at 1-5. Otherwise, an INVALID_ARGUMENT error is
     /// returned.
@@ -356,7 +356,7 @@ pub struct Rating {
     /// always 5. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// For example, [41, 14, 13, 47, 303]. It means that the
-    /// [Product][google.cloud.retail.v2.Product] got 41 ratings with 1 star, 14
+    /// \[Product][google.cloud.retail.v2.Product\] got 41 ratings with 1 star, 14
     /// ratings with 2 star, and so on.
     #[prost(int32, repeated, tag = "3")]
     pub rating_histogram: ::prost::alloc::vec::Vec<i32>,
@@ -372,7 +372,7 @@ pub struct UserInfo {
     #[prost(string, tag = "1")]
     pub user_id: ::prost::alloc::string::String,
     /// The end user's IP address. Required for getting
-    /// [SearchResponse.sponsored_results][google.cloud.retail.v2.SearchResponse.sponsored_results].
+    /// \[SearchResponse.sponsored_results][google.cloud.retail.v2.SearchResponse.sponsored_results\].
     /// This field is used to extract location information for personalization.
     ///
     /// This field must be either an IPv4 address (e.g. "104.133.9.80") or an IPv6
@@ -380,35 +380,35 @@ pub struct UserInfo {
     /// INVALID_ARGUMENT error is returned.
     ///
     /// This should not be set when using the JavaScript tag in
-    /// [UserEventService.CollectUserEvent][google.cloud.retail.v2.UserEventService.CollectUserEvent]
+    /// \[UserEventService.CollectUserEvent][google.cloud.retail.v2.UserEventService.CollectUserEvent\]
     /// or if
-    /// [direct_user_request][google.cloud.retail.v2.UserInfo.direct_user_request]
+    /// \[direct_user_request][google.cloud.retail.v2.UserInfo.direct_user_request\]
     /// is set.
     #[prost(string, tag = "2")]
     pub ip_address: ::prost::alloc::string::String,
     /// User agent as included in the HTTP header. Required for getting
-    /// [SearchResponse.sponsored_results][google.cloud.retail.v2.SearchResponse.sponsored_results].
+    /// \[SearchResponse.sponsored_results][google.cloud.retail.v2.SearchResponse.sponsored_results\].
     ///
     /// The field must be a UTF-8 encoded string with a length limit of 1,000
     /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// This should not be set when using the client side event reporting with
     /// GTM or JavaScript tag in
-    /// [UserEventService.CollectUserEvent][google.cloud.retail.v2.UserEventService.CollectUserEvent]
+    /// \[UserEventService.CollectUserEvent][google.cloud.retail.v2.UserEventService.CollectUserEvent\]
     /// or if
-    /// [direct_user_request][google.cloud.retail.v2.UserInfo.direct_user_request]
+    /// \[direct_user_request][google.cloud.retail.v2.UserInfo.direct_user_request\]
     /// is set.
     #[prost(string, tag = "3")]
     pub user_agent: ::prost::alloc::string::String,
     /// True if the request is made directly from the end user, in which case the
-    /// [ip_address][google.cloud.retail.v2.UserInfo.ip_address] and
-    /// [user_agent][google.cloud.retail.v2.UserInfo.user_agent] can be populated
+    /// \[ip_address][google.cloud.retail.v2.UserInfo.ip_address\] and
+    /// \[user_agent][google.cloud.retail.v2.UserInfo.user_agent\] can be populated
     /// from the HTTP request. This flag should be set only if the API request is
     /// made directly from the end user such as a mobile app (and not if a gateway
     /// or a server is processing and pushing the user events).
     ///
     /// This should not be set when using the JavaScript tag in
-    /// [UserEventService.CollectUserEvent][google.cloud.retail.v2.UserEventService.CollectUserEvent].
+    /// \[UserEventService.CollectUserEvent][google.cloud.retail.v2.UserEventService.CollectUserEvent\].
     #[prost(bool, tag = "4")]
     pub direct_user_request: bool,
 }
@@ -418,12 +418,12 @@ pub struct Promotion {
     /// ID of the promotion. For example, "free gift".
     ///
     /// The value value must be a UTF-8 encoded string with a length limit of 128
-    /// characters, and match the pattern: [a-zA-Z][a-zA-Z0-9_]*. For example,
+    /// characters, and match the pattern: \[a-zA-Z][a-zA-Z0-9_\]*. For example,
     /// id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is
     /// returned.
     ///
     /// Google Merchant Center property
-    /// [promotion](https://support.google.com/merchants/answer/7050148).
+    /// \[promotion\](<https://support.google.com/merchants/answer/7050148>).
     #[prost(string, tag = "1")]
     pub promotion_id: ::prost::alloc::string::String,
 }
@@ -437,51 +437,51 @@ pub struct Product {
     /// The branch ID must be "default_branch".
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
-    /// Immutable. [Product][google.cloud.retail.v2.Product] identifier, which is
-    /// the final component of [name][google.cloud.retail.v2.Product.name]. For
+    /// Immutable. \[Product][google.cloud.retail.v2.Product\] identifier, which is
+    /// the final component of \[name][google.cloud.retail.v2.Product.name\]. For
     /// example, this field is "id_1", if
-    /// [name][google.cloud.retail.v2.Product.name] is
+    /// \[name][google.cloud.retail.v2.Product.name\] is
     /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/id_1`.
     ///
     /// This field must be a UTF-8 encoded string with a length limit of 128
     /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
-    /// [id](https://support.google.com/merchants/answer/6324405). Schema.org
-    /// Property [Product.sku](https://schema.org/sku).
+    /// \[id\](<https://support.google.com/merchants/answer/6324405>). Schema.org
+    /// Property \[Product.sku\](<https://schema.org/sku>).
     #[prost(string, tag = "2")]
     pub id: ::prost::alloc::string::String,
     /// Immutable. The type of the product. Default to
-    /// [Catalog.product_level_config.ingestion_product_type][google.cloud.retail.v2.ProductLevelConfig.ingestion_product_type]
+    /// \[Catalog.product_level_config.ingestion_product_type][google.cloud.retail.v2.ProductLevelConfig.ingestion_product_type\]
     /// if unset.
     #[prost(enumeration = "product::Type", tag = "3")]
     pub r#type: i32,
     /// Variant group identifier. Must be an
-    /// [id][google.cloud.retail.v2.Product.id], with the same parent branch with
+    /// \[id][google.cloud.retail.v2.Product.id\], with the same parent branch with
     /// this product. Otherwise, an error is thrown.
     ///
-    /// For [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
-    /// [Product][google.cloud.retail.v2.Product]s, this field can only be empty or
-    /// set to the same value as [id][google.cloud.retail.v2.Product.id].
+    /// For \[Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY\]
+    /// \[Product][google.cloud.retail.v2.Product\]s, this field can only be empty or
+    /// set to the same value as \[id][google.cloud.retail.v2.Product.id\].
     ///
-    /// For VARIANT [Product][google.cloud.retail.v2.Product]s, this field cannot
+    /// For VARIANT \[Product][google.cloud.retail.v2.Product\]s, this field cannot
     /// be empty. A maximum of 2,000 products are allowed to share the same
-    /// [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
-    /// [Product][google.cloud.retail.v2.Product]. Otherwise, an INVALID_ARGUMENT
+    /// \[Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY\]
+    /// \[Product][google.cloud.retail.v2.Product\]. Otherwise, an INVALID_ARGUMENT
     /// error is returned.
     ///
     /// Google Merchant Center Property
-    /// [item_group_id](https://support.google.com/merchants/answer/6324507).
+    /// \[item_group_id\](<https://support.google.com/merchants/answer/6324507>).
     /// Schema.org Property
-    /// [Product.inProductGroupWithID](https://schema.org/inProductGroupWithID).
+    /// \[Product.inProductGroupWithID\](<https://schema.org/inProductGroupWithID>).
     ///
     /// This field must be enabled before it can be used. [Learn
     /// more](/recommendations-ai/docs/catalog#item-group-id).
     #[prost(string, tag = "4")]
     pub primary_product_id: ::prost::alloc::string::String,
-    /// The [id][google.cloud.retail.v2.Product.id] of the collection members when
-    /// [type][google.cloud.retail.v2.Product.type] is
-    /// [Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION].
+    /// The \[id][google.cloud.retail.v2.Product.id\] of the collection members when
+    /// \[type][google.cloud.retail.v2.Product.type\] is
+    /// \[Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION\].
     ///
     /// Should not set it for other types. A maximum of 1000 values are allowed.
     /// Otherwise, an INVALID_ARGUMENT error is return.
@@ -496,13 +496,13 @@ pub struct Product {
     /// returned.
     ///
     /// Google Merchant Center property
-    /// [gtin](https://support.google.com/merchants/answer/6324461).
+    /// \[gtin\](<https://support.google.com/merchants/answer/6324461>).
     /// Schema.org property
-    /// [Product.isbn](https://schema.org/isbn) or
-    /// [Product.gtin8](https://schema.org/gtin8) or
-    /// [Product.gtin12](https://schema.org/gtin12) or
-    /// [Product.gtin13](https://schema.org/gtin13) or
-    /// [Product.gtin14](https://schema.org/gtin14).
+    /// \[Product.isbn\](<https://schema.org/isbn>) or
+    /// \[Product.gtin8\](<https://schema.org/gtin8>) or
+    /// \[Product.gtin12\](<https://schema.org/gtin12>) or
+    /// \[Product.gtin13\](<https://schema.org/gtin13>) or
+    /// \[Product.gtin14\](<https://schema.org/gtin14>).
     ///
     /// If the value is not a valid GTIN, an INVALID_ARGUMENT error is returned.
     #[prost(string, tag = "6")]
@@ -526,21 +526,21 @@ pub struct Product {
     ///        "Sports & Fitness > Athletic Clothing > Shoes"
     ///      ]
     ///
-    /// Must be set for [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
-    /// [Product][google.cloud.retail.v2.Product] otherwise an INVALID_ARGUMENT
+    /// Must be set for \[Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY\]
+    /// \[Product][google.cloud.retail.v2.Product\] otherwise an INVALID_ARGUMENT
     /// error is returned.
     ///
     /// At most 250 values are allowed per
-    /// [Product][google.cloud.retail.v2.Product]. Empty values are not allowed.
+    /// \[Product][google.cloud.retail.v2.Product\]. Empty values are not allowed.
     /// Each value must be a UTF-8 encoded string with a length limit of 5,000
     /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
-    /// [google_product_category][mc_google_product_category]. Schema.org property
-    /// [Product.category] (https://schema.org/category).
+    /// \[google_product_category][mc_google_product_category\]. Schema.org property
+    /// \[Product.category\] (<https://schema.org/category>).
     ///
-    /// [mc_google_product_category]:
-    /// https://support.google.com/merchants/answer/6324436
+    /// \[mc_google_product_category\]:
+    /// <https://support.google.com/merchants/answer/6324436>
     #[prost(string, repeated, tag = "7")]
     pub categories: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// Required. Product title.
@@ -549,8 +549,8 @@ pub struct Product {
     /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
-    /// [title](https://support.google.com/merchants/answer/6324415). Schema.org
-    /// property [Product.name](https://schema.org/name).
+    /// \[title\](<https://support.google.com/merchants/answer/6324415>). Schema.org
+    /// property \[Product.name\](<https://schema.org/name>).
     #[prost(string, tag = "8")]
     pub title: ::prost::alloc::string::String,
     /// The brands of the product.
@@ -560,8 +560,8 @@ pub struct Product {
     /// INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
-    /// [brand](https://support.google.com/merchants/answer/6324351). Schema.org
-    /// property [Product.brand](https://schema.org/brand).
+    /// \[brand\](<https://support.google.com/merchants/answer/6324351>). Schema.org
+    /// property \[Product.brand\](<https://schema.org/brand>).
     #[prost(string, repeated, tag = "9")]
     pub brands: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// Product description.
@@ -570,17 +570,17 @@ pub struct Product {
     /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
-    /// [description](https://support.google.com/merchants/answer/6324468).
-    /// schema.org property [Product.description](https://schema.org/description).
+    /// \[description\](<https://support.google.com/merchants/answer/6324468>).
+    /// schema.org property \[Product.description\](<https://schema.org/description>).
     #[prost(string, tag = "10")]
     pub description: ::prost::alloc::string::String,
     /// Language of the title/description and other string attributes. Use language
-    /// tags defined by [BCP 47][https://www.rfc-editor.org/rfc/bcp/bcp47.txt].
+    /// tags defined by [BCP 47]\[<https://www.rfc-editor.org/rfc/bcp/bcp47.txt\].>
     ///
     /// For product prediction, this field is ignored and the model automatically
-    /// detects the text language. The [Product][google.cloud.retail.v2.Product]
+    /// detects the text language. The \[Product][google.cloud.retail.v2.Product\]
     /// can include text in different languages, but duplicating
-    /// [Product][google.cloud.retail.v2.Product]s to provide text in multiple
+    /// \[Product][google.cloud.retail.v2.Product\]s to provide text in multiple
     /// languages can result in degraded model performance.
     ///
     /// For product search this field is in use. It defaults to "en-US" if unset.
@@ -609,45 +609,45 @@ pub struct Product {
     /// * The key must be a UTF-8 encoded string with a length limit of 128
     ///   characters.
     /// * For indexable attribute, the key must match the pattern:
-    ///   [a-zA-Z0-9][a-zA-Z0-9_]*. For example, key0LikeThis or KEY_1_LIKE_THIS.
+    ///   \[a-zA-Z0-9][a-zA-Z0-9_\]*. For example, key0LikeThis or KEY_1_LIKE_THIS.
     #[prost(map = "string, message", tag = "12")]
     pub attributes: ::std::collections::HashMap<::prost::alloc::string::String, CustomAttribute>,
     /// Custom tags associated with the product.
     ///
     /// At most 250 values are allowed per
-    /// [Product][google.cloud.retail.v2.Product]. This value must be a UTF-8
+    /// \[Product][google.cloud.retail.v2.Product\]. This value must be a UTF-8
     /// encoded string with a length limit of 1,000 characters. Otherwise, an
     /// INVALID_ARGUMENT error is returned.
     ///
     /// This tag can be used for filtering recommendation results by passing the
     /// tag as part of the
-    /// [PredictRequest.filter][google.cloud.retail.v2.PredictRequest.filter].
+    /// \[PredictRequest.filter][google.cloud.retail.v2.PredictRequest.filter\].
     ///
     /// Google Merchant Center property
-    /// [custom_label_0–4](https://support.google.com/merchants/answer/6324473).
+    /// \[custom_label_0–4\](<https://support.google.com/merchants/answer/6324473>).
     #[prost(string, repeated, tag = "13")]
     pub tags: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// Product price and cost information.
     ///
     /// Google Merchant Center property
-    /// [price](https://support.google.com/merchants/answer/6324371).
+    /// \[price\](<https://support.google.com/merchants/answer/6324371>).
     #[prost(message, optional, tag = "14")]
     pub price_info: ::core::option::Option<PriceInfo>,
     /// The rating of this product.
     #[prost(message, optional, tag = "15")]
     pub rating: ::core::option::Option<Rating>,
-    /// The timestamp when this [Product][google.cloud.retail.v2.Product] becomes
+    /// The timestamp when this \[Product][google.cloud.retail.v2.Product\] becomes
     /// available for
-    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+    /// \[SearchService.Search][google.cloud.retail.v2.SearchService.Search\].
     #[prost(message, optional, tag = "18")]
     pub available_time: ::core::option::Option<::prost_types::Timestamp>,
-    /// The online availability of the [Product][google.cloud.retail.v2.Product].
+    /// The online availability of the \[Product][google.cloud.retail.v2.Product\].
     /// Default to
-    /// [Availability.IN_STOCK][google.cloud.retail.v2.Product.Availability.IN_STOCK].
+    /// \[Availability.IN_STOCK][google.cloud.retail.v2.Product.Availability.IN_STOCK\].
     ///
     /// Google Merchant Center Property
-    /// [availability](https://support.google.com/merchants/answer/6324448).
-    /// Schema.org Property [Offer.availability](https://schema.org/availability).
+    /// \[availability\](<https://support.google.com/merchants/answer/6324448>).
+    /// Schema.org Property \[Offer.availability\](<https://schema.org/availability>).
     #[prost(enumeration = "product::Availability", tag = "19")]
     pub availability: i32,
     /// The available quantity of the item.
@@ -657,7 +657,7 @@ pub struct Product {
     /// region IDs for different shipping methods.
     ///
     /// All the elements must have distinct
-    /// [FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type].
+    /// \[FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type\].
     /// Otherwise, an INVALID_ARGUMENT error is returned.
     #[prost(message, repeated, tag = "21")]
     pub fulfillment_info: ::prost::alloc::vec::Vec<FulfillmentInfo>,
@@ -670,8 +670,8 @@ pub struct Product {
     /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
-    /// [link](https://support.google.com/merchants/answer/6324416). Schema.org
-    /// property [Offer.url](https://schema.org/url).
+    /// \[link\](<https://support.google.com/merchants/answer/6324416>). Schema.org
+    /// property \[Offer.url\](<https://schema.org/url>).
     #[prost(string, tag = "22")]
     pub uri: ::prost::alloc::string::String,
     /// Product images for the product.Highly recommended to put the main image
@@ -680,8 +680,8 @@ pub struct Product {
     /// A maximum of 300 images are allowed.
     ///
     /// Google Merchant Center property
-    /// [image_link](https://support.google.com/merchants/answer/6324350).
-    /// Schema.org property [Product.image](https://schema.org/image).
+    /// \[image_link\](<https://support.google.com/merchants/answer/6324350>).
+    /// Schema.org property \[Product.image\](<https://schema.org/image>).
     #[prost(message, repeated, tag = "23")]
     pub images: ::prost::alloc::vec::Vec<Image>,
     /// The target group associated with a given audience (e.g. male, veterans,
@@ -691,12 +691,12 @@ pub struct Product {
     /// The color of the product.
     ///
     /// Google Merchant Center property
-    /// [color](https://support.google.com/merchants/answer/6324487). Schema.org
-    /// property [Product.color](https://schema.org/color).
+    /// \[color\](<https://support.google.com/merchants/answer/6324487>). Schema.org
+    /// property \[Product.color\](<https://schema.org/color>).
     #[prost(message, optional, tag = "25")]
     pub color_info: ::core::option::Option<ColorInfo>,
     /// The size of the product. To represent different size systems or size types,
-    /// consider using this format: [[[size_system:]size_type:]size_value].
+    /// consider using this format: \[[[size_system:]size_type:]size_value\].
     ///
     /// For example, in "US:MENS:M", "US" represents size system; "MENS" represents
     /// size type; "M" represents size value. In "GIRLS:27", size system is empty;
@@ -704,15 +704,15 @@ pub struct Product {
     /// both size system and size type are empty, while size value is "32 inches".
     ///
     /// A maximum of 20 values are allowed per
-    /// [Product][google.cloud.retail.v2.Product]. Each value must be a UTF-8
+    /// \[Product][google.cloud.retail.v2.Product\]. Each value must be a UTF-8
     /// encoded string with a length limit of 128 characters. Otherwise, an
     /// INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
-    /// [size](https://support.google.com/merchants/answer/6324492),
-    /// [size_type](https://support.google.com/merchants/answer/6324497) and
-    /// [size_system](https://support.google.com/merchants/answer/6324502).
-    /// Schema.org property [Product.size](https://schema.org/size).
+    /// \[size\](<https://support.google.com/merchants/answer/6324492>),
+    /// \[size_type\](<https://support.google.com/merchants/answer/6324497>) and
+    /// \[size_system\](<https://support.google.com/merchants/answer/6324502>).
+    /// Schema.org property \[Product.size\](<https://schema.org/size>).
     #[prost(string, repeated, tag = "26")]
     pub sizes: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// The material of the product. For example, "leather", "wooden".
@@ -722,117 +722,117 @@ pub struct Product {
     /// INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
-    /// [material](https://support.google.com/merchants/answer/6324410). Schema.org
-    /// property [Product.material](https://schema.org/material).
+    /// \[material\](<https://support.google.com/merchants/answer/6324410>). Schema.org
+    /// property \[Product.material\](<https://schema.org/material>).
     #[prost(string, repeated, tag = "27")]
     pub materials: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// The pattern or graphic print of the product. For example, "striped", "polka
     /// dot", "paisley".
     ///
     /// A maximum of 20 values are allowed per
-    /// [Product][google.cloud.retail.v2.Product]. Each value must be a UTF-8
+    /// \[Product][google.cloud.retail.v2.Product\]. Each value must be a UTF-8
     /// encoded string with a length limit of 128 characters. Otherwise, an
     /// INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
-    /// [pattern](https://support.google.com/merchants/answer/6324483). Schema.org
-    /// property [Product.pattern](https://schema.org/pattern).
+    /// \[pattern\](<https://support.google.com/merchants/answer/6324483>). Schema.org
+    /// property \[Product.pattern\](<https://schema.org/pattern>).
     #[prost(string, repeated, tag = "28")]
     pub patterns: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// The condition of the product. Strongly encouraged to use the standard
     /// values: "new", "refurbished", "used".
     ///
     /// A maximum of 5 values are allowed per
-    /// [Product][google.cloud.retail.v2.Product]. Each value must be a UTF-8
+    /// \[Product][google.cloud.retail.v2.Product\]. Each value must be a UTF-8
     /// encoded string with a length limit of 128 characters. Otherwise, an
     /// INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
-    /// [condition](https://support.google.com/merchants/answer/6324469).
+    /// \[condition\](<https://support.google.com/merchants/answer/6324469>).
     /// Schema.org property
-    /// [Offer.itemCondition](https://schema.org/itemCondition).
+    /// \[Offer.itemCondition\](<https://schema.org/itemCondition>).
     #[prost(string, repeated, tag = "29")]
     pub conditions: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// The promotions applied to the product. A maximum of 10 values are allowed
-    /// per [Product][google.cloud.retail.v2.Product].
+    /// per \[Product][google.cloud.retail.v2.Product\].
     #[prost(message, repeated, tag = "34")]
     pub promotions: ::prost::alloc::vec::Vec<Promotion>,
     /// The timestamp when the product is published by the retailer for the first
     /// time, which indicates the freshness of the products. Note that this field
     /// is different from
-    /// [available_time][google.cloud.retail.v2.Product.available_time], given it
+    /// \[available_time][google.cloud.retail.v2.Product.available_time\], given it
     /// purely describes product freshness regardless of when it is available on
     /// search and recommendation.
     #[prost(message, optional, tag = "33")]
     pub publish_time: ::core::option::Option<::prost_types::Timestamp>,
-    /// Indicates which fields in the [Product][google.cloud.retail.v2.Product]s
-    /// are returned in [SearchResponse][google.cloud.retail.v2.SearchResponse].
+    /// Indicates which fields in the \[Product][google.cloud.retail.v2.Product\]s
+    /// are returned in \[SearchResponse][google.cloud.retail.v2.SearchResponse\].
     ///
-    /// Supported fields for all [type][google.cloud.retail.v2.Product.type]s:
+    /// Supported fields for all \[type][google.cloud.retail.v2.Product.type\]s:
     ///
-    /// * [audience][google.cloud.retail.v2.Product.audience]
-    /// * [availability][google.cloud.retail.v2.Product.availability]
-    /// * [brands][google.cloud.retail.v2.Product.brands]
-    /// * [color_info][google.cloud.retail.v2.Product.color_info]
-    /// * [conditions][google.cloud.retail.v2.Product.conditions]
-    /// * [gtin][google.cloud.retail.v2.Product.gtin]
-    /// * [materials][google.cloud.retail.v2.Product.materials]
-    /// * [name][google.cloud.retail.v2.Product.name]
-    /// * [patterns][google.cloud.retail.v2.Product.patterns]
-    /// * [price_info][google.cloud.retail.v2.Product.price_info]
-    /// * [rating][google.cloud.retail.v2.Product.rating]
-    /// * [sizes][google.cloud.retail.v2.Product.sizes]
-    /// * [title][google.cloud.retail.v2.Product.title]
-    /// * [uri][google.cloud.retail.v2.Product.uri]
-    ///
-    /// Supported fields only for
-    /// [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY] and
-    /// [Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION]:
-    ///
-    /// * [categories][google.cloud.retail.v2.Product.categories]
-    /// * [description][google.cloud.retail.v2.Product.description]
-    /// * [images][google.cloud.retail.v2.Product.images]
+    /// * \[audience][google.cloud.retail.v2.Product.audience\]
+    /// * \[availability][google.cloud.retail.v2.Product.availability\]
+    /// * \[brands][google.cloud.retail.v2.Product.brands\]
+    /// * \[color_info][google.cloud.retail.v2.Product.color_info\]
+    /// * \[conditions][google.cloud.retail.v2.Product.conditions\]
+    /// * \[gtin][google.cloud.retail.v2.Product.gtin\]
+    /// * \[materials][google.cloud.retail.v2.Product.materials\]
+    /// * \[name][google.cloud.retail.v2.Product.name\]
+    /// * \[patterns][google.cloud.retail.v2.Product.patterns\]
+    /// * \[price_info][google.cloud.retail.v2.Product.price_info\]
+    /// * \[rating][google.cloud.retail.v2.Product.rating\]
+    /// * \[sizes][google.cloud.retail.v2.Product.sizes\]
+    /// * \[title][google.cloud.retail.v2.Product.title\]
+    /// * \[uri][google.cloud.retail.v2.Product.uri\]
     ///
     /// Supported fields only for
-    /// [Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT]:
+    /// \[Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY\] and
+    /// \[Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION\]:
     ///
-    /// * Only the first image in [images][google.cloud.retail.v2.Product.images]
+    /// * \[categories][google.cloud.retail.v2.Product.categories\]
+    /// * \[description][google.cloud.retail.v2.Product.description\]
+    /// * \[images][google.cloud.retail.v2.Product.images\]
     ///
-    /// To mark [attributes][google.cloud.retail.v2.Product.attributes] as
+    /// Supported fields only for
+    /// \[Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT\]:
+    ///
+    /// * Only the first image in \[images][google.cloud.retail.v2.Product.images\]
+    ///
+    /// To mark \[attributes][google.cloud.retail.v2.Product.attributes\] as
     /// retrievable, include paths of the form "attributes.key" where "key" is the
     /// key of a custom attribute, as specified in
-    /// [attributes][google.cloud.retail.v2.Product.attributes].
+    /// \[attributes][google.cloud.retail.v2.Product.attributes\].
     ///
-    /// For [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY] and
-    /// [Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION], the
+    /// For \[Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY\] and
+    /// \[Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION\], the
     /// following fields are always returned in
-    /// [SearchResponse][google.cloud.retail.v2.SearchResponse] by default:
+    /// \[SearchResponse][google.cloud.retail.v2.SearchResponse\] by default:
     ///
-    /// * [name][google.cloud.retail.v2.Product.name]
+    /// * \[name][google.cloud.retail.v2.Product.name\]
     ///
-    /// For [Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT], the
+    /// For \[Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT\], the
     /// following fields are always returned in by default:
     ///
-    /// * [name][google.cloud.retail.v2.Product.name]
-    /// * [color_info][google.cloud.retail.v2.Product.color_info]
+    /// * \[name][google.cloud.retail.v2.Product.name\]
+    /// * \[color_info][google.cloud.retail.v2.Product.color_info\]
     ///
     /// Maximum number of paths is 30. Otherwise, an INVALID_ARGUMENT error is
     /// returned.
     ///
     /// Note: Returning more fields in
-    /// [SearchResponse][google.cloud.retail.v2.SearchResponse] may increase
+    /// \[SearchResponse][google.cloud.retail.v2.SearchResponse\] may increase
     /// response payload size and serving latency.
     #[prost(message, optional, tag = "30")]
     pub retrievable_fields: ::core::option::Option<::prost_types::FieldMask>,
     /// Output only. Product variants grouped together on primary product which
     /// share similar product attributes. It's automatically grouped by
-    /// [primary_product_id][google.cloud.retail.v2.Product.primary_product_id] for
+    /// \[primary_product_id][google.cloud.retail.v2.Product.primary_product_id\] for
     /// all the product variants. Only populated for
-    /// [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
-    /// [Product][google.cloud.retail.v2.Product]s.
+    /// \[Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY\]
+    /// \[Product][google.cloud.retail.v2.Product\]s.
     ///
     /// Note: This field is OUTPUT_ONLY for
-    /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct].
+    /// \[ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct\].
     /// Do not set this field in API requests.
     #[prost(message, repeated, tag = "31")]
     pub variants: ::prost::alloc::vec::Vec<Product>,
@@ -846,31 +846,31 @@ pub mod product {
     #[repr(i32)]
     pub enum Type {
         /// Default value. Default to
-        /// [Catalog.product_level_config.ingestion_product_type][google.cloud.retail.v2.ProductLevelConfig.ingestion_product_type]
+        /// \[Catalog.product_level_config.ingestion_product_type][google.cloud.retail.v2.ProductLevelConfig.ingestion_product_type\]
         /// if unset.
         Unspecified = 0,
         /// The primary type.
         ///
         /// As the primary unit for predicting, indexing and search serving, a
-        /// [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
-        /// [Product][google.cloud.retail.v2.Product] is grouped with multiple
-        /// [Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT]
-        /// [Product][google.cloud.retail.v2.Product]s.
+        /// \[Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY\]
+        /// \[Product][google.cloud.retail.v2.Product\] is grouped with multiple
+        /// \[Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT\]
+        /// \[Product][google.cloud.retail.v2.Product\]s.
         Primary = 1,
         /// The variant type.
         ///
-        /// [Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT]
-        /// [Product][google.cloud.retail.v2.Product]s usually share some common
+        /// \[Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT\]
+        /// \[Product][google.cloud.retail.v2.Product\]s usually share some common
         /// attributes on the same
-        /// [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
-        /// [Product][google.cloud.retail.v2.Product]s, but they have variant
+        /// \[Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY\]
+        /// \[Product][google.cloud.retail.v2.Product\]s, but they have variant
         /// attributes like different colors, sizes and prices, etc.
         Variant = 2,
         /// The collection type. Collection products are bundled
-        /// [Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
-        /// [Product][google.cloud.retail.v2.Product]s or
-        /// [Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT]
-        /// [Product][google.cloud.retail.v2.Product]s that are sold together, such
+        /// \[Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY\]
+        /// \[Product][google.cloud.retail.v2.Product\]s or
+        /// \[Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT\]
+        /// \[Product][google.cloud.retail.v2.Product\]s that are sold together, such
         /// as a jewelry set with necklaces, earrings and rings, etc.
         Collection = 3,
     }
@@ -880,7 +880,7 @@ pub mod product {
     #[repr(i32)]
     pub enum Availability {
         /// Default product availability. Default to
-        /// [Availability.IN_STOCK][google.cloud.retail.v2.Product.Availability.IN_STOCK]
+        /// \[Availability.IN_STOCK][google.cloud.retail.v2.Product.Availability.IN_STOCK\]
         /// if unset.
         Unspecified = 0,
         /// Product in stock.
@@ -895,37 +895,37 @@ pub mod product {
     #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum Expiration {
         /// The timestamp when this product becomes unavailable for
-        /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+        /// \[SearchService.Search][google.cloud.retail.v2.SearchService.Search\].
         ///
-        /// If it is set, the [Product][google.cloud.retail.v2.Product] is not
+        /// If it is set, the \[Product][google.cloud.retail.v2.Product\] is not
         /// available for
-        /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search] after
-        /// [expire_time][google.cloud.retail.v2.Product.expire_time]. However, the
+        /// \[SearchService.Search][google.cloud.retail.v2.SearchService.Search\] after
+        /// \[expire_time][google.cloud.retail.v2.Product.expire_time\]. However, the
         /// product can still be retrieved by
-        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+        /// \[ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct\]
         /// and
-        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+        /// \[ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts\].
         ///
         /// Google Merchant Center property
-        /// [expiration_date](https://support.google.com/merchants/answer/6324499).
+        /// \[expiration_date\](<https://support.google.com/merchants/answer/6324499>).
         #[prost(message, tag = "16")]
         ExpireTime(::prost_types::Timestamp),
         /// Input only. The TTL (time to live) of the product.
         ///
-        /// If it is set, [expire_time][google.cloud.retail.v2.Product.expire_time]
+        /// If it is set, \[expire_time][google.cloud.retail.v2.Product.expire_time\]
         /// is set as current timestamp plus
-        /// [ttl][google.cloud.retail.v2.Product.ttl]. The derived
-        /// [expire_time][google.cloud.retail.v2.Product.expire_time] is returned in
-        /// the output and [ttl][google.cloud.retail.v2.Product.ttl] is left blank
-        /// when retrieving the [Product][google.cloud.retail.v2.Product].
+        /// \[ttl][google.cloud.retail.v2.Product.ttl\]. The derived
+        /// \[expire_time][google.cloud.retail.v2.Product.expire_time\] is returned in
+        /// the output and \[ttl][google.cloud.retail.v2.Product.ttl\] is left blank
+        /// when retrieving the \[Product][google.cloud.retail.v2.Product\].
         ///
         /// If it is set, the product is not available for
-        /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search] after
-        /// current timestamp plus [ttl][google.cloud.retail.v2.Product.ttl].
+        /// \[SearchService.Search][google.cloud.retail.v2.SearchService.Search\] after
+        /// current timestamp plus \[ttl][google.cloud.retail.v2.Product.ttl\].
         /// However, the product can still be retrieved by
-        /// [ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct]
+        /// \[ProductService.GetProduct][google.cloud.retail.v2.ProductService.GetProduct\]
         /// and
-        /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts].
+        /// \[ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts\].
         #[prost(message, tag = "17")]
         Ttl(::prost_types::Duration),
     }
@@ -960,7 +960,7 @@ pub struct UserEvent {
     ///
     /// The field should not contain PII or user-data. We recommend to use Google
     /// Analystics [Client
-    /// ID](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#clientId)
+    /// ID](<https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#clientId>)
     /// for this field.
     #[prost(string, tag = "2")]
     pub visitor_id: ::prost::alloc::string::String,
@@ -975,7 +975,7 @@ pub struct UserEvent {
     #[prost(string, tag = "21")]
     pub session_id: ::prost::alloc::string::String,
     /// Only required for
-    /// [UserEventService.ImportUserEvents][google.cloud.retail.v2.UserEventService.ImportUserEvents]
+    /// \[UserEventService.ImportUserEvents][google.cloud.retail.v2.UserEventService.ImportUserEvents\]
     /// method. Timestamp of when the user event happened.
     #[prost(message, optional, tag = "3")]
     pub event_time: ::core::option::Option<::prost_types::Timestamp>,
@@ -986,27 +986,27 @@ pub struct UserEvent {
     #[prost(string, repeated, tag = "4")]
     pub experiment_ids: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// Highly recommended for user events that are the result of
-    /// [PredictionService.Predict][google.cloud.retail.v2.PredictionService.Predict].
+    /// \[PredictionService.Predict][google.cloud.retail.v2.PredictionService.Predict\].
     /// This field enables accurate attribution of recommendation model
     /// performance.
     ///
     /// The value must be a valid
-    /// [PredictResponse.attribution_token][google.cloud.retail.v2.PredictResponse.attribution_token]
+    /// \[PredictResponse.attribution_token][google.cloud.retail.v2.PredictResponse.attribution_token\]
     /// for user events that are the result of
-    /// [PredictionService.Predict][google.cloud.retail.v2.PredictionService.Predict].
+    /// \[PredictionService.Predict][google.cloud.retail.v2.PredictionService.Predict\].
     /// The value must be a valid
-    /// [SearchResponse.attribution_token][google.cloud.retail.v2.SearchResponse.attribution_token]
+    /// \[SearchResponse.attribution_token][google.cloud.retail.v2.SearchResponse.attribution_token\]
     /// for user events that are the result of
-    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search].
+    /// \[SearchService.Search][google.cloud.retail.v2.SearchService.Search\].
     ///
     /// This token enables us to accurately attribute page view or purchase back to
     /// the event and the particular predict response containing this
     /// clicked/purchased product. If user clicks on product K in the
     /// recommendation results, pass
-    /// [PredictResponse.attribution_token][google.cloud.retail.v2.PredictResponse.attribution_token]
+    /// \[PredictResponse.attribution_token][google.cloud.retail.v2.PredictResponse.attribution_token\]
     /// as a URL parameter to product K's page. When recording events on product
     /// K's page, log the
-    /// [PredictResponse.attribution_token][google.cloud.retail.v2.PredictResponse.attribution_token]
+    /// \[PredictResponse.attribution_token][google.cloud.retail.v2.PredictResponse.attribution_token\]
     /// to this field.
     #[prost(string, tag = "5")]
     pub attribution_token: ::prost::alloc::string::String,
@@ -1023,7 +1023,7 @@ pub struct UserEvent {
     /// whole page yet). When a new page is returned to the end user, after
     /// pagination/filtering/ordering even for the same query, a new `search` event
     /// with different
-    /// [product_details][google.cloud.retail.v2.UserEvent.product_details] is
+    /// \[product_details][google.cloud.retail.v2.UserEvent.product_details\] is
     /// desired. The end user may have not finished broswing the whole page yet.
     #[prost(message, repeated, tag = "6")]
     pub product_details: ::prost::alloc::vec::Vec<ProductDetail>,
@@ -1060,15 +1060,15 @@ pub struct UserEvent {
     pub purchase_transaction: ::core::option::Option<PurchaseTransaction>,
     /// The user's search query.
     ///
-    /// See [SearchRequest.query][google.cloud.retail.v2.SearchRequest.query] for
+    /// See \[SearchRequest.query][google.cloud.retail.v2.SearchRequest.query\] for
     /// definition.
     ///
     /// The value must be a UTF-8 encoded string with a length limit of 5,000
     /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// At least one of
-    /// [search_query][google.cloud.retail.v2.UserEvent.search_query] or
-    /// [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
+    /// \[search_query][google.cloud.retail.v2.UserEvent.search_query\] or
+    /// \[page_categories][google.cloud.retail.v2.UserEvent.page_categories\] is
     /// required for `search` events. Other event types should not set this field.
     /// Otherwise, an INVALID_ARGUMENT error is returned.
     #[prost(string, tag = "10")]
@@ -1076,7 +1076,7 @@ pub struct UserEvent {
     /// The filter syntax consists of an expression language for constructing a
     /// predicate from one or more fields of the products being filtered.
     ///
-    /// See [SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter] for
+    /// See \[SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter\] for
     /// definition and syntax.
     ///
     /// The value must be a UTF-8 encoded string with a length limit of 1,000
@@ -1085,7 +1085,7 @@ pub struct UserEvent {
     pub filter: ::prost::alloc::string::String,
     /// The order in which products are returned.
     ///
-    /// See [SearchRequest.order_by][google.cloud.retail.v2.SearchRequest.order_by]
+    /// See \[SearchRequest.order_by][google.cloud.retail.v2.SearchRequest.order_by\]
     /// for definition and syntax.
     ///
     /// The value must be a UTF-8 encoded string with a length limit of 1,000
@@ -1098,7 +1098,7 @@ pub struct UserEvent {
     /// An integer that specifies the current offset for pagination (the 0-indexed
     /// starting location, amongst the products deemed by the API as relevant).
     ///
-    /// See [SearchRequest.offset][google.cloud.retail.v2.SearchRequest.offset] for
+    /// See \[SearchRequest.offset][google.cloud.retail.v2.SearchRequest.offset\] for
     /// definition.
     ///
     /// If this field is negative, an INVALID_ARGUMENT is returned.
@@ -1118,8 +1118,8 @@ pub struct UserEvent {
     /// "pageCategories" : ["Sales > 2017 Black Friday Deals"].
     ///
     /// Required for `category-page-view` events. At least one of
-    /// [search_query][google.cloud.retail.v2.UserEvent.search_query] or
-    /// [page_categories][google.cloud.retail.v2.UserEvent.page_categories] is
+    /// \[search_query][google.cloud.retail.v2.UserEvent.search_query\] or
+    /// \[page_categories][google.cloud.retail.v2.UserEvent.page_categories\] is
     /// required for `search` events. Other event types should not set this field.
     /// Otherwise, an INVALID_ARGUMENT error is returned.
     #[prost(string, repeated, tag = "11")]
@@ -1156,15 +1156,15 @@ pub struct UserEvent {
 /// Detailed product information associated with a user event.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ProductDetail {
-    /// Required. [Product][google.cloud.retail.v2.Product] information.
+    /// Required. \[Product][google.cloud.retail.v2.Product\] information.
     ///
     /// Required field(s):
     ///
-    /// * [Product.id][google.cloud.retail.v2.Product.id]
+    /// * \[Product.id][google.cloud.retail.v2.Product.id\]
     ///
     /// Optional override field(s):
     ///
-    /// * [Product.price_info][google.cloud.retail.v2.Product.price_info]
+    /// * \[Product.price_info][google.cloud.retail.v2.Product.price_info\]
     ///
     /// If any supported optional fields are provided, we will treat them as a full
     /// override when looking up product information from the catalog. Thus, it is
@@ -1188,15 +1188,15 @@ pub struct ProductDetail {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CompletionDetail {
     /// Completion attribution token in
-    /// [CompleteQueryResponse.attribution_token][google.cloud.retail.v2.CompleteQueryResponse.attribution_token].
+    /// \[CompleteQueryResponse.attribution_token][google.cloud.retail.v2.CompleteQueryResponse.attribution_token\].
     #[prost(string, tag = "1")]
     pub completion_attribution_token: ::prost::alloc::string::String,
     /// End user selected
-    /// [CompleteQueryResponse.CompletionResult.suggestion][google.cloud.retail.v2.CompleteQueryResponse.CompletionResult.suggestion].
+    /// \[CompleteQueryResponse.CompletionResult.suggestion][google.cloud.retail.v2.CompleteQueryResponse.CompletionResult.suggestion\].
     #[prost(string, tag = "2")]
     pub selected_suggestion: ::prost::alloc::string::String,
     /// End user selected
-    /// [CompleteQueryResponse.CompletionResult.suggestion][google.cloud.retail.v2.CompleteQueryResponse.CompletionResult.suggestion]
+    /// \[CompleteQueryResponse.CompletionResult.suggestion][google.cloud.retail.v2.CompleteQueryResponse.CompletionResult.suggestion\]
     /// position, starting from 0.
     #[prost(int32, tag = "3")]
     pub selected_position: i32,
@@ -1220,9 +1220,9 @@ pub struct PurchaseTransaction {
     /// costs, shipping expenses not borne by the end user, or any other costs,
     /// such that:
     ///
-    /// * Profit = [revenue][google.cloud.retail.v2.PurchaseTransaction.revenue] -
-    /// [tax][google.cloud.retail.v2.PurchaseTransaction.tax] -
-    /// [cost][google.cloud.retail.v2.PurchaseTransaction.cost]
+    /// * Profit = \[revenue][google.cloud.retail.v2.PurchaseTransaction.revenue\] -
+    /// \[tax][google.cloud.retail.v2.PurchaseTransaction.tax\] -
+    /// \[cost][google.cloud.retail.v2.PurchaseTransaction.cost\]
     #[prost(float, tag = "4")]
     pub cost: f32,
     /// Required. Currency code. Use three-character ISO-4217 code.
@@ -1239,7 +1239,7 @@ pub struct GcsSource {
     /// files, such as `gs://bucket/directory/*.json`. A request can
     /// contain at most 100 files, and each file can be up to 2 GB. See
     /// [Importing product
-    /// information](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog)
+    /// information](<https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog>)
     /// for the expected file format and setup instructions.
     #[prost(string, repeated, tag = "1")]
     pub input_uris: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
@@ -1247,18 +1247,18 @@ pub struct GcsSource {
     ///
     /// Supported values for product imports:
     ///
-    /// * `product` (default): One JSON [Product][google.cloud.retail.v2.Product]
+    /// * `product` (default): One JSON \[Product][google.cloud.retail.v2.Product\]
     /// per line. Each product must
-    ///   have a valid [Product.id][google.cloud.retail.v2.Product.id].
+    ///   have a valid \[Product.id][google.cloud.retail.v2.Product.id\].
     /// * `product_merchant_center`: See [Importing catalog data from Merchant
-    ///   Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc).
+    ///   Center](<https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc>).
     ///
     /// Supported values for user events imports:
     ///
     /// * `user_event` (default): One JSON
-    /// [UserEvent][google.cloud.retail.v2.UserEvent] per line.
+    /// \[UserEvent][google.cloud.retail.v2.UserEvent\] per line.
     /// * `user_event_ga360`: Using
-    ///   https://support.google.com/analytics/answer/3437719.
+    ///   <https://support.google.com/analytics/answer/3437719.>
     #[prost(string, tag = "2")]
     pub data_schema: ::prost::alloc::string::String,
 }
@@ -1287,18 +1287,18 @@ pub struct BigQuerySource {
     ///
     /// Supported values for product imports:
     ///
-    /// * `product` (default): One JSON [Product][google.cloud.retail.v2.Product]
+    /// * `product` (default): One JSON \[Product][google.cloud.retail.v2.Product\]
     /// per line. Each product must
-    ///   have a valid [Product.id][google.cloud.retail.v2.Product.id].
+    ///   have a valid \[Product.id][google.cloud.retail.v2.Product.id\].
     /// * `product_merchant_center`: See [Importing catalog data from Merchant
-    ///   Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc).
+    ///   Center](<https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc>).
     ///
     /// Supported values for user events imports:
     ///
     /// * `user_event` (default): One JSON
-    /// [UserEvent][google.cloud.retail.v2.UserEvent] per line.
+    /// \[UserEvent][google.cloud.retail.v2.UserEvent\] per line.
     /// * `user_event_ga360`: Using
-    ///   https://support.google.com/analytics/answer/3437719.
+    ///   <https://support.google.com/analytics/answer/3437719.>
     #[prost(string, tag = "4")]
     pub data_schema: ::prost::alloc::string::String,
     /// BigQuery table partition info. Leave this empty if the BigQuery table
@@ -1315,7 +1315,7 @@ pub mod big_query_source {
         /// BigQuery time partitioned table's _PARTITIONDATE in YYYY-MM-DD format.
         ///
         /// Only supported when
-        /// [ImportProductsRequest.reconciliation_mode][google.cloud.retail.v2.ImportProductsRequest.reconciliation_mode]
+        /// \[ImportProductsRequest.reconciliation_mode][google.cloud.retail.v2.ImportProductsRequest.reconciliation_mode\]
         /// is set to `FULL`.
         #[prost(message, tag = "6")]
         PartitionDate(super::super::super::super::r#type::Date),
@@ -1325,7 +1325,7 @@ pub mod big_query_source {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ProductInlineSource {
     /// Required. A list of products to update/create. Each product must have a
-    /// valid [Product.id][google.cloud.retail.v2.Product.id]. Recommended max of
+    /// valid \[Product.id][google.cloud.retail.v2.Product.id\]. Recommended max of
     /// 100 items.
     #[prost(message, repeated, tag = "1")]
     pub products: ::prost::alloc::vec::Vec<Product>,
@@ -1370,11 +1370,11 @@ pub struct ImportProductsRequest {
     /// Unique identifier provided by client, within the ancestor
     /// dataset scope. Ensures idempotency and used for request deduplication.
     /// Server-generated if unspecified. Up to 128 characters long and must match
-    /// the pattern: "[a-zA-Z0-9_]+". This is returned as [Operation.name][] in
-    /// [ImportMetadata][google.cloud.retail.v2.ImportMetadata].
+    /// the pattern: "\[a-zA-Z0-9_\]+". This is returned as \[Operation.name][\] in
+    /// \[ImportMetadata][google.cloud.retail.v2.ImportMetadata\].
     ///
     /// Only supported when
-    /// [ImportProductsRequest.reconciliation_mode][google.cloud.retail.v2.ImportProductsRequest.reconciliation_mode]
+    /// \[ImportProductsRequest.reconciliation_mode][google.cloud.retail.v2.ImportProductsRequest.reconciliation_mode\]
     /// is set to `FULL`.
     #[prost(string, tag = "6")]
     pub request_id: ::prost::alloc::string::String,
@@ -1390,17 +1390,17 @@ pub struct ImportProductsRequest {
     pub update_mask: ::core::option::Option<::prost_types::FieldMask>,
     /// The mode of reconciliation between existing products and the products to be
     /// imported. Defaults to
-    /// [ReconciliationMode.INCREMENTAL][google.cloud.retail.v2.ImportProductsRequest.ReconciliationMode.INCREMENTAL].
+    /// \[ReconciliationMode.INCREMENTAL][google.cloud.retail.v2.ImportProductsRequest.ReconciliationMode.INCREMENTAL\].
     #[prost(enumeration = "import_products_request::ReconciliationMode", tag = "5")]
     pub reconciliation_mode: i32,
     /// Pub/Sub topic for receiving notification. If this field is set,
     /// when the import is finished, a notification will be sent to
     /// specified Pub/Sub topic. The message data will be JSON string of a
-    /// [Operation][google.longrunning.Operation].
+    /// \[Operation][google.longrunning.Operation\].
     /// Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
     ///
     /// Only supported when
-    /// [ImportProductsRequest.reconciliation_mode][google.cloud.retail.v2.ImportProductsRequest.reconciliation_mode]
+    /// \[ImportProductsRequest.reconciliation_mode][google.cloud.retail.v2.ImportProductsRequest.reconciliation_mode\]
     /// is set to `FULL`.
     #[prost(string, tag = "7")]
     pub notification_pubsub_topic: ::prost::alloc::string::String,
@@ -1420,14 +1420,14 @@ pub mod import_products_request {
         /// products may be deleted if they are not present in the source location.
         ///
         /// Can only be while using
-        /// [BigQuerySource][google.cloud.retail.v2.BigQuerySource].
+        /// \[BigQuerySource][google.cloud.retail.v2.BigQuerySource\].
         ///
         /// Add the IAM permission "BigQuery Data Viewer" for
         /// cloud-retail-customer-data-access@system.gserviceaccount.com before
         /// using this feature otherwise an error is thrown.
         ///
         /// This feature is only available for users who have Retail Search enabled.
-        /// Please submit a form [here](https://cloud.google.com/contact) to contact
+        /// Please submit a form \[here\](<https://cloud.google.com/contact>) to contact
         /// cloud sales if you are interested in using Retail Search.
         Full = 2,
     }
@@ -1460,7 +1460,7 @@ pub struct ImportCompletionDataRequest {
     /// Pub/Sub topic for receiving notification. If this field is set,
     /// when the import is finished, a notification will be sent to
     /// specified Pub/Sub topic. The message data will be JSON string of a
-    /// [Operation][google.longrunning.Operation].
+    /// \[Operation][google.longrunning.Operation\].
     /// Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
     #[prost(string, tag = "3")]
     pub notification_pubsub_topic: ::prost::alloc::string::String,
@@ -1517,7 +1517,7 @@ pub struct CompletionDataInputConfig {
     /// The source of the input.
     ///
     /// Supported
-    /// [BigQuerySource.data_schema][google.cloud.retail.v2.BigQuerySource.data_schema]
+    /// \[BigQuerySource.data_schema][google.cloud.retail.v2.BigQuerySource.data_schema\]
     /// values for suggestions imports:
     ///
     /// * `suggestions` (default): One JSON completion suggestion per line.
@@ -1531,7 +1531,7 @@ pub mod completion_data_input_config {
     /// The source of the input.
     ///
     /// Supported
-    /// [BigQuerySource.data_schema][google.cloud.retail.v2.BigQuerySource.data_schema]
+    /// \[BigQuerySource.data_schema][google.cloud.retail.v2.BigQuerySource.data_schema\]
     /// values for suggestions imports:
     ///
     /// * `suggestions` (default): One JSON completion suggestion per line.
@@ -1572,13 +1572,13 @@ pub struct ImportMetadata {
     /// Pub/Sub topic for receiving notification. If this field is set,
     /// when the import is finished, a notification will be sent to
     /// specified Pub/Sub topic. The message data will be JSON string of a
-    /// [Operation][google.longrunning.Operation].
+    /// \[Operation][google.longrunning.Operation\].
     /// Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`.
     #[prost(string, tag = "6")]
     pub notification_pubsub_topic: ::prost::alloc::string::String,
 }
 /// Response of the
-/// [ImportProductsRequest][google.cloud.retail.v2.ImportProductsRequest]. If the
+/// \[ImportProductsRequest][google.cloud.retail.v2.ImportProductsRequest\]. If the
 /// long running operation is done, then this message is returned by the
 /// google.longrunning.Operations.response field if the operation was successful.
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1619,7 +1619,7 @@ pub struct UserEventImportSummary {
     pub unjoined_events_count: i64,
 }
 /// Response of the
-/// [ImportCompletionDataRequest][google.cloud.retail.v2.ImportCompletionDataRequest].
+/// \[ImportCompletionDataRequest][google.cloud.retail.v2.ImportCompletionDataRequest\].
 /// If the long running operation is done, this message is returned by the
 /// google.longrunning.Operations.response field if the operation is successful.
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -1632,37 +1632,37 @@ pub struct ImportCompletionDataResponse {
 /// how users will be send events and how predictions will be made.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ProductLevelConfig {
-    /// The type of [Product][google.cloud.retail.v2.Product]s allowed to be
+    /// The type of \[Product][google.cloud.retail.v2.Product\]s allowed to be
     /// ingested into the catalog. Acceptable values are:
     ///
     /// * `primary` (default): You can only ingest
-    /// [Product.Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
-    ///   [Product][google.cloud.retail.v2.Product]s. This means
-    ///   [Product.primary_product_id][google.cloud.retail.v2.Product.primary_product_id]
+    /// \[Product.Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY\]
+    ///   \[Product][google.cloud.retail.v2.Product\]s. This means
+    ///   \[Product.primary_product_id][google.cloud.retail.v2.Product.primary_product_id\]
     ///   can only be empty or set to the same value as
-    ///   [Product.id][google.cloud.retail.v2.Product.id].
+    ///   \[Product.id][google.cloud.retail.v2.Product.id\].
     /// * `variant`: You can only ingest
-    /// [Product.Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT]
-    /// [Product][google.cloud.retail.v2.Product]s.
+    /// \[Product.Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT\]
+    /// \[Product][google.cloud.retail.v2.Product\]s.
     ///   This means
-    ///   [Product.primary_product_id][google.cloud.retail.v2.Product.primary_product_id]
+    ///   \[Product.primary_product_id][google.cloud.retail.v2.Product.primary_product_id\]
     ///   cannot be empty.
     ///
     /// If this field is set to an invalid value other than these, an
     /// INVALID_ARGUMENT error is returned.
     ///
     /// If this field is `variant` and
-    /// [merchant_center_product_id_field][google.cloud.retail.v2.ProductLevelConfig.merchant_center_product_id_field]
+    /// \[merchant_center_product_id_field][google.cloud.retail.v2.ProductLevelConfig.merchant_center_product_id_field\]
     /// is `itemGroupId`, an INVALID_ARGUMENT error is returned.
     ///
     /// See [Using product
-    /// levels](https://cloud.google.com/retail/recommendations-ai/docs/catalog#product-levels)
+    /// levels](<https://cloud.google.com/retail/recommendations-ai/docs/catalog#product-levels>)
     /// for more details.
     #[prost(string, tag = "1")]
     pub ingestion_product_type: ::prost::alloc::string::String,
     /// Which field of [Merchant Center
     /// Product](/bigquery-transfer/docs/merchant-center-products-schema) should be
-    /// imported as [Product.id][google.cloud.retail.v2.Product.id]. Acceptable
+    /// imported as \[Product.id][google.cloud.retail.v2.Product.id\]. Acceptable
     /// values are:
     ///
     /// * `offerId` (default): Import `offerId` as the product ID.
@@ -1674,11 +1674,11 @@ pub struct ProductLevelConfig {
     /// INVALID_ARGUMENT error is returned.
     ///
     /// If this field is `itemGroupId` and
-    /// [ingestion_product_type][google.cloud.retail.v2.ProductLevelConfig.ingestion_product_type]
+    /// \[ingestion_product_type][google.cloud.retail.v2.ProductLevelConfig.ingestion_product_type\]
     /// is `variant`, an INVALID_ARGUMENT error is returned.
     ///
     /// See [Using product
-    /// levels](https://cloud.google.com/retail/recommendations-ai/docs/catalog#product-levels)
+    /// levels](<https://cloud.google.com/retail/recommendations-ai/docs/catalog#product-levels>)
     /// for more details.
     #[prost(string, tag = "2")]
     pub merchant_center_product_id_field: ::prost::alloc::string::String,
@@ -1700,19 +1700,19 @@ pub struct Catalog {
     pub product_level_config: ::core::option::Option<ProductLevelConfig>,
 }
 /// Request for
-/// [CatalogService.ListCatalogs][google.cloud.retail.v2.CatalogService.ListCatalogs]
+/// \[CatalogService.ListCatalogs][google.cloud.retail.v2.CatalogService.ListCatalogs\]
 /// method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListCatalogsRequest {
     /// Required. The account resource name with an associated location.
     ///
     /// If the caller does not have permission to list
-    /// [Catalog][google.cloud.retail.v2.Catalog]s under this location, regardless
+    /// \[Catalog][google.cloud.retail.v2.Catalog\]s under this location, regardless
     /// of whether or not this location exists, a PERMISSION_DENIED error is
     /// returned.
     #[prost(string, tag = "1")]
     pub parent: ::prost::alloc::string::String,
-    /// Maximum number of [Catalog][google.cloud.retail.v2.Catalog]s to return. If
+    /// Maximum number of \[Catalog][google.cloud.retail.v2.Catalog\]s to return. If
     /// unspecified, defaults to 50. The maximum allowed value is 1000. Values
     /// above 1000 will be coerced to 1000.
     ///
@@ -1720,50 +1720,50 @@ pub struct ListCatalogsRequest {
     #[prost(int32, tag = "2")]
     pub page_size: i32,
     /// A page token
-    /// [ListCatalogsResponse.next_page_token][google.cloud.retail.v2.ListCatalogsResponse.next_page_token],
+    /// \[ListCatalogsResponse.next_page_token][google.cloud.retail.v2.ListCatalogsResponse.next_page_token\],
     /// received from a previous
-    /// [CatalogService.ListCatalogs][google.cloud.retail.v2.CatalogService.ListCatalogs]
+    /// \[CatalogService.ListCatalogs][google.cloud.retail.v2.CatalogService.ListCatalogs\]
     /// call. Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other parameters provided to
-    /// [CatalogService.ListCatalogs][google.cloud.retail.v2.CatalogService.ListCatalogs]
+    /// \[CatalogService.ListCatalogs][google.cloud.retail.v2.CatalogService.ListCatalogs\]
     /// must match the call that provided the page token. Otherwise, an
     /// INVALID_ARGUMENT error is returned.
     #[prost(string, tag = "3")]
     pub page_token: ::prost::alloc::string::String,
 }
 /// Response for
-/// [CatalogService.ListCatalogs][google.cloud.retail.v2.CatalogService.ListCatalogs]
+/// \[CatalogService.ListCatalogs][google.cloud.retail.v2.CatalogService.ListCatalogs\]
 /// method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListCatalogsResponse {
-    /// All the customer's [Catalog][google.cloud.retail.v2.Catalog]s.
+    /// All the customer's \[Catalog][google.cloud.retail.v2.Catalog\]s.
     #[prost(message, repeated, tag = "1")]
     pub catalogs: ::prost::alloc::vec::Vec<Catalog>,
     /// A token that can be sent as
-    /// [ListCatalogsRequest.page_token][google.cloud.retail.v2.ListCatalogsRequest.page_token]
+    /// \[ListCatalogsRequest.page_token][google.cloud.retail.v2.ListCatalogsRequest.page_token\]
     /// to retrieve the next page. If this field is omitted, there are no
     /// subsequent pages.
     #[prost(string, tag = "2")]
     pub next_page_token: ::prost::alloc::string::String,
 }
 /// Request for
-/// [CatalogService.UpdateCatalog][google.cloud.retail.v2.CatalogService.UpdateCatalog]
+/// \[CatalogService.UpdateCatalog][google.cloud.retail.v2.CatalogService.UpdateCatalog\]
 /// method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateCatalogRequest {
-    /// Required. The [Catalog][google.cloud.retail.v2.Catalog] to update.
+    /// Required. The \[Catalog][google.cloud.retail.v2.Catalog\] to update.
     ///
     /// If the caller does not have permission to update the
-    /// [Catalog][google.cloud.retail.v2.Catalog], regardless of whether or not it
+    /// \[Catalog][google.cloud.retail.v2.Catalog\], regardless of whether or not it
     /// exists, a PERMISSION_DENIED error is returned.
     ///
-    /// If the [Catalog][google.cloud.retail.v2.Catalog] to update does not exist,
+    /// If the \[Catalog][google.cloud.retail.v2.Catalog\] to update does not exist,
     /// a NOT_FOUND error is returned.
     #[prost(message, optional, tag = "1")]
     pub catalog: ::core::option::Option<Catalog>,
     /// Indicates which fields in the provided
-    /// [Catalog][google.cloud.retail.v2.Catalog] to update.
+    /// \[Catalog][google.cloud.retail.v2.Catalog\] to update.
     ///
     /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
     /// is returned.
@@ -1784,7 +1784,7 @@ pub struct SetDefaultBranchRequest {
     #[prost(string, tag = "2")]
     pub branch_id: ::prost::alloc::string::String,
     /// Some note on this request, this can be retrieved by
-    /// [CatalogService.GetDefaultBranch][google.cloud.retail.v2.CatalogService.GetDefaultBranch]
+    /// \[CatalogService.GetDefaultBranch][google.cloud.retail.v2.CatalogService.GetDefaultBranch\]
     /// before next valid default branch set occurs.
     ///
     /// This field must be a UTF-8 encoded string with a length limit of 1,000
@@ -1801,7 +1801,7 @@ pub struct GetDefaultBranchRequest {
     pub catalog: ::prost::alloc::string::String,
 }
 /// Response message of
-/// [CatalogService.GetDefaultBranch][google.cloud.retail.v2.CatalogService.GetDefaultBranch].
+/// \[CatalogService.GetDefaultBranch][google.cloud.retail.v2.CatalogService.GetDefaultBranch\].
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetDefaultBranchResponse {
     /// Full resource name of the branch id currently set as default branch.
@@ -1811,7 +1811,7 @@ pub struct GetDefaultBranchResponse {
     #[prost(message, optional, tag = "2")]
     pub set_time: ::core::option::Option<::prost_types::Timestamp>,
     /// This corresponds to
-    /// [SetDefaultBranchRequest.note][google.cloud.retail.v2.SetDefaultBranchRequest.note]
+    /// \[SetDefaultBranchRequest.note][google.cloud.retail.v2.SetDefaultBranchRequest.note\]
     /// field, when this branch was set as default.
     #[prost(string, tag = "3")]
     pub note: ::prost::alloc::string::String,
@@ -1828,7 +1828,7 @@ pub mod catalog_service_client {
     impl<T> CatalogServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -2005,7 +2005,7 @@ pub struct CompleteQueryRequest {
     /// The list of languages of the query. This is
     /// the BCP-47 language code, such as "en-US" or "sr-Latn".
     /// For more information, see
-    /// [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
+    /// [Tags for Identifying Languages](<https://tools.ietf.org/html/bcp47>).
     ///
     /// The maximum number of allowed characters is 255.
     /// Only "en-US" is currently supported.
@@ -2029,7 +2029,7 @@ pub struct CompleteQueryRequest {
     pub device_type: ::prost::alloc::string::String,
     /// Determines which dataset to use for fetching completion. "user-data" will
     /// use the imported dataset through
-    /// [CompletionService.ImportCompletionData][google.cloud.retail.v2.CompletionService.ImportCompletionData].
+    /// \[CompletionService.ImportCompletionData][google.cloud.retail.v2.CompletionService.ImportCompletionData\].
     /// "cloud-retail" will use the dataset generated by cloud retail based on user
     /// events. If leave empty, it will use the "user-data".
     ///
@@ -2043,7 +2043,7 @@ pub struct CompleteQueryRequest {
     #[prost(string, tag = "6")]
     pub dataset: ::prost::alloc::string::String,
     /// Completion max suggestions. If left unset or set to 0, then will fallback
-    /// to the configured value [CompletionConfig.max_suggestions][].
+    /// to the configured value \[CompletionConfig.max_suggestions][\].
     ///
     /// The maximum allowed max suggestions is 20. If it is set higher, it will be
     /// capped by 20.
@@ -2058,7 +2058,7 @@ pub struct CompleteQueryResponse {
     #[prost(message, repeated, tag = "1")]
     pub completion_results: ::prost::alloc::vec::Vec<complete_query_response::CompletionResult>,
     /// A unique complete token. This should be included in the
-    /// [SearchRequest][google.cloud.retail.v2.SearchRequest] resulting from this
+    /// \[SearchRequest][google.cloud.retail.v2.SearchRequest\] resulting from this
     /// completion, which enables accurate attribution of complete model
     /// performance.
     #[prost(string, tag = "2")]
@@ -2068,12 +2068,12 @@ pub struct CompleteQueryResponse {
     /// team if you are interested in enabling it.
     ///
     /// This feature is only available when
-    /// [CompleteQueryRequest.visitor_id][google.cloud.retail.v2.CompleteQueryRequest.visitor_id]
-    /// field is set and [UserEvent][google.cloud.retail.v2.UserEvent] is imported.
+    /// \[CompleteQueryRequest.visitor_id][google.cloud.retail.v2.CompleteQueryRequest.visitor_id\]
+    /// field is set and \[UserEvent][google.cloud.retail.v2.UserEvent\] is imported.
     /// The recent searches satisfy the follow rules:
     ///  * They are ordered from latest to oldest.
     ///  * They are matched with
-    ///  [CompleteQueryRequest.query][google.cloud.retail.v2.CompleteQueryRequest.query]
+    ///  \[CompleteQueryRequest.query][google.cloud.retail.v2.CompleteQueryRequest.query\]
     ///  case insensitively.
     ///  * They are transformed to lower cases.
     ///  * They are UTF-8 safe.
@@ -2121,7 +2121,7 @@ pub mod completion_service_client {
     impl<T> CompletionServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -2216,10 +2216,10 @@ pub struct PredictRequest {
     /// The ID of the Recommendations AI placement. Before you can request
     /// predictions from your model, you must create at least one placement for it.
     /// For more information, see [Managing
-    /// placements](https://cloud.google.com/retail/recommendations-ai/docs/manage-placements).
+    /// placements](<https://cloud.google.com/retail/recommendations-ai/docs/manage-placements>).
     ///
     /// The full list of available placements can be seen at
-    /// https://console.cloud.google.com/recommendation/catalogs/default_catalog/placements
+    /// <https://console.cloud.google.com/recommendation/catalogs/default_catalog/placements>
     #[prost(string, tag = "1")]
     pub placement: ::prost::alloc::string::String,
     /// Required. Context about the user, what they are looking at and what action
@@ -2313,7 +2313,7 @@ pub struct PredictRequest {
     /// * Keys must start with a lowercase letter or international character.
     ///
     /// See [Google Cloud
-    /// Document](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements)
+    /// Document](<https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements>)
     /// for more details.
     #[prost(map = "string, string", tag = "8")]
     pub labels:
@@ -2327,7 +2327,7 @@ pub struct PredictResponse {
     #[prost(message, repeated, tag = "1")]
     pub results: ::prost::alloc::vec::Vec<predict_response::PredictionResult>,
     /// A unique attribution token. This should be included in the
-    /// [UserEvent][google.cloud.retail.v2.UserEvent] logs resulting from this
+    /// \[UserEvent][google.cloud.retail.v2.UserEvent\] logs resulting from this
     /// recommendation, which enables accurate attribution of recommendation model
     /// performance.
     #[prost(string, tag = "2")]
@@ -2372,7 +2372,7 @@ pub mod prediction_service_client {
     impl<T> PredictionServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -2446,7 +2446,7 @@ pub struct PurgeUserEventsRequest {
     /// eligible fields for filtering are:
     ///
     /// * `eventType`: Double quoted
-    /// [UserEvent.event_type][google.cloud.retail.v2.UserEvent.event_type] string.
+    /// \[UserEvent.event_type][google.cloud.retail.v2.UserEvent.event_type\] string.
     /// * `eventTime`: in ISO 8601 "zulu" format.
     /// * `visitorId`: Double quoted string. Specifying this will delete all
     ///   events associated with a visitor.
@@ -2481,27 +2481,27 @@ pub struct PurgeUserEventsResponse {
     #[prost(int64, tag = "1")]
     pub purged_events_count: i64,
 }
-/// Request message for [CreateProduct][] method.
+/// Request message for \[CreateProduct][\] method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateProductRequest {
     /// Required. The parent catalog resource name, such as
     /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch`.
     #[prost(string, tag = "1")]
     pub parent: ::prost::alloc::string::String,
-    /// Required. The [Product][google.cloud.retail.v2.Product] to create.
+    /// Required. The \[Product][google.cloud.retail.v2.Product\] to create.
     #[prost(message, optional, tag = "2")]
     pub product: ::core::option::Option<Product>,
-    /// Required. The ID to use for the [Product][google.cloud.retail.v2.Product],
+    /// Required. The ID to use for the \[Product][google.cloud.retail.v2.Product\],
     /// which will become the final component of the
-    /// [Product.name][google.cloud.retail.v2.Product.name].
+    /// \[Product.name][google.cloud.retail.v2.Product.name\].
     ///
     /// If the caller does not have permission to create the
-    /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
+    /// \[Product][google.cloud.retail.v2.Product\], regardless of whether or not it
     /// exists, a PERMISSION_DENIED error is returned.
     ///
     /// This field must be unique among all
-    /// [Product][google.cloud.retail.v2.Product]s with the same
-    /// [parent][google.cloud.retail.v2.CreateProductRequest.parent]. Otherwise, an
+    /// \[Product][google.cloud.retail.v2.Product\]s with the same
+    /// \[parent][google.cloud.retail.v2.CreateProductRequest.parent\]. Otherwise, an
     /// ALREADY_EXISTS error is returned.
     ///
     /// This field must be a UTF-8 encoded string with a length limit of 128
@@ -2509,39 +2509,39 @@ pub struct CreateProductRequest {
     #[prost(string, tag = "3")]
     pub product_id: ::prost::alloc::string::String,
 }
-/// Request message for [GetProduct][] method.
+/// Request message for \[GetProduct][\] method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetProductRequest {
-    /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
+    /// Required. Full resource name of \[Product][google.cloud.retail.v2.Product\],
     /// such as
     /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
     ///
     /// If the caller does not have permission to access the
-    /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
+    /// \[Product][google.cloud.retail.v2.Product\], regardless of whether or not it
     /// exists, a PERMISSION_DENIED error is returned.
     ///
-    /// If the requested [Product][google.cloud.retail.v2.Product] does not exist,
+    /// If the requested \[Product][google.cloud.retail.v2.Product\] does not exist,
     /// a NOT_FOUND error is returned.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
 }
-/// Request message for [UpdateProduct][] method.
+/// Request message for \[UpdateProduct][\] method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateProductRequest {
     /// Required. The product to update/create.
     ///
     /// If the caller does not have permission to update the
-    /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
+    /// \[Product][google.cloud.retail.v2.Product\], regardless of whether or not it
     /// exists, a PERMISSION_DENIED error is returned.
     ///
-    /// If the [Product][google.cloud.retail.v2.Product] to update does not exist
+    /// If the \[Product][google.cloud.retail.v2.Product\] to update does not exist
     /// and
-    /// [allow_missing][google.cloud.retail.v2.UpdateProductRequest.allow_missing]
+    /// \[allow_missing][google.cloud.retail.v2.UpdateProductRequest.allow_missing\]
     /// is not set, a NOT_FOUND error is returned.
     #[prost(message, optional, tag = "1")]
     pub product: ::core::option::Option<Product>,
     /// Indicates which fields in the provided
-    /// [Product][google.cloud.retail.v2.Product] to update. The immutable and
+    /// \[Product][google.cloud.retail.v2.Product\] to update. The immutable and
     /// output only fields are NOT supported. If not set, all supported fields (the
     /// fields that are neither immutable nor output only) are updated.
     ///
@@ -2549,41 +2549,41 @@ pub struct UpdateProductRequest {
     /// is returned.
     #[prost(message, optional, tag = "2")]
     pub update_mask: ::core::option::Option<::prost_types::FieldMask>,
-    /// If set to true, and the [Product][google.cloud.retail.v2.Product] is not
-    /// found, a new [Product][google.cloud.retail.v2.Product] will be created. In
+    /// If set to true, and the \[Product][google.cloud.retail.v2.Product\] is not
+    /// found, a new \[Product][google.cloud.retail.v2.Product\] will be created. In
     /// this situation, `update_mask` is ignored.
     #[prost(bool, tag = "3")]
     pub allow_missing: bool,
 }
-/// Request message for [DeleteProduct][] method.
+/// Request message for \[DeleteProduct][\] method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DeleteProductRequest {
-    /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
+    /// Required. Full resource name of \[Product][google.cloud.retail.v2.Product\],
     /// such as
     /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
     ///
     /// If the caller does not have permission to delete the
-    /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
+    /// \[Product][google.cloud.retail.v2.Product\], regardless of whether or not it
     /// exists, a PERMISSION_DENIED error is returned.
     ///
-    /// If the [Product][google.cloud.retail.v2.Product] to delete does not exist,
+    /// If the \[Product][google.cloud.retail.v2.Product\] to delete does not exist,
     /// a NOT_FOUND error is returned.
     ///
-    /// The [Product][google.cloud.retail.v2.Product] to delete can neither be a
-    /// [Product.Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION]
-    /// [Product][google.cloud.retail.v2.Product] member nor a
-    /// [Product.Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
-    /// [Product][google.cloud.retail.v2.Product] with more than one
-    /// [variants][google.cloud.retail.v2.Product.Type.VARIANT]. Otherwise, an
+    /// The \[Product][google.cloud.retail.v2.Product\] to delete can neither be a
+    /// \[Product.Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION\]
+    /// \[Product][google.cloud.retail.v2.Product\] member nor a
+    /// \[Product.Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY\]
+    /// \[Product][google.cloud.retail.v2.Product\] with more than one
+    /// \[variants][google.cloud.retail.v2.Product.Type.VARIANT\]. Otherwise, an
     /// INVALID_ARGUMENT error is returned.
     ///
     /// All inventory information for the named
-    /// [Product][google.cloud.retail.v2.Product] will be deleted.
+    /// \[Product][google.cloud.retail.v2.Product\] will be deleted.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
 }
 /// Request message for
-/// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+/// \[ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts\]
 /// method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListProductsRequest {
@@ -2593,11 +2593,11 @@ pub struct ListProductsRequest {
     /// branch.
     ///
     /// If the caller does not have permission to list
-    /// [Product][google.cloud.retail.v2.Product]s under this branch, regardless of
+    /// \[Product][google.cloud.retail.v2.Product\]s under this branch, regardless of
     /// whether or not this branch exists, a PERMISSION_DENIED error is returned.
     #[prost(string, tag = "1")]
     pub parent: ::prost::alloc::string::String,
-    /// Maximum number of [Product][google.cloud.retail.v2.Product]s to return. If
+    /// Maximum number of \[Product][google.cloud.retail.v2.Product\]s to return. If
     /// unspecified, defaults to 100. The maximum allowed value is 1000. Values
     /// above 1000 will be coerced to 1000.
     ///
@@ -2605,13 +2605,13 @@ pub struct ListProductsRequest {
     #[prost(int32, tag = "2")]
     pub page_size: i32,
     /// A page token
-    /// [ListProductsResponse.next_page_token][google.cloud.retail.v2.ListProductsResponse.next_page_token],
+    /// \[ListProductsResponse.next_page_token][google.cloud.retail.v2.ListProductsResponse.next_page_token\],
     /// received from a previous
-    /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+    /// \[ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts\]
     /// call. Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other parameters provided to
-    /// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+    /// \[ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts\]
     /// must match the call that provided the page token. Otherwise, an
     /// INVALID_ARGUMENT error is returned.
     #[prost(string, tag = "3")]
@@ -2619,18 +2619,18 @@ pub struct ListProductsRequest {
     /// A filter to apply on the list results. Supported features:
     ///
     /// * List all the products under the parent branch if
-    /// [filter][google.cloud.retail.v2.ListProductsRequest.filter] is unset.
-    /// * List [Product.Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT]
-    /// [Product][google.cloud.retail.v2.Product]s sharing the same
-    ///   [Product.Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
-    ///   [Product][google.cloud.retail.v2.Product]. For example:
+    /// \[filter][google.cloud.retail.v2.ListProductsRequest.filter\] is unset.
+    /// * List \[Product.Type.VARIANT][google.cloud.retail.v2.Product.Type.VARIANT\]
+    /// \[Product][google.cloud.retail.v2.Product\]s sharing the same
+    ///   \[Product.Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY\]
+    ///   \[Product][google.cloud.retail.v2.Product\]. For example:
     ///     `primary_product_id = "some_product_id"`
-    /// * List [Product][google.cloud.retail.v2.Product]s bundled in a
-    /// [Product.Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION]
-    /// [Product][google.cloud.retail.v2.Product].
+    /// * List \[Product][google.cloud.retail.v2.Product\]s bundled in a
+    /// \[Product.Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION\]
+    /// \[Product][google.cloud.retail.v2.Product\].
     ///   For example:
     ///     `collection_product_id = "some_product_id"`
-    /// * List [Product][google.cloud.retail.v2.Product]s with a partibular type.
+    /// * List \[Product][google.cloud.retail.v2.Product\]s with a partibular type.
     /// For example:
     ///     `type = "PRIMARY"`
     ///     `type = "VARIANT"`
@@ -2639,26 +2639,26 @@ pub struct ListProductsRequest {
     /// If the field is unrecognizable, an INVALID_ARGUMENT error is returned.
     ///
     /// If the specified
-    /// [Product.Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY]
-    /// [Product][google.cloud.retail.v2.Product] or
-    /// [Product.Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION]
-    /// [Product][google.cloud.retail.v2.Product] does not exist, a NOT_FOUND error
+    /// \[Product.Type.PRIMARY][google.cloud.retail.v2.Product.Type.PRIMARY\]
+    /// \[Product][google.cloud.retail.v2.Product\] or
+    /// \[Product.Type.COLLECTION][google.cloud.retail.v2.Product.Type.COLLECTION\]
+    /// \[Product][google.cloud.retail.v2.Product\] does not exist, a NOT_FOUND error
     /// is returned.
     #[prost(string, tag = "4")]
     pub filter: ::prost::alloc::string::String,
-    /// The fields of [Product][google.cloud.retail.v2.Product] to return in the
+    /// The fields of \[Product][google.cloud.retail.v2.Product\] to return in the
     /// responses. If not set or empty, the following fields are returned:
     ///
-    /// * [Product.name][google.cloud.retail.v2.Product.name]
-    /// * [Product.id][google.cloud.retail.v2.Product.id]
-    /// * [Product.title][google.cloud.retail.v2.Product.title]
-    /// * [Product.uri][google.cloud.retail.v2.Product.uri]
-    /// * [Product.images][google.cloud.retail.v2.Product.images]
-    /// * [Product.price_info][google.cloud.retail.v2.Product.price_info]
-    /// * [Product.brands][google.cloud.retail.v2.Product.brands]
+    /// * \[Product.name][google.cloud.retail.v2.Product.name\]
+    /// * \[Product.id][google.cloud.retail.v2.Product.id\]
+    /// * \[Product.title][google.cloud.retail.v2.Product.title\]
+    /// * \[Product.uri][google.cloud.retail.v2.Product.uri\]
+    /// * \[Product.images][google.cloud.retail.v2.Product.images\]
+    /// * \[Product.price_info][google.cloud.retail.v2.Product.price_info\]
+    /// * \[Product.brands][google.cloud.retail.v2.Product.brands\]
     ///
     /// If "*" is provided, all fields are returned.
-    /// [Product.name][google.cloud.retail.v2.Product.name] is always returned no
+    /// \[Product.name][google.cloud.retail.v2.Product.name\] is always returned no
     /// matter what mask is set.
     ///
     /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
@@ -2667,62 +2667,62 @@ pub struct ListProductsRequest {
     pub read_mask: ::core::option::Option<::prost_types::FieldMask>,
 }
 /// Response message for
-/// [ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts]
+/// \[ProductService.ListProducts][google.cloud.retail.v2.ProductService.ListProducts\]
 /// method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListProductsResponse {
-    /// The [Product][google.cloud.retail.v2.Product]s.
+    /// The \[Product][google.cloud.retail.v2.Product\]s.
     #[prost(message, repeated, tag = "1")]
     pub products: ::prost::alloc::vec::Vec<Product>,
     /// A token that can be sent as
-    /// [ListProductsRequest.page_token][google.cloud.retail.v2.ListProductsRequest.page_token]
+    /// \[ListProductsRequest.page_token][google.cloud.retail.v2.ListProductsRequest.page_token\]
     /// to retrieve the next page. If this field is omitted, there are no
     /// subsequent pages.
     #[prost(string, tag = "2")]
     pub next_page_token: ::prost::alloc::string::String,
 }
-/// Request message for [SetInventory][] method.
+/// Request message for \[SetInventory][\] method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SetInventoryRequest {
     /// Required. The inventory information to update. The allowable fields to
     /// update are:
-    /// * [Product.price_info][google.cloud.retail.v2.Product.price_info]
-    /// * [Product.availability][google.cloud.retail.v2.Product.availability]
-    /// * [Product.available_quantity][google.cloud.retail.v2.Product.available_quantity]
-    /// * [Product.fulfillment_info][google.cloud.retail.v2.Product.fulfillment_info]
+    /// * \[Product.price_info][google.cloud.retail.v2.Product.price_info\]
+    /// * \[Product.availability][google.cloud.retail.v2.Product.availability\]
+    /// * \[Product.available_quantity][google.cloud.retail.v2.Product.available_quantity\]
+    /// * \[Product.fulfillment_info][google.cloud.retail.v2.Product.fulfillment_info\]
     /// The updated inventory fields must be specified in
-    /// [SetInventoryRequest.set_mask][google.cloud.retail.v2.SetInventoryRequest.set_mask].
+    /// \[SetInventoryRequest.set_mask][google.cloud.retail.v2.SetInventoryRequest.set_mask\].
     ///
-    /// If [SetInventoryRequest.inventory.name][] is empty or invalid, an
+    /// If \[SetInventoryRequest.inventory.name][\] is empty or invalid, an
     /// INVALID_ARGUMENT error is returned.
     ///
     /// If the caller does not have permission to update the
-    /// [Product][google.cloud.retail.v2.Product] named in
-    /// [Product.name][google.cloud.retail.v2.Product.name], regardless of whether
+    /// \[Product][google.cloud.retail.v2.Product\] named in
+    /// \[Product.name][google.cloud.retail.v2.Product.name\], regardless of whether
     /// or not it exists, a PERMISSION_DENIED error is returned.
     ///
-    /// If the [Product][google.cloud.retail.v2.Product] to update does not have
+    /// If the \[Product][google.cloud.retail.v2.Product\] to update does not have
     /// existing inventory information, the provided inventory information will be
     /// inserted.
     ///
-    /// If the [Product][google.cloud.retail.v2.Product] to update has existing
+    /// If the \[Product][google.cloud.retail.v2.Product\] to update has existing
     /// inventory information, the provided inventory information will be merged
     /// while respecting the last update time for each inventory field, using the
     /// provided or default value for
-    /// [SetInventoryRequest.set_time][google.cloud.retail.v2.SetInventoryRequest.set_time].
+    /// \[SetInventoryRequest.set_time][google.cloud.retail.v2.SetInventoryRequest.set_time\].
     ///
     /// The last update time is recorded for the following inventory fields:
-    /// * [Product.price_info][google.cloud.retail.v2.Product.price_info]
-    /// * [Product.availability][google.cloud.retail.v2.Product.availability]
-    /// * [Product.available_quantity][google.cloud.retail.v2.Product.available_quantity]
-    /// * [Product.fulfillment_info][google.cloud.retail.v2.Product.fulfillment_info]
+    /// * \[Product.price_info][google.cloud.retail.v2.Product.price_info\]
+    /// * \[Product.availability][google.cloud.retail.v2.Product.availability\]
+    /// * \[Product.available_quantity][google.cloud.retail.v2.Product.available_quantity\]
+    /// * \[Product.fulfillment_info][google.cloud.retail.v2.Product.fulfillment_info\]
     ///
     /// If a full overwrite of inventory information while ignoring timestamps is
-    /// needed, [UpdateProduct][] should be invoked instead.
+    /// needed, \[UpdateProduct][\] should be invoked instead.
     #[prost(message, optional, tag = "1")]
     pub inventory: ::core::option::Option<Product>,
     /// Indicates which inventory fields in the provided
-    /// [Product][google.cloud.retail.v2.Product] to update. If not set or set with
+    /// \[Product][google.cloud.retail.v2.Product\] to update. If not set or set with
     /// empty paths, all inventory fields will be updated.
     ///
     /// If an unsupported or unknown field is provided, an INVALID_ARGUMENT error
@@ -2734,34 +2734,34 @@ pub struct SetInventoryRequest {
     /// recorded. If not provided, the internal system time will be used.
     #[prost(message, optional, tag = "3")]
     pub set_time: ::core::option::Option<::prost_types::Timestamp>,
-    /// If set to true, and the [Product][google.cloud.retail.v2.Product] with name
-    /// [Product.name][google.cloud.retail.v2.Product.name] is not found, the
+    /// If set to true, and the \[Product][google.cloud.retail.v2.Product\] with name
+    /// \[Product.name][google.cloud.retail.v2.Product.name\] is not found, the
     /// inventory update will still be processed and retained for at most 1 day
-    /// until the [Product][google.cloud.retail.v2.Product] is created. If set to
+    /// until the \[Product][google.cloud.retail.v2.Product\] is created. If set to
     /// false, an INVALID_ARGUMENT error is returned if the
-    /// [Product][google.cloud.retail.v2.Product] is not found.
+    /// \[Product][google.cloud.retail.v2.Product\] is not found.
     #[prost(bool, tag = "4")]
     pub allow_missing: bool,
 }
 /// Metadata related to the progress of the SetInventory operation.
 /// Currently empty because there is no meaningful metadata populated from the
-/// [SetInventory][] method.
+/// \[SetInventory][\] method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SetInventoryMetadata {}
 /// Response of the SetInventoryRequest.  Currently empty because
-/// there is no meaningful response populated from the [SetInventory][]
+/// there is no meaningful response populated from the \[SetInventory][\]
 /// method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SetInventoryResponse {}
-/// Request message for [AddFulfillmentPlaces][] method.
+/// Request message for \[AddFulfillmentPlaces][\] method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddFulfillmentPlacesRequest {
-    /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
+    /// Required. Full resource name of \[Product][google.cloud.retail.v2.Product\],
     /// such as
     /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
     ///
     /// If the caller does not have permission to access the
-    /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
+    /// \[Product][google.cloud.retail.v2.Product\], regardless of whether or not it
     /// exists, a PERMISSION_DENIED error is returned.
     #[prost(string, tag = "1")]
     pub product: ::prost::alloc::string::String,
@@ -2783,23 +2783,23 @@ pub struct AddFulfillmentPlacesRequest {
     /// If this field is set to an invalid value other than these, an
     /// INVALID_ARGUMENT error is returned.
     ///
-    /// This field directly corresponds to [Product.fulfillment_info.type][].
+    /// This field directly corresponds to \[Product.fulfillment_info.type][\].
     #[prost(string, tag = "2")]
     pub r#type: ::prost::alloc::string::String,
     /// Required. The IDs for this
-    /// [type][google.cloud.retail.v2.AddFulfillmentPlacesRequest.type], such as
+    /// \[type][google.cloud.retail.v2.AddFulfillmentPlacesRequest.type\], such as
     /// the store IDs for "pickup-in-store" or the region IDs for
     /// "same-day-delivery" to be added for this
-    /// [type][google.cloud.retail.v2.AddFulfillmentPlacesRequest.type]. Duplicate
+    /// \[type][google.cloud.retail.v2.AddFulfillmentPlacesRequest.type\]. Duplicate
     /// IDs will be automatically ignored.
     ///
     /// At least 1 value is required, and a maximum of 2000 values are allowed.
     /// Each value must be a string with a length limit of 10 characters, matching
-    /// the pattern [a-zA-Z0-9_-]+, such as "store1" or "REGION-2". Otherwise, an
+    /// the pattern \[a-zA-Z0-9_-\]+, such as "store1" or "REGION-2". Otherwise, an
     /// INVALID_ARGUMENT error is returned.
     ///
     /// If the total number of place IDs exceeds 2000 for this
-    /// [type][google.cloud.retail.v2.AddFulfillmentPlacesRequest.type] after
+    /// \[type][google.cloud.retail.v2.AddFulfillmentPlacesRequest.type\] after
     /// adding, then the update will be rejected.
     #[prost(string, repeated, tag = "3")]
     pub place_ids: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
@@ -2808,34 +2808,34 @@ pub struct AddFulfillmentPlacesRequest {
     /// internal system time will be used.
     #[prost(message, optional, tag = "4")]
     pub add_time: ::core::option::Option<::prost_types::Timestamp>,
-    /// If set to true, and the [Product][google.cloud.retail.v2.Product] is not
+    /// If set to true, and the \[Product][google.cloud.retail.v2.Product\] is not
     /// found, the fulfillment information will still be processed and retained for
     /// at most 1 day and processed once the
-    /// [Product][google.cloud.retail.v2.Product] is created. If set to false, an
+    /// \[Product][google.cloud.retail.v2.Product\] is created. If set to false, an
     /// INVALID_ARGUMENT error is returned if the
-    /// [Product][google.cloud.retail.v2.Product] is not found.
+    /// \[Product][google.cloud.retail.v2.Product\] is not found.
     #[prost(bool, tag = "5")]
     pub allow_missing: bool,
 }
 /// Metadata related to the progress of the AddFulfillmentPlaces operation.
 /// Currently empty because there is no meaningful metadata populated from the
-/// [AddFulfillmentPlaces][] method.
+/// \[AddFulfillmentPlaces][\] method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddFulfillmentPlacesMetadata {}
 /// Response of the RemoveFulfillmentPlacesRequest.  Currently empty because
-/// there is no meaningful response populated from the [AddFulfillmentPlaces][]
+/// there is no meaningful response populated from the \[AddFulfillmentPlaces][\]
 /// method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddFulfillmentPlacesResponse {}
-/// Request message for [RemoveFulfillmentPlaces][] method.
+/// Request message for \[RemoveFulfillmentPlaces][\] method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RemoveFulfillmentPlacesRequest {
-    /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
+    /// Required. Full resource name of \[Product][google.cloud.retail.v2.Product\],
     /// such as
     /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
     ///
     /// If the caller does not have permission to access the
-    /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
+    /// \[Product][google.cloud.retail.v2.Product\], regardless of whether or not it
     /// exists, a PERMISSION_DENIED error is returned.
     #[prost(string, tag = "1")]
     pub product: ::prost::alloc::string::String,
@@ -2857,18 +2857,18 @@ pub struct RemoveFulfillmentPlacesRequest {
     /// If this field is set to an invalid value other than these, an
     /// INVALID_ARGUMENT error is returned.
     ///
-    /// This field directly corresponds to [Product.fulfillment_info.type][].
+    /// This field directly corresponds to \[Product.fulfillment_info.type][\].
     #[prost(string, tag = "2")]
     pub r#type: ::prost::alloc::string::String,
     /// Required. The IDs for this
-    /// [type][google.cloud.retail.v2.RemoveFulfillmentPlacesRequest.type], such as
+    /// \[type][google.cloud.retail.v2.RemoveFulfillmentPlacesRequest.type\], such as
     /// the store IDs for "pickup-in-store" or the region IDs for
     /// "same-day-delivery", to be removed for this
-    /// [type][google.cloud.retail.v2.RemoveFulfillmentPlacesRequest.type].
+    /// \[type][google.cloud.retail.v2.RemoveFulfillmentPlacesRequest.type\].
     ///
     /// At least 1 value is required, and a maximum of 2000 values are allowed.
     /// Each value must be a string with a length limit of 10 characters, matching
-    /// the pattern [a-zA-Z0-9_-]+, such as "store1" or "REGION-2". Otherwise, an
+    /// the pattern \[a-zA-Z0-9_-\]+, such as "store1" or "REGION-2". Otherwise, an
     /// INVALID_ARGUMENT error is returned.
     #[prost(string, repeated, tag = "3")]
     pub place_ids: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
@@ -2877,22 +2877,22 @@ pub struct RemoveFulfillmentPlacesRequest {
     /// internal system time will be used.
     #[prost(message, optional, tag = "4")]
     pub remove_time: ::core::option::Option<::prost_types::Timestamp>,
-    /// If set to true, and the [Product][google.cloud.retail.v2.Product] is not
+    /// If set to true, and the \[Product][google.cloud.retail.v2.Product\] is not
     /// found, the fulfillment information will still be processed and retained for
     /// at most 1 day and processed once the
-    /// [Product][google.cloud.retail.v2.Product] is created. If set to false, an
+    /// \[Product][google.cloud.retail.v2.Product\] is created. If set to false, an
     /// INVALID_ARGUMENT error is returned if the
-    /// [Product][google.cloud.retail.v2.Product] is not found.
+    /// \[Product][google.cloud.retail.v2.Product\] is not found.
     #[prost(bool, tag = "5")]
     pub allow_missing: bool,
 }
 /// Metadata related to the progress of the RemoveFulfillmentPlaces operation.
 /// Currently empty because there is no meaningful metadata populated from the
-/// [RemoveFulfillmentPlaces][] method.
+/// \[RemoveFulfillmentPlaces][\] method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RemoveFulfillmentPlacesMetadata {}
 /// Response of the RemoveFulfillmentPlacesRequest. Currently empty because there
-/// is no meaningful response populated from the [RemoveFulfillmentPlaces][]
+/// is no meaningful response populated from the \[RemoveFulfillmentPlaces][\]
 /// method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RemoveFulfillmentPlacesResponse {}
@@ -2909,7 +2909,7 @@ pub mod product_service_client {
     impl<T> ProductServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -3188,7 +3188,7 @@ pub mod product_service_client {
     }
 }
 /// Request message for
-/// [SearchService.Search][google.cloud.retail.v2.SearchService.Search] method.
+/// \[SearchService.Search][google.cloud.retail.v2.SearchService.Search\] method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchRequest {
     /// Required. The resource name of the search engine placement, such as
@@ -3223,7 +3223,7 @@ pub struct SearchRequest {
     /// User information.
     #[prost(message, optional, tag = "5")]
     pub user_info: ::core::option::Option<UserInfo>,
-    /// Maximum number of [Product][google.cloud.retail.v2.Product]s to return. If
+    /// Maximum number of \[Product][google.cloud.retail.v2.Product\]s to return. If
     /// unspecified, defaults to a reasonable value. The maximum allowed value is
     /// 120. Values above 120 will be coerced to 120.
     ///
@@ -3231,21 +3231,21 @@ pub struct SearchRequest {
     #[prost(int32, tag = "7")]
     pub page_size: i32,
     /// A page token
-    /// [SearchResponse.next_page_token][google.cloud.retail.v2.SearchResponse.next_page_token],
+    /// \[SearchResponse.next_page_token][google.cloud.retail.v2.SearchResponse.next_page_token\],
     /// received from a previous
-    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search] call.
+    /// \[SearchService.Search][google.cloud.retail.v2.SearchService.Search\] call.
     /// Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other parameters provided to
-    /// [SearchService.Search][google.cloud.retail.v2.SearchService.Search] must
+    /// \[SearchService.Search][google.cloud.retail.v2.SearchService.Search\] must
     /// match the call that provided the page token. Otherwise, an INVALID_ARGUMENT
     /// error is returned.
     #[prost(string, tag = "8")]
     pub page_token: ::prost::alloc::string::String,
     /// A 0-indexed integer that specifies the current offset (that is, starting
-    /// result location, amongst the [Product][google.cloud.retail.v2.Product]s
+    /// result location, amongst the \[Product][google.cloud.retail.v2.Product\]s
     /// deemed by the API as relevant) in search results. This field is only
-    /// considered if [page_token][google.cloud.retail.v2.SearchRequest.page_token]
+    /// considered if \[page_token][google.cloud.retail.v2.SearchRequest.page_token\]
     /// is unset.
     ///
     /// If this field is negative, an INVALID_ARGUMENT is returned.
@@ -3261,16 +3261,16 @@ pub struct SearchRequest {
     /// The filter applied to every search request when quality improvement such as
     /// query expansion is needed. For example, if a query does not have enough
     /// results, an expanded query with
-    /// [SearchRequest.canonical_filter][google.cloud.retail.v2.SearchRequest.canonical_filter]
+    /// \[SearchRequest.canonical_filter][google.cloud.retail.v2.SearchRequest.canonical_filter\]
     /// will be returned as a supplement of the original query. This field is
     /// strongly recommended to achieve high search quality.
     ///
-    /// See [SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter] for
+    /// See \[SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter\] for
     /// more details about filter syntax.
     #[prost(string, tag = "28")]
     pub canonical_filter: ::prost::alloc::string::String,
     /// The order in which products are returned. Products can be ordered by
-    /// a field in an [Product][google.cloud.retail.v2.Product] object. Leave it
+    /// a field in an \[Product][google.cloud.retail.v2.Product\] object. Leave it
     /// unset if ordered by relevance. OrderBy expression is case-sensitive.
     ///
     /// If this field is unrecognizable, an INVALID_ARGUMENT is returned.
@@ -3297,15 +3297,15 @@ pub struct SearchRequest {
     #[prost(message, optional, tag = "14")]
     pub query_expansion_spec: ::core::option::Option<search_request::QueryExpansionSpec>,
     /// The keys to fetch and rollup the matching
-    /// [variant][google.cloud.retail.v2.Product.Type.VARIANT]
-    /// [Product][google.cloud.retail.v2.Product]s attributes. The attributes from
-    /// all the matching [variant][google.cloud.retail.v2.Product.Type.VARIANT]
-    /// [Product][google.cloud.retail.v2.Product]s are merged and de-duplicated.
-    /// Notice that rollup [variant][google.cloud.retail.v2.Product.Type.VARIANT]
-    /// [Product][google.cloud.retail.v2.Product]s attributes will lead to extra
+    /// \[variant][google.cloud.retail.v2.Product.Type.VARIANT\]
+    /// \[Product][google.cloud.retail.v2.Product\]s attributes. The attributes from
+    /// all the matching \[variant][google.cloud.retail.v2.Product.Type.VARIANT\]
+    /// \[Product][google.cloud.retail.v2.Product\]s are merged and de-duplicated.
+    /// Notice that rollup \[variant][google.cloud.retail.v2.Product.Type.VARIANT\]
+    /// \[Product][google.cloud.retail.v2.Product\]s attributes will lead to extra
     /// query latency. Maximum number of keys is 10.
     ///
-    /// For [FulfillmentInfo][google.cloud.retail.v2.FulfillmentInfo], a
+    /// For \[FulfillmentInfo][google.cloud.retail.v2.FulfillmentInfo\], a
     /// fulfillment type and a fulfillment ID must be provided in the format of
     /// "fulfillmentType.fulfillmentId". E.g., in "pickupInStore.store123",
     /// "pickupInStore" is fulfillment type and "store123" is the store ID.
@@ -3317,42 +3317,42 @@ pub struct SearchRequest {
     /// * originalPrice
     /// * discount
     /// * attributes.key, where key is any key in the
-    ///   [Product.attributes][google.cloud.retail.v2.Product.attributes] map.
+    ///   \[Product.attributes][google.cloud.retail.v2.Product.attributes\] map.
     /// * pickupInStore.id, where id is any
-    /// [FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids]
-    /// for [FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type]
+    /// \[FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids\]
+    /// for \[FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type\]
     ///   "pickup-in-store".
     /// * shipToStore.id, where id is any
-    /// [FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids]
-    /// for [FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type]
+    /// \[FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids\]
+    /// for \[FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type\]
     ///   "ship-to-store".
     /// * sameDayDelivery.id, where id is any
-    /// [FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids]
-    /// for [FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type]
+    /// \[FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids\]
+    /// for \[FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type\]
     ///   "same-day-delivery".
     /// * nextDayDelivery.id, where id is any
-    /// [FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids]
-    /// for [FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type]
+    /// \[FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids\]
+    /// for \[FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type\]
     ///   "next-day-delivery".
     /// * customFulfillment1.id, where id is any
-    /// [FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids]
-    /// for [FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type]
+    /// \[FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids\]
+    /// for \[FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type\]
     ///   "custom-type-1".
     /// * customFulfillment2.id, where id is any
-    /// [FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids]
-    /// for [FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type]
+    /// \[FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids\]
+    /// for \[FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type\]
     ///   "custom-type-2".
     /// * customFulfillment3.id, where id is any
-    /// [FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids]
-    /// for [FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type]
+    /// \[FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids\]
+    /// for \[FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type\]
     ///   "custom-type-3".
     /// * customFulfillment4.id, where id is any
-    /// [FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids]
-    /// for [FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type]
+    /// \[FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids\]
+    /// for \[FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type\]
     ///   "custom-type-4".
     /// * customFulfillment5.id, where id is any
-    /// [FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids]
-    /// for [FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type]
+    /// \[FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids\]
+    /// for \[FulfillmentInfo.type][google.cloud.retail.v2.FulfillmentInfo.type\]
     ///   "custom-type-5".
     ///
     /// If this field is set to an invalid value other than these, an
@@ -3362,7 +3362,7 @@ pub struct SearchRequest {
     /// The categories associated with a category page. Required for category
     /// navigation queries to achieve good search quality. The format should be
     /// the same as
-    /// [UserEvent.page_categories][google.cloud.retail.v2.UserEvent.page_categories];
+    /// \[UserEvent.page_categories][google.cloud.retail.v2.UserEvent.page_categories\];
     ///
     /// To represent full path of category, use '>' sign to separate different
     /// hierarchies. If '>' is part of the category name, please replace it with
@@ -3392,13 +3392,13 @@ pub mod search_request {
         /// List of keys to exclude when faceting.
         ///
         /// By default,
-        /// [FacetKey.key][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.key]
+        /// \[FacetKey.key][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.key\]
         /// is not excluded from the filter unless it is listed in this field.
         ///
         /// For example, suppose there are 100 products with color facet "Red" and
         /// 200 products with color facet "Blue". A query containing the filter
         /// "colorFamilies:ANY("Red")" and have "colorFamilies" as
-        /// [FacetKey.key][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.key]
+        /// \[FacetKey.key][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.key\]
         /// will by default return the "Red" with count 100.
         ///
         /// If this field contains "colorFamilies", then the query returns both the
@@ -3446,11 +3446,11 @@ pub mod search_request {
         #[derive(Clone, PartialEq, ::prost::Message)]
         pub struct FacetKey {
             /// Required. Supported textual and numerical facet keys in
-            /// [Product][google.cloud.retail.v2.Product] object, over which the facet
+            /// \[Product][google.cloud.retail.v2.Product\] object, over which the facet
             /// values are computed. Facet key is case-sensitive.
             ///
             /// Allowed facet keys when
-            /// [FacetKey.query][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.query]
+            /// \[FacetKey.query][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.query\]
             /// is not specified:
             ///
             /// * textual_field =
@@ -3530,43 +3530,43 @@ pub mod search_request {
             /// Only supported on textual fields. Maximum is 10.
             #[prost(string, repeated, tag = "9")]
             pub contains: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
-            /// The order in which [Facet.values][] are returned.
+            /// The order in which \[Facet.values][\] are returned.
             ///
             /// Allowed values are:
             ///
-            /// * "count desc", which means order by [Facet.FacetValue.count][]
+            /// * "count desc", which means order by \[Facet.FacetValue.count][\]
             /// descending.
             ///
-            /// * "value desc", which means order by [Facet.FacetValue.value][]
+            /// * "value desc", which means order by \[Facet.FacetValue.value][\]
             /// descending.
             ///   Only applies to textual facets.
             ///
             /// If not set, textual values are sorted in [natural
-            /// order](https://en.wikipedia.org/wiki/Natural_sort_order); numerical
+            /// order](<https://en.wikipedia.org/wiki/Natural_sort_order>); numerical
             /// intervals are sorted in the order given by
-            /// [FacetSpec.FacetKey.intervals][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.intervals];
-            /// [FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids]
+            /// \[FacetSpec.FacetKey.intervals][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.intervals\];
+            /// \[FulfillmentInfo.place_ids][google.cloud.retail.v2.FulfillmentInfo.place_ids\]
             /// are sorted in the order given by
-            /// [FacetSpec.FacetKey.restricted_values][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.restricted_values].
+            /// \[FacetSpec.FacetKey.restricted_values][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.restricted_values\].
             #[prost(string, tag = "4")]
             pub order_by: ::prost::alloc::string::String,
             /// The query that is used to compute facet for the given facet key.
             /// When provided, it will override the default behavior of facet
             /// computation. The query syntax is the same as a filter expression. See
-            /// [SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter] for
+            /// \[SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter\] for
             /// detail syntax and limitations. Notice that there is no limitation on
-            /// [FacetKey.key][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.key]
+            /// \[FacetKey.key][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.key\]
             /// when query is specified.
             ///
-            /// In the response, [FacetValue.value][] will be always "1" and
-            /// [FacetValue.count][] will be the number of results that matches the
+            /// In the response, \[FacetValue.value][\] will be always "1" and
+            /// \[FacetValue.count][\] will be the number of results that matches the
             /// query.
             ///
             /// For example, you can set a customized facet for "shipToStore",
             /// where
-            /// [FacetKey.key][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.key]
+            /// \[FacetKey.key][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.key\]
             /// is "customizedShipToStore", and
-            /// [FacetKey.query][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.query]
+            /// \[FacetKey.query][google.cloud.retail.v2.SearchRequest.FacetSpec.FacetKey.query\]
             /// is "availability: ANY(\"IN_STOCK\") AND shipToStore: ANY(\"123\")".
             /// Then the facet will count the products that are both in stock and ship
             /// to store "123".
@@ -3579,7 +3579,7 @@ pub mod search_request {
     pub struct DynamicFacetSpec {
         /// Mode of the DynamicFacet feature.
         /// Defaults to
-        /// [Mode.DISABLED][google.cloud.retail.v2.SearchRequest.DynamicFacetSpec.Mode.DISABLED]
+        /// \[Mode.DISABLED][google.cloud.retail.v2.SearchRequest.DynamicFacetSpec.Mode.DISABLED\]
         /// if it's unset.
         #[prost(enumeration = "dynamic_facet_spec::Mode", tag = "1")]
         pub mode: i32,
@@ -3617,7 +3617,7 @@ pub mod search_request {
         pub struct ConditionBoostSpec {
             /// An expression which specifies a boost condition. The syntax and
             /// supported fields are the same as a filter expression. See
-            /// [SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter] for
+            /// \[SearchRequest.filter][google.cloud.retail.v2.SearchRequest.filter\] for
             /// detail syntax and limitations.
             ///
             /// Examples:
@@ -3655,7 +3655,7 @@ pub mod search_request {
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct QueryExpansionSpec {
         /// The condition under which query expansion should occur. Default to
-        /// [Condition.DISABLED][google.cloud.retail.v2.SearchRequest.QueryExpansionSpec.Condition.DISABLED].
+        /// \[Condition.DISABLED][google.cloud.retail.v2.SearchRequest.QueryExpansionSpec.Condition.DISABLED\].
         #[prost(enumeration = "query_expansion_spec::Condition", tag = "1")]
         pub condition: i32,
         /// Whether to pin unexpanded results. If this field is set to true,
@@ -3673,10 +3673,10 @@ pub mod search_request {
         #[repr(i32)]
         pub enum Condition {
             /// Unspecified query expansion condition. This defaults to
-            /// [Condition.DISABLED][google.cloud.retail.v2.SearchRequest.QueryExpansionSpec.Condition.DISABLED].
+            /// \[Condition.DISABLED][google.cloud.retail.v2.SearchRequest.QueryExpansionSpec.Condition.DISABLED\].
             Unspecified = 0,
             /// Disabled query expansion. Only the exact search query is used, even if
-            /// [SearchResponse.total_size][google.cloud.retail.v2.SearchResponse.total_size]
+            /// \[SearchResponse.total_size][google.cloud.retail.v2.SearchResponse.total_size\]
             /// is zero.
             Disabled = 1,
             /// Automatic query expansion built by Google Retail Search.
@@ -3685,7 +3685,7 @@ pub mod search_request {
     }
 }
 /// Response message for
-/// [SearchService.Search][google.cloud.retail.v2.SearchService.Search] method.
+/// \[SearchService.Search][google.cloud.retail.v2.SearchService.Search\] method.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct SearchResponse {
     /// A list of matched items. The order represents the ranking.
@@ -3695,9 +3695,9 @@ pub struct SearchResponse {
     #[prost(message, repeated, tag = "2")]
     pub facets: ::prost::alloc::vec::Vec<search_response::Facet>,
     /// The estimated total count of matched items irrespective of pagination. The
-    /// count of [results][google.cloud.retail.v2.SearchResponse.results] returned
+    /// count of \[results][google.cloud.retail.v2.SearchResponse.results\] returned
     /// by pagination may be less than the
-    /// [total_size][google.cloud.retail.v2.SearchResponse.total_size] that
+    /// \[total_size][google.cloud.retail.v2.SearchResponse.total_size\] that
     /// matches.
     #[prost(int32, tag = "3")]
     pub total_size: i32,
@@ -3705,12 +3705,12 @@ pub struct SearchResponse {
     #[prost(string, tag = "4")]
     pub corrected_query: ::prost::alloc::string::String,
     /// A unique search token. This should be included in the
-    /// [UserEvent][google.cloud.retail.v2.UserEvent] logs resulting from this
+    /// \[UserEvent][google.cloud.retail.v2.UserEvent\] logs resulting from this
     /// search, which enables accurate attribution of search model performance.
     #[prost(string, tag = "5")]
     pub attribution_token: ::prost::alloc::string::String,
     /// A token that can be sent as
-    /// [SearchRequest.page_token][google.cloud.retail.v2.SearchRequest.page_token]
+    /// \[SearchRequest.page_token][google.cloud.retail.v2.SearchRequest.page_token\]
     /// to retrieve the next page. If this field is omitted, there are no
     /// subsequent pages.
     #[prost(string, tag = "6")]
@@ -3720,8 +3720,8 @@ pub struct SearchResponse {
     pub query_expansion_info: ::core::option::Option<search_response::QueryExpansionInfo>,
     /// The URI of a customer-defined redirect page. If redirect action is
     /// triggered, no search will be performed, and only
-    /// [redirect_uri][google.cloud.retail.v2.SearchResponse.redirect_uri] and
-    /// [attribution_token][google.cloud.retail.v2.SearchResponse.attribution_token]
+    /// \[redirect_uri][google.cloud.retail.v2.SearchResponse.redirect_uri\] and
+    /// \[attribution_token][google.cloud.retail.v2.SearchResponse.attribution_token\]
     /// will be set in the response.
     #[prost(string, tag = "10")]
     pub redirect_uri: ::prost::alloc::string::String,
@@ -3731,59 +3731,59 @@ pub mod search_response {
     /// Represents the search results.
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct SearchResult {
-        /// [Product.id][google.cloud.retail.v2.Product.id] of the searched
-        /// [Product][google.cloud.retail.v2.Product].
+        /// \[Product.id][google.cloud.retail.v2.Product.id\] of the searched
+        /// \[Product][google.cloud.retail.v2.Product\].
         #[prost(string, tag = "1")]
         pub id: ::prost::alloc::string::String,
         /// The product data snippet in the search response. Only
-        /// [Product.name][google.cloud.retail.v2.Product.name] is guaranteed to be
+        /// \[Product.name][google.cloud.retail.v2.Product.name\] is guaranteed to be
         /// populated.
         ///
-        /// [Product.variants][google.cloud.retail.v2.Product.variants] contains the
+        /// \[Product.variants][google.cloud.retail.v2.Product.variants\] contains the
         /// product variants that match the search query. If there are multiple
         /// product variants matching the query, top 5 most relevant product variants
         /// are returned and ordered by relevancy.
         ///
         /// If relevancy can be deternmined, use
-        /// [matching_variant_fields][google.cloud.retail.v2.SearchResponse.SearchResult.matching_variant_fields]
+        /// \[matching_variant_fields][google.cloud.retail.v2.SearchResponse.SearchResult.matching_variant_fields\]
         /// to look up matched product variants fields. If relevancy cannot be
         /// determined, e.g. when searching "shoe" all products in a shoe product can
         /// be a match, 5 product variants are returned but order is meaningless.
         #[prost(message, optional, tag = "2")]
         pub product: ::core::option::Option<super::Product>,
         /// The count of matched
-        /// [variant][google.cloud.retail.v2.Product.Type.VARIANT]
-        /// [Product][google.cloud.retail.v2.Product]s.
+        /// \[variant][google.cloud.retail.v2.Product.Type.VARIANT\]
+        /// \[Product][google.cloud.retail.v2.Product\]s.
         #[prost(int32, tag = "3")]
         pub matching_variant_count: i32,
-        /// If a [variant][google.cloud.retail.v2.Product.Type.VARIANT]
-        /// [Product][google.cloud.retail.v2.Product] matches the search query, this
-        /// map indicates which [Product][google.cloud.retail.v2.Product] fields are
+        /// If a \[variant][google.cloud.retail.v2.Product.Type.VARIANT\]
+        /// \[Product][google.cloud.retail.v2.Product\] matches the search query, this
+        /// map indicates which \[Product][google.cloud.retail.v2.Product\] fields are
         /// matched. The key is the
-        /// [Product.name][google.cloud.retail.v2.Product.name], the value is a field
-        /// mask of the matched [Product][google.cloud.retail.v2.Product] fields. If
+        /// \[Product.name][google.cloud.retail.v2.Product.name\], the value is a field
+        /// mask of the matched \[Product][google.cloud.retail.v2.Product\] fields. If
         /// matched attributes cannot be determined, this map will be empty.
         ///
         /// For example, a key "sku1" with field mask
         /// "products.color_info" indicates there is a match between
-        /// "sku1" [ColorInfo][google.cloud.retail.v2.ColorInfo] and the query.
+        /// "sku1" \[ColorInfo][google.cloud.retail.v2.ColorInfo\] and the query.
         #[prost(map = "string, message", tag = "4")]
         pub matching_variant_fields:
             ::std::collections::HashMap<::prost::alloc::string::String, ::prost_types::FieldMask>,
         /// The rollup matching
-        /// [variant][google.cloud.retail.v2.Product.Type.VARIANT]
-        /// [Product][google.cloud.retail.v2.Product] attributes. The key is one of
+        /// \[variant][google.cloud.retail.v2.Product.Type.VARIANT\]
+        /// \[Product][google.cloud.retail.v2.Product\] attributes. The key is one of
         /// the
-        /// [SearchRequest.variant_rollup_keys][google.cloud.retail.v2.SearchRequest.variant_rollup_keys].
+        /// \[SearchRequest.variant_rollup_keys][google.cloud.retail.v2.SearchRequest.variant_rollup_keys\].
         /// The values are the merged and de-duplicated
-        /// [Product][google.cloud.retail.v2.Product] attributes. Notice that the
+        /// \[Product][google.cloud.retail.v2.Product\] attributes. Notice that the
         /// rollup values are respect filter. For example, when filtering by
         /// "colorFamilies:ANY(\"red\")" and rollup "colorFamilies", only "red" is
         /// returned.
         ///
         /// For textual and numerical attributes, the rollup values is a list of
         /// string or double values with type
-        /// [google.protobuf.ListValue][google.protobuf.ListValue]. For example, if
+        /// \[google.protobuf.ListValue][google.protobuf.ListValue\]. For example, if
         /// there are two variants with colors "red" and "blue", the rollup values
         /// are
         ///
@@ -3796,9 +3796,9 @@ pub mod search_response {
         ///       }
         ///     }
         ///
-        /// For [FulfillmentInfo][google.cloud.retail.v2.FulfillmentInfo], the rollup
+        /// For \[FulfillmentInfo][google.cloud.retail.v2.FulfillmentInfo\], the rollup
         /// values is a double value with type
-        /// [google.protobuf.Value][google.protobuf.Value]. For example,
+        /// \[google.protobuf.Value][google.protobuf.Value\]. For example,
         /// `{key: "pickupInStore.store1" value { number_value: 10 }}` means a there
         /// are 10 variants in this product are available in the store "store1".
         #[prost(map = "string, message", tag = "5")]
@@ -3853,7 +3853,7 @@ pub mod search_response {
         #[prost(bool, tag = "1")]
         pub expanded_query: bool,
         /// Number of pinned results. This field will only be set when expansion
-        /// happens and [SearchRequest.query_expansion_spec.pin_unexpanded_results][]
+        /// happens and \[SearchRequest.query_expansion_spec.pin_unexpanded_results][\]
         /// is set to true.
         #[prost(int64, tag = "2")]
         pub pinned_result_count: i64,
@@ -3875,7 +3875,7 @@ pub mod search_service_client {
     impl<T> SearchServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -4030,7 +4030,7 @@ pub mod user_event_service_client {
     impl<T> UserEventServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

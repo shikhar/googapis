@@ -88,7 +88,7 @@ pub mod registration {
         /// `issues` field.
         Suspended = 7,
         /// The domain has been exported from Cloud Domains to
-        /// [Google Domains](https://domains.google/). You can no longer update it
+        /// [Google Domains](<https://domains.google/>). You can no longer update it
         /// with this API, and information shown about it may be stale. Without further action, domains in this
         /// state expire at their `expire_time`. You can delete the resource
         /// after the `expire_time` has passed.
@@ -102,7 +102,7 @@ pub mod registration {
         Unspecified = 0,
         /// Contact the Cloud Support team to resolve a problem with this domain.
         ContactSupport = 1,
-        /// [ICANN](https://icann.org/) requires verification of the email address
+        /// \[ICANN\](<https://icann.org/>) requires verification of the email address
         /// in the `Registration`'s `contact_settings.registrant_contact` field. To
         /// verify the email address, follow the
         /// instructions in the email the `registrant_contact` receives following
@@ -141,7 +141,7 @@ pub mod management_settings {
         /// is in state `EXPORTED`.
         ///
         /// To manage the domain's current billing and
-        /// renewal settings, go to [Google Domains](https://domains.google/).
+        /// renewal settings, go to [Google Domains](<https://domains.google/>).
         ManualRenewal = 2,
     }
 }
@@ -175,7 +175,7 @@ pub mod dns_settings {
     /// Configuration for using the free DNS zone provided by Google Domains as a
     /// `Registration`'s `dns_provider`. You cannot configure the DNS zone itself
     /// using the API. To configure the DNS zone, go to
-    /// [Google Domains](https://domains.google/).
+    /// [Google Domains](<https://domains.google/>).
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct GoogleDomainsDns {
         /// Output only. A list of name servers that store the DNS zone for this domain. Each name
@@ -311,14 +311,14 @@ pub mod dns_settings {
         #[prost(message, tag = "1")]
         CustomDns(CustomDns),
         /// The free DNS zone provided by
-        /// [Google Domains](https://domains.google/).
+        /// [Google Domains](<https://domains.google/>).
         #[prost(message, tag = "2")]
         GoogleDomainsDns(GoogleDomainsDns),
     }
 }
 /// Defines the contact information associated with a `Registration`.
 ///
-/// [ICANN](https://icann.org/) requires all domain names to have associated
+/// \[ICANN\](<https://icann.org/>) requires all domain names to have associated
 /// contact information. The `registrant_contact` is considered the
 /// domain's legal owner, and often the other contacts are identical.
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -425,7 +425,7 @@ pub struct RegisterDomainRequest {
     pub yearly_price: ::core::option::Option<super::super::super::r#type::Money>,
     /// When true, only validation will be performed, without actually registering
     /// the domain. Follows:
-    /// https://cloud.google.com/apis/design/design_patterns#request_validation
+    /// <https://cloud.google.com/apis/design/design_patterns#request_validation>
     #[prost(bool, tag = "6")]
     pub validate_only: bool,
 }
@@ -663,7 +663,7 @@ pub struct OperationMetadata {
 }
 /// Defines a set of possible contact privacy settings for a `Registration`.
 ///
-/// [ICANN](https://icann.org/) maintains the WHOIS database, a publicly
+/// \[ICANN\](<https://icann.org/>) maintains the WHOIS database, a publicly
 /// accessible mapping from domain name to contact information, and requires that
 /// each domain name have an entry. Choose from these options to control how much
 /// information in your `ContactSettings` is published.
@@ -685,7 +685,7 @@ pub enum ContactPrivacy {
     /// Some data from `ContactSettings` is publicly available. The actual
     /// information redacted depends on the domain. For details, see [the
     /// registration privacy
-    /// article](https://support.google.com/domains/answer/3251242).
+    /// article](<https://support.google.com/domains/answer/3251242>).
     RedactedContactData = 3,
 }
 /// Notices about special properties of certain domains.
@@ -698,7 +698,7 @@ pub enum DomainNotice {
     /// Security list in browsers. Serving a website on such domain requires
     /// an SSL certificate. For details, see
     /// [how to get an SSL
-    /// certificate](https://support.google.com/domains/answer/7638036).
+    /// certificate](<https://support.google.com/domains/answer/7638036>).
     HstsPreloaded = 1,
 }
 /// Notices related to contact information.
@@ -734,7 +734,7 @@ pub mod domains_client {
     impl<T> DomainsClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

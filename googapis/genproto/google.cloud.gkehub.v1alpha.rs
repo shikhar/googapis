@@ -229,7 +229,7 @@ pub struct ListFeaturesRequest {
     #[prost(string, tag = "3")]
     pub page_token: ::prost::alloc::string::String,
     /// Lists Features that match the filter expression, following the syntax
-    /// outlined in https://google.aip.dev/160.
+    /// outlined in <https://google.aip.dev/160.>
     ///
     /// Examples:
     ///
@@ -247,7 +247,7 @@ pub struct ListFeaturesRequest {
     #[prost(string, tag = "4")]
     pub filter: ::prost::alloc::string::String,
     /// One or more fields to compare and use to sort the output.
-    /// See https://google.aip.dev/132#ordering.
+    /// See <https://google.aip.dev/132#ordering.>
     #[prost(string, tag = "5")]
     pub order_by: ::prost::alloc::string::String,
 }
@@ -384,7 +384,7 @@ pub struct OperationMetadata {
     pub status_detail: ::prost::alloc::string::String,
     /// Output only. Identifies whether the user has requested cancellation
     /// of the operation. Operations that have successfully been cancelled
-    /// have [Operation.error][] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+    /// have \[Operation.error][\] value with a \[google.rpc.Status.code][google.rpc.Status.code\] of 1,
     /// corresponding to `Code.CANCELLED`.
     #[prost(bool, tag = "6")]
     pub cancel_requested: bool,
@@ -417,7 +417,7 @@ pub mod gke_hub_client {
     impl<T> GkeHubClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

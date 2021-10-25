@@ -54,7 +54,7 @@ pub struct TransferConfig {
     /// Parameters specific to each data source. For more information see the
     /// bq tab in the 'Setting up a data transfer' section for each data source.
     /// For example the parameters for Cloud Storage transfers are listed here:
-    /// https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
+    /// <https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq>
     #[prost(message, optional, tag = "9")]
     pub params: ::core::option::Option<::prost_types::Struct>,
     /// Data transfer schedule.
@@ -67,7 +67,7 @@ pub struct TransferConfig {
     /// `every wed,fri of jan,jun 13:15`, and
     /// `first sunday of quarter 00:00`.
     /// See more explanation about the format here:
-    /// https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
+    /// <https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format>
     /// NOTE: the granularity should be at least 8 hours, or less frequent.
     #[prost(string, tag = "7")]
     pub schedule: ::prost::alloc::string::String,
@@ -77,7 +77,7 @@ pub struct TransferConfig {
     /// The number of days to look back to automatically refresh the data.
     /// For example, if `data_refresh_window_days = 10`, then every day
     /// BigQuery reingests data for [today-10, today-1], rather than ingesting data
-    /// for just [today-1].
+    /// for just \[today-1\].
     /// Only valid if the data source supports the feature. Set the value to  0
     /// to use the default value.
     #[prost(int32, tag = "12")]
@@ -159,7 +159,7 @@ pub struct TransferRun {
     /// Output only. Parameters specific to each data source. For more information see the
     /// bq tab in the 'Setting up a data transfer' section for each data source.
     /// For example the parameters for Cloud Storage transfers are listed here:
-    /// https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
+    /// <https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq>
     #[prost(message, optional, tag = "9")]
     pub params: ::core::option::Option<::prost_types::Struct>,
     /// Output only. Data source id.
@@ -366,7 +366,7 @@ pub struct DataSource {
     pub client_id: ::prost::alloc::string::String,
     /// Api auth scopes for which refresh token needs to be obtained. These are
     /// scopes needed by a data source to prepare data and ingest them into
-    /// BigQuery, e.g., https://www.googleapis.com/auth/bigquery
+    /// BigQuery, e.g., <https://www.googleapis.com/auth/bigquery>
     #[prost(string, repeated, tag = "6")]
     pub scopes: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// Deprecated. This field has no effect.
@@ -516,7 +516,7 @@ pub struct CreateTransferConfigRequest {
     /// `CheckValidCreds`.
     /// In order to obtain authorization_code, please make a
     /// request to
-    /// https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id=<datatransferapiclientid>&scope=<data_source_scopes>&redirect_uri=<redirect_uri>
+    /// <https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id=<datatransferapiclientid>&scope=<data_source_scopes>&redirect_uri=<redirect_uri>>
     ///
     /// * client_id should be OAuth client_id of BigQuery DTS API for the given
     ///   data source returned by ListDataSources method.
@@ -556,7 +556,7 @@ pub struct UpdateTransferConfigRequest {
     /// authorizing user.
     /// In order to obtain authorization_code, please make a
     /// request to
-    /// https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id=<datatransferapiclientid>&scope=<data_source_scopes>&redirect_uri=<redirect_uri>
+    /// <https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id=<datatransferapiclientid>&scope=<data_source_scopes>&redirect_uri=<redirect_uri>>
     ///
     /// * client_id should be OAuth client_id of BigQuery DTS API for the given
     ///   data source returned by ListDataSources method.
@@ -861,7 +861,7 @@ pub mod data_transfer_service_client {
     impl<T> DataTransferServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

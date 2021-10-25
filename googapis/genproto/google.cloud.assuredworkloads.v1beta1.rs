@@ -149,7 +149,7 @@ pub struct Workload {
     /// workload resources if possible. This field is optional.
     #[prost(message, repeated, tag = "15")]
     pub resource_settings: ::prost::alloc::vec::Vec<workload::ResourceSettings>,
-    /// Settings specific to the selected [compliance_regime]
+    /// Settings specific to the selected \[compliance_regime\]
     #[prost(oneof = "workload::ComplianceRegimeSettings", tags = "7, 8, 11, 12")]
     pub compliance_regime_settings: ::core::option::Option<workload::ComplianceRegimeSettings>,
 }
@@ -194,7 +194,7 @@ pub mod workload {
         /// new version of the crypto key and mark it as the primary.
         #[prost(message, optional, tag = "1")]
         pub next_rotation_time: ::core::option::Option<::prost_types::Timestamp>,
-        /// Required. Input only. Immutable. [next_rotation_time] will be advanced by this period when the Key
+        /// Required. Input only. Immutable. \[next_rotation_time\] will be advanced by this period when the Key
         /// Management Service automatically rotates a key. Must be at least 24 hours
         /// and at most 876,000 hours.
         #[prost(message, optional, tag = "2")]
@@ -272,7 +272,7 @@ pub mod workload {
         /// Assured Workloads For Canada Regions and Support controls
         CaRegionsAndSupport = 9,
     }
-    /// Settings specific to the selected [compliance_regime]
+    /// Settings specific to the selected \[compliance_regime\]
     #[derive(Clone, PartialEq, ::prost::Oneof)]
     pub enum ComplianceRegimeSettings {
         /// Required. Input only. Immutable. Settings specific to resources needed for IL4.
@@ -322,7 +322,7 @@ pub mod assured_workloads_service_client {
     impl<T> AssuredWorkloadsServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

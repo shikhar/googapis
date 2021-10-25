@@ -177,7 +177,7 @@ pub struct ExecutionTemplate {
     /// Container Image URI to a DLVM
     /// Example: 'gcr.io/deeplearning-platform-release/base-cu100'
     /// More examples can be found at:
-    /// https://cloud.google.com/ai-platform/deep-learning-containers/docs/choosing-container
+    /// <https://cloud.google.com/ai-platform/deep-learning-containers/docs/choosing-container>
     #[prost(string, tag = "6")]
     pub container_image_uri: ::prost::alloc::string::String,
     /// Path to the notebook folder to write to.
@@ -187,7 +187,7 @@ pub struct ExecutionTemplate {
     #[prost(string, tag = "7")]
     pub output_notebook_folder: ::prost::alloc::string::String,
     /// Parameters to be overridden in the notebook during execution.
-    /// Ref https://papermill.readthedocs.io/en/latest/usage-parameterize.html on
+    /// Ref <https://papermill.readthedocs.io/en/latest/usage-parameterize.html> on
     /// how to specifying parameters in the input notebook and pass them here
     /// in an YAML file.
     /// Ex: gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml
@@ -306,7 +306,7 @@ pub mod execution_template {
         /// Default value for an execution.
         VertexAi = 1,
         /// Run execution on a cluster with Dataproc as a job.
-        /// https://cloud.google.com/dataproc/docs/reference/rest/v1/projects.regions.jobs
+        /// <https://cloud.google.com/dataproc/docs/reference/rest/v1/projects.regions.jobs>
         Dataproc = 2,
     }
     /// Parameters for an execution type.
@@ -377,7 +377,7 @@ pub mod execution {
         /// `error_message` should describe the reason for the cancellation.
         Cancelled = 7,
         /// The jobs has become expired (added for uCAIP jobs)
-        /// https://cloud.google.com/vertex-ai/docs/reference/rest/v1/JobState
+        /// <https://cloud.google.com/vertex-ai/docs/reference/rest/v1/JobState>
         Expired = 9,
         /// The Execution is being created.
         Initializing = 10,
@@ -441,7 +441,7 @@ pub struct Instance {
     /// must have the service account user permission to use the instance.
     ///
     /// If not specified, the [Compute Engine default service
-    /// account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account)
+    /// account](<https://cloud.google.com/compute/docs/access/service-accounts#default_service_account>)
     /// is used.
     #[prost(string, tag = "7")]
     pub service_account: ::prost::alloc::string::String,
@@ -449,12 +449,12 @@ pub struct Instance {
     /// Compute Engine instances.
     ///
     /// If not specified, the following
-    /// [scopes](https://cloud.google.com/compute/docs/access/service-accounts#accesscopesiam)
+    /// \[scopes\](<https://cloud.google.com/compute/docs/access/service-accounts#accesscopesiam>)
     /// are defined:
-    ///  - https://www.googleapis.com/auth/cloud-platform
-    ///  - https://www.googleapis.com/auth/userinfo.email
+    ///  - <https://www.googleapis.com/auth/cloud-platform>
+    ///  - <https://www.googleapis.com/auth/userinfo.email>
     /// If not using default scopes, you need at least:
-    ///    https://www.googleapis.com/auth/compute
+    ///    <https://www.googleapis.com/auth/compute>
     #[prost(string, repeated, tag = "31")]
     pub service_account_scopes: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// Required. The [Compute Engine machine type](/compute/docs/machine-types) of this
@@ -518,7 +518,7 @@ pub struct Instance {
     pub disks: ::prost::alloc::vec::Vec<instance::Disk>,
     /// Optional. Shielded VM configuration.
     /// [Images using supported Shielded VM features]
-    /// (https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
+    /// (<https://cloud.google.com/compute/docs/instances/modifying-shielded-vm>).
     #[prost(message, optional, tag = "30")]
     pub shielded_instance_config: ::core::option::Option<instance::ShieldedInstanceConfig>,
     /// If true, no public IP will be assigned to this instance.
@@ -547,7 +547,7 @@ pub struct Instance {
     pub metadata:
         ::std::collections::HashMap<::prost::alloc::string::String, ::prost::alloc::string::String>,
     /// Optional. The Compute Engine tags to add to runtime (see [Tagging
-    /// instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+    /// instances](<https://cloud.google.com/compute/docs/label-or-tag-resources#tags>)).
     #[prost(string, repeated, tag = "32")]
     pub tags: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// The upgrade history of this instance.
@@ -559,7 +559,7 @@ pub struct Instance {
     pub nic_type: i32,
     /// Optional. The optional reservation affinity. Setting this field will apply
     /// the specified [Zonal Compute
-    /// Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources)
+    /// Reservation](<https://cloud.google.com/compute/docs/instances/reserving-zonal-resources>)
     /// to this notebook instance.
     #[prost(message, optional, tag = "34")]
     pub reservation_affinity: ::core::option::Option<ReservationAffinity>,
@@ -875,7 +875,7 @@ pub mod instance {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct InstanceConfig {
     /// Cron expression in UTC timezone, used to schedule instance auto upgrade.
-    /// Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
+    /// Please follow the [cron format](<https://en.wikipedia.org/wiki/Cron>).
     #[prost(string, tag = "1")]
     pub notebook_upgrade_schedule: ::prost::alloc::string::String,
     /// Verifies core internal services are running. More info: go/notebooks-health
@@ -968,7 +968,7 @@ pub mod runtime {
 /// Definition of the types of hardware accelerators that can be used.
 /// Definition of the types of hardware accelerators that can be used.
 /// See [Compute Engine
-/// AcceleratorTypes](https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes).
+/// AcceleratorTypes](<https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes>).
 /// Examples:
 ///
 /// * `nvidia-tesla-k80`
@@ -1108,13 +1108,13 @@ pub mod local_disk {
     /// Optional. A list of features to enable on the guest operating system.
     /// Applicable only for bootable images.
     /// Read [Enabling guest operating system
-    /// features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features)
+    /// features](<https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features>)
     /// to see a list of available options.
     /// Guest OS features for boot disk.
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct RuntimeGuestOsFeature {
         /// The ID of a supported feature. Read [Enabling guest operating system
-        /// features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features)
+        /// features](<https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features>)
         /// to see a list of available options.
         ///
         /// Valid values:
@@ -1212,7 +1212,7 @@ pub mod runtime_access_config {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RuntimeSoftwareConfig {
     /// Cron expression in UTC timezone, used to schedule instance auto upgrade.
-    /// Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
+    /// Please follow the [cron format](<https://en.wikipedia.org/wiki/Cron>).
     #[prost(string, tag = "1")]
     pub notebook_upgrade_schedule: ::prost::alloc::string::String,
     /// Verifies core internal services are running.
@@ -1249,7 +1249,7 @@ pub struct RuntimeMetrics {
 }
 /// A set of Shielded Instance options.
 /// Check [Images using supported Shielded VM
-/// features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
+/// features](<https://cloud.google.com/compute/docs/instances/modifying-shielded-vm>).
 /// Not all combinations are valid.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct RuntimeShieldedInstanceConfig {
@@ -1323,8 +1323,8 @@ pub struct VirtualMachineConfig {
     ///
     /// A full URL or partial URI. Examples:
     ///
-    /// * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default`
-    /// * `projects/[project_id]/regions/global/default`
+    /// * `<https://www.googleapis.com/compute/v1/projects/\[project_id\]/regions/global/default`>
+    /// * `projects/\[project_id\]/regions/global/default`
     ///
     /// Runtimes are managed resources inside Google Infrastructure.
     /// Runtimes support the following network configurations:
@@ -1341,8 +1341,8 @@ pub struct VirtualMachineConfig {
     ///
     /// A full URL or partial URI are valid. Examples:
     ///
-    /// * `https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0`
-    /// * `projects/[project_id]/regions/us-east1/subnetworks/sub0`
+    /// * `<https://www.googleapis.com/compute/v1/projects/\[project_id\]/regions/us-east1/subnetworks/sub0`>
+    /// * `projects/\[project_id\]/regions/us-east1/subnetworks/sub0`
     #[prost(string, tag = "9")]
     pub subnet: ::prost::alloc::string::String,
     /// Optional. If true, runtime will only have internal IP
@@ -1354,28 +1354,28 @@ pub struct VirtualMachineConfig {
     #[prost(bool, tag = "10")]
     pub internal_ip_only: bool,
     /// Optional. The Compute Engine tags to add to runtime (see [Tagging
-    /// instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+    /// instances](<https://cloud.google.com/compute/docs/label-or-tag-resources#tags>)).
     #[prost(string, repeated, tag = "13")]
     pub tags: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// Output only. The Compute Engine guest attributes. (see
     /// [Project and instance
     /// guest
-    /// attributes](https://cloud.google.com/compute/docs/storing-retrieving-metadata#guest_attributes)).
+    /// attributes](<https://cloud.google.com/compute/docs/storing-retrieving-metadata#guest_attributes>)).
     #[prost(map = "string, string", tag = "14")]
     pub guest_attributes:
         ::std::collections::HashMap<::prost::alloc::string::String, ::prost::alloc::string::String>,
     /// Optional. The Compute Engine metadata entries to add to virtual machine. (see
     /// [Project and instance
-    /// metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
+    /// metadata](<https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata>)).
     #[prost(map = "string, string", tag = "15")]
     pub metadata:
         ::std::collections::HashMap<::prost::alloc::string::String, ::prost::alloc::string::String>,
     /// Optional. The labels to associate with this runtime.
     /// Label **keys** must contain 1 to 63 characters, and must conform to
-    /// [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt).
+    /// [RFC 1035](<https://www.ietf.org/rfc/rfc1035.txt>).
     /// Label **values** may be empty, but, if present, must contain 1 to 63
     /// characters, and must conform to [RFC
-    /// 1035](https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be
+    /// 1035](<https://www.ietf.org/rfc/rfc1035.txt>). No more than 32 labels can be
     /// associated with a cluster.
     #[prost(map = "string, string", tag = "16")]
     pub labels:
@@ -1507,7 +1507,7 @@ pub struct ReportRuntimeEventRequest {
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// Required. The VM hardware token for authenticating the VM.
-    /// https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+    /// <https://cloud.google.com/compute/docs/instances/verifying-instance-identity>
     #[prost(string, tag = "2")]
     pub vm_id: ::prost::alloc::string::String,
     /// Required. The Event to be reported.
@@ -1526,7 +1526,7 @@ pub mod managed_notebook_service_client {
     impl<T> ManagedNotebookServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
@@ -1769,12 +1769,12 @@ pub struct Schedule {
     /// Cron-tab formatted schedule by which the job will execute
     /// Format: minute, hour, day of month, month, day of week
     /// e.g. 0 0 * * WED = every Wednesday
-    /// More examples: https://crontab.guru/examples.html
+    /// More examples: <https://crontab.guru/examples.html>
     #[prost(string, tag = "5")]
     pub cron_schedule: ::prost::alloc::string::String,
     /// Timezone on which the cron_schedule.
     /// The value of this field must be a time zone name from the tz database.
-    /// TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+    /// TZ Database: <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>
     ///
     /// Note that some time zones include a provision for daylight savings time.
     /// The rules for daylight saving time are determined by the chosen tz.
@@ -1808,14 +1808,14 @@ pub mod schedule {
         Enabled = 1,
         /// The job is paused by the user. It will not execute. A user can
         /// intentionally pause the job using
-        /// [PauseJobRequest][].
+        /// \[PauseJobRequest][\].
         Paused = 2,
         /// The job is disabled by the system due to error. The user
         /// cannot directly set a job to be disabled.
         Disabled = 3,
-        /// The job state resulting from a failed [CloudScheduler.UpdateJob][]
+        /// The job state resulting from a failed \[CloudScheduler.UpdateJob][\]
         /// operation. To recover a job from this state, retry
-        /// [CloudScheduler.UpdateJob][] until a successful response is received.
+        /// \[CloudScheduler.UpdateJob][\] until a successful response is received.
         UpdateFailed = 4,
         /// The schedule resource is being created.
         Initializing = 5,
@@ -1843,8 +1843,8 @@ pub struct OperationMetadata {
     pub status_message: ::prost::alloc::string::String,
     /// Identifies whether the user has requested cancellation
     /// of the operation. Operations that have successfully been cancelled
-    /// have [Operation.error][] value with a
-    /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to `Code.CANCELLED`.
+    /// have \[Operation.error][\] value with a
+    /// \[google.rpc.Status.code][google.rpc.Status.code\] of 1, corresponding to `Code.CANCELLED`.
     #[prost(bool, tag = "6")]
     pub requested_cancellation: bool,
     /// API version used to start the operation.
@@ -1933,7 +1933,7 @@ pub struct SetInstanceAcceleratorRequest {
     pub r#type: i32,
     /// Required. Count of cores of this accelerator. Note that not all combinations
     /// of `type` and `core_count` are valid. Check [GPUs on
-    /// Compute Engine](https://cloud.google.com/compute/docs/gpus/#gpus-list) to
+    /// Compute Engine](<https://cloud.google.com/compute/docs/gpus/#gpus-list>) to
     /// find a valid combination. TPUs are not supported.
     #[prost(int64, tag = "3")]
     pub core_count: i64,
@@ -1946,7 +1946,7 @@ pub struct SetInstanceMachineTypeRequest {
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// Required. The [Compute Engine machine
-    /// type](https://cloud.google.com/compute/docs/machine-types).
+    /// type](<https://cloud.google.com/compute/docs/machine-types>).
     #[prost(string, tag = "2")]
     pub machine_type: ::prost::alloc::string::String,
 }
@@ -2026,7 +2026,7 @@ pub struct ReportInstanceInfoRequest {
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// Required. The VM hardware token for authenticating the VM.
-    /// https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+    /// <https://cloud.google.com/compute/docs/instances/verifying-instance-identity>
     #[prost(string, tag = "2")]
     pub vm_id: ::prost::alloc::string::String,
     /// The metadata reported to Notebooks API. This will be merged to the instance
@@ -2141,7 +2141,7 @@ pub struct UpgradeInstanceInternalRequest {
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// Required. The VM hardware token for authenticating the VM.
-    /// https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+    /// <https://cloud.google.com/compute/docs/instances/verifying-instance-identity>
     #[prost(string, tag = "2")]
     pub vm_id: ::prost::alloc::string::String,
 }
@@ -2361,7 +2361,7 @@ pub mod notebook_service_client {
     impl<T> NotebookServiceClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {

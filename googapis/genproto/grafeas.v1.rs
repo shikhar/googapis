@@ -50,7 +50,7 @@ pub struct Signature {
     ///
     /// OpenPGP V4 public key fingerprint:
     ///   * "openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA"
-    /// See https://www.iana.org/assignments/uri-schemes/prov/openpgp4fpr for more
+    /// See <https://www.iana.org/assignments/uri-schemes/prov/openpgp4fpr> for more
     /// details on this scheme.
     ///
     /// RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER
@@ -140,7 +140,7 @@ pub struct AttestationOccurrence {
     pub signatures: ::prost::alloc::vec::Vec<Signature>,
 }
 /// Common Vulnerability Scoring System version 3.
-/// For details, see https://www.first.org/cvss/specification-document
+/// For details, see <https://www.first.org/cvss/specification-document>
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CvsSv3 {
     /// The base score is a function of the base metric scores.
@@ -223,7 +223,7 @@ pub mod cvs_sv3 {
 /// E.g., Debian's jessie-backports dpkg mirror.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Distribution {
-    /// Required. The cpe_uri in [CPE format](https://cpe.mitre.org/specification/)
+    /// Required. The cpe_uri in [CPE format](<https://cpe.mitre.org/specification/>)
     /// denoting the package manager version distributing a package.
     #[prost(string, tag = "1")]
     pub cpe_uri: ::prost::alloc::string::String,
@@ -248,7 +248,7 @@ pub struct Distribution {
 /// filesystem. E.g., glibc was found in `/var/lib/dpkg/status`.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Location {
-    /// Required. The CPE URI in [CPE format](https://cpe.mitre.org/specification/)
+    /// Required. The CPE URI in [CPE format](<https://cpe.mitre.org/specification/>)
     /// denoting the package manager version distributing a package.
     #[prost(string, tag = "1")]
     pub cpe_uri: ::prost::alloc::string::String,
@@ -375,7 +375,7 @@ pub mod vulnerability_note {
         /// node.js packages, etc.).
         #[prost(string, tag = "3")]
         pub package_type: ::prost::alloc::string::String,
-        /// Required. The [CPE URI](https://cpe.mitre.org/specification/) this
+        /// Required. The [CPE URI](<https://cpe.mitre.org/specification/>) this
         /// vulnerability affects.
         #[prost(string, tag = "4")]
         pub affected_cpe_uri: ::prost::alloc::string::String,
@@ -385,7 +385,7 @@ pub mod vulnerability_note {
         /// The version number at the start of an interval in which this
         /// vulnerability exists. A vulnerability can affect a package between
         /// version numbers that are disjoint sets of intervals (example:
-        /// [1.0.0-1.1.0], [2.4.6-2.4.8] and [4.5.6-4.6.8]) each of which will be
+        /// \[1.0.0-1.1.0\], \[2.4.6-2.4.8\] and \[4.5.6-4.6.8\]) each of which will be
         /// represented in its own Detail. If a specific affected version is provided
         /// by a vulnerability database, affected_version_start and
         /// affected_version_end will be the same in that Detail.
@@ -393,14 +393,14 @@ pub mod vulnerability_note {
         pub affected_version_start: ::core::option::Option<super::Version>,
         /// The version number at the end of an interval in which this vulnerability
         /// exists. A vulnerability can affect a package between version numbers
-        /// that are disjoint sets of intervals (example: [1.0.0-1.1.0],
-        /// [2.4.6-2.4.8] and [4.5.6-4.6.8]) each of which will be represented in its
+        /// that are disjoint sets of intervals (example: \[1.0.0-1.1.0\],
+        /// \[2.4.6-2.4.8\] and \[4.5.6-4.6.8\]) each of which will be represented in its
         /// own Detail. If a specific affected version is provided by a vulnerability
         /// database, affected_version_start and affected_version_end will be the
         /// same in that Detail.
         #[prost(message, optional, tag = "7")]
         pub affected_version_end: ::core::option::Option<super::Version>,
-        /// The distro recommended [CPE URI](https://cpe.mitre.org/specification/)
+        /// The distro recommended [CPE URI](<https://cpe.mitre.org/specification/>)
         /// to update to that contains a fix for this vulnerability. It is possible
         /// for this to be different from the affected_cpe_uri.
         #[prost(string, tag = "8")]
@@ -427,7 +427,7 @@ pub mod vulnerability_note {
     }
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct WindowsDetail {
-        /// Required. The [CPE URI](https://cpe.mitre.org/specification/) this
+        /// Required. The [CPE URI](<https://cpe.mitre.org/specification/>) this
         /// vulnerability affects.
         #[prost(string, tag = "1")]
         pub cpe_uri: ::prost::alloc::string::String,
@@ -448,11 +448,11 @@ pub mod vulnerability_note {
     pub mod windows_detail {
         #[derive(Clone, PartialEq, ::prost::Message)]
         pub struct KnowledgeBase {
-            /// The KB name (generally of the form KB[0-9]+ (e.g., KB123456)).
+            /// The KB name (generally of the form KB\[0-9\]+ (e.g., KB123456)).
             #[prost(string, tag = "1")]
             pub name: ::prost::alloc::string::String,
             /// A link to the KB in the [Windows update catalog]
-            /// (https://www.catalog.update.microsoft.com/).
+            /// (<https://www.catalog.update.microsoft.com/>).
             #[prost(string, tag = "2")]
             pub url: ::prost::alloc::string::String,
         }
@@ -501,7 +501,7 @@ pub mod vulnerability_occurrence {
     /// in and its associated fix (if one is available).
     #[derive(Clone, PartialEq, ::prost::Message)]
     pub struct PackageIssue {
-        /// Required. The [CPE URI](https://cpe.mitre.org/specification/) this
+        /// Required. The [CPE URI](<https://cpe.mitre.org/specification/>) this
         /// vulnerability was found in.
         #[prost(string, tag = "1")]
         pub affected_cpe_uri: ::prost::alloc::string::String,
@@ -512,7 +512,7 @@ pub mod vulnerability_occurrence {
         /// affected by this vulnerability.
         #[prost(message, optional, tag = "3")]
         pub affected_version: ::core::option::Option<super::Version>,
-        /// The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability
+        /// The [CPE URI](<https://cpe.mitre.org/specification/>) this vulnerability
         /// was fixed in. It is possible for this to be different from the
         /// affected_cpe_uri.
         #[prost(string, tag = "4")]
@@ -984,7 +984,7 @@ pub mod discovery_occurrence {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Layer {
     /// Required. The recovered Dockerfile directive used to construct this layer.
-    /// See https://docs.docker.com/engine/reference/builder/ for more information.
+    /// See <https://docs.docker.com/engine/reference/builder/> for more information.
     #[prost(string, tag = "1")]
     pub directive: ::prost::alloc::string::String,
     /// The recovered arguments to the Dockerfile directive.
@@ -1002,8 +1002,8 @@ pub struct Fingerprint {
     #[prost(string, repeated, tag = "2")]
     pub v2_blob: ::prost::alloc::vec::Vec<::prost::alloc::string::String>,
     /// Output only. The name of the image's v2 blobs computed via:
-    ///   [bottom] := v2_blob[bottom]
-    ///   [N] := sha256(v2_blob[N] + " " + v2_name[N+1])
+    ///   \[bottom\] := v2_blob\[bottom\]
+    ///   \[N\] := sha256(v2_blob\[N\] + " " + v2_name\[N+1\])
     /// Only the name of the final blob is kept.
     #[prost(string, tag = "3")]
     pub v2_name: ::prost::alloc::string::String,
@@ -1036,8 +1036,8 @@ pub struct ImageOccurrence {
     #[prost(int32, tag = "2")]
     pub distance: i32,
     /// This contains layer-specific metadata, if populated it has length
-    /// "distance" and is ordered with [distance] being the layer immediately
-    /// following the base image and [1] being the final layer.
+    /// "distance" and is ordered with \[distance\] being the layer immediately
+    /// following the base image and \[1\] being the final layer.
     #[prost(message, repeated, tag = "3")]
     pub layer_info: ::prost::alloc::vec::Vec<Layer>,
     /// Output only. This contains the base image URL for the derived image
@@ -1071,13 +1071,13 @@ pub struct UpgradeNote {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpgradeDistribution {
     /// Required - The specific operating system this metadata applies to. See
-    /// https://cpe.mitre.org/specification/.
+    /// <https://cpe.mitre.org/specification/.>
     #[prost(string, tag = "1")]
     pub cpe_uri: ::prost::alloc::string::String,
     /// The operating system classification of this Upgrade, as specified by the
     /// upstream operating system upgrade feed. For Windows the classification is
     /// one of the category_ids listed at
-    /// https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ff357803(v=vs.85)
+    /// <https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ff357803(v=vs.85>)
     #[prost(string, tag = "2")]
     pub classification: ::prost::alloc::string::String,
     /// The severity as specified by the upstream operating system.
@@ -1090,7 +1090,7 @@ pub struct UpgradeDistribution {
 /// Windows Update represents the metadata about the update for the Windows
 /// operating system. The fields in this message come from the Windows Update API
 /// documented at
-/// https://docs.microsoft.com/en-us/windows/win32/api/wuapi/nn-wuapi-iupdate.
+/// <https://docs.microsoft.com/en-us/windows/win32/api/wuapi/nn-wuapi-iupdate.>
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct WindowsUpdate {
     /// Required - The unique identifier for the update.
@@ -1166,16 +1166,16 @@ pub struct UpgradeOccurrence {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Occurrence {
     /// Output only. The name of the occurrence in the form of
-    /// `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+    /// `projects/\[PROJECT_ID]/occurrences/[OCCURRENCE_ID\]`.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// Required. Immutable. A URI that represents the resource for which the
     /// occurrence applies. For example,
-    /// `https://gcr.io/project/image@sha256:123abc` for a Docker image.
+    /// `<https://gcr.io/project/image@sha256:123abc`> for a Docker image.
     #[prost(string, tag = "2")]
     pub resource_uri: ::prost::alloc::string::String,
     /// Required. Immutable. The analysis note associated with this occurrence, in
-    /// the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be
+    /// the form of `projects/\[PROVIDER_ID]/notes/[NOTE_ID\]`. This field can be
     /// used as a filter in list requests.
     #[prost(string, tag = "3")]
     pub note_name: ::prost::alloc::string::String,
@@ -1234,7 +1234,7 @@ pub mod occurrence {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Note {
     /// Output only. The name of the note in the form of
-    /// `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+    /// `projects/\[PROVIDER_ID]/notes/[NOTE_ID\]`.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// A one sentence description of this note.
@@ -1303,7 +1303,7 @@ pub mod note {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetOccurrenceRequest {
     /// The name of the occurrence in the form of
-    /// `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+    /// `projects/\[PROJECT_ID]/occurrences/[OCCURRENCE_ID\]`.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
 }
@@ -1311,7 +1311,7 @@ pub struct GetOccurrenceRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListOccurrencesRequest {
     /// The name of the project to list occurrences for in the form of
-    /// `projects/[PROJECT_ID]`.
+    /// `projects/\[PROJECT_ID\]`.
     #[prost(string, tag = "1")]
     pub parent: ::prost::alloc::string::String,
     /// The filter expression.
@@ -1341,14 +1341,14 @@ pub struct ListOccurrencesResponse {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DeleteOccurrenceRequest {
     /// The name of the occurrence in the form of
-    /// `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+    /// `projects/\[PROJECT_ID]/occurrences/[OCCURRENCE_ID\]`.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
 }
 /// Request to create a new occurrence.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateOccurrenceRequest {
-    /// The name of the project in the form of `projects/[PROJECT_ID]`, under which
+    /// The name of the project in the form of `projects/\[PROJECT_ID\]`, under which
     /// the occurrence is to be created.
     #[prost(string, tag = "1")]
     pub parent: ::prost::alloc::string::String,
@@ -1360,7 +1360,7 @@ pub struct CreateOccurrenceRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateOccurrenceRequest {
     /// The name of the occurrence in the form of
-    /// `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+    /// `projects/\[PROJECT_ID]/occurrences/[OCCURRENCE_ID\]`.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// The updated occurrence.
@@ -1374,7 +1374,7 @@ pub struct UpdateOccurrenceRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetNoteRequest {
     /// The name of the note in the form of
-    /// `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+    /// `projects/\[PROVIDER_ID]/notes/[NOTE_ID\]`.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
 }
@@ -1382,7 +1382,7 @@ pub struct GetNoteRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct GetOccurrenceNoteRequest {
     /// The name of the occurrence in the form of
-    /// `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
+    /// `projects/\[PROJECT_ID]/occurrences/[OCCURRENCE_ID\]`.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
 }
@@ -1390,7 +1390,7 @@ pub struct GetOccurrenceNoteRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListNotesRequest {
     /// The name of the project to list notes for in the form of
-    /// `projects/[PROJECT_ID]`.
+    /// `projects/\[PROJECT_ID\]`.
     #[prost(string, tag = "1")]
     pub parent: ::prost::alloc::string::String,
     /// The filter expression.
@@ -1420,14 +1420,14 @@ pub struct ListNotesResponse {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct DeleteNoteRequest {
     /// The name of the note in the form of
-    /// `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+    /// `projects/\[PROVIDER_ID]/notes/[NOTE_ID\]`.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
 }
 /// Request to create a new note.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct CreateNoteRequest {
-    /// The name of the project in the form of `projects/[PROJECT_ID]`, under which
+    /// The name of the project in the form of `projects/\[PROJECT_ID\]`, under which
     /// the note is to be created.
     #[prost(string, tag = "1")]
     pub parent: ::prost::alloc::string::String,
@@ -1442,7 +1442,7 @@ pub struct CreateNoteRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UpdateNoteRequest {
     /// The name of the note in the form of
-    /// `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+    /// `projects/\[PROVIDER_ID]/notes/[NOTE_ID\]`.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// The updated note.
@@ -1456,7 +1456,7 @@ pub struct UpdateNoteRequest {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ListNoteOccurrencesRequest {
     /// The name of the note to list occurrences for in the form of
-    /// `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+    /// `projects/\[PROVIDER_ID]/notes/[NOTE_ID\]`.
     #[prost(string, tag = "1")]
     pub name: ::prost::alloc::string::String,
     /// The filter expression.
@@ -1482,7 +1482,7 @@ pub struct ListNoteOccurrencesResponse {
 /// Request to create notes in batch.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BatchCreateNotesRequest {
-    /// The name of the project in the form of `projects/[PROJECT_ID]`, under which
+    /// The name of the project in the form of `projects/\[PROJECT_ID\]`, under which
     /// the notes are to be created.
     #[prost(string, tag = "1")]
     pub parent: ::prost::alloc::string::String,
@@ -1500,7 +1500,7 @@ pub struct BatchCreateNotesResponse {
 /// Request to create occurrences in batch.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct BatchCreateOccurrencesRequest {
-    /// The name of the project in the form of `projects/[PROJECT_ID]`, under which
+    /// The name of the project in the form of `projects/\[PROJECT_ID\]`, under which
     /// the occurrences are to be created.
     #[prost(string, tag = "1")]
     pub parent: ::prost::alloc::string::String,
@@ -1540,7 +1540,7 @@ pub mod grafeas_client {
     impl<T> GrafeasClient<T>
     where
         T: tonic::client::GrpcService<tonic::body::BoxBody>,
-        T::ResponseBody: Body + Send + Sync + 'static,
+        T::ResponseBody: Body + Send + 'static,
         T::Error: Into<StdError>,
         <T::ResponseBody as Body>::Error: Into<StdError> + Send,
     {
