@@ -19,9 +19,9 @@ doctest = false
 all-features = true
 
 [dependencies]
-tonic = "0.5.2"
-prost = "0.8.0"
-prost-types = "0.8.0"
+tonic = "0.6.0"
+prost = "0.9.0"
+prost-types = "0.9.0"
 
 # NOTE: [features] must come last in the file. The xtask script relies on this.
 [features]
